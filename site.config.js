@@ -4,10 +4,10 @@ module.exports = {
   site: {
     title: 'AI Engineering',
     description: 'AI Engineering Blog',
-    basePath: process.env.NODE_ENV === 'production' ? '/public' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/docs' : '',
     categories,
   },
   build: {
-    outputPath: process.env.NODE_ENV === 'production' ? './public' : './output',
+    outputPath: process.env.NODE_ENV === 'production' ? './docs' : './output',
   },
 };
