@@ -1,0 +1,18 @@
+---
+title: Categories
+layout: default
+---
+
+<h1>Categories</h1>
+
+<ul>
+  <% site.categories.forEach((category) => { %>
+  <li>
+    <%= category.title %> <% category.articles.forEach((article) => { %>
+    <ul>
+      <li><a href="<%= article.url %>"><%= article.title %></a></li>
+    </ul>
+    <% }) %>
+  </li>
+  <% }) %>
+</ul>
