@@ -4,7 +4,7 @@ module.exports = {
   site: {
     title: 'AI Engineering',
     description: 'AI Engineering Blog',
-    basePath: process.env.NODE_ENV === 'production' ? '/aiengineer' : '',
+    basePath: process.env.NODE_ENV === 'production' ? '/public' : '',
     categories,
   },
   build: {
