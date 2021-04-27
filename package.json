@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node ./scripts/build",
     "build:prod": "cross-env NODE_ENV=production node ./scripts/build",
-    "serve": "serve ./output"
+    "live": "live-server --port=3003 --host=127.0.0.1 --open=output --watch=output --no-css-inject"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,8 @@
     "front-matter": "^4.0.2",
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",
+    "live-server": "^1.2.1",
     "marked": "^2.0.3",
-    "prettier": "^2.2.1",
-    "serve": "^11.3.2"
+    "prettier": "^2.2.1"
   }
 }
