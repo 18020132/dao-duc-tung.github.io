@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node ./scripts/build",
     "build:prod": "cross-env NODE_ENV=production node ./scripts/build",
-    "live": "live-server --port=3003 --host=127.0.0.1 --watch=output --no-css-inject output"
+    "live": "live-server --port=3003 --host=127.0.0.1 --no-css-inject output"
   },
   "repository": {
     "type": "git",

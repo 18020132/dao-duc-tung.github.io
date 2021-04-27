@@ -9,7 +9,7 @@ title: Categories
   <li>
     <%= category.title %> <% category.articles.forEach((article) => { %>
     <ul>
-      <li><a href="<%= article.url %>"><%= article.title %></a></li>
+      <li><a href="<%= site.basePath %>/<%= article.url %>"><%= article.title %></a></li>
     </ul>
     <% }) %>
   </li>
