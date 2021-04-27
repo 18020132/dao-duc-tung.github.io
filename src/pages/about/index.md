@@ -1,6 +1,5 @@
 ---
 title: About
-layout: default
 ---
 
 My name is Tung.

@@ -50,7 +50,7 @@ files.forEach((file, i) => {
   }
 
   // render layout with page contents
-  const layout = pageData.attributes.layout || 'default';
+  const layout = pageData.attributes.layout || 'index';
   const layoutFileName = `${srcPath}/layouts/${layout}.ejs`;
   const layoutData = fse.readFileSync(layoutFileName, 'utf-8');
   const completePage = ejs.render(
