@@ -1,10 +1,14 @@
 [
   {
-    "title": "Basic Engineering Skills",
+    "title": "Basic Data Engineering",
     "articles": [
       {
-        "title": "Docker",
-        "url": "basic_engineering_skills/docker"
+        "title": "Docker Level 0",
+        "url": "basic-data-engineering/docker-level-0"
+      },
+      {
+        "title": "Docker Level 1",
+        "url": "basic-data-engineering/docker-level-1"
       }
     ]
   }
