@@ -1,7 +1,7 @@
 {
   "name": "dao-duc-tung.github.io",
   "version": "1.0.0",
-  "description": "Personal blog",
+  "description": "AI Engineer Skills",
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/build",

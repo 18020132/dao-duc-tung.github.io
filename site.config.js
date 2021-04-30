@@ -3,7 +3,7 @@ const categories = require('./src/data/categories');
 module.exports = {
   site: {
     title: 'AI Engineer',
-    description: 'AI Engineer Blog',
+    description: 'AI Engineer Skills',
     basePath: process.env.NODE_ENV === 'production' ? '' : '',
     categories,
   },
