@@ -9,6 +9,14 @@
       {
         "title": "Docker Level 1",
         "url": "basic-data-engineering/docker-level-1"
+      },
+      {
+        "title": "Docker Level 2",
+        "url": "basic-data-engineering/docker-level-2"
+      },
+      {
+        "title": "Docker Level 3",
+        "url": "basic-data-engineering/docker-level-3"
       }
     ]
   }
