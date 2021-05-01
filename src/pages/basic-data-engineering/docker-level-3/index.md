@@ -1,5 +1,5 @@
 # Docker level 3
 
-## Behind the scene
+## Architecture
 
 ## Orchestration

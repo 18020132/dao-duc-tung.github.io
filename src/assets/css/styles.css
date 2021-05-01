@@ -679,6 +679,9 @@ a:hover {
 
 .main-content img {
   max-width: 100%;
+  /* Auto align center */
+  display: block;
+  margin: 0 auto;
 }
 
 .main-content h1,

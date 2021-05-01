@@ -2,7 +2,7 @@
 
 ![Docker Logo][docker-logo]
 
-> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the *blah blah blah*. ([Wikiperdia](https://en.wikipedia.org/wiki/Docker_(software)))
+> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the _blah blah blah_. ([Wikipedia](<https://en.wikipedia.org/wiki/Docker_(software)>))
 
 Let's forget what you have read and start with **AI Engineer**'s introduction.
 
@@ -20,18 +20,47 @@ Docker will let you install whatever the version of the libraries you need into 
 
 ### How?
 
-Docker splits **a Linux system** into smaller worlds called **containers**.
+Docker splits **an Operating System** into smaller worlds called **containers**.
 
 Containers are isolated from one another. A container has everything needed to run your code such as your code, configuration files, your tools, networking system and just enough of the operating system to run your code.
 
-When the containers were born by you, they can't see each other. You will configure them to let them chit chat around.
+You may have _container A_ running Ubuntu 14.04 and _container B_ running Debian 10 that talks to _container A_ through a virtual network created by you and managed by docker.
+
+![Docker Containers][docker-containers]
 
 ### What is docker?
 
+- A client program which is a command line interface (CLI).
+- A server program that listens for whatever you ask for when you use that _docker_ command.
+- A program that builds containers defined by you (later we'll see how to define them ourselves).
+- A service that stores and shares containers on the internet so everyone can find the other's work.
+- A company that makes all of those things.
+
 ## Installation
 
+You will install docker (or **Docker Engine**) based on your OS. Please refer to the [docker docs](https://docs.docker.com/engine/install/) to download.
 
-## Key points
+> Docker Engine is an open source containerization technology for building and containerizing your applications. ([Docker docs](https://docs.docker.com/engine/))
+
+By installing **Docker Engine**, you will also install:
+
+- The docker server program.
+- The docker client program.
+- APIs which define interfaces that programs use to chit chat with the docker server.
+
+## Containers and Virtual Machines
+
+The main difference is:
+
+- Containers virtualize OS to run several programs on a single OS instance.
+- Virtual Machines virtualize hardware to run several OS instance.
+
+|  **Containers**   |  **Virtual Machines**   |
+| :---------------: | :---------------------: |
+| OS virtualization | Hardware virtualization |
+|     Shared OS     |      Dedicated OS       |
 
 <!-- MARKDOWN LINKS & IMAGES -->
+
 [docker-logo]: /assets/images/basic-data-engineering/docker-level-0/docker-logo-1200x630.png
+[docker-containers]: /assets/images/basic-data-engineering/docker-level-0/docker-containers.png
