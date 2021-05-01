@@ -10,4 +10,17 @@
     type="text/css"
   />
   <link rel="stylesheet" href="<%= site.basePath %>/assets/css/styles.css" />
+  <% if(site.gtag.enable) { %>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%- site.gtag.gtagkey %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '<%- site.gtag.gtagkey %>');
+  </script>
+  <% } %>
 </head>
