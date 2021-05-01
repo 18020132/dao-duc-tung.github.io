@@ -1,0 +1,32 @@
+{
+  "name": "dao-duc-tung.github.io",
+  "version": "1.0.0",
+  "description": "AI Engineer Skills",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/build",
+    "build:prod": "cross-env NODE_ENV=production node ./scripts/build",
+    "live": "live-server --port=3003 --host=127.0.0.1 --no-css-inject output"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dao-duc-tung/dao-duc-tung.github.io.git"
+  },
+  "author": "Tung Dao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dao-duc-tung/dao-duc-tung.github.io/issues"
+  },
+  "homepage": "https://github.com/dao-duc-tung/dao-duc-tung.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "ejs": "^3.1.6",
+    "front-matter": "^4.0.2",
+    "fs-extra": "^9.1.0",
+    "glob": "^7.1.6",
+    "live-server": "^1.2.1",
+    "marked": "^2.0.3",
+    "prettier": "^2.2.1"
+  }
+}
