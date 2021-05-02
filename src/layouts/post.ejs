@@ -3,7 +3,9 @@
   <%- include('./partials/header') %>
   <body>
     <%- include('./partials/navigation') %>
-    <section class="main-content"><%- body %></section>
+    <section class="main-content">
+      <%- include('./partials/pre-body') %> <%- body %> <%- include('./partials/post-body') %>
+    </section>
     <%- include('./partials/footer') %>
   </body>
 </html>

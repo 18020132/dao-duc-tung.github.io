@@ -5,13 +5,16 @@ title: Categories
 <h1>Categories</h1>
 
 <ul>
-  <% site.categories.forEach((category) => { %>
+  <% site.posts.forEach((category) => { %>
   <li>
-    <%= category.title %> <% category.articles.forEach((article) => { %>
+    <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a> <%
+    category.childs.forEach((categoryChild) => { %> <% if (categoryChild.type === 'topic') { %>
     <ul>
-      <li><a href="<%= site.basePath %>/<%= article.url %>"><%= article.title %></a></li>
+      <li>
+        <a href="<%= site.basePath %>/<%= categoryChild.url %>"><%= categoryChild.title %></a>
+      </li>
     </ul>
-    <% }) %>
+    <% } %> <% }) %>
   </li>
   <% }) %>
 </ul>

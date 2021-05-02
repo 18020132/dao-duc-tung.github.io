@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Basic Data Engineering",
+    "type": "category",
+    "url": "basic-data-engineering",
+    "childs": [
+      {
+        "title": "Docker",
+        "type": "topic",
+        "url": "basic-data-engineering/docker",
+        "childs": [
+          {
+            "title": "Docker Level 0",
+            "type": "post",
+            "url": "basic-data-engineering/docker/docker-level-0"
+          },
+          {
+            "title": "Docker Level 1",
+            "type": "post",
+            "url": "basic-data-engineering/docker/docker-level-1"
+          },
+          {
+            "title": "Docker Level 2",
+            "type": "post",
+            "url": "basic-data-engineering/docker/docker-level-2"
+          },
+          {
+            "title": "Docker Level 3",
+            "type": "post",
+            "url": "basic-data-engineering/docker/docker-level-3"
+          }
+        ]
+      }
+    ]
+  }
+]
