@@ -4,12 +4,19 @@ const ejs = require('ejs');
 const marked = require('marked');
 const frontMatter = require('front-matter');
 const glob = require('glob');
+const moment = require('moment');
 const config = require('../site.config');
 
 const srcPath = './src';
 const distPath = config.build.outputPath;
 const distCnamePath = `${distPath}/CNAME`;
 const tempCnamePath = `./CNAME`;
+
+const READING_SPEED = 100; // wpm
+const measureReadingTime = (str) => {
+  const nWords = str.trim().split(/\s+/).length;
+  return parseInt(nWords / READING_SPEED);
+};
 
 // copy CNAME file out of distPath
 if (process.env.NODE_ENV === 'production') {
@@ -36,12 +43,19 @@ files.forEach((file, i) => {
   fse.mkdirsSync(destPath);
 
   // read page file
-  const data = fse.readFileSync(`${srcPath}/pages/${file}`, 'utf-8');
+  const pageFilePath = `${srcPath}/pages/${file}`;
+  const data = fse.readFileSync(pageFilePath, 'utf-8');
+
+  // add data for current page
+  const modifiedDate = fse.statSync(pageFilePath).mtime;
+  const readingTime = measureReadingTime(data);
+  const url = `${destPath}/${fileData.name}`;
 
   // render page
   const pageData = frontMatter(data);
   const templateConfig = Object.assign({}, config, {
-    page: pageData.attributes,
+    page: Object.assign({}, pageData.attributes, { modifiedDate, readingTime }),
+    moment,
   });
   let pageContent;
 
@@ -52,7 +66,7 @@ files.forEach((file, i) => {
       break;
     case '.ejs':
       pageContent = ejs.render(pageData.body, templateConfig, {
-        filename: `${srcPath}/pages/${file}`,
+        filename: pageFilePath,
       });
       break;
     default:
@@ -63,6 +77,8 @@ files.forEach((file, i) => {
   const layout = pageData.attributes.layout || 'index';
   const layoutFileName = `${srcPath}/layouts/${layout}.ejs`;
   const layoutData = fse.readFileSync(layoutFileName, 'utf-8');
+  const htmlPath = `${url}.html`;
+
   const completePage = ejs.render(
     layoutData,
     Object.assign({}, templateConfig, {
@@ -72,7 +88,7 @@ files.forEach((file, i) => {
   );
 
   // save the html file
-  fse.writeFileSync(`${destPath}/${fileData.name}.html`, completePage);
+  fse.writeFileSync(htmlPath, completePage);
 });
 
 // copy CNAME file into distPath

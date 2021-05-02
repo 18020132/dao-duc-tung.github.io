@@ -647,9 +647,6 @@ a:hover {
   font-style: normal;
   color: rgba(41, 41, 41, 1);
 
-  margin-top: 2em;
-  margin-bottom: -0.46em;
-  letter-spacing: -0.003em;
   line-height: 32px;
 }
 
@@ -834,6 +831,27 @@ a:hover {
   margin: 1rem 0;
   background-color: #eff0f1;
   border: 0;
+}
+
+.main-content .pre-body {
+  padding-top: 2rem;
+  line-height: 20px;
+}
+
+.main-content .pre-body h1 {
+  margin-bottom: 1rem;
+}
+
+.main-content .pre-body .post-info {
+  color: rgba(117, 117, 117, 1);
+  font-size: 16px;
+}
+
+.main-content .post-body {
+  padding-bottom: 4rem;
+  color: rgba(117, 117, 117, 1);
+  line-height: 20px;
+  font-size: 16px;
 }
 
 .site-footer {

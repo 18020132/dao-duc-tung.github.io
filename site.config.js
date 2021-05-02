@@ -1,5 +1,5 @@
 const gtag = { enable: true, gtagkey: 'UA-116933686-1' };
-const categories = require('./src/data/categories');
+const posts = require('./src/data/posts');
 
 module.exports = {
   site: {
@@ -7,7 +7,7 @@ module.exports = {
     description: 'AI Engineer Skills',
     basePath: process.env.NODE_ENV === 'production' ? '' : '',
     gtag,
-    categories,
+    posts,
   },
   build: {
     outputPath: process.env.NODE_ENV === 'production' ? './docs' : './output',

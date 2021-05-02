@@ -27,6 +27,7 @@
     "glob": "^7.1.6",
     "live-server": "^1.2.1",
     "marked": "^2.0.3",
+    "moment": "^2.29.1",
     "prettier": "^2.2.1"
   }
 }

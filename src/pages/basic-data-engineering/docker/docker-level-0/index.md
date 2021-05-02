@@ -1,4 +1,7 @@
-# Docker Level 0
+---
+title: Docker Level 0
+layout: post
+---
 
 ![Docker Logo][docker-logo]
 
