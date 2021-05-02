@@ -1,6 +1,11 @@
 <section class="page-header">
-  <h1 class="project-name"><%= site.title %></h1>
-  <a href="<%= site.basePath %>/" class="btn">Home</a>
-  <a href="<%= site.basePath %>/categories" class="btn">Categories</a>
-  <a href="<%= site.basePath %>/about" class="btn">About</a>
+  <div class="header-left">
+    <a href="<%= site.basePath %>/">
+      <img class="logo" src="<%= site.basePath %>/assets/images/logo.png" alt="<%= site.title %>" />
+    </a>
+  </div>
+  <div class="header-right">
+    <a href="<%= site.basePath %>/categories" class="btn">Categories</a>
+    <a href="<%= site.basePath %>/about" class="btn">About</a>
+  </div>
 </section>

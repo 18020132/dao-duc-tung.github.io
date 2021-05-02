@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
 // clear destination folder
 fse.emptyDirSync(distPath);
 
-// copy assets folder
+// copy files
 fse.copy(`${srcPath}/assets`, `${distPath}/assets`);
 
 // read pages

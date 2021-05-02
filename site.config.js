@@ -3,7 +3,7 @@ const posts = require('./src/data/posts');
 
 module.exports = {
   site: {
-    title: 'AI Engineer',
+    title: 'AI Engineer - Stay foolish!',
     description: 'AI Engineer Skills',
     basePath: process.env.NODE_ENV === 'production' ? '' : '',
     gtag,

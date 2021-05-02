@@ -556,20 +556,36 @@ a:hover {
   }
 
   .btn + .btn {
-    margin-top: 1rem;
     margin-left: 0;
   }
 }
 
 .page-header {
   color: rgba(0, 0, 0, 0.8);
-  text-align: left;
   border-bottom: solid 1px #eff0f1;
+}
+
+.page-header .header-left {
+  display: inline-block;
+}
+
+.page-header .header-right {
+  float: right;
+}
+
+@media screen and (max-width: 42em) {
+  .page-header .header-right {
+    float: none;
+  }
+}
+
+.page-header .logo {
+  width: 300px;
 }
 
 @media screen and (min-width: 64em) {
   .page-header {
-    padding: 2rem 4rem;
+    padding: 2rem 3rem;
   }
 }
 
@@ -581,7 +597,7 @@ a:hover {
 
 @media screen and (max-width: 42em) {
   .page-header {
-    padding: 1rem 2rem;
+    padding: 2rem;
   }
 }
 
