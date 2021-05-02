@@ -2,29 +2,53 @@
 <html lang="en-US">
   <head>
   <meta charset="UTF-8" />
-  <title>AI Engineer</title>
+  <title>Docker Level 0</title>
   <meta name="description" content="AI Engineer Skills" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon.ico" />
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
     rel="stylesheet"
     type="text/css"
   />
   <link rel="stylesheet" href="/assets/css/styles.css" />
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116933686-1');
+  </script>
+  
 </head>
 
   <body>
     <section class="page-header">
-  <h1 class="project-name">AI Engineer</h1>
-  <a href="/" class="btn">Home</a>
-  <a href="/categories" class="btn">Categories</a>
-  <a href="/about" class="btn">About</a>
+  <div class="header-left">
+    <a href="/">
+      <img class="logo" src="/assets/images/logo.png" alt="AI Engineer - Stay foolish!" />
+    </a>
+  </div>
+  <div class="header-right">
+    <a href="/categories" class="btn">Categories</a>
+    <a href="/about" class="btn">About</a>
+  </div>
 </section>
 
-
-    <section class="main-content"><h1 id="docker-level-0">Docker Level 0</h1>
-<p><img src="/assets/images/basic-data-engineering/docker-level-0/docker-logo-1200x630.png" alt="Docker Logo"></p>
+    <section class="main-content">
+      <div class="pre-body">
+  <h1>Docker Level 0</h1>
+  <div class="post-info">
+    May 02, 2021 · 5 min read
+  </div>
+</div>
+ <p><img src="/assets/images/basic-data-engineering/docker-level-0/docker-logo-1200x630.png" alt="Docker Logo"></p>
 <blockquote>
 <p>Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the <em>blah blah blah</em>. (<a href="https://en.wikipedia.org/wiki/Docker_(software)">Wikipedia</a>)</p>
 </blockquote>
@@ -33,7 +57,8 @@
 <h3 id="why-docker">Why docker?</h3>
 <p>Have you set up a development environment for your deep learning project?</p>
 <p>Have you ever had trouble with TensorFlow when you have to install a compatible version for a project that you clone from somewhere and you already installed another version of TensorFlow on your PC?</p>
-<p>Even if you just want to start a Jupyter notebook, you need to install it on your PC. Or you might use Anaconda to install it. But again, you need to decide which version of Anaconda you want to use, and whether the Anaconda Python get conflict with your native Python is another story. By doing these things, you will possibly mess up your operating system (OS) by installing and uninstalling tools around.</p>
+<p>Even if you just want to start a Jupyter notebook, you need to install it on your PC. Or you might use Anaconda to install it. But again, you need to decide which version of Anaconda you want to use, and whether the Anaconda Python get conflict with your native Python is another story.</p>
+<p>By doing these things, you will possibly mess up your operating system (OS) by installing and uninstalling tools around.</p>
 <p>Docker will let you install whatever the version of the libraries you need into your OS without messing it!</p>
 <h3 id="how">How?</h3>
 <p>Docker splits <strong>an Operating System</strong> into smaller worlds called <strong>containers</strong>.</p>
@@ -43,13 +68,13 @@
 <h3 id="what-is-docker">What is docker?</h3>
 <ul>
 <li>A client program which is a command line interface (CLI).</li>
-<li>A server program that listens for whatever you ask for when you use that <em>docker</em> command.</li>
+<li>A server program that listens for whatever you ask for when you use that CLI.</li>
 <li>A program that builds containers defined by you (later we&#39;ll see how to define them ourselves).</li>
 <li>A service that stores and shares containers on the internet so everyone can find the other&#39;s work.</li>
 <li>A company that makes all of those things.</li>
 </ul>
 <h2 id="installation">Installation</h2>
-<p>You will install docker (or <strong>Docker Engine</strong>) based on your OS. Please refer to the <a href="https://docs.docker.com/engine/install/">docker docs</a> to download.</p>
+<p>Please refer to the <a href="https://docs.docker.com/engine/install/">docker docs</a> to download <strong>Docker Engine</strong> based on your OS.</p>
 <blockquote>
 <p>Docker Engine is an open source containerization technology for building and containerizing your applications. (<a href="https://docs.docker.com/engine/">Docker docs</a>)</p>
 </blockquote>
@@ -59,12 +84,8 @@
 <li>The docker client program.</li>
 <li>APIs which define interfaces that programs use to chit chat with the docker server.</li>
 </ul>
-<h2 id="containers-and-virtual-machines">Containers and Virtual Machines</h2>
-<p>The main difference is:</p>
-<ul>
-<li>Containers virtualize OS to run several programs on a single OS instance.</li>
-<li>Virtual Machines virtualize hardware to run several OS instance.</li>
-</ul>
+<h2 id="containers-vs-virtual-machines">Containers vs. Virtual Machines</h2>
+<p>Containers and virtual machines are different in several ways. The main difference is that containers virtualize OS to run several programs on a single OS instance while virtual machines virtualize hardware to run several OS instance. Below is the summary table:</p>
 <table>
 <thead>
 <tr>
@@ -83,7 +104,9 @@
 </tbody></table>
 <!-- MARKDOWN LINKS & IMAGES -->
 
-</section>
+ <div class="post-body"></div>
+
+    </section>
     <footer class="site-footer">
   <span class="site-footer-credits">AI Engineer @ 2021</span>
 </footer>
