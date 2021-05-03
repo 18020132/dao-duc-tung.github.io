@@ -216,6 +216,7 @@ th {
   padding: 0;
 }
 
+/* .highlight */
 .highlight table td {
   padding: 5px;
 }
@@ -518,6 +519,7 @@ a:hover {
   text-decoration: underline;
 }
 
+/* .btn */
 .btn {
   display: inline-block;
   color: rgba(117, 117, 117, 1);
@@ -560,6 +562,30 @@ a:hover {
   }
 }
 
+/* .logo */
+.logo {
+  width: 300px;
+}
+
+@media screen and (min-width: 64em) {
+  .logo {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .logo {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .logo {
+    width: 200px;
+  }
+}
+
+/* .page-header */
 .page-header {
   color: rgba(0, 0, 0, 0.8);
   border-bottom: solid 1px #eff0f1;
@@ -577,10 +603,6 @@ a:hover {
   .page-header .header-right {
     float: none;
   }
-}
-
-.page-header .logo {
-  width: 300px;
 }
 
 @media screen and (min-width: 64em) {
@@ -601,6 +623,7 @@ a:hover {
   }
 }
 
+/* .project-name */
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
@@ -624,6 +647,7 @@ a:hover {
   }
 }
 
+/* .project-tagline */
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
@@ -648,6 +672,7 @@ a:hover {
   }
 }
 
+/* .main-content */
 .main-content {
   word-wrap: break-word;
 
@@ -870,29 +895,47 @@ a:hover {
   font-size: 16px;
 }
 
+/* .site-footer */
 .site-footer {
-  padding: 32px 0;
   margin-top: auto;
   border-top: solid 1px #eff0f1;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0);
+}
+
+.site-footer .footer-left {
+  display: inline-block;
+}
+
+.site-footer .footer-right {
+  float: right;
+}
+
+@media screen and (max-width: 42em) {
+  .site-footer .footer-right {
+    float: none;
+  }
 }
 
 @media screen and (min-width: 64em) {
-  .site-footer-credits {
-    padding: 2rem 4rem;
+  .site-footer {
+    padding: 2rem 3rem;
   }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .site-footer-credits {
+  .site-footer {
     padding: 2rem 3rem;
   }
 }
 
 @media screen and (max-width: 42em) {
-  .site-footer-credits {
-    padding: 1rem 2rem;
+  .site-footer {
+    padding: 2rem;
   }
+}
+
+.site-footer a:hover {
+  text-decoration: none;
 }
 
 .site-footer-owner {
@@ -901,7 +944,28 @@ a:hover {
 }
 
 .site-footer-credits {
-  font-size: 16px;
+  display: inline-block;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.98);
+}
+
+@media screen and (min-width: 64em) {
+  .site-footer-credits {
+    padding: 0.75rem 0rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .site-footer-credits {
+    padding: 0.6rem 0rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .site-footer-credits {
+    width: 100%;
+    font-size: 0.9rem;
+  }
 }
