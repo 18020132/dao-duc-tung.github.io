@@ -1,5 +1,5 @@
 <div class="post-body">
-  <% var post = helper.funcs.getPost(page.title); %>
+  <% var post = helper.dataHelper.getPost(page.title); %>
 
   <div class="post-body-social">
     <div class="post-body-social-left">
@@ -23,8 +23,8 @@
     </ul>
   </div>
   <div class="post-body-continue">
-    <% var prevPost = helper.funcs.getPrevPost(page.title); var nextPost =
-    helper.funcs.getNextPost(page.title); %>
+    <% var prevPost = helper.dataHelper.getPrevPost(page.title); var nextPost =
+    helper.dataHelper.getNextPost(page.title); %>
     <div class="post-body-continue-left">
       <% if (prevPost !== undefined) { %>
       <a href="<%= site.basePath %>/<%= prevPost.url %>" class="btn">

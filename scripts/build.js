@@ -6,7 +6,7 @@ const frontMatter = require('front-matter');
 const glob = require('glob');
 const moment = require('moment');
 
-const funcs = require('../src/data/index');
+const dataHelper = require('../src/data/index');
 const config = require('../site.config');
 
 const srcPath = './src';
@@ -43,8 +43,8 @@ files.forEach((file, i) => {
   const data = fse.readFileSync(pageFilePath, 'utf-8');
 
   // add data for current page
-  const modifiedDate = fse.statSync(pageFilePath).mtime;
-  const readingTime = funcs.measureReadingTime(data);
+  const modifiedDate = dataHelper.getModifiedDate(pageFilePath);
+  const readingTime = dataHelper.measureReadingTime(data);
   const url = `${destPath}/${fileData.name}`;
 
   // render page
@@ -52,7 +52,7 @@ files.forEach((file, i) => {
   const templateConfig = Object.assign({}, config, {
     page: Object.assign({}, pageData.attributes, { modifiedDate, readingTime }),
     helper: {
-      funcs,
+      dataHelper,
       moment,
     },
   });

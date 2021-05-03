@@ -1,1 +1,13 @@
-AI Engineer Skills
+---
+title: Home
+---
+
+<h2>Latest Posts</h2>
+
+<ul>
+  <% helper.dataHelper.latestPosts.forEach((post) => { %>
+  <li>
+    <a href="<%= site.basePath %>/<%= post.url %>"><%= post.title %></a>
+  </li>
+  <% }) %>
+</ul>

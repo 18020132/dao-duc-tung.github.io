@@ -1,7 +1,12 @@
+const fse = require('fs-extra');
+const moment = require('moment');
 const posts = require('./posts');
+const srcPath = './src';
+
 const CATEGORY_TYPE = 'category';
 const TOPIC_TYPE = 'topic';
 const POST_TYPE = 'post';
+const N_LATEST_POSTS = 5;
 
 const getAllCategories = () => {
   return posts.filter((category) => {
@@ -82,10 +87,42 @@ const getNextPost = (currentPostTitle) => {
   return undefined;
 };
 
+const getAbsolutePathFromRelativePath = (relativePath) => {
+  const filePathMd = `${srcPath}/pages/${relativePath}/index.md`;
+  const filePathEjs = `${srcPath}/pages/${relativePath}/index.ejs`;
+  if (fse.existsSync(filePathMd)) {
+    return filePathMd;
+  } else if (fse.existsSync(filePathEjs)) {
+    return filePathEjs;
+  }
+};
+
+const getModifiedDate = (filePath) => {
+  return fse.statSync(filePath).mtime;
+};
+
+const getLatestPosts = () => {
+  var tempPosts = JSON.parse(JSON.stringify(allPosts));
+  tempPosts.sort((post1, post2) => {
+    var modifiedDate1 = moment(getModifiedDate(getAbsolutePathFromRelativePath(post1.url)));
+    var modifiedDate2 = moment(getModifiedDate(getAbsolutePathFromRelativePath(post2.url)));
+    if (modifiedDate1.isAfter(modifiedDate2)) return -1;
+    else if (modifiedDate2.isAfter(modifiedDate1)) return 1;
+    else return 0;
+  });
+  return tempPosts.slice(0, N_LATEST_POSTS);
+};
+const latestPosts = getLatestPosts();
+
 module.exports = {
+  allCategories,
+  allTopics,
+  allPosts,
+  latestPosts,
   getCategory,
   getTopic,
   getPost,
   getPrevPost,
   getNextPost,
+  getModifiedDate,
 };

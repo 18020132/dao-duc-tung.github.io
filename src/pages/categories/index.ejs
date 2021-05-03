@@ -5,7 +5,7 @@ title: Categories
 <h1>Categories</h1>
 
 <ul>
-  <% site.posts.forEach((category) => { %>
+  <% helper.dataHelper.allCategories.forEach((category) => { %>
   <li>
     <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a> <%
     category.childs.forEach((categoryChild) => { %> <% if (categoryChild.type === 'topic') { %> <% }

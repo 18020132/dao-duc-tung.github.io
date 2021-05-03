@@ -1,4 +1,4 @@
-const postFuncs = require('./postFuncs');
-const miscFuncs = require('./miscFuncs');
+const postHelper = require('./postHelper');
+const miscHelper = require('./miscHelper');
 
-module.exports = Object.assign({}, postFuncs, miscFuncs);
+module.exports = Object.assign({}, postHelper, miscHelper);
