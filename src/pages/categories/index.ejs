@@ -8,13 +8,8 @@ title: Categories
   <% site.posts.forEach((category) => { %>
   <li>
     <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a> <%
-    category.childs.forEach((categoryChild) => { %> <% if (categoryChild.type === 'topic') { %>
-    <ul>
-      <li>
-        <a href="<%= site.basePath %>/<%= categoryChild.url %>"><%= categoryChild.title %></a>
-      </li>
-    </ul>
-    <% } %> <% }) %>
+    category.childs.forEach((categoryChild) => { %> <% if (categoryChild.type === 'topic') { %> <% }
+    %> <% }) %>
   </li>
   <% }) %>
 </ul>

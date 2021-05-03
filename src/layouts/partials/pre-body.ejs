@@ -1,6 +1,7 @@
 <div class="pre-body">
   <h1><%= page.title %></h1>
   <div class="post-info">
-    <%= moment(page.modifiedDate).format('MMM DD, YYYY') %> · <%= page.readingTime %> min read
+    <%= helper.moment(page.modifiedDate).format('MMM DD, YYYY') %> · <%= page.readingTime %> min
+    read
   </div>
 </div>

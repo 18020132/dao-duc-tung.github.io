@@ -5,17 +5,17 @@
     <%- include('./partials/navigation') %>
 
     <section class="main-content">
-      <% site.posts.forEach((category) => { if (category.type === 'category' && category.title ===
-      page.title) { %>
+      <% var category = helper.funcs.getCategory(site.posts, page.title); if (category !==
+      undefined) { %>
       <h1><%= category.title %></h1>
       <ul>
-        <% category.childs.forEach((categoryChild) => { %>
+        <% category.childs.forEach((topicChild) => { %>
         <li>
-          <a href="<%= site.basePath %>/<%= categoryChild.url %>"><%= categoryChild.title %></a>
+          <a href="<%= site.basePath %>/<%= topicChild.url %>"><%= topicChild.title %></a>
         </li>
         <% }) %>
       </ul>
-      <% }}) %>
+      <% } %>
     </section>
     <%- include('./partials/footer') %>
   </body>
