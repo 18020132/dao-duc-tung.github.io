@@ -890,27 +890,57 @@ a:hover {
 
 /* post-body */
 .post-body {
-  padding-bottom: 4rem;
+  padding: 2rem 0rem;
   color: rgba(117, 117, 117, 1);
   line-height: 20px;
   font-size: 16px;
   margin-top: auto;
 }
 
-.post-body .post-body-left {
+.post-body .post-body-tags {
+  display: block;
+  font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-bottom: 40px;
+}
+
+.post-body .post-body-tags ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-body .post-body-tags li {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-right: 8px;
+  list-style-type: none;
+}
+
+.post-body .post-body-tags a {
+  display: block;
+  font-size: 13px;
+  padding: 5px 10px;
+  line-height: 22px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: rgba(117, 117, 117, 1);
+  background-color: rgba(242, 242, 242, 1);
+}
+
+.post-body .post-body-continue-posts .post-body-left {
   display: inline-block;
 }
 
-.post-body .post-body-right {
+.post-body .post-body-continue-posts .post-body-right {
   float: right;
 }
 
-.post-body i {
+.post-body .post-body-continue-posts i {
   vertical-align: bottom;
 }
 
 @media screen and (max-width: 42em) {
-  .post-body {
+  .post-body .post-body-continue-posts {
     display: none;
   }
 }
