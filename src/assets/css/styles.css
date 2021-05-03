@@ -504,7 +504,7 @@ th {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: rgba(41, 41, 41, 1);
@@ -888,11 +888,31 @@ a:hover {
   font-size: 16px;
 }
 
-.main-content .post-body {
+/* post-body */
+.post-body {
   padding-bottom: 4rem;
   color: rgba(117, 117, 117, 1);
   line-height: 20px;
   font-size: 16px;
+  margin-top: auto;
+}
+
+.post-body .post-body-left {
+  display: inline-block;
+}
+
+.post-body .post-body-right {
+  float: right;
+}
+
+.post-body i {
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 42em) {
+  .post-body {
+    display: none;
+  }
 }
 
 /* .site-footer */

@@ -27,7 +27,7 @@ const getAllTopics = () => {
       }
     });
   });
-  return topic;
+  return allTopics;
 };
 const allTopics = getAllTopics();
 

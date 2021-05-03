@@ -5,8 +5,7 @@
     <%- include('./partials/navigation') %>
 
     <section class="main-content">
-      <% var category = helper.funcs.getCategory(site.posts, page.title); if (category !==
-      undefined) { %>
+      <% var category = helper.funcs.getCategory(page.title); if (category !== undefined) { %>
       <h1><%= category.title %></h1>
       <ul>
         <% category.childs.forEach((topicChild) => { %>

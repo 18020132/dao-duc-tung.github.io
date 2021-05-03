@@ -1,1 +1,20 @@
-<div class="post-body"></div>
+<div class="post-body">
+  <% var prevPost = helper.funcs.getPrevPost(page.title); var nextPost =
+  helper.funcs.getNextPost(page.title); %>
+  <div class="post-body-left">
+    <% if (prevPost !== undefined) { %>
+    <a href="<%= site.basePath %>/<%= prevPost.url %>" class="btn">
+      <i class="material-icons"> arrow_back_ios </i>
+      Previous: <%= prevPost.title %></a
+    >
+    <% } %>
+  </div>
+  <div class="post-body-right">
+    <% if (nextPost !== undefined) { %>
+    <a href="<%= site.basePath %>/<%= nextPost.url %>" class="btn">
+      Next: <%= nextPost.title %>
+      <i class="material-icons"> arrow_forward_ios </i>
+    </a>
+    <% } %>
+  </div>
+</div>
