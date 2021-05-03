@@ -1,24 +1,16 @@
 <div class="post-body">
   <% var post = helper.funcs.getPost(page.title); %>
-  <script>
-    function copyUrlToClipboard() {
-      var dummy = document.createElement('input'),
-        text = window.location.host + '<%= site.basePath %>/<%= post.url %>';
 
-      document.body.appendChild(dummy);
-      dummy.value = text;
-      dummy.select();
-      document.execCommand('copy');
-      document.body.removeChild(dummy);
-    }
-  </script>
   <div class="post-body-social">
     <div class="post-body-social-left">
       <a href="#" class="btn"><i class="material-icons"> thumb_up_off_alt </i>1</a>
       <a href="#" class="btn"><i class="material-icons"> speaker_notes </i></a>
     </div>
     <div class="post-body-social-right">
-      <a href="#" onclick="copyUrlToClipboard(); return false;" class="btn"
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '<%= site.basePath %>/<%= post.url %>'); return false;"
+        class="btn"
         ><i class="material-icons"> link </i></a
       >
     </div>

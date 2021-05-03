@@ -7,17 +7,5 @@
   <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
   <link rel="stylesheet" href="<%= site.basePath %>/assets/css/styles.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <% if(site.gtag.enable) { %>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=<%- site.gtag.gtagkey %>"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', '<%- site.gtag.gtagkey %>');
-  </script>
-  <% } %>
+  <%- include('./script') %>
 </head>
