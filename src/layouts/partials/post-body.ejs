@@ -1,16 +1,39 @@
 <div class="post-body">
+  <% var post = helper.funcs.getPost(page.title); %>
+  <script>
+    function copyUrlToClipboard() {
+      var dummy = document.createElement('input'),
+        text = window.location.host + '<%= site.basePath %>/<%= post.url %>';
+
+      document.body.appendChild(dummy);
+      dummy.value = text;
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+    }
+  </script>
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <a href="#" class="btn"><i class="material-icons"> thumb_up_off_alt </i>1</a>
+      <a href="#" class="btn"><i class="material-icons"> speaker_notes </i></a>
+    </div>
+    <div class="post-body-social-right">
+      <a href="#" onclick="copyUrlToClipboard(); return false;" class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
   <div class="post-body-tags">
-    <% var post = helper.funcs.getPost(page.title); %>
     <ul>
       <% post.tags.forEach((tag) => { %>
       <li><a href="#"><%= tag %></a></li>
       <% }); %>
     </ul>
   </div>
-  <div class="post-body-continue-posts">
+  <div class="post-body-continue">
     <% var prevPost = helper.funcs.getPrevPost(page.title); var nextPost =
     helper.funcs.getNextPost(page.title); %>
-    <div class="post-body-left">
+    <div class="post-body-continue-left">
       <% if (prevPost !== undefined) { %>
       <a href="<%= site.basePath %>/<%= prevPost.url %>" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
@@ -18,7 +41,7 @@
       >
       <% } %>
     </div>
-    <div class="post-body-right">
+    <div class="post-body-continue-right">
       <% if (nextPost !== undefined) { %>
       <a href="<%= site.basePath %>/<%= nextPost.url %>" class="btn">
         Next: <%= nextPost.title %>
