@@ -42,45 +42,45 @@ const getAllPosts = () => {
 };
 const allPosts = getAllPosts();
 
-const getCategory = (categoryTitle) => {
+const getCategory = (categoryUrl) => {
   return allCategories.find((category) => {
-    if (category.title === categoryTitle) return true;
+    if (category.url === categoryUrl) return true;
     return false;
   });
 };
 
-const getTopic = (topicTitle) => {
+const getTopic = (topicUrl) => {
   return allTopics.find((topic) => {
-    if (topic.title === topicTitle) return true;
+    if (topic.url === topicUrl) return true;
     return false;
   });
 };
 
-const getPost = (postTitle) => {
+const getPost = (postUrl) => {
   return allPosts.find((post) => {
-    if (post.title === postTitle) return true;
+    if (post.url === postUrl) return true;
     return false;
   });
 };
 
-const getPrevPost = (currentPostTitle) => {
-  if (allPosts.length > 0 && allPosts[0].title === currentPostTitle) {
+const getPrevPost = (currentPostUrl) => {
+  if (allPosts.length > 0 && allPosts[0].url === currentPostUrl) {
     return undefined;
   }
   for (var i = 1; i < allPosts.length; ++i) {
-    if (allPosts[i].title === currentPostTitle) {
+    if (allPosts[i].url === currentPostUrl) {
       return allPosts[i - 1];
     }
   }
   return undefined;
 };
 
-const getNextPost = (currentPostTitle) => {
-  if (allPosts.length > 0 && allPosts[allPosts.length - 1].title === currentPostTitle) {
+const getNextPost = (currentPostUrl) => {
+  if (allPosts.length > 0 && allPosts[allPosts.length - 1].url === currentPostUrl) {
     return undefined;
   }
   for (var i = 0; i < allPosts.length - 1; ++i) {
-    if (allPosts[i].title === currentPostTitle) {
+    if (allPosts[i].url === currentPostUrl) {
       return allPosts[i + 1];
     }
   }

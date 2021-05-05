@@ -10,27 +10,27 @@
         "url": "basic-data-engineering/docker",
         "childs": [
           {
-            "title": "Docker Level 0",
+            "title": "Docker - Introduction",
             "type": "post",
-            "url": "basic-data-engineering/docker/docker-level-0",
+            "url": "basic-data-engineering/docker/introduction",
             "tags": ["docker"]
           },
           {
-            "title": "Docker Level 1",
+            "title": "Docker - Basic Usage",
             "type": "post",
-            "url": "basic-data-engineering/docker/docker-level-1",
+            "url": "basic-data-engineering/docker/basic-usage",
             "tags": ["docker"]
           },
           {
-            "title": "Docker Level 2",
+            "title": "Dockerfile",
             "type": "post",
-            "url": "basic-data-engineering/docker/docker-level-2",
+            "url": "basic-data-engineering/docker/dockerfile",
             "tags": ["docker"]
           },
           {
-            "title": "Docker Level 3",
+            "title": "Docker - Behind the scene",
             "type": "post",
-            "url": "basic-data-engineering/docker/docker-level-3",
+            "url": "basic-data-engineering/docker/behind-the-scene",
             "tags": ["docker"]
           }
         ]
