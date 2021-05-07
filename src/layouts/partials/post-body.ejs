@@ -3,7 +3,13 @@
 
   <div class="post-body-social">
     <div class="post-body-social-left">
-      <a href="#" class="btn"><i class="material-icons"> 👏 </i>1</a>
+      <div class="post-body-tags">
+        <ul>
+          <% post.tags.forEach((tag) => { %>
+          <li><a href="#"><%= tag %></a></li>
+          <% }); %>
+        </ul>
+      </div>
     </div>
     <div class="post-body-social-right">
       <a
@@ -13,13 +19,6 @@
         ><i class="material-icons"> link </i></a
       >
     </div>
-  </div>
-  <div class="post-body-tags">
-    <ul>
-      <% post.tags.forEach((tag) => { %>
-      <li><a href="#"><%= tag %></a></li>
-      <% }); %>
-    </ul>
   </div>
   <div class="post-body-continue">
     <% var prevPost = helper.dataHelper.getPrevPost(page.url); var nextPost =
