@@ -591,36 +591,49 @@ a:hover {
   border-bottom: solid 1px #eff0f1;
 }
 
-.page-header .header-left {
+.page-header .page-header-left {
   display: inline-block;
 }
 
-.page-header .header-right {
+.page-header .page-header-right {
   float: right;
-}
-
-@media screen and (max-width: 42em) {
-  .page-header .header-right {
-    float: none;
-  }
 }
 
 @media screen and (min-width: 64em) {
   .page-header {
     padding: 2rem 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-header .page-header-right {
+    max-width: 20em;
   }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .page-header {
     padding: 2rem 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .page-header .page-header-right {
+    max-width: 16em;
   }
 }
 
 @media screen and (max-width: 42em) {
   .page-header {
     padding: 2rem;
+    padding-bottom: 1rem;
   }
+
+  .page-header .page-header-right {
+    display: none;
+  }
+}
+
+.page-header .page-header-menu {
+  padding-top: 1rem;
 }
 
 /* .project-name */
