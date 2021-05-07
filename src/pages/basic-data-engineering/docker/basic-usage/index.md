@@ -1,9 +1,7 @@
 ---
-title: Docker Level 1
+url: basic-data-engineering/docker/basic-usage
 layout: post
 ---
-
-# Docker Level 1
 
 ## Basic Usage
 

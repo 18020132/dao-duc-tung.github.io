@@ -1,1 +1,51 @@
-<div class="post-body"></div>
+<div class="post-body">
+  <% var post = helper.dataHelper.getPost(page.url); %>
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          <% post.tags.forEach((tag) => { %>
+          <li><a href="#"><%= tag %></a></li>
+          <% }); %>
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '<%= site.basePath %>/<%= post.url %>'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    <% var prevPost = helper.dataHelper.getPrevPost(page.url); var nextPost =
+    helper.dataHelper.getNextPost(page.url); %>
+    <div class="post-body-continue-left">
+      <% if (prevPost !== undefined) { %>
+      <a href="<%= site.basePath %>/<%= prevPost.url %>" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous: <%= prevPost.title %></a
+      >
+      <% } %>
+    </div>
+    <div class="post-body-continue-right">
+      <% if (nextPost !== undefined) { %>
+      <a href="<%= site.basePath %>/<%= nextPost.url %>" class="btn">
+        Next: <%= nextPost.title %>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      <% } %>
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="<%= post.url %>"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>

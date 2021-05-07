@@ -1,9 +1,7 @@
 ---
-title: Docker Level 2
+url: basic-data-engineering/docker/dockerfile
 layout: post
 ---
-
-# Docker Level 2
 
 ## Building docker images
 

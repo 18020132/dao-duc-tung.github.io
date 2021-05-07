@@ -4,24 +4,8 @@
   <meta name="description" content="<%= site.description %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#157878" />
-  <link rel="shortcut icon" href="/assets/images/favicon.ico" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:400,700"
-    rel="stylesheet"
-    type="text/css"
-  />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
   <link rel="stylesheet" href="<%= site.basePath %>/assets/css/styles.css" />
-  <% if(site.gtag.enable) { %>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=<%- site.gtag.gtagkey %>"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', '<%- site.gtag.gtagkey %>');
-  </script>
-  <% } %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <%- include('./script') %>
 </head>
