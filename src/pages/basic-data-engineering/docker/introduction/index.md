@@ -3,7 +3,7 @@ url: basic-data-engineering/docker/introduction
 layout: post
 ---
 
-![Docker Logo][docker-logo]
+![docker-logo][docker-logo]
 
 > Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the _blah blah blah_. ([Wikipedia](<https://en.wikipedia.org/wiki/Docker_(software)>))
 
@@ -31,7 +31,7 @@ Containers are isolated from one another. A container has everything needed to r
 
 You may have _container A_ running Ubuntu 14.04 and _container B_ running Debian 10 that talks to _container A_ through a virtual network created by you and managed by docker.
 
-![Docker Containers][docker-containers]
+![docker-containers][docker-containers]
 
 ### What is docker?
 
@@ -64,5 +64,5 @@ Containers and virtual machines are different in several ways. The main differen
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[docker-logo]: /assets/images/basic-data-engineering/docker-level-0/docker-logo-1200x630.png
-[docker-containers]: /assets/images/basic-data-engineering/docker-level-0/docker-containers.png
+[docker-logo]: /assets/images/basic-data-engineering/docker/introduction/docker-logo-1200x630.png
+[docker-containers]: /assets/images/basic-data-engineering/docker/introduction/docker-containers.png

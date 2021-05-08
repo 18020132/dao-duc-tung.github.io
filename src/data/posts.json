@@ -13,25 +13,13 @@
             "title": "Docker - Introduction",
             "type": "post",
             "url": "basic-data-engineering/docker/introduction",
-            "tags": ["docker"]
+            "tags": ["docker", "introduction"]
           },
           {
-            "title": "Docker - Basic Usage",
+            "title": "Docker - Image and Container",
             "type": "post",
-            "url": "basic-data-engineering/docker/basic-usage",
-            "tags": ["docker"]
-          },
-          {
-            "title": "Dockerfile",
-            "type": "post",
-            "url": "basic-data-engineering/docker/dockerfile",
-            "tags": ["docker"]
-          },
-          {
-            "title": "Docker - Behind the scene",
-            "type": "post",
-            "url": "basic-data-engineering/docker/behind-the-scene",
-            "tags": ["docker"]
+            "url": "basic-data-engineering/docker/image-and-container",
+            "tags": ["docker", "docker image", "docker container"]
           }
         ]
       }
