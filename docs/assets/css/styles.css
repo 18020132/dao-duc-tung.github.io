@@ -756,7 +756,7 @@ a:hover {
 .main-content code {
   padding: 2px 4px;
   font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #567482;
   background-color: #f3f6fa;
   border-radius: 0.3rem;
@@ -777,7 +777,7 @@ a:hover {
 .main-content pre > code {
   padding: 0;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #567482;
   word-break: normal;
   white-space: pre;
