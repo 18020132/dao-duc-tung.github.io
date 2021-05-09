@@ -3,9 +3,9 @@ url: basic-data-engineering/docker/image-and-container
 layout: post
 ---
 
-In this post, we will see how to start a container and the meaning of `isolated containers`.
+In this post, we will see how to start a container, the meaning of `isolated containers` and how to create an image from a container.
 
-Before we start, you should know how to open a terminal depending on your OS.
+Before we start, you should know how to open a terminal on your OS.
 
 ## Docker Image
 
@@ -79,6 +79,75 @@ Containers are isolated from one another. The files that we create in a containe
 
 To exit the container's terminal, you can either press `Ctrl + D` or typing `exit`.
 
+When you exit the container's terminal, you also `stop` the container. To check all the containers that you run, let's type:
+
+```bash
+docker container ls -a
+```
+
+![docker-container-ls--a][docker-container-ls--a]
+
+Without flag `a`, this command just shows the running containers. This flag will help us to show the stopped containers also.
+
+**Trick**: Another way to list down the containers is using `docker ps -a`.
+
+Now, let's open the container where I created the file `FILE` and interact with its terminal. In my case, it is the stopped container with the ID of `6cf8c7c8d891`. Let's type:
+
+```bash
+docker start -ia 6cf8c7c8d891
+ls
+```
+
+![docker-start--ia-id][docker-start--ia-id]
+
+The flags `ia` help us to open the container terminal and interact with it. Now you can see the file `FILE` is still there because the container is not `died` or deleted yet. It's just stopped :)
+
+**Trick**: A slow way to start the container is using `docker container start`.
+
+## Docker Commit command
+
+Now, let's type:
+
+```bash
+docker commit -m "Add FILE" 6cf8c7c8d891
+```
+
+![docker-commit][docker-commit]
+
+This command takes the container and creates an image from it with a message `Add FILE`. Docker will generate an ID for the image. As you can see in my case the ID is `28956...`.
+
+Let's check all the existing images:
+
+```bash
+docker images
+```
+
+![docker-images][docker-images]
+
+We can see the created image with the ID of `28956...` and it doesn't have a name. Let's give it a name:
+
+```bash
+docker tag 28956bdd0d45 ai-engineer-image
+docker images
+```
+
+![docker-tag][docker-tag]
+
+Now, let's start a container from the `ai-engineer-image`:
+
+```bash
+docker run -it ai-engineer-image bash
+ls
+```
+
+![docker-run--it-ai-engineer-image-bash][docker-run--it-ai-engineer-image-bash]
+
+The container has the file `FILE` as expected!
+
+**Trick**: Another way to commit and tag in one command is using `docker commit <container_id/container_name> image_name`. This should be the command you use daily.
+
+![docker-commit-2][docker-commit-2]
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [docker-run-ubuntu]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run-ubuntu.png
@@ -86,3 +155,10 @@ To exit the container's terminal, you can either press `Ctrl + D` or typing `exi
 [docker-run--it-ubuntu-bash]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash.png
 [touch-file]: /assets/images/basic-data-engineering/docker/image-and-container/touch-file.png
 [docker-run--it-ubuntu-bash-2]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash-2.png
+[docker-container-ls--a]: /assets/images/basic-data-engineering/docker/image-and-container/docker-container-ls--a.png
+[docker-start--ia-id]: /assets/images/basic-data-engineering/docker/image-and-container/docker-start--ia-id.png
+[docker-commit]: /assets/images/basic-data-engineering/docker/image-and-container/docker-commit.png
+[docker-images]: /assets/images/basic-data-engineering/docker/image-and-container/docker-images.png
+[docker-tag]: /assets/images/basic-data-engineering/docker/image-and-container/docker-tag.png
+[docker-run--it-ai-engineer-image-bash]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png
+[docker-commit-2]: /assets/images/basic-data-engineering/docker/image-and-container/docker-commit-2.png
