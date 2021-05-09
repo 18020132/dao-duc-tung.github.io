@@ -63,12 +63,12 @@
   
   <h1>Docker - Image and Container</h1>
   <div class="post-info">
-    May 08, 2021 · 4 min
+    May 09, 2021 · 8 min
     read
   </div>
 </div>
- <p>In this post, we will see how to start a container and the meaning of <code>isolated containers</code>.</p>
-<p>Before we start, you should know how to open a terminal depending on your OS.</p>
+ <p>In this post, we will see how to start a container, the meaning of <code>isolated containers</code> and how to create an image from a container.</p>
+<p>Before we start, you should know how to open a terminal on your OS.</p>
 <h2 id="docker-image">Docker Image</h2>
 <p>In the previous post <strong>Docker Introduction</strong>, we know that:</p>
 <blockquote>
@@ -110,6 +110,42 @@ ls
 <p>We see that the file <code>FILE</code> is in the first running container, but it&#39;s not in the other one. This is the meaning of <code>isolated</code> word.</p>
 <p>Containers are isolated from one another. The files that we create in a container won&#39;t be put into the image where the container comes from. Those created files live and die along with the container.</p>
 <p>To exit the container&#39;s terminal, you can either press <code>Ctrl + D</code> or typing <code>exit</code>.</p>
+<p>When you exit the container&#39;s terminal, you also <code>stop</code> the container. To check all the containers that you run, let&#39;s type:</p>
+<pre><code class="language-bash">docker container ls -a
+</code></pre>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-container-ls--a.png" alt="docker-container-ls--a"></p>
+<p>Without flag <code>a</code>, this command just shows the running containers. This flag will help us to show the stopped containers also.</p>
+<p><strong>Trick</strong>: Another way to list down the containers is using <code>docker ps -a</code>.</p>
+<p>Now, let&#39;s open the container where I created the file <code>FILE</code> and interact with its terminal. In my case, it is the stopped container with the ID of <code>6cf8c7c8d891</code>. Let&#39;s type:</p>
+<pre><code class="language-bash">docker start -ia 6cf8c7c8d891
+ls
+</code></pre>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-start--ia-id.png" alt="docker-start--ia-id"></p>
+<p>The flags <code>ia</code> help us to open the container terminal and interact with it. Now you can see the file <code>FILE</code> is still there because the container is not <code>died</code> or deleted yet. It&#39;s just stopped :)</p>
+<p><strong>Trick</strong>: A slow way to start the container is using <code>docker container start</code>.</p>
+<h2 id="docker-commit-command">Docker Commit command</h2>
+<p>Now, let&#39;s type:</p>
+<pre><code class="language-bash">docker commit -m &quot;Add FILE&quot; 6cf8c7c8d891
+</code></pre>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-commit.png" alt="docker-commit"></p>
+<p>This command takes the container and creates an image from it with a message <code>Add FILE</code>. Docker will generate an ID for the image. As you can see in my case the ID is <code>28956...</code>.</p>
+<p>Let&#39;s check all the existing images:</p>
+<pre><code class="language-bash">docker images
+</code></pre>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-images.png" alt="docker-images"></p>
+<p>We can see the created image with the ID of <code>28956...</code> and it doesn&#39;t have a name. Let&#39;s give it a name:</p>
+<pre><code class="language-bash">docker tag 28956bdd0d45 ai-engineer-image
+docker images
+</code></pre>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-tag.png" alt="docker-tag"></p>
+<p>Now, let&#39;s start a container from the <code>ai-engineer-image</code>:</p>
+<pre><code class="language-bash">docker run -it ai-engineer-image bash
+ls
+</code></pre>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png" alt="docker-run--it-ai-engineer-image-bash"></p>
+<p>The container has the file <code>FILE</code> as expected!</p>
+<p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit &lt;container_id/container_name&gt; image_name</code>. This should be the command you use daily.</p>
+<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
  <div class="post-body">
