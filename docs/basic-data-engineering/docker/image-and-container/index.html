@@ -63,11 +63,12 @@
   
   <h1>Docker - Image and Container</h1>
   <div class="post-info">
-    May 09, 2021 · 8 min
+    May 14, 2021 · 9 min
     read
   </div>
 </div>
- <p>In this post, we will see how to start a container, the meaning of <code>isolated containers</code> and how to create an image from a container.</p>
+ <p><img src="/assets/images/basic-data-engineering/docker/image-and-container/containers.png" alt="containers"></p>
+<p>In this post, we will see how to start a container, the meaning of <code>isolated containers</code> and how to create an image from a container.</p>
 <p>Before we start, you should know how to open a terminal on your OS.</p>
 <h2 id="docker-image">Docker Image</h2>
 <p>In the previous post <strong>Docker Introduction</strong>, we know that:</p>
@@ -122,8 +123,8 @@ ls
 </code></pre>
 <p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-start--ia-id.png" alt="docker-start--ia-id"></p>
 <p>The flags <code>ia</code> help us to open the container terminal and interact with it. Now you can see the file <code>FILE</code> is still there because the container is not <code>died</code> or deleted yet. It&#39;s just stopped :)</p>
-<p><strong>Trick</strong>: A slow way to start the container is using <code>docker container start</code>.</p>
-<h2 id="docker-commit-command">Docker Commit command</h2>
+<p><strong>Trick</strong>: A slow way to start the container is using <code>docker container start &lt;container_id&gt;</code>.</p>
+<h2 id="create-image-from-existing-container">Create image from existing container</h2>
 <p>Now, let&#39;s type:</p>
 <pre><code class="language-bash">docker commit -m &quot;Add FILE&quot; 6cf8c7c8d891
 </code></pre>
@@ -144,8 +145,42 @@ ls
 </code></pre>
 <p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png" alt="docker-run--it-ai-engineer-image-bash"></p>
 <p>The container has the file <code>FILE</code> as expected!</p>
-<p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit &lt;container_id/container_name&gt; image_name</code>. This should be the command you use daily.</p>
+<p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit &lt;container_id&gt; image_name</code>. This should be the command you use daily.</p>
 <p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
+<h2 id="key-notes">Key notes</h2>
+<ul>
+<li>Image commands</li>
+</ul>
+<pre><code class="language-bash"># list images
+docker image ls
+docker images
+</code></pre>
+<ul>
+<li>Container commands</li>
+</ul>
+<pre><code class="language-bash"># list all containers
+docker container ls -a
+docker ps -a
+
+# run new container
+docker run &lt;image_id&gt;
+# run new container with interactive terminal
+docker run -it &lt;image_id&gt; bash
+
+# start stopped container
+docker container start &lt;container_id&gt;
+docker start -ia &lt;container_id&gt;
+</code></pre>
+<ul>
+<li>Commit commands</li>
+</ul>
+<pre><code class="language-bash"># create an image from a container
+docker commit -m &quot;Message&quot; &lt;container_id&gt;
+# tag an image a name
+docker tag &lt;image_id&gt; image_name
+# create an image from a container and give it a name
+docker commit &lt;container_id&gt; image_name
+</code></pre>
 <!-- MARKDOWN LINKS & IMAGES -->
 
  <div class="post-body">
@@ -185,6 +220,11 @@ ls
       
     </div>
     <div class="post-body-continue-right">
+      
+      <a href="/basic-data-engineering/docker/attach-and-detach" class="btn">
+        Next: Docker - Attach and Detach
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
       
     </div>
   </div>
