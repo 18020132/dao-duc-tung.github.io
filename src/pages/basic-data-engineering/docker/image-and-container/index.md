@@ -3,6 +3,8 @@ url: basic-data-engineering/docker/image-and-container
 layout: post
 ---
 
+![containers][containers]
+
 In this post, we will see how to start a container, the meaning of `isolated containers` and how to create an image from a container.
 
 Before we start, you should know how to open a terminal on your OS.
@@ -102,9 +104,9 @@ ls
 
 The flags `ia` help us to open the container terminal and interact with it. Now you can see the file `FILE` is still there because the container is not `died` or deleted yet. It's just stopped :)
 
-**Trick**: A slow way to start the container is using `docker container start`.
+**Trick**: A slow way to start the container is using `docker container start <container_id>`.
 
-## Docker Commit command
+## Create image from existing container
 
 Now, let's type:
 
@@ -144,12 +146,51 @@ ls
 
 The container has the file `FILE` as expected!
 
-**Trick**: Another way to commit and tag in one command is using `docker commit <container_id/container_name> image_name`. This should be the command you use daily.
+**Trick**: Another way to commit and tag in one command is using `docker commit <container_id> image_name`. This should be the command you use daily.
 
 ![docker-commit-2][docker-commit-2]
 
+## Key notes
+
+- Image commands
+
+```bash
+# list images
+docker image ls
+docker images
+```
+
+- Container commands
+
+```bash
+# list all containers
+docker container ls -a
+docker ps -a
+
+# run new container
+docker run <image_id>
+# run new container with interactive terminal
+docker run -it <image_id> bash
+
+# start stopped container
+docker container start <container_id>
+docker start -ia <container_id>
+```
+
+- Commit commands
+
+```bash
+# create an image from a container
+docker commit -m "Message" <container_id>
+# tag an image a name
+docker tag <image_id> image_name
+# create an image from a container and give it a name
+docker commit <container_id> image_name
+```
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
+[containers]: /assets/images/basic-data-engineering/docker/image-and-container/containers.png
 [docker-run-ubuntu]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run-ubuntu.png
 [docker-image-ls]: /assets/images/basic-data-engineering/docker/image-and-container/docker-image-ls.png
 [docker-run--it-ubuntu-bash]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash.png

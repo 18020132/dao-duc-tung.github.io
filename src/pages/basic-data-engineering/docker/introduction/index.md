@@ -5,7 +5,7 @@ layout: post
 
 ![docker-logo][docker-logo]
 
-> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. Because all of the _blah blah blah_. ([Wikipedia](<https://en.wikipedia.org/wiki/Docker_(software)>))
+> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages _blah blah blah_. ([Wikipedia](<https://en.wikipedia.org/wiki/Docker_(software)>))
 
 Let's forget what you have read and start with **AI Engineer**'s introduction.
 
@@ -36,8 +36,8 @@ You may have _container A_ running Ubuntu 14.04 and _container B_ running Debian
 ### What is docker?
 
 - A client program which is a command line interface (CLI).
-- A server program that listens for whatever you ask for when you use that CLI.
-- A program that builds containers defined by you (later we'll see how to define them ourselves).
+- A server program that listens to whatever you ask for when you use that CLI.
+- A program that builds containers defined by you.
 - A service that stores and shares containers on the internet so everyone can find the other's work.
 - A company that makes all of those things.
 
@@ -61,6 +61,17 @@ Containers and virtual machines are different in several ways. The main differen
 | :---------------: | :---------------------: |
 | OS virtualization | Hardware virtualization |
 |     Shared OS     |      Dedicated OS       |
+
+## Key notes
+
+- Docker splits your system into containers. Containers have just enough of the operating system to run your code.
+- Docker is:
+  - A client program (CLI).
+  - A server that listens to the client program.
+  - A program that builds containers.
+  - A service that stores and shares containers.
+  - A company.
+- Containers virtualize OS while virtual machines virtualize hardware.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

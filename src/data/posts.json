@@ -20,6 +20,12 @@
             "type": "post",
             "url": "basic-data-engineering/docker/image-and-container",
             "tags": ["docker", "docker image", "docker container"]
+          },
+          {
+            "title": "Docker - Attach and Detach",
+            "type": "post",
+            "url": "basic-data-engineering/docker/attach-and-detach",
+            "tags": ["docker", "docker attach", "docker detach", "docker run", "docker exec"]
           }
         ]
       }
