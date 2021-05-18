@@ -1,30 +1,30 @@
 [
   {
-    "title": "Basic Data Engineering",
+    "title": "Basic Skills",
     "type": "category",
-    "url": "basic-data-engineering",
+    "url": "basic-skills",
     "childs": [
       {
         "title": "Docker",
         "type": "topic",
-        "url": "basic-data-engineering/docker",
+        "url": "basic-skills/docker",
         "childs": [
           {
             "title": "Docker - Introduction",
             "type": "post",
-            "url": "basic-data-engineering/docker/introduction",
+            "url": "basic-skills/docker/introduction",
             "tags": ["docker", "introduction"]
           },
           {
             "title": "Docker - Image and Container",
             "type": "post",
-            "url": "basic-data-engineering/docker/image-and-container",
+            "url": "basic-skills/docker/image-and-container",
             "tags": ["docker", "docker image", "docker container"]
           },
           {
             "title": "Docker - Attach and Detach",
             "type": "post",
-            "url": "basic-data-engineering/docker/attach-and-detach",
+            "url": "basic-skills/docker/attach-and-detach",
             "tags": ["docker", "docker attach", "docker detach", "docker run", "docker exec"]
           }
         ]

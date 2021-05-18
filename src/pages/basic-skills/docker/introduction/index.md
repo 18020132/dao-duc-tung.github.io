@@ -1,5 +1,5 @@
 ---
-url: basic-data-engineering/docker/introduction
+url: basic-skills/docker/introduction
 layout: post
 ---
 
@@ -75,5 +75,5 @@ Containers and virtual machines are different in several ways. The main differen
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[docker-logo]: /assets/images/basic-data-engineering/docker/introduction/docker-logo-1200x630.png
-[docker-containers]: /assets/images/basic-data-engineering/docker/introduction/docker-containers.png
+[docker-logo]: /assets/images/basic-skills/docker/introduction/docker-logo-1200x630.png
+[docker-containers]: /assets/images/basic-skills/docker/introduction/docker-containers.png

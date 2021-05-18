@@ -7,9 +7,7 @@ title: Categories
 <ul>
   <% helper.dataHelper.allCategories.forEach((category) => { %>
   <li>
-    <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a> <%
-    category.childs.forEach((categoryChild) => { %> <% if (categoryChild.type === 'topic') { %> <% }
-    %> <% }) %>
+    <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a>
   </li>
   <% }) %>
 </ul>

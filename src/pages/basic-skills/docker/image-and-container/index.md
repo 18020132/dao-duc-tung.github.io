@@ -1,5 +1,5 @@
 ---
-url: basic-data-engineering/docker/image-and-container
+url: basic-skills/docker/image-and-container
 layout: post
 ---
 
@@ -190,16 +190,16 @@ docker commit <container_id> image_name
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[containers]: /assets/images/basic-data-engineering/docker/image-and-container/containers.png
-[docker-run-ubuntu]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run-ubuntu.png
-[docker-image-ls]: /assets/images/basic-data-engineering/docker/image-and-container/docker-image-ls.png
-[docker-run--it-ubuntu-bash]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash.png
-[touch-file]: /assets/images/basic-data-engineering/docker/image-and-container/touch-file.png
-[docker-run--it-ubuntu-bash-2]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash-2.png
-[docker-container-ls--a]: /assets/images/basic-data-engineering/docker/image-and-container/docker-container-ls--a.png
-[docker-start--ia-id]: /assets/images/basic-data-engineering/docker/image-and-container/docker-start--ia-id.png
-[docker-commit]: /assets/images/basic-data-engineering/docker/image-and-container/docker-commit.png
-[docker-images]: /assets/images/basic-data-engineering/docker/image-and-container/docker-images.png
-[docker-tag]: /assets/images/basic-data-engineering/docker/image-and-container/docker-tag.png
-[docker-run--it-ai-engineer-image-bash]: /assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png
-[docker-commit-2]: /assets/images/basic-data-engineering/docker/image-and-container/docker-commit-2.png
+[containers]: /assets/images/basic-skills/docker/image-and-container/containers.png
+[docker-run-ubuntu]: /assets/images/basic-skills/docker/image-and-container/docker-run-ubuntu.png
+[docker-image-ls]: /assets/images/basic-skills/docker/image-and-container/docker-image-ls.png
+[docker-run--it-ubuntu-bash]: /assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash.png
+[touch-file]: /assets/images/basic-skills/docker/image-and-container/touch-file.png
+[docker-run--it-ubuntu-bash-2]: /assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash-2.png
+[docker-container-ls--a]: /assets/images/basic-skills/docker/image-and-container/docker-container-ls--a.png
+[docker-start--ia-id]: /assets/images/basic-skills/docker/image-and-container/docker-start--ia-id.png
+[docker-commit]: /assets/images/basic-skills/docker/image-and-container/docker-commit.png
+[docker-images]: /assets/images/basic-skills/docker/image-and-container/docker-images.png
+[docker-tag]: /assets/images/basic-skills/docker/image-and-container/docker-tag.png
+[docker-run--it-ai-engineer-image-bash]: /assets/images/basic-skills/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png
+[docker-commit-2]: /assets/images/basic-skills/docker/image-and-container/docker-commit-2.png
