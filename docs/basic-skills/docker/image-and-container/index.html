@@ -63,11 +63,11 @@
   
   <h1>Docker - Image and Container</h1>
   <div class="post-info">
-    May 14, 2021 · 9 min
+    May 18, 2021 · 9 min
     read
   </div>
 </div>
- <p><img src="/assets/images/basic-data-engineering/docker/image-and-container/containers.png" alt="containers"></p>
+ <p><img src="/assets/images/basic-skills/docker/image-and-container/containers.png" alt="containers"></p>
 <p>In this post, we will see how to start a container, the meaning of <code>isolated containers</code> and how to create an image from a container.</p>
 <p>Before we start, you should know how to open a terminal on your OS.</p>
 <h2 id="docker-image">Docker Image</h2>
@@ -80,12 +80,12 @@
 <p>Let&#39;s run a Ubuntu container. Open a terminal and type:</p>
 <pre><code class="language-bash">docker run ubuntu
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-run-ubuntu.png" alt="docker-run-ubuntu"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run-ubuntu.png" alt="docker-run-ubuntu"></p>
 <p>If this is your first time running ubuntu container, docker will automatically download the ubuntu image for you.</p>
 <p>Now, let&#39;s type:</p>
 <pre><code class="language-bash">docker image ls
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-image-ls.png" alt="docker-image-ls"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-image-ls.png" alt="docker-image-ls"></p>
 <p>The command <code>docker image ls</code> lists all the images in your system. We can see that the downloaded ubuntu image is named <code>ubuntu</code>. It has an ID of <code>7e0aa2d69a15</code>, a size of 72.7 MB and a tag of <code>latest</code> which is its version.</p>
 <p>You can refer to an image by either its ID or the combination of its name and its tag. An image doesn&#39;t have to have a name!</p>
 <p><strong>Trick</strong>: Another way to list down the images is typing command <code>docker images</code>.</p>
@@ -97,56 +97,56 @@
 <p>Let&#39;s see what <code>isolated</code> word means. Open terminal 1, and type:</p>
 <pre><code class="language-bash">docker run -it ubuntu:latest bash
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash.png" alt="docker-run--it-ubuntu-bash"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash.png" alt="docker-run--it-ubuntu-bash"></p>
 <p>This command will run a container from image <code>ubuntu</code> with version <code>latest</code>. <code>-it</code> flags help us to interact with the running container via its terminal. <code>bash</code> is the command we want to run inside the container&#39;s terminal. Now we are inside a container&#39;s terminal. Let&#39;s create a file named <code>FILE</code> by typing:</p>
 <pre><code class="language-bash">touch FILE
 ls
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/touch-file.png" alt="touch-FILE"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/touch-file.png" alt="touch-FILE"></p>
 <p>Now, keep terminal 1 opening, open terminal 2, and run another container:</p>
 <pre><code class="language-bash">docker run -it ubuntu:latest bash
 ls
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ubuntu-bash-2.png" alt="docker-run--it-ubuntu-bash-2"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash-2.png" alt="docker-run--it-ubuntu-bash-2"></p>
 <p>We see that the file <code>FILE</code> is in the first running container, but it&#39;s not in the other one. This is the meaning of <code>isolated</code> word.</p>
 <p>Containers are isolated from one another. The files that we create in a container won&#39;t be put into the image where the container comes from. Those created files live and die along with the container.</p>
 <p>To exit the container&#39;s terminal, you can either press <code>Ctrl + D</code> or typing <code>exit</code>.</p>
 <p>When you exit the container&#39;s terminal, you also <code>stop</code> the container. To check all the containers that you run, let&#39;s type:</p>
 <pre><code class="language-bash">docker container ls -a
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-container-ls--a.png" alt="docker-container-ls--a"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-container-ls--a.png" alt="docker-container-ls--a"></p>
 <p>Without flag <code>a</code>, this command just shows the running containers. This flag will help us to show the stopped containers also.</p>
 <p><strong>Trick</strong>: Another way to list down the containers is using <code>docker ps -a</code>.</p>
 <p>Now, let&#39;s open the container where I created the file <code>FILE</code> and interact with its terminal. In my case, it is the stopped container with the ID of <code>6cf8c7c8d891</code>. Let&#39;s type:</p>
 <pre><code class="language-bash">docker start -ia 6cf8c7c8d891
 ls
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-start--ia-id.png" alt="docker-start--ia-id"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-start--ia-id.png" alt="docker-start--ia-id"></p>
 <p>The flags <code>ia</code> help us to open the container terminal and interact with it. Now you can see the file <code>FILE</code> is still there because the container is not <code>died</code> or deleted yet. It&#39;s just stopped :)</p>
 <p><strong>Trick</strong>: A slow way to start the container is using <code>docker container start &lt;container_id&gt;</code>.</p>
 <h2 id="create-image-from-existing-container">Create image from existing container</h2>
 <p>Now, let&#39;s type:</p>
 <pre><code class="language-bash">docker commit -m &quot;Add FILE&quot; 6cf8c7c8d891
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-commit.png" alt="docker-commit"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-commit.png" alt="docker-commit"></p>
 <p>This command takes the container and creates an image from it with a message <code>Add FILE</code>. Docker will generate an ID for the image. As you can see in my case the ID is <code>28956...</code>.</p>
 <p>Let&#39;s check all the existing images:</p>
 <pre><code class="language-bash">docker images
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-images.png" alt="docker-images"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-images.png" alt="docker-images"></p>
 <p>We can see the created image with the ID of <code>28956...</code> and it doesn&#39;t have a name. Let&#39;s give it a name:</p>
 <pre><code class="language-bash">docker tag 28956bdd0d45 ai-engineer-image
 docker images
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-tag.png" alt="docker-tag"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-tag.png" alt="docker-tag"></p>
 <p>Now, let&#39;s start a container from the <code>ai-engineer-image</code>:</p>
 <pre><code class="language-bash">docker run -it ai-engineer-image bash
 ls
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png" alt="docker-run--it-ai-engineer-image-bash"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png" alt="docker-run--it-ai-engineer-image-bash"></p>
 <p>The container has the file <code>FILE</code> as expected!</p>
 <p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit &lt;container_id&gt; image_name</code>. This should be the command you use daily.</p>
-<p><img src="/assets/images/basic-data-engineering/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
 <h2 id="key-notes">Key notes</h2>
 <ul>
 <li>Image commands</li>
@@ -203,7 +203,7 @@ docker commit &lt;container_id&gt; image_name
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/basic-data-engineering/docker/image-and-container'); return false;"
+        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/image-and-container'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -213,7 +213,7 @@ docker commit &lt;container_id&gt; image_name
     
     <div class="post-body-continue-left">
       
-      <a href="/basic-data-engineering/docker/introduction" class="btn">
+      <a href="/basic-skills/docker/introduction" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
         Previous: Docker - Introduction</a
       >
@@ -221,7 +221,7 @@ docker commit &lt;container_id&gt; image_name
     </div>
     <div class="post-body-continue-right">
       
-      <a href="/basic-data-engineering/docker/attach-and-detach" class="btn">
+      <a href="/basic-skills/docker/attach-and-detach" class="btn">
         Next: Docker - Attach and Detach
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
@@ -232,7 +232,7 @@ docker commit &lt;container_id&gt; image_name
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="basic-data-engineering/docker/image-and-container"
+  issue-term="basic-skills/docker/image-and-container"
   theme="github-light"
   crossorigin="anonymous"
   async

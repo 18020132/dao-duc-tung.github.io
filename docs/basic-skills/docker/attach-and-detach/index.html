@@ -63,11 +63,11 @@
   
   <h1>Docker - Attach and Detach</h1>
   <div class="post-info">
-    May 14, 2021 · 4 min
+    May 18, 2021 · 4 min
     read
   </div>
 </div>
- <p><img src="/assets/images/basic-data-engineering/docker/attach-and-detach/attach-detach.png" alt="attach-detach"></p>
+ <p><img src="/assets/images/basic-skills/docker/attach-and-detach/attach-detach.png" alt="attach-detach"></p>
 <p>It is common and necessary if we want to take a look on what is happening inside a container by interacting with it.
 In this post, we will see how to attach and detach from a container.</p>
 <h2 id="detach">Detach</h2>
@@ -86,14 +86,14 @@ Let&#39;s press <code>ctrl + p</code> then <code>ctrl + q</code> to do that!</p>
 <p>Now, check whether it&#39;s still running or not</p>
 <pre><code class="language-bash">docker ps
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/attach-and-detach/docker-ps-1.png" alt="docker-ps-1"></p>
+<p><img src="/assets/images/basic-skills/docker/attach-and-detach/docker-ps-1.png" alt="docker-ps-1"></p>
 <p>Okay, the container is still running! This is called <strong>detaching</strong>.</p>
 <p><strong>Trick</strong>: To run a container and leave it running in the background, we can use flag <code>-d</code> with <code>docker run</code> command.</p>
 <h2 id="attach">Attach</h2>
 <p>To jump into the running container, we type:</p>
 <pre><code class="language-bash">docker attach eb8566be48f8 # container id in my case
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/attach-and-detach/docker-attach.png" alt="docker-attach"></p>
+<p><img src="/assets/images/basic-skills/docker/attach-and-detach/docker-attach.png" alt="docker-attach"></p>
 <p>Okay, good job! We are inside the main process of the container!</p>
 <p>Let&#39;s leave this current terminal there and open a new terminal.
 Now we want to create another process in the running container.
@@ -102,7 +102,7 @@ This is very common when we want to see something inside it or to figure out wha
 touch FILE
 ls
 </code></pre>
-<p><img src="/assets/images/basic-data-engineering/docker/attach-and-detach/docker-exec-1.png" alt="docker-exec-1"></p>
+<p><img src="/assets/images/basic-skills/docker/attach-and-detach/docker-exec-1.png" alt="docker-exec-1"></p>
 <p>We have created a file named <code>FILE</code>.
 This file is also existed in the attaching terminal also because they are pointing at the same container.</p>
 <p>If we exit the process in the 2nd terminal where we use <code>exec</code> command to jump into the container,
@@ -156,7 +156,7 @@ docker exec -d container_id top -b
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/basic-data-engineering/docker/attach-and-detach'); return false;"
+        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/attach-and-detach'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -166,7 +166,7 @@ docker exec -d container_id top -b
     
     <div class="post-body-continue-left">
       
-      <a href="/basic-data-engineering/docker/image-and-container" class="btn">
+      <a href="/basic-skills/docker/image-and-container" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
         Previous: Docker - Image and Container</a
       >
@@ -180,7 +180,7 @@ docker exec -d container_id top -b
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="basic-data-engineering/docker/attach-and-detach"
+  issue-term="basic-skills/docker/attach-and-detach"
   theme="github-light"
   crossorigin="anonymous"
   async
