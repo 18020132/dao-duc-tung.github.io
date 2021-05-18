@@ -104,7 +104,17 @@ ls
 
 The flags `ia` help us to open the container terminal and interact with it. Now you can see the file `FILE` is still there because the container is not `died` or deleted yet. It's just stopped :)
 
-**Trick**: A slow way to start the container is using `docker container start <container_id>`.
+**Trick**: A slow way to start the container is using `docker container start container_id`.
+
+## Kill and remove container
+
+When you kill a container, you also `stop` the container and it goes to the stopped state.
+When you finish your work with the container which is in the stopped state, you remove it.
+
+```bash
+docker kill container_id
+docker rm container_id
+```
 
 ## Create image from existing container
 
@@ -146,7 +156,7 @@ ls
 
 The container has the file `FILE` as expected!
 
-**Trick**: Another way to commit and tag in one command is using `docker commit <container_id> image_name`. This should be the command you use daily.
+**Trick**: Another way to commit and tag in one command is using `docker commit container_id image_name`. This should be the command you use daily.
 
 ![docker-commit-2][docker-commit-2]
 
@@ -168,24 +178,30 @@ docker container ls -a
 docker ps -a
 
 # run new container
-docker run <image_id>
+docker run image_id
 # run new container with interactive terminal
-docker run -it <image_id> bash
+docker run -it image_id bash
 
 # start stopped container
-docker container start <container_id>
-docker start -ia <container_id>
+docker container start container_id
+docker start -ia container_id
+
+# kill container
+docker kill container_id
+
+# remove container
+docker rm container_id
 ```
 
 - Commit commands
 
 ```bash
 # create an image from a container
-docker commit -m "Message" <container_id>
+docker commit -m "Message" container_id
 # tag an image a name
-docker tag <image_id> image_name
+docker tag image_id image_name
 # create an image from a container and give it a name
-docker commit <container_id> image_name
+docker commit container_id image_name
 ```
 
 <!-- MARKDOWN LINKS & IMAGES -->
