@@ -123,7 +123,13 @@ ls
 </code></pre>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-start--ia-id.png" alt="docker-start--ia-id"></p>
 <p>The flags <code>ia</code> help us to open the container terminal and interact with it. Now you can see the file <code>FILE</code> is still there because the container is not <code>died</code> or deleted yet. It&#39;s just stopped :)</p>
-<p><strong>Trick</strong>: A slow way to start the container is using <code>docker container start &lt;container_id&gt;</code>.</p>
+<p><strong>Trick</strong>: A slow way to start the container is using <code>docker container start container_id</code>.</p>
+<h2 id="kill-and-remove-container">Kill and remove container</h2>
+<p>When you kill a container, you also <code>stop</code> the container and it goes to the stopped state.
+When you finish your work with the container which is in the stopped state, you remove it.</p>
+<pre><code class="language-bash">docker kill container_id
+docker rm container_id
+</code></pre>
 <h2 id="create-image-from-existing-container">Create image from existing container</h2>
 <p>Now, let&#39;s type:</p>
 <pre><code class="language-bash">docker commit -m &quot;Add FILE&quot; 6cf8c7c8d891
@@ -145,7 +151,7 @@ ls
 </code></pre>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png" alt="docker-run--it-ai-engineer-image-bash"></p>
 <p>The container has the file <code>FILE</code> as expected!</p>
-<p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit &lt;container_id&gt; image_name</code>. This should be the command you use daily.</p>
+<p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit container_id image_name</code>. This should be the command you use daily.</p>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
 <h2 id="key-notes">Key notes</h2>
 <ul>
@@ -163,23 +169,29 @@ docker container ls -a
 docker ps -a
 
 # run new container
-docker run &lt;image_id&gt;
+docker run image_id
 # run new container with interactive terminal
-docker run -it &lt;image_id&gt; bash
+docker run -it image_id bash
 
 # start stopped container
-docker container start &lt;container_id&gt;
-docker start -ia &lt;container_id&gt;
+docker container start container_id
+docker start -ia container_id
+
+# kill container
+docker kill container_id
+
+# remove container
+docker rm container_id
 </code></pre>
 <ul>
 <li>Commit commands</li>
 </ul>
 <pre><code class="language-bash"># create an image from a container
-docker commit -m &quot;Message&quot; &lt;container_id&gt;
+docker commit -m &quot;Message&quot; container_id
 # tag an image a name
-docker tag &lt;image_id&gt; image_name
+docker tag image_id image_name
 # create an image from a container and give it a name
-docker commit &lt;container_id&gt; image_name
+docker commit container_id image_name
 </code></pre>
 <!-- MARKDOWN LINKS & IMAGES -->
 
