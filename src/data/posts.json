@@ -26,6 +26,12 @@
             "type": "post",
             "url": "basic-skills/docker/attach-and-detach",
             "tags": ["docker", "docker attach", "docker detach", "docker run", "docker exec"]
+          },
+          {
+            "title": "Docker - Expose & Publish Port",
+            "type": "post",
+            "url": "basic-skills/docker/expose-publish-port",
+            "tags": ["docker", "expose port", "publish port"]
           }
         ]
       }
