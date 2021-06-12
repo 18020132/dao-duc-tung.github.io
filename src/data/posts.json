@@ -28,10 +28,16 @@
             "tags": ["docker", "docker attach", "docker detach", "docker run", "docker exec"]
           },
           {
-            "title": "Docker - Expose & Publish Port",
+            "title": "Docker - Publish Port",
             "type": "post",
-            "url": "basic-skills/docker/expose-publish-port",
-            "tags": ["docker", "expose port", "publish port"]
+            "url": "basic-skills/docker/publish-port",
+            "tags": ["docker", "publish port"]
+          },
+          {
+            "title": "Docker - Container Networking",
+            "type": "post",
+            "url": "basic-skills/docker/container-networking",
+            "tags": ["docker", "container networking"]
           }
         ]
       }

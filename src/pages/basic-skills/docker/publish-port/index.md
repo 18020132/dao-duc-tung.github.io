@@ -1,5 +1,5 @@
 ---
-url: basic-skills/docker/expose-publish-port
+url: basic-skills/docker/publish-port
 layout: post
 ---
 
@@ -11,6 +11,8 @@ Docker makes this convenient by providing a range of networking options for _int
 In the _inter-communication_, Docker provides private networks for linking the containers so that the service in the container is not able to be accessed from outside Docker, but from the other Docker containers.
 
 In the _outer-communication_, the service in the container is available from anywhere, even outside the machine hosting Docker.
+
+This post will describe how to create the _outer-communication_ to chit chat between containers.
 
 ## Publish ports
 
@@ -97,7 +99,7 @@ You can run `docker port server` to check the binding port on your machine.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[containers-communication]: /assets/images/basic-skills/docker/expose-publish-port/containers-communication.png
-[publish-ports-01]: /assets/images/basic-skills/docker/expose-publish-port/publish-ports-01.png
-[publish-ports-02]: /assets/images/basic-skills/docker/expose-publish-port/publish-ports-02.png
-[publish-ports-03]: /assets/images/basic-skills/docker/expose-publish-port/publish-ports-03.png
+[containers-communication]: /assets/images/basic-skills/docker/publish-port/containers-communication.png
+[publish-ports-01]: /assets/images/basic-skills/docker/publish-port/publish-ports-01.png
+[publish-ports-02]: /assets/images/basic-skills/docker/publish-port/publish-ports-02.png
+[publish-ports-03]: /assets/images/basic-skills/docker/publish-port/publish-ports-03.png
