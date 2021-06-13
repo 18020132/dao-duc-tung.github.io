@@ -55,7 +55,7 @@ Let's see what `isolated` word means. Open terminal 1, and type:
 docker run -it ubuntu:latest bash
 ```
 
-![docker-run--it-ubuntu-bash][docker-run--it-ubuntu-bash]
+![docker-run-it-ubuntu-bash][docker-run-it-ubuntu-bash]
 
 This command will run a container from image `ubuntu` with version `latest`. `-it` flags help us to interact with the running container via its terminal. `bash` is the command we want to run inside the container's terminal. Now we are inside a container's terminal. Let's create a file named `FILE` by typing:
 
@@ -73,7 +73,7 @@ docker run -it ubuntu:latest bash
 ls
 ```
 
-![docker-run--it-ubuntu-bash-2][docker-run--it-ubuntu-bash-2]
+![docker-run-it-ubuntu-bash-2][docker-run-it-ubuntu-bash-2]
 
 We see that the file `FILE` is in the first running container, but it's not in the other one. This is the meaning of `isolated` word.
 
@@ -152,7 +152,7 @@ docker run -it ai-engineer-image bash
 ls
 ```
 
-![docker-run--it-ai-engineer-image-bash][docker-run--it-ai-engineer-image-bash]
+![docker-run-it-ai-engineer-image-bash][docker-run-it-ai-engineer-image-bash]
 
 The container has the file `FILE` as expected!
 
@@ -209,13 +209,13 @@ docker commit container_id image_name
 [containers]: /assets/images/basic-skills/docker/image-and-container/containers.png
 [docker-run-ubuntu]: /assets/images/basic-skills/docker/image-and-container/docker-run-ubuntu.png
 [docker-image-ls]: /assets/images/basic-skills/docker/image-and-container/docker-image-ls.png
-[docker-run--it-ubuntu-bash]: /assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash.png
+[docker-run-it-ubuntu-bash]: /assets/images/basic-skills/docker/image-and-container/docker-run-it-ubuntu-bash.png
 [touch-file]: /assets/images/basic-skills/docker/image-and-container/touch-file.png
-[docker-run--it-ubuntu-bash-2]: /assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash-2.png
+[docker-run-it-ubuntu-bash-2]: /assets/images/basic-skills/docker/image-and-container/docker-run-it-ubuntu-bash-2.png
 [docker-container-ls--a]: /assets/images/basic-skills/docker/image-and-container/docker-container-ls--a.png
 [docker-start--ia-id]: /assets/images/basic-skills/docker/image-and-container/docker-start--ia-id.png
 [docker-commit]: /assets/images/basic-skills/docker/image-and-container/docker-commit.png
 [docker-images]: /assets/images/basic-skills/docker/image-and-container/docker-images.png
 [docker-tag]: /assets/images/basic-skills/docker/image-and-container/docker-tag.png
-[docker-run--it-ai-engineer-image-bash]: /assets/images/basic-skills/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png
+[docker-run-it-ai-engineer-image-bash]: /assets/images/basic-skills/docker/image-and-container/docker-run-it-ai-engineer-image-bash.png
 [docker-commit-2]: /assets/images/basic-skills/docker/image-and-container/docker-commit-2.png
