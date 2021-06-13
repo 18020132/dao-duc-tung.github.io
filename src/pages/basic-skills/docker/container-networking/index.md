@@ -3,6 +3,8 @@ url: basic-skills/docker/container-networking
 layout: post
 ---
 
+![thor-ironman][thor-ironman]
+
 In the previous post about publishing ports, we knew that Docker can perform _outer-communication_ to let a container chit chat with another machine or another container inside your machine.
 By doing that way, we publish ports outside the docker internal virtual network and even to the host network. That's why your machine can talk with a docker container.
 
@@ -112,6 +114,7 @@ docker run --rm -it --net earth --name ironman ubuntu:14.04 bash
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
+[thor-ironman]: /assets/images/basic-skills/docker/container-networking/thor-ironman.jpg
 [network-ls]: /assets/images/basic-skills/docker/container-networking/network-ls.png
 [run-thor]: /assets/images/basic-skills/docker/container-networking/run-thor.png
 [create-ironman]: /assets/images/basic-skills/docker/container-networking/create-ironman.jpg
