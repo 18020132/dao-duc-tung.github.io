@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+  <title>AI Engineer - Stay foolish!</title>
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-white-bg-transparent.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    <a href="/categories" class="btn">Categories</a>
+    <a href="/about" class="btn">About</a>
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+  
+  <h1>Docker - Container Networking</h1>
+  <div class="post-info">
+    Jun 13, 2021 · 5 min
+    read
+  </div>
+</div>
+ <p><img src="/assets/images/basic-skills/docker/container-networking/thor-ironman.jpg" alt="thor-ironman"></p>
+<p>In the previous post about publishing ports, we knew that Docker can perform <em>outer-communication</em> to let a container chit chat with another machine or another container inside your machine.
+By doing that way, we publish ports outside the docker internal virtual network and even to the host network. That&#39;s why your machine can talk with a docker container.</p>
+<p>In this post, we will see how to create an <em>inter-communication</em> to control exactly which container will talk with which container.</p>
+<h2 id="default-networks">Default networks</h2>
+<p>Let&#39;s show the available networks by running</p>
+<pre><code class="language-bash">docker network ls
+</code></pre>
+<p><img src="/assets/images/basic-skills/docker/container-networking/network-ls.png" alt="network-ls"></p>
+<p>So we see 3 networks by default which are <code>bridge</code>, <code>host</code>, and <code>none</code>.</p>
+<h3 id="bridge-network">Bridge network</h3>
+<p>In networking concept, a bridge is a Link Layer device that forwards traffic between network segments. It can be a hardware device or software device.</p>
+<p>In docker, a bridge network uses a software bridge. Containers that connect to the same bridge network can communicate. It provides isolation from containers which are not connected to that bridge network.</p>
+<p>Docker also makes sure that containers on different bridge networks cannot communicate directly with each other by automatically installing rules in the host machine.</p>
+<h3 id="host-network">Host network</h3>
+<p>Host network will make the container not isolated from the docker host, meaning the container doesn&#39;t get its own IP address allocated.</p>
+<p>For example, if a container binds to port 12345 and this container use host networking mode, the container&#39;s application is accessible on port 12345 on host&#39;s IP address.</p>
+<h3 id="none-network">None network</h3>
+<p>None network will set the mode no networking for the container.</p>
+<h2 id="create-an-user-defined-network">Create an user-defined network</h2>
+<p>Let&#39;s create a network named <code>earth</code>.</p>
+<pre><code class="language-bash">docker network create earth
+</code></pre>
+<p>Run a container named <code>thor</code>, connect him with the network <code>earth</code> and let him listen on port 12345.</p>
+<pre><code class="language-bash">docker run --rm -it --net earth --name thor ubuntu:14.04 bash
+nc -lp 12345
+</code></pre>
+<p><img src="/assets/images/basic-skills/docker/container-networking/run-thor.png" alt="run-thor"></p>
+<p>Open a new terminal, create a container named <code>ironman</code> and let him connect to <code>thor</code> on port 12345.
+Suddenly, <code>ironman</code> says &quot;jarvis&quot;. Let&#39;s look at <code>thor</code> terminal, he heard it!</p>
+<pre><code class="language-bash">docker run --rm -it --net earth --name ironman ubuntu:14.04 bash
+nc thor 12345
+jarvis
+</code></pre>
+<p><img src="/assets/images/basic-skills/docker/container-networking/create-ironman.jpg" alt="create-ironman"></p>
+<p>From this example, we created an user-defined network, let 2 containers join that network and chit chat with each other.</p>
+<h2 id="connect-a-container-with-a-network">Connect a container with a network</h2>
+<p>Let&#39;s create a new user-defined network named <code>asgard</code> and connect <code>thor</code> container with <code>asgard</code> network.</p>
+<pre><code class="language-bash">docker network create asgard
+docker network connect asgard thor
+</code></pre>
+<p>Now we create a container named <code>loki</code> and ping <code>thor</code>.
+<code>loki</code> will be able to ping <code>thor</code> because both of them use <code>asgard</code> network.
+But <code>ironman</code> cannot ping <code>loki</code> because <code>ironman</code> is not inside <code>asgard</code> network.
+<code>ironman</code> only uses <code>earth</code> network.</p>
+<pre><code class="language-bash">docker run --rm -it --net asgard --name loki ubuntu:14.04 bash
+ping thor # success
+ping ironman # failed
+</code></pre>
+<p><img src="/assets/images/basic-skills/docker/container-networking/create-loki.png" alt="create-loki"></p>
+<h2 id="key-notes">Key notes</h2>
+<pre><code class="language-bash"># list all networks
+docker network ls
+
+# create network
+docker network create network_name
+
+# connect a container with a network
+docker network connect network_name container_id
+
+# inspect a network
+docker network inspect network_name
+docker inspect network_name
+
+# Use --net flag to specify network for a container on creating
+docker run --rm -it --net earth --name ironman ubuntu:14.04 bash
+</code></pre>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+ <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">docker</a></li>
+          
+          <li><a href="#">container networking</a></li>
+          
+          <li><a href="#">docker network</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/container-networking'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/basic-skills/docker/publish-port" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous: Docker - Publish Port</a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="basic-skills/docker/container-networking"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

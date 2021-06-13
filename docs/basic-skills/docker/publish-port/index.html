@@ -61,24 +61,25 @@
     <section class="main-content">
       <div class="pre-body">
   
-  <h1>Docker - Expose &amp; Publish Port</h1>
+  <h1>Docker - Publish Port</h1>
   <div class="post-info">
-    Jun 06, 2021 · 6 min
+    Jun 13, 2021 · 6 min
     read
   </div>
 </div>
- <p><img src="/assets/images/basic-skills/docker/expose-publish-port/containers-communication.png" alt="containers-communication"></p>
+ <p><img src="/assets/images/basic-skills/docker/publish-port/containers-communication.png" alt="containers-communication"></p>
 <p>Docker is commonly used to run services that require network communication like websites.
 Docker makes this convenient by providing a range of networking options for <em>inter-communication</em> and <em>outer-communication</em>.</p>
 <p>In the <em>inter-communication</em>, Docker provides private networks for linking the containers so that the service in the container is not able to be accessed from outside Docker, but from the other Docker containers.</p>
 <p>In the <em>outer-communication</em>, the service in the container is available from anywhere, even outside the machine hosting Docker.</p>
+<p>This post will describe how to create the <em>outer-communication</em> to chit chat between containers.</p>
 <h2 id="publish-ports">Publish ports</h2>
 <p>Let&#39;s create a server and publish some ports on it.</p>
-<pre><code class="language-bash">docker run --rm --it -p 12345:12345 -p 12346:12346 --name server ubuntu:14.04 bash
+<pre><code class="language-bash">docker run --rm -it -p 12345:12345 -p 12346:12346 --name server ubuntu:14.04 bash
 ifconfig # to check IP address
 nc -lp 12345 | nc -lp 12346
 </code></pre>
-<p><img src="/assets/images/basic-skills/docker/expose-publish-port/publish-ports-01.png" alt="publish-ports-01"></p>
+<p><img src="/assets/images/basic-skills/docker/publish-port/publish-ports-01.png" alt="publish-ports-01"></p>
 <p>The syntax <code>-p host_port:container_port</code> binds a container&#39;s port to a host&#39;s port. The command <code>nc -lp 12345 | nc -lp 12346</code> will let our server listen on port <code>12345</code> and pass whatever it receives to port <code>12346</code> (google <code>netcat</code> for more detail).</p>
 <p>From the <code>server</code> terminal that we have just created, we can see that Docker creates an internal network and assigns IP <code>172.17.0.2</code> to our server. We will learn about Docker network in a future post.</p>
 <p>Now, open a new terminal to create client 1 container and connect to server at port <code>12345</code>.</p>
@@ -90,9 +91,9 @@ nc 172.17.0.2 12345
 nc 172.17.0.2 12346
 </code></pre>
 <p>Let&#39;s type a message on client 1 terminal and see the message is printed out in client 2 terminal. Hooray! We have just created a one-way chit chat application using Docker and <code>netcat</code>!</p>
-<p><img src="/assets/images/basic-skills/docker/expose-publish-port/publish-ports-02.png" alt="publish-ports-02"></p>
+<p><img src="/assets/images/basic-skills/docker/publish-port/publish-ports-02.png" alt="publish-ports-02"></p>
 <p>We also can perform this communication by creating 2 clients on local machine (same as above but running on your host instead of running inside a Docker container), or one of them running on local machine whereas the other running on a Docker container. Check the example below.</p>
-<p><img src="/assets/images/basic-skills/docker/expose-publish-port/publish-ports-03.png" alt="publish-ports-03"></p>
+<p><img src="/assets/images/basic-skills/docker/publish-port/publish-ports-03.png" alt="publish-ports-03"></p>
 <h2 id="publish-ports-dynamically">Publish ports dynamically</h2>
 <p>When we need to publish many ports on the host, it&#39;s very common that some of the host&#39;s ports are not available.
 Docker provides a functionality to let us choose the host&#39;s unused ports automatically.</p>
@@ -149,8 +150,6 @@ Docker provides a functionality to let us choose the host&#39;s unused ports aut
           
           <li><a href="#">docker</a></li>
           
-          <li><a href="#">expose port</a></li>
-          
           <li><a href="#">publish port</a></li>
           
         </ul>
@@ -159,7 +158,7 @@ Docker provides a functionality to let us choose the host&#39;s unused ports aut
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/expose-publish-port'); return false;"
+        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/publish-port'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -177,13 +176,18 @@ Docker provides a functionality to let us choose the host&#39;s unused ports aut
     </div>
     <div class="post-body-continue-right">
       
+      <a href="/basic-skills/docker/container-networking" class="btn">
+        Next: Docker - Container Networking
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
     </div>
   </div>
 </div>
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="basic-skills/docker/expose-publish-port"
+  issue-term="basic-skills/docker/publish-port"
   theme="github-light"
   crossorigin="anonymous"
   async

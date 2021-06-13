@@ -63,7 +63,7 @@
   
   <h1>Docker - Image and Container</h1>
   <div class="post-info">
-    May 18, 2021 · 9 min
+    Jun 13, 2021 · 9 min
     read
   </div>
 </div>
@@ -97,7 +97,7 @@
 <p>Let&#39;s see what <code>isolated</code> word means. Open terminal 1, and type:</p>
 <pre><code class="language-bash">docker run -it ubuntu:latest bash
 </code></pre>
-<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash.png" alt="docker-run--it-ubuntu-bash"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run-it-ubuntu-bash.png" alt="docker-run-it-ubuntu-bash"></p>
 <p>This command will run a container from image <code>ubuntu</code> with version <code>latest</code>. <code>-it</code> flags help us to interact with the running container via its terminal. <code>bash</code> is the command we want to run inside the container&#39;s terminal. Now we are inside a container&#39;s terminal. Let&#39;s create a file named <code>FILE</code> by typing:</p>
 <pre><code class="language-bash">touch FILE
 ls
@@ -107,7 +107,7 @@ ls
 <pre><code class="language-bash">docker run -it ubuntu:latest bash
 ls
 </code></pre>
-<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ubuntu-bash-2.png" alt="docker-run--it-ubuntu-bash-2"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run-it-ubuntu-bash-2.png" alt="docker-run-it-ubuntu-bash-2"></p>
 <p>We see that the file <code>FILE</code> is in the first running container, but it&#39;s not in the other one. This is the meaning of <code>isolated</code> word.</p>
 <p>Containers are isolated from one another. The files that we create in a container won&#39;t be put into the image where the container comes from. Those created files live and die along with the container.</p>
 <p>To exit the container&#39;s terminal, you can either press <code>Ctrl + D</code> or typing <code>exit</code>.</p>
@@ -149,7 +149,7 @@ docker images
 <pre><code class="language-bash">docker run -it ai-engineer-image bash
 ls
 </code></pre>
-<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run--it-ai-engineer-image-bash.png" alt="docker-run--it-ai-engineer-image-bash"></p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-run-it-ai-engineer-image-bash.png" alt="docker-run-it-ai-engineer-image-bash"></p>
 <p>The container has the file <code>FILE</code> as expected!</p>
 <p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit container_id image_name</code>. This should be the command you use daily.</p>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
