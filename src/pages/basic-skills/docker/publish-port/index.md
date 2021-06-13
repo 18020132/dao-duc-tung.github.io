@@ -19,7 +19,7 @@ This post will describe how to create the _outer-communication_ to chit chat bet
 Let's create a server and publish some ports on it.
 
 ```bash
-docker run --rm --it -p 12345:12345 -p 12346:12346 --name server ubuntu:14.04 bash
+docker run --rm -it -p 12345:12345 -p 12346:12346 --name server ubuntu:14.04 bash
 ifconfig # to check IP address
 nc -lp 12345 | nc -lp 12346
 ```
