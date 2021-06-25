@@ -38,6 +38,12 @@
             "type": "post",
             "url": "basic-skills/docker/container-networking",
             "tags": ["docker", "container networking", "docker network"]
+          },
+          {
+            "title": "Docker - Volumes",
+            "type": "post",
+            "url": "basic-skills/docker/volumes",
+            "tags": ["docker"]
           }
         ]
       }
