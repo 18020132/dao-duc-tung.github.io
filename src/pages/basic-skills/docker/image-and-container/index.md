@@ -126,7 +126,7 @@ docker commit -m "Add FILE" 6cf8c7c8d891
 
 ![docker-commit][docker-commit]
 
-This command takes the container and creates an image from it with a message `Add FILE`. Docker will generate an ID for the image. As you can see in my case the ID is `28956...`.
+This command takes the container and creates an image from it with a message `Add FILE`. Docker will generate an ID for the image. As you can see in my case the ID is `28956bdd0d45`.
 
 Let's check all the existing images:
 
@@ -136,7 +136,7 @@ docker images
 
 ![docker-images][docker-images]
 
-We can see the created image with the ID of `28956...` and it doesn't have a name. Let's give it a name:
+We can see the created image with the ID of `28956bdd0d45` and it doesn't have a name. Let's give it a name:
 
 ```bash
 docker tag 28956bdd0d45 ai-engineer-image
@@ -160,6 +160,22 @@ The container has the file `FILE` as expected!
 
 ![docker-commit-2][docker-commit-2]
 
+## Note on the size of images
+
+When you look at the size of the images on your machine (use `docker images` to list them), you can misunderstand that those images take a lot of space on your machine. Actually, they are sharing the underlying data. So please don't get scared by the size, they are all just 72.7MB like the image showed below.
+
+![docker-images][docker-images]
+
+## Note on the image name structure
+
+The full image name structure is
+
+```
+server_address:port/organization/image_name:tag
+```
+
+`server_address` can be your machine or a server. `port` is the port number of `server_address`. `tag` is the image tag i.e. `v14.04` or `latest`. Leave out the parts you don't need.
+
 ## Key notes
 
 - Image commands
@@ -168,6 +184,11 @@ The container has the file `FILE` as expected!
 # list images
 docker image ls
 docker images
+# download image ubuntu with tag 14.04
+docker pull ubuntu:14.04
+# remove image
+docker rmi image-name:tag
+docker rmi image-id
 ```
 
 - Container commands
