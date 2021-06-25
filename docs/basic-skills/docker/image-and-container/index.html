@@ -63,7 +63,7 @@
   
   <h1>Docker - Image and Container</h1>
   <div class="post-info">
-    Jun 13, 2021 · 9 min
+    Jun 25, 2021 · 11 min
     read
   </div>
 </div>
@@ -135,12 +135,12 @@ docker rm container_id
 <pre><code class="language-bash">docker commit -m &quot;Add FILE&quot; 6cf8c7c8d891
 </code></pre>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-commit.png" alt="docker-commit"></p>
-<p>This command takes the container and creates an image from it with a message <code>Add FILE</code>. Docker will generate an ID for the image. As you can see in my case the ID is <code>28956...</code>.</p>
+<p>This command takes the container and creates an image from it with a message <code>Add FILE</code>. Docker will generate an ID for the image. As you can see in my case the ID is <code>28956bdd0d45</code>.</p>
 <p>Let&#39;s check all the existing images:</p>
 <pre><code class="language-bash">docker images
 </code></pre>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-images.png" alt="docker-images"></p>
-<p>We can see the created image with the ID of <code>28956...</code> and it doesn&#39;t have a name. Let&#39;s give it a name:</p>
+<p>We can see the created image with the ID of <code>28956bdd0d45</code> and it doesn&#39;t have a name. Let&#39;s give it a name:</p>
 <pre><code class="language-bash">docker tag 28956bdd0d45 ai-engineer-image
 docker images
 </code></pre>
@@ -153,6 +153,14 @@ ls
 <p>The container has the file <code>FILE</code> as expected!</p>
 <p><strong>Trick</strong>: Another way to commit and tag in one command is using <code>docker commit container_id image_name</code>. This should be the command you use daily.</p>
 <p><img src="/assets/images/basic-skills/docker/image-and-container/docker-commit-2.png" alt="docker-commit-2"></p>
+<h2 id="note-on-the-size-of-images">Note on the size of images</h2>
+<p>When you look at the size of the images on your machine (use <code>docker images</code> to list them), you can misunderstand that those images take a lot of space on your machine. Actually, they are sharing the underlying data. So please don&#39;t get scared by the size, they are all just 72.7MB like the image showed below.</p>
+<p><img src="/assets/images/basic-skills/docker/image-and-container/docker-images.png" alt="docker-images"></p>
+<h2 id="note-on-the-image-name-structure">Note on the image name structure</h2>
+<p>The full image name structure is</p>
+<pre><code>server_address:port/organization/image_name:tag
+</code></pre>
+<p><code>server_address</code> can be your machine or a server. <code>port</code> is the port number of <code>server_address</code>. <code>tag</code> is the image tag i.e. <code>v14.04</code> or <code>latest</code>. Leave out the parts you don&#39;t need.</p>
 <h2 id="key-notes">Key notes</h2>
 <ul>
 <li>Image commands</li>
@@ -160,6 +168,11 @@ ls
 <pre><code class="language-bash"># list images
 docker image ls
 docker images
+# download image ubuntu with tag 14.04
+docker pull ubuntu:14.04
+# remove image
+docker rmi image-name:tag
+docker rmi image-id
 </code></pre>
 <ul>
 <li>Container commands</li>
