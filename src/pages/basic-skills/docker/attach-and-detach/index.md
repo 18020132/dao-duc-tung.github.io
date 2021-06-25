@@ -97,7 +97,7 @@ docker exec -d container_id top -b
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[attach-detach]: /assets/images/basic-skills/docker/attach-and-detach/attach-detach.png
+[attach-detach]: /assets/images/basic-skills/docker/attach-and-detach/attach-detach.jpg
 [docker-ps-1]: /assets/images/basic-skills/docker/attach-and-detach/docker-ps-1.png
 [docker-attach]: /assets/images/basic-skills/docker/attach-and-detach/docker-attach.png
 [docker-exec-1]: /assets/images/basic-skills/docker/attach-and-detach/docker-exec-1.png

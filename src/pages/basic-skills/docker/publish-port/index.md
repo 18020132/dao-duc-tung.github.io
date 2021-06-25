@@ -3,7 +3,7 @@ url: basic-skills/docker/publish-port
 layout: post
 ---
 
-![containers-communication][containers-communication]
+![ports][ports]
 
 Docker is commonly used to run services that require network communication like websites.
 Docker makes this convenient by providing a range of networking options for _inter-communication_ and _outer-communication_.
@@ -99,7 +99,7 @@ You can run `docker port server` to check the binding port on your machine.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[containers-communication]: /assets/images/basic-skills/docker/publish-port/containers-communication.png
+[ports]: /assets/images/basic-skills/docker/publish-port/ports.jpg
 [publish-ports-01]: /assets/images/basic-skills/docker/publish-port/publish-ports-01.png
 [publish-ports-02]: /assets/images/basic-skills/docker/publish-port/publish-ports-02.png
 [publish-ports-03]: /assets/images/basic-skills/docker/publish-port/publish-ports-03.png
