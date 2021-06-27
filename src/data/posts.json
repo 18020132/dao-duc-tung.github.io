@@ -43,7 +43,13 @@
             "title": "Docker - Volumes",
             "type": "post",
             "url": "basic-skills/docker/volumes",
-            "tags": ["docker"]
+            "tags": ["docker", "sharing data", "volumes-from"]
+          },
+          {
+            "title": "Docker - Registry",
+            "type": "post",
+            "url": "basic-skills/docker/registry",
+            "tags": ["docker", "docker registry", "docker search", "docker tag", "docker push"]
           }
         ]
       }
