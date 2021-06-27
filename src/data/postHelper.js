@@ -6,7 +6,7 @@ const srcPath = './src';
 const CATEGORY_TYPE = 'category';
 const TOPIC_TYPE = 'topic';
 const POST_TYPE = 'post';
-const N_LATEST_POSTS = 5;
+const N_LATEST_POSTS = 50;
 
 const getAllCategories = () => {
   return posts.filter((category) => {

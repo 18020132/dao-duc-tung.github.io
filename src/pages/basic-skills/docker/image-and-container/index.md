@@ -184,8 +184,10 @@ server_address:port/organization/image_name:tag
 # list images
 docker image ls
 docker images
+
 # download image ubuntu with tag 14.04
 docker pull ubuntu:14.04
+
 # remove image
 docker rmi image-name:tag
 docker rmi image-id
@@ -200,6 +202,7 @@ docker ps -a
 
 # run new container
 docker run image_id
+
 # run new container with interactive terminal
 docker run -it image_id bash
 
@@ -219,10 +222,18 @@ docker rm container_id
 ```bash
 # create an image from a container
 docker commit -m "Message" container_id
-# tag an image a name
-docker tag image_id image_name
+
+# Give an image a name with tag
+docker tag image_id image_name:tag
+
 # create an image from a container and give it a name
 docker commit container_id image_name
+```
+
+- Full image name structure
+
+```
+server_address:port/organization/image_name:tag
 ```
 
 <!-- MARKDOWN LINKS & IMAGES -->
