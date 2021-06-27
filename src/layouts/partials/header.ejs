@@ -1,6 +1,20 @@
 <head>
   <meta charset="UTF-8" />
+
+  <% var category = helper.dataHelper.getCategory(page.url); %>
+  <% var topic = helper.dataHelper.getTopic(page.url); %>
+  <% var post = helper.dataHelper.getPost(page.url); %>
+
+  <% if (category !== undefined) { %>
+  <title><%= category.title %></title>
+  <% } else if (topic !== undefined) { %>
+  <title><%= topic.title %></title>
+  <% } else if (post !== undefined) { %>
+  <title><%= post.title %></title>
+  <% } else { %>
   <title><%= page.title || site.title %></title>
+  <% } %>
+
   <meta name="description" content="<%= site.description %>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#157878" />
