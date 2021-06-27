@@ -2,12 +2,10 @@
 title: About
 ---
 
-My name is Tung.
+I'm an engineer who loves getting hands-on with different parts of an ML system like Project Scoping, Data Management, Model Development, Deployment, Monitoring, Maintenance, and Business Analysis.
 
-I'm a Software Engineer who is trying to become another type of engineer like Machine Learning Engineer or Data Engineer or something like that.
+I also like talking about the intersection of technology, health, life, and musical instruments.
 
-I love coding, musical instruments, and self-learning. Currently, I'm practicing planche.
+I believe that learning is a lifetime journey, and my interests will be the rocket fuel to lead me along the way.
 
-I'm writing this blog for sharing what I learn because famous and wise persons usually do that.
-
-Last but not least, I choose this [aiengineer.net](https://aiengineer.net/) domain because it's cheap.
+If I were the last person on Earth, I would still make my art.
