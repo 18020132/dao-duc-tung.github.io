@@ -2,7 +2,15 @@
 <html lang="en-US">
   <head>
   <meta charset="UTF-8" />
-  <title>AI Engineer - Stay foolish!</title>
+
+  
+  
+  
+
+  
+  <title>Docker - Image and Container</title>
+  
+
   <meta name="description" content="AI Engineer Skills" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#157878" />
@@ -63,7 +71,7 @@
   
   <h1>Docker - Image and Container</h1>
   <div class="post-info">
-    Jun 25, 2021 · 11 min
+    Jun 27, 2021 · 11 min
     read
   </div>
 </div>
@@ -168,8 +176,10 @@ ls
 <pre><code class="language-bash"># list images
 docker image ls
 docker images
+
 # download image ubuntu with tag 14.04
 docker pull ubuntu:14.04
+
 # remove image
 docker rmi image-name:tag
 docker rmi image-id
@@ -183,6 +193,7 @@ docker ps -a
 
 # run new container
 docker run image_id
+
 # run new container with interactive terminal
 docker run -it image_id bash
 
@@ -201,10 +212,17 @@ docker rm container_id
 </ul>
 <pre><code class="language-bash"># create an image from a container
 docker commit -m &quot;Message&quot; container_id
-# tag an image a name
-docker tag image_id image_name
+
+# Give an image a name with tag
+docker tag image_id image_name:tag
+
 # create an image from a container and give it a name
 docker commit container_id image_name
+</code></pre>
+<ul>
+<li>Full image name structure</li>
+</ul>
+<pre><code>server_address:port/organization/image_name:tag
 </code></pre>
 <!-- MARKDOWN LINKS & IMAGES -->
 
