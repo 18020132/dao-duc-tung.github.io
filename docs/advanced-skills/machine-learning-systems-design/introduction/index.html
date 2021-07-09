@@ -8,7 +8,7 @@
   
 
   
-  <title>Docker - Registry</title>
+  <title>MLSD - Introduction</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -74,53 +74,25 @@
     <section class="main-content">
       <div class="pre-body">
   
-  <h1>Docker - Registry</h1>
+  <h1>MLSD - Introduction</h1>
   <div class="post-info">
-    Jun 27, 2021 · 2 min
+    Jul 09, 2021 · 1 min
     read
   </div>
 </div>
- <p><img src="/assets/images/basic-skills/docker/registry/infant-room.jpg" alt="infant-room"></p>
-<p>Today in this post, we will talk about the place from where we usually pull the docker images - <strong>Docker Registry</strong>.</p>
-<p><strong>Docker Registry</strong> is an application that runs on Docker&#39;s server. It stores docker images so you can download them or push your own docker images to your own repository just like GitHub.</p>
-<h2 id="searching">Searching</h2>
-<p>To search for a docker image, you can type:</p>
-<pre><code class="language-bash">docker search ubuntu
-</code></pre>
-<p><img src="/assets/images/basic-skills/docker/registry/cli-search.png" alt="cli-search"></p>
-<p>Alternatively, you can go to <a href="https://hub.docker.com">hub.docker.com</a>. This web version will provide more information about how to use the image, its description, the latest update and all of its tags.</p>
-<p><img src="/assets/images/basic-skills/docker/registry/hub-search.png" alt="hub-search"></p>
-<h2 id="publish-an-image-to-the-world">Publish an image to the world</h2>
-<pre><code class="language-bash"># You need to login first
-docker login
-
-# Give ubuntu image a new name with tag
-docker tag ubuntu:14.04 tungdao17/my-ubuntu:v1.0
-
-# push it to docker hub
-docker push tungdao17/my-ubuntu:v1.0
-</code></pre>
-<h2 id="start-your-own-docker-registry">Start your own docker registry</h2>
-<p>It&#39;s very simple to start your own registry. Refer to <a href="https://docs.docker.com/registry/">https://docs.docker.com/registry/</a> for more details.</p>
-<h2 id="key-notes">Key notes</h2>
+ <p>In this topic, I will share with you the key notes of the <a href="https://stanford-cs329s.github.io/index.html">Machine Learning Systems Design course</a> organized by <strong>Standford University</strong>, and what I experienced in real-world projects.</p>
+<p>The topic will cover key concepts of a ML system as below:</p>
 <ul>
-<li>Some commands</li>
+<li>ML production, ML challenges and ML deployment myths</li>
+<li>ML system goals, ML iterative process, ML adoption</li>
+<li>Data engineering, Batch processing vs. Stream processing, ML pipelines</li>
+<li>Data sampling, data augmentation, feature engineering, data leakage, model selection</li>
+<li>AutoML, model calibration, model evalution, data testing, model testing, pipeline testing</li>
+<li>ML workflow management, data versioning, model versioning</li>
+<li>Model compression, containerized deployment, test in production</li>
+<li>Model training to fulfill fairness, robustness, and interpretability</li>
+<li>Monitoring and maintenence</li>
 </ul>
-<pre><code class="language-bash"># Search for a published image
-docker search image_name
-
-# Give an image a new name with tag
-docker tag image_id your_docker_registry/image_name:tag
-
-# push image to docker hub
-docker push your_docker_registry/image_name:tag
-</code></pre>
-<ul>
-<li>Don&#39;t trust every docker images.</li>
-<li>Clean your local images frequently.</li>
-</ul>
-<!-- MARKDOWN LINKS & IMAGES -->
-
  <div class="post-body">
   
 
@@ -129,15 +101,11 @@ docker push your_docker_registry/image_name:tag
       <div class="post-body-tags">
         <ul>
           
-          <li><a href="#">docker</a></li>
+          <li><a href="#">machine learning systems</a></li>
           
-          <li><a href="#">docker registry</a></li>
+          <li><a href="#">design</a></li>
           
-          <li><a href="#">docker search</a></li>
-          
-          <li><a href="#">docker tag</a></li>
-          
-          <li><a href="#">docker push</a></li>
+          <li><a href="#">introduction</a></li>
           
         </ul>
       </div>
@@ -145,7 +113,7 @@ docker push your_docker_registry/image_name:tag
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/registry'); return false;"
+        onclick="copyToClipboard(window.location.host + '/advanced-skills/machine-learning-systems-design/introduction'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -155,18 +123,13 @@ docker push your_docker_registry/image_name:tag
     
     <div class="post-body-continue-left">
       
-      <a href="/basic-skills/docker/volumes" class="btn">
+      <a href="/basic-skills/docker/registry" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
-        Previous: Docker - Volumes</a
+        Previous: Docker - Registry</a
       >
       
     </div>
     <div class="post-body-continue-right">
-      
-      <a href="/advanced-skills/machine-learning-systems-design/introduction" class="btn">
-        Next: MLSD - Introduction
-        <i class="material-icons"> arrow_forward_ios </i>
-      </a>
       
     </div>
   </div>
@@ -174,7 +137,7 @@ docker push your_docker_registry/image_name:tag
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="basic-skills/docker/registry"
+  issue-term="advanced-skills/machine-learning-systems-design/introduction"
   theme="github-light"
   crossorigin="anonymous"
   async
