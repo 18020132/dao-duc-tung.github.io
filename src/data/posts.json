@@ -70,6 +70,12 @@
             "type": "post",
             "url": "advanced-skills/machine-learning-systems-design/introduction",
             "tags": ["machine learning systems", "design", "introduction"]
+          },
+          {
+            "title": "MLSD - Research vs. Production",
+            "type": "post",
+            "url": "advanced-skills/machine-learning-systems-design/research-vs-production",
+            "tags": ["machine learning systems", "research", "production", "compare"]
           }
         ]
       }

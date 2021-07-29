@@ -3,6 +3,8 @@ url: advanced-skills/machine-learning-systems-design/introduction
 layout: post
 ---
 
+![system][system]
+
 In this topic, I will share with you the key notes of the [Machine Learning Systems Design course](https://stanford-cs329s.github.io/index.html) organized by **Standford University**, and what I experienced in real-world projects.
 
 The topic will cover key concepts of a ML system as below:
@@ -16,3 +18,7 @@ The topic will cover key concepts of a ML system as below:
 - Model compression, containerized deployment, test in production
 - Model training to fulfill fairness, robustness, and interpretability
 - Monitoring and maintenence
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[system]: /assets/images/advanced-skills/machine-learning-systems-design/introduction/system.jpeg
