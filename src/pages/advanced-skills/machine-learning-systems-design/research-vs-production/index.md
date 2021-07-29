@@ -64,7 +64,7 @@ You might be a victim of biased ML algorithms. Your resume might be ranked very 
 
 > ML algorithms don't predict the future, but encode the past, perpetuating the biases in the data and more.
 
-The minority groups would be harm badly because the wrong prediction has minor consequences on the model's overall performance.
+The minority groups would be harm badly because the wrong predictions have minor consequences on the model's overall performance.
 
 ## Interpretability
 
