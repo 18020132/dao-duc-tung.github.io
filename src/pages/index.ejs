@@ -5,9 +5,16 @@ title: AI Engineer
 <h2>Latest Posts</h2>
 
 <ul>
-  <% helper.dataHelper.latestPosts.forEach((post) => { %>
-  <li>
-    <a href="<%= site.basePath %>/<%= post.url %>"><%= post.title %></a>
-  </li>
+  <% helper.dataHelper.latestPostsGroupedByCategory.forEach((category) => { %>
+    <li>
+      <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a>
+      <ul>
+        <% category.childs.forEach((post) => { %>
+          <li>
+            <a href="<%= site.basePath %>/<%= post.url %>"><%= post.title %></a>
+          </li>
+        <% }) %>
+      </ul>
+    </li>
   <% }) %>
 </ul>

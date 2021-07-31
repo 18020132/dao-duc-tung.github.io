@@ -8,6 +8,10 @@ const TOPIC_TYPE = 'topic';
 const POST_TYPE = 'post';
 const N_LATEST_POSTS = 50;
 
+const deepCopy = (object) => {
+  return JSON.parse(JSON.stringify(object));
+}
+
 const getAllCategories = () => {
   return posts.filter((category) => {
     if (category.type === CATEGORY_TYPE) return true;
@@ -101,24 +105,54 @@ const getModifiedDate = (filePath) => {
   return fse.statSync(filePath).mtime;
 };
 
+const sortPostByLatestModifiedDate = (post1, post2) => {
+  var modifiedDate1 = moment(getModifiedDate(getAbsolutePathFromRelativePath(post1.url)));
+  var modifiedDate2 = moment(getModifiedDate(getAbsolutePathFromRelativePath(post2.url)));
+  if (modifiedDate1.isAfter(modifiedDate2)) return -1;
+  else if (modifiedDate2.isAfter(modifiedDate1)) return 1;
+  else return 0;
+};
+
 const getLatestPosts = () => {
-  var tempPosts = JSON.parse(JSON.stringify(allPosts));
-  tempPosts.sort((post1, post2) => {
-    var modifiedDate1 = moment(getModifiedDate(getAbsolutePathFromRelativePath(post1.url)));
-    var modifiedDate2 = moment(getModifiedDate(getAbsolutePathFromRelativePath(post2.url)));
-    if (modifiedDate1.isAfter(modifiedDate2)) return -1;
-    else if (modifiedDate2.isAfter(modifiedDate1)) return 1;
-    else return 0;
-  });
+  var tempPosts = deepCopy(allPosts);
+  tempPosts.sort(sortPostByLatestModifiedDate);
   return tempPosts.slice(0, N_LATEST_POSTS);
 };
 const latestPosts = getLatestPosts();
+
+const getLatestPostsGroupedByCategory = () => {
+  var tempCategories = [];
+  allCategories.forEach((category) => {
+    var allPosts = [];
+    category.childs.forEach((topic) => {
+      topic.childs.forEach((post) => {
+        if (post.type === POST_TYPE) {
+          allPosts.push(post);
+        }
+      });
+    });
+    var tempCategory = deepCopy(category);
+    tempCategory.childs = allPosts;
+    tempCategories.push(tempCategory);
+  });
+
+  const nLatest = Math.floor(N_LATEST_POSTS / allCategories.length);
+  for (var i = 0; i < tempCategories.length; ++i) {
+    var tempPosts = tempCategories[i].childs;
+    tempPosts.sort(sortPostByLatestModifiedDate);
+    tempCategories[i].childs = tempPosts.slice(0, nLatest);
+  }
+  return tempCategories;
+}
+
+var latestPostsGroupedByCategory = getLatestPostsGroupedByCategory();
 
 module.exports = {
   allCategories,
   allTopics,
   allPosts,
   latestPosts,
+  latestPostsGroupedByCategory,
   getCategory,
   getTopic,
   getPost,
