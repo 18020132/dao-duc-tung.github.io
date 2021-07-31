@@ -1,5 +1,12 @@
 [
   {
+    "title": "Thoughts On",
+    "type": "category",
+    "url": "thoughts-on",
+    "childs": [
+    ]
+  },
+  {
     "title": "Basic Skills",
     "type": "category",
     "url": "basic-skills",

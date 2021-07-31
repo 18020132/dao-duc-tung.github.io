@@ -123,17 +123,19 @@ const latestPosts = getLatestPosts();
 const getLatestPostsGroupedByCategory = () => {
   var tempCategories = [];
   allCategories.forEach((category) => {
-    var allPosts = [];
+    var tempAllPosts = [];
     category.childs.forEach((topic) => {
       topic.childs.forEach((post) => {
         if (post.type === POST_TYPE) {
-          allPosts.push(post);
+          tempAllPosts.push(post);
         }
       });
     });
-    var tempCategory = deepCopy(category);
-    tempCategory.childs = allPosts;
-    tempCategories.push(tempCategory);
+    if (tempAllPosts.length > 0) {
+      var tempCategory = deepCopy(category);
+      tempCategory.childs = tempAllPosts;
+      tempCategories.push(tempCategory);
+    }
   });
 
   const nLatest = Math.floor(N_LATEST_POSTS / allCategories.length);
