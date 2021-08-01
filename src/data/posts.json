@@ -20,6 +20,32 @@
     ]
   },
   {
+    "title": "Advanced Skills",
+    "type": "category",
+    "url": "advanced-skills",
+    "childs": [
+      {
+        "title": "Machine Learning Systems Design",
+        "type": "topic",
+        "url": "advanced-skills/machine-learning-systems-design",
+        "childs": [
+          {
+            "title": "MLSD - Introduction",
+            "type": "post",
+            "url": "advanced-skills/machine-learning-systems-design/introduction",
+            "tags": ["machine learning systems", "design", "introduction"]
+          },
+          {
+            "title": "MLSD - Research vs. Production",
+            "type": "post",
+            "url": "advanced-skills/machine-learning-systems-design/research-vs-production",
+            "tags": ["machine learning systems", "research", "production", "compare"]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Basic Skills",
     "type": "category",
     "url": "basic-skills",
@@ -70,32 +96,6 @@
             "type": "post",
             "url": "basic-skills/docker/registry",
             "tags": ["docker", "docker registry", "docker search", "docker tag", "docker push"]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Advanced Skills",
-    "type": "category",
-    "url": "advanced-skills",
-    "childs": [
-      {
-        "title": "Machine Learning Systems Design",
-        "type": "topic",
-        "url": "advanced-skills/machine-learning-systems-design",
-        "childs": [
-          {
-            "title": "MLSD - Introduction",
-            "type": "post",
-            "url": "advanced-skills/machine-learning-systems-design/introduction",
-            "tags": ["machine learning systems", "design", "introduction"]
-          },
-          {
-            "title": "MLSD - Research vs. Production",
-            "type": "post",
-            "url": "advanced-skills/machine-learning-systems-design/research-vs-production",
-            "tags": ["machine learning systems", "research", "production", "compare"]
           }
         ]
       }
