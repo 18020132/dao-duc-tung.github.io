@@ -585,6 +585,17 @@ a:hover {
   }
 }
 
+/* .avatar */
+.avatar {
+  float: right;
+  max-width: 33%;
+  margin: 0 0 1em 2em;
+}
+
+.avatar img {
+  border-radius: 999px;
+}
+
 /* .page-header */
 .page-header {
   color: rgba(0, 0, 0, 0.8);
