@@ -7,6 +7,13 @@
     ]
   },
   {
+    "title": "Projects",
+    "type": "category",
+    "url": "projects",
+    "childs": [
+    ]
+  },
+  {
     "title": "Basic Skills",
     "type": "category",
     "url": "basic-skills",
@@ -86,6 +93,13 @@
           }
         ]
       }
+    ]
+  },
+  {
+    "title": "Finance",
+    "type": "category",
+    "url": "finance",
+    "childs": [
     ]
   }
 ]
