@@ -13,13 +13,6 @@
     ]
   },
   {
-    "title": "Projects",
-    "type": "category",
-    "url": "projects",
-    "childs": [
-    ]
-  },
-  {
     "title": "Advanced Skills",
     "type": "category",
     "url": "advanced-skills",
@@ -105,6 +98,26 @@
     "title": "Finance",
     "type": "category",
     "url": "finance",
+    "childs": [
+      {
+        "title": "Finance Foundations",
+        "type": "topic",
+        "url": "finance/finance-foundations",
+        "childs": [
+          {
+            "title": "Finance Foundations - Introduction",
+            "type": "post",
+            "url": "finance/finance-foundations/introduction",
+            "tags": ["finance", "introduction"]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Projects",
+    "type": "category",
+    "url": "projects",
     "childs": [
     ]
   }
