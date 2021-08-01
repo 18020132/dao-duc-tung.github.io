@@ -95,6 +95,6 @@ if (process.env.NODE_ENV === 'production') {
   if (fse.existsSync(tempCnamePath)) {
     fse.copyFileSync(tempCnamePath, distCnamePath);
     fse.removeSync(tempCnamePath);
-    console.log('Copy CNAME back successful');
+    console.log('Copy CNAME back successfully');
   }
 }

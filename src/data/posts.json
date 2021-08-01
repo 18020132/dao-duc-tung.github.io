@@ -4,6 +4,12 @@
     "type": "category",
     "url": "thoughts-on",
     "childs": [
+      {
+        "title": "The art of asking questions",
+        "type": "post",
+        "url": "thoughts-on/the-art-of-asking-questions",
+        "tags": ["ask question", "art"]
+      }
     ]
   },
   {

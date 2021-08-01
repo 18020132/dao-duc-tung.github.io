@@ -35,10 +35,17 @@ const allTopics = getAllTopics();
 
 const getAllPosts = () => {
   var allPosts = [];
-  allTopics.forEach((topic) => {
-    topic.childs.forEach((post) => {
-      if (post.type === POST_TYPE) {
-        allPosts.push(post);
+  allCategories.forEach((category) => {
+    category.childs.forEach((categoryChild) => {
+      if (categoryChild.type === POST_TYPE) {
+        allPosts.push(categoryChild);
+      }
+      if (categoryChild.type === TOPIC_TYPE) {
+        categoryChild.childs.forEach((categoryChildChild) => {
+          if (categoryChildChild.type === POST_TYPE) {
+            allPosts.push(categoryChildChild);
+          }
+        });
       }
     });
   });
@@ -124,12 +131,17 @@ const getLatestPostsGroupedByCategory = () => {
   var tempCategories = [];
   allCategories.forEach((category) => {
     var tempAllPosts = [];
-    category.childs.forEach((topic) => {
-      topic.childs.forEach((post) => {
-        if (post.type === POST_TYPE) {
-          tempAllPosts.push(post);
-        }
-      });
+    category.childs.forEach((categoryChild) => {
+      if (categoryChild.type === POST_TYPE) {
+        tempAllPosts.push(categoryChild);
+      }
+      else if (categoryChild.type === TOPIC_TYPE) {
+        categoryChild.childs.forEach((categoryChildChild) => {
+          if (categoryChildChild.type === POST_TYPE) {
+            tempAllPosts.push(categoryChildChild);
+          }
+        });
+      }
     });
     if (tempAllPosts.length > 0) {
       var tempCategory = deepCopy(category);
