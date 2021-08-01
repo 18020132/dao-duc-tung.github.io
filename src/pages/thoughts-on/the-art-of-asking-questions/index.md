@@ -13,7 +13,7 @@ _Fortunately_, I'm the youngest engineer in the team, so I have fewer meetings t
 
 Wait a sec, should I use "_Unfortunately_" instead?
 
-Meetings are organized to make people working more efficiently, to work together and to win together, not to let people feel like they are wasting their time.
+Meetings are organized to make people working more efficient, to work together and to win together, not to let people feel like they are wasting their time.
 
 There are definitely some certain disadvantages of meetings. But on the other side, I personally choose to take advantage of them.
 
