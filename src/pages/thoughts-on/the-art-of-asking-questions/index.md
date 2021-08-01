@@ -7,7 +7,7 @@ layout: post
 
 ## Thoughts
 
-Recently, I've moved to a new team, the big team that I've ever worked with. And of course, lots of meetings.
+Recently, I've moved to a new team, the biggest team that I've ever worked with. And of course, lots of meetings.
 
 _Fortunately_, I'm the youngest engineer in the team, so I have fewer meetings than higher-level engineers to do my coding stuff.
 
