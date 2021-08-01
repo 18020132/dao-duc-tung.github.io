@@ -5,9 +5,9 @@ layout: post
 
 ![research][research]
 
-The first ML project that I did happen in 2017. Most of the time, I was just reading papers and trying to understand every single line of it.
+My first ML project was in 2017. Most of the time, I was just reading papers and trying to understand every single line of it.
 
-In 2019, I tried to deploy a computer vision model to a website. I realized that the model was too big and the time from receiving a query to returning the result was few decades. I mean few seconds.
+In 2019, I tried to deploy a computer vision model to a web-based application. I realized that the model was too big and the time from receiving a query to returning the result was few decades. I mean few seconds.
 
 Besides that problem, there're lots of other problems that I still feel very tough to solve in 2021. Below are five major problems that show the differences between ML systems in research and in production.
 

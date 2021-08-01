@@ -18,7 +18,7 @@ const tempCnamePath = `./CNAME`;
 if (process.env.NODE_ENV === 'production') {
   if (fse.existsSync(distCnamePath)) {
     fse.copyFileSync(distCnamePath, tempCnamePath);
-    console.log('Move CNAME out successful');
+    console.log('Move CNAME out successfully');
   }
 }
 
