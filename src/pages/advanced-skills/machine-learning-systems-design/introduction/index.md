@@ -19,6 +19,8 @@ The topic will cover key concepts of a ML system as below:
 - Model training to fulfill fairness, robustness, and interpretability
 - Monitoring and maintenence
 
+I also summarized this course by highlighting key things. You can check out [This Board](https://whimsical.com/cs-329s-machine-learning-systems-design-note-E7oPi8C6VUU89j8yPJdgzK@2Ux7TurymLxaSgJ7VvRt).
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [system]: /assets/images/advanced-skills/machine-learning-systems-design/introduction/system.jpeg
