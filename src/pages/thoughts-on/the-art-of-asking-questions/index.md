@@ -9,7 +9,7 @@ layout: post
 
 Recently, I've moved to a new team, the big team that I've ever worked with. And of course, lots of meetings.
 
-_Fortunately_, my level in the team is not so high, so I have fewer meetings than higher-level engineers to do my coding stuff.
+_Fortunately_, I'm the youngest engineer in the team, so I have fewer meetings than higher-level engineers to do my coding stuff.
 
 Wait a sec, should I use "_Unfortunately_" instead?
 
