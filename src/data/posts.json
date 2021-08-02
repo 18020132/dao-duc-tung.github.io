@@ -109,6 +109,12 @@
             "type": "post",
             "url": "finance/finance-foundations/introduction",
             "tags": ["finance", "introduction"]
+          },
+          {
+            "title": "Finance Foundations - Definition",
+            "type": "post",
+            "url": "finance/finance-foundations/definition",
+            "tags": ["finance", "definition"]
           }
         ]
       }
