@@ -8,7 +8,7 @@
   
 
   
-  <title>Docker - Registry</title>
+  <title>Finance Foundations - Definition</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -80,52 +80,43 @@
     <section class="main-content">
       <div class="pre-body">
   
-  <h1>Docker - Registry</h1>
+  <h1>Finance Foundations - Definition</h1>
   <div class="post-info">
-    Jun 27, 2021 · 2 min
+    Aug 02, 2021 · 2 min
     read
   </div>
 </div>
 
-      <p><img src="/assets/images/basic-skills/docker/registry/infant-room.jpg" alt="infant-room"></p>
-<p>Today in this post, we will talk about the place from where we usually pull the docker images - <strong>Docker Registry</strong>.</p>
-<p><strong>Docker Registry</strong> is an application that runs on Docker&#39;s server. It stores docker images so you can download them or push your own docker images to your own repository just like GitHub.</p>
-<h2 id="searching">Searching</h2>
-<p>To search for a docker image, you can type:</p>
-<pre><code class="language-bash">docker search ubuntu
-</code></pre>
-<p><img src="/assets/images/basic-skills/docker/registry/cli-search.png" alt="cli-search"></p>
-<p>Alternatively, you can go to <a href="https://hub.docker.com">hub.docker.com</a>. This web version will provide more information about how to use the image, its description, the latest update and all of its tags.</p>
-<p><img src="/assets/images/basic-skills/docker/registry/hub-search.png" alt="hub-search"></p>
-<h2 id="publish-an-image-to-the-world">Publish an image to the world</h2>
-<pre><code class="language-bash"># You need to login first
-docker login
-
-# Give ubuntu image a new name with tag
-docker tag ubuntu:14.04 tungdao17/my-ubuntu:v1.0
-
-# push it to docker hub
-docker push tungdao17/my-ubuntu:v1.0
-</code></pre>
-<h2 id="start-your-own-docker-registry">Start your own docker registry</h2>
-<p>It&#39;s very simple to start your own registry. Refer to <a href="https://docs.docker.com/registry/">https://docs.docker.com/registry/</a> for more details.</p>
-<h2 id="key-notes">Key notes</h2>
+      <p><img src="/assets/images/finance/finance-foundations/definition/financial-management.jpg" alt="financial-management"></p>
+<p>What is the definition of <strong>finance</strong>?</p>
+<p><strong>Finance</strong> includes 3 activities. Each activity is determined by a question:</p>
 <ul>
-<li>Some commands</li>
+<li>What things do the company needs to buy?</li>
+<li>Where to get the money to buy those things?</li>
+<li>How to manage them efficiently once the company bought them?</li>
 </ul>
-<pre><code class="language-bash"># Search for a published image
-docker search image_name
-
-# Give an image a new name with tag
-docker tag image_id your_docker_registry/image_name:tag
-
-# push image to docker hub
-docker push your_docker_registry/image_name:tag
-</code></pre>
+<h2 id="what-things-do-the-company-needs-to-buy">What things do the company needs to buy?</h2>
+<p>This question is to define the requirements to achieve the company&#39;s goals.
+The requirements can be long-term or short-term.</p>
+<p>In a more simple explanation, the company needs to define what <em>big</em> things and <em>small</em> things they need to buy.</p>
 <ul>
-<li>Don&#39;t trust every docker images.</li>
-<li>Clean your local images frequently.</li>
+<li>Big things (long-term): buy a new building, machines, etc.</li>
+<li>Small things (short-term): buy new products for inventory, hire data scientists for research, expand marketing team, etc.</li>
 </ul>
+<p>Of course, all of those things are not either big or small. It&#39;s just a way of explanation.</p>
+<h2 id="where-to-get-the-money-to-buy-those-things">Where to get the money to buy those things?</h2>
+<p>The company can get the money from different sources such as:</p>
+<ul>
+<li>Shareholders, investors</li>
+<li>Borrow from the bank</li>
+<li>Or get the money from company internal profit</li>
+</ul>
+<p>The board of directors needs to decide where to get the money.
+This is usually what people implicitly understand when they talk about finance.</p>
+<h2 id="how-to-manage-them-efficiently">How to manage them efficiently?</h2>
+<p>This is the problem of management.
+The company needs to <em>schedule</em> and <em>spend company resources</em> like machines
+or staff to <em>manage</em>, <em>control</em>, <em>process</em>, <em>use</em> them efficiently.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 
@@ -137,15 +128,9 @@ docker push your_docker_registry/image_name:tag
       <div class="post-body-tags">
         <ul>
           
-          <li><a href="#">docker</a></li>
+          <li><a href="#">finance</a></li>
           
-          <li><a href="#">docker registry</a></li>
-          
-          <li><a href="#">docker search</a></li>
-          
-          <li><a href="#">docker tag</a></li>
-          
-          <li><a href="#">docker push</a></li>
+          <li><a href="#">definition</a></li>
           
         </ul>
       </div>
@@ -153,7 +138,7 @@ docker push your_docker_registry/image_name:tag
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/basic-skills/docker/registry'); return false;"
+        onclick="copyToClipboard(window.location.host + '/finance/finance-foundations/definition'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -163,18 +148,13 @@ docker push your_docker_registry/image_name:tag
     
     <div class="post-body-continue-left">
       
-      <a href="/basic-skills/docker/volumes" class="btn">
+      <a href="/finance/finance-foundations/introduction" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
-        Previous<span class="post-body-continue-post-title">: Docker - Volumes</span></a
+        Previous<span class="post-body-continue-post-title">: Finance Foundations - Introduction</span></a
       >
       
     </div>
     <div class="post-body-continue-right">
-      
-      <a href="/finance/finance-foundations/introduction" class="btn">
-        Next<span class="post-body-continue-post-title">: Finance Foundations - Introduction</span>
-        <i class="material-icons"> arrow_forward_ios </i>
-      </a>
       
     </div>
   </div>
@@ -182,7 +162,7 @@ docker push your_docker_registry/image_name:tag
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="basic-skills/docker/registry"
+  issue-term="finance/finance-foundations/definition"
   theme="github-light"
   crossorigin="anonymous"
   async
