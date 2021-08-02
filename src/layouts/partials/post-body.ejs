@@ -27,14 +27,14 @@
       <% if (prevPost !== undefined) { %>
       <a href="<%= site.basePath %>/<%= prevPost.url %>" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
-        Previous: <%= prevPost.title %></a
+        Previous<span class="post-body-continue-post-title">: <%= prevPost.title %></span></a
       >
       <% } %>
     </div>
     <div class="post-body-continue-right">
       <% if (nextPost !== undefined) { %>
       <a href="<%= site.basePath %>/<%= nextPost.url %>" class="btn">
-        Next: <%= nextPost.title %>
+        Next<span class="post-body-continue-post-title">: <%= nextPost.title %></span>
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
       <% } %>

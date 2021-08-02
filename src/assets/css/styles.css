@@ -989,7 +989,7 @@ a:hover {
 }
 
 @media screen and (max-width: 42em) {
-  .post-body .post-body-continue {
+  .post-body .post-body-continue .post-body-continue-post-title {
     display: none;
   }
 }
