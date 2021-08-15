@@ -105,15 +105,21 @@
         "url": "investment/finance-foundations",
         "childs": [
           {
-            "title": "Finance Foundations - Introduction",
+            "title": "Finance Introduction",
             "type": "post",
-            "url": "investment/finance-foundations/introduction",
+            "url": "investment/finance-foundations/finance-introduction",
             "tags": ["finance", "introduction"]
           },
           {
-            "title": "Finance Foundations - Definition",
+            "title": "Finance Definition",
             "type": "post",
-            "url": "investment/finance-foundations/definition",
+            "url": "investment/finance-foundations/finance-definition",
+            "tags": ["finance", "definition"]
+          },
+          {
+            "title": "Financial Statements Introduction",
+            "type": "post",
+            "url": "investment/finance-foundations/financial-statements-introduction",
             "tags": ["finance", "definition"]
           }
         ]
