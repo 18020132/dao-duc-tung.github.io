@@ -12,8 +12,6 @@
     <div class="gcse-search"></div>
   </div>
   <div class="page-header-menu">
-    <a href="<%= site.basePath %>/about" class="btn">About</a>
-    <!-- <a href="<%= site.basePath %>/categories" class="btn">Categories</a> -->
     <% helper.dataHelper.allCategories.forEach((category) => { %>
       <a href="<%= site.basePath %>/<%= category.url %>" class="btn"><%= category.title %></a>
     <% }) %>
