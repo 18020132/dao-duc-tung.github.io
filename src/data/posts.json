@@ -95,25 +95,25 @@
     ]
   },
   {
-    "title": "Finance",
+    "title": "Investment",
     "type": "category",
-    "url": "finance",
+    "url": "investment",
     "childs": [
       {
         "title": "Finance Foundations",
         "type": "topic",
-        "url": "finance/finance-foundations",
+        "url": "investment/finance-foundations",
         "childs": [
           {
             "title": "Finance Foundations - Introduction",
             "type": "post",
-            "url": "finance/finance-foundations/introduction",
+            "url": "investment/finance-foundations/introduction",
             "tags": ["finance", "introduction"]
           },
           {
             "title": "Finance Foundations - Definition",
             "type": "post",
-            "url": "finance/finance-foundations/definition",
+            "url": "investment/finance-foundations/definition",
             "tags": ["finance", "definition"]
           }
         ]

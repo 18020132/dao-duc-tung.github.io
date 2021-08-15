@@ -1,5 +1,5 @@
 ---
-url: finance/finance-foundations/introduction
+url: investment/finance-foundations/introduction
 layout: post
 ---
 
@@ -29,4 +29,4 @@ This is finance.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[finance]: /assets/images/finance/finance-foundations/introduction/finance.jpeg
+[finance]: /assets/images/investment/finance-foundations/introduction/finance.jpeg

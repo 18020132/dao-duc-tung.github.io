@@ -1,5 +1,5 @@
 ---
-url: finance/finance-foundations/definition
+url: investment/finance-foundations/definition
 layout: post
 ---
 
@@ -44,4 +44,4 @@ or staff to _manage_, _control_, _process_, _use_ them efficiently.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[financial-management]: /assets/images/finance/finance-foundations/definition/financial-management.jpg
+[financial-management]: /assets/images/investment/finance-foundations/definition/financial-management.jpg
