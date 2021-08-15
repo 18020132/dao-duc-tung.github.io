@@ -65,6 +65,8 @@ About the **entrepreneurs** who create and operate the companies, we have alread
 - Should they lend/invest the money?
 - How to form the portfolio of investments? What things should they invest in to not _put all eggs in one basket_?
 
+> Investors balance available opportunities and provide money that results in the best return.
+
 ### Facilitators
 
 There are different types of facilitators:
@@ -79,7 +81,7 @@ There are different types of facilitators:
 
 Finance gives us tools to look at three main entities which are swimming around in the ocean of economy, to see how they work and interact with each other.
 
-Finance is identifying essential resources, figuring out where to obtain funds, and managing those resources.
+Finance is defining what to purchase, how to get the money to purchase, and how to manage those purchases efficiently.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
