@@ -120,7 +120,13 @@
             "title": "Financial Statements Introduction",
             "type": "post",
             "url": "investment/finance-foundations/financial-statements-introduction",
-            "tags": ["finance", "definition"]
+            "tags": ["finance", "statement", "introduction"]
+          },
+          {
+            "title": "Financial Statements Detail",
+            "type": "post",
+            "url": "investment/finance-foundations/financial-statements-detail",
+            "tags": ["finance", "statement", "detail"]
           }
         ]
       }

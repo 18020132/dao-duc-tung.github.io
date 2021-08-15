@@ -15,7 +15,7 @@ There are three primary financial statements including:
 
 ## Balance sheet
 
-The balance sheet includes information about a company's assets and liabilities at a point in time (e.g. end of the year).
+The balance sheet includes information about a company's assets, obligations, liabilities at a point in time (e.g. end of the year).
 
 The assets might include short-term assets such as new products for inventory, new hiring staff; or long-term assets such as property, plant, and equipment (**PP&E**).
 
