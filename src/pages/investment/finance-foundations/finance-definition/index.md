@@ -25,7 +25,7 @@ In a more simple explanation, the company needs to define what _big_ things and 
 - Big things (long-term): buy a new building, machines, etc.
 - Small things (short-term): buy new products for inventory, hire data scientists for research, expand marketing team, etc.
 
-Of course, all of those things are neither big or small. It's just a way of explanation.
+Of course, all of those things are neither big nor small. It's just a way of explanation.
 
 ### Where to get the money to buy those things?
 

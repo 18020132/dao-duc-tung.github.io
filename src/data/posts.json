@@ -127,6 +127,12 @@
             "type": "post",
             "url": "investment/finance-foundations/financial-statements-detail",
             "tags": ["finance", "statement", "detail"]
+          },
+          {
+            "title": "Financial Ratios",
+            "type": "post",
+            "url": "investment/finance-foundations/financial-ratios",
+            "tags": ["finance", "ratio"]
           }
         ]
       }
