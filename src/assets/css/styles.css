@@ -707,7 +707,6 @@ a:hover {
 
   /* Borrow from medium.com */
   display: block;
-  font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
   color: rgba(41, 41, 41, 1);
 }
@@ -721,7 +720,7 @@ a:hover {
     max-width: 64rem;
     padding: 2rem 10rem;
     margin: 0 auto;
-    font-size: 21px;
+    font-size: 18px;
     line-height: 32px;
   }
 }
@@ -729,7 +728,7 @@ a:hover {
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .main-content {
     padding: 2rem 3rem;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
   }
 }
@@ -737,7 +736,7 @@ a:hover {
 @media screen and (max-width: 42em) {
   .main-content {
     padding: 2rem 2rem;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 28px;
   }
 }
