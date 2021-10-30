@@ -8,7 +8,10 @@
         "title": "The art of asking questions",
         "type": "post",
         "url": "thoughts-on/the-art-of-asking-questions",
-        "tags": ["ask question", "art"]
+        "tags": [
+          "ask question",
+          "art"
+        ]
       }
     ]
   },
@@ -26,13 +29,22 @@
             "title": "MLSD - Introduction",
             "type": "post",
             "url": "advanced-skills/machine-learning-systems-design/introduction",
-            "tags": ["machine learning systems", "design", "introduction"]
+            "tags": [
+              "machine learning systems",
+              "design",
+              "introduction"
+            ]
           },
           {
             "title": "MLSD - Research vs. Production",
             "type": "post",
             "url": "advanced-skills/machine-learning-systems-design/research-vs-production",
-            "tags": ["machine learning systems", "research", "production", "compare"]
+            "tags": [
+              "machine learning systems",
+              "research",
+              "production",
+              "compare"
+            ]
           }
         ]
       }
@@ -52,43 +64,73 @@
             "title": "Docker - Introduction",
             "type": "post",
             "url": "basic-skills/docker/introduction",
-            "tags": ["docker", "introduction"]
+            "tags": [
+              "docker",
+              "introduction"
+            ]
           },
           {
             "title": "Docker - Image and Container",
             "type": "post",
             "url": "basic-skills/docker/image-and-container",
-            "tags": ["docker", "docker image", "docker container"]
+            "tags": [
+              "docker",
+              "docker image",
+              "docker container"
+            ]
           },
           {
             "title": "Docker - Attach and Detach",
             "type": "post",
             "url": "basic-skills/docker/attach-and-detach",
-            "tags": ["docker", "docker attach", "docker detach", "docker run", "docker exec"]
+            "tags": [
+              "docker",
+              "docker attach",
+              "docker detach",
+              "docker run",
+              "docker exec"
+            ]
           },
           {
             "title": "Docker - Publish Port",
             "type": "post",
             "url": "basic-skills/docker/publish-port",
-            "tags": ["docker", "publish port"]
+            "tags": [
+              "docker",
+              "publish port"
+            ]
           },
           {
             "title": "Docker - Container Networking",
             "type": "post",
             "url": "basic-skills/docker/container-networking",
-            "tags": ["docker", "container networking", "docker network"]
+            "tags": [
+              "docker",
+              "container networking",
+              "docker network"
+            ]
           },
           {
             "title": "Docker - Volumes",
             "type": "post",
             "url": "basic-skills/docker/volumes",
-            "tags": ["docker", "sharing data", "volumes-from"]
+            "tags": [
+              "docker",
+              "sharing data",
+              "volumes-from"
+            ]
           },
           {
             "title": "Docker - Registry",
             "type": "post",
             "url": "basic-skills/docker/registry",
-            "tags": ["docker", "docker registry", "docker search", "docker tag", "docker push"]
+            "tags": [
+              "docker",
+              "docker registry",
+              "docker search",
+              "docker tag",
+              "docker push"
+            ]
           }
         ]
       }
@@ -108,31 +150,48 @@
             "title": "Finance Introduction",
             "type": "post",
             "url": "investment/finance-foundations/finance-introduction",
-            "tags": ["finance", "introduction"]
+            "tags": [
+              "finance",
+              "introduction"
+            ]
           },
           {
             "title": "Finance Definition",
             "type": "post",
             "url": "investment/finance-foundations/finance-definition",
-            "tags": ["finance", "definition"]
+            "tags": [
+              "finance",
+              "definition"
+            ]
           },
           {
             "title": "Financial Statements Introduction",
             "type": "post",
             "url": "investment/finance-foundations/financial-statements-introduction",
-            "tags": ["finance", "statement", "introduction"]
+            "tags": [
+              "finance",
+              "statement",
+              "introduction"
+            ]
           },
           {
             "title": "Financial Statements Detail",
             "type": "post",
             "url": "investment/finance-foundations/financial-statements-detail",
-            "tags": ["finance", "statement", "detail"]
+            "tags": [
+              "finance",
+              "statement",
+              "detail"
+            ]
           },
           {
             "title": "Financial Ratios",
             "type": "post",
             "url": "investment/finance-foundations/financial-ratios",
-            "tags": ["finance", "ratio"]
+            "tags": [
+              "finance",
+              "ratio"
+            ]
           }
         ]
       }
@@ -143,6 +202,35 @@
     "type": "category",
     "url": "projects",
     "childs": [
+      {
+        "title": "Learning Vietnamese",
+        "type": "topic",
+        "url": "projects/learning-vietnamese",
+        "childs": [
+          {
+            "title": "How does AI work?",
+            "type": "post",
+            "url": "projects/learning-vietnamese/how-does-ai-work",
+            "tags": [
+              "learning vietnamese",
+              "how",
+              "ai",
+              "work"
+            ]
+          },
+          {
+            "title": "Is AI an existential threat to humanity?",
+            "type": "post",
+            "url": "projects/learning-vietnamese/is-ai-an-existential-threat-to-humanity",
+            "tags": [
+              "learning vietnamese",
+              "ai",
+              "threat",
+              "humanity"
+            ]
+          }
+        ]
+      }
     ]
   }
 ]
