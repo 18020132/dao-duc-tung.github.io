@@ -228,6 +228,17 @@
               "threat",
               "humanity"
             ]
+          },
+          {
+            "title": "Should I teach my toddler Python?",
+            "type": "post",
+            "url": "projects/learning-vietnamese/should-i-teach-my-toddler-python",
+            "tags": [
+              "learning vietnamese",
+              "teach",
+              "toddler",
+              "python"
+            ]
           }
         ]
       }
