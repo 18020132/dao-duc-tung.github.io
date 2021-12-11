@@ -9,7 +9,7 @@ layout: post
 
 After more than 18 years of schooling, on the official graduation day, looking back on the journey, it was short but full of emotions, bewilderment, fear, and infatuated.
 
-During that time, I always believed in "Follow your passion, success will follow you", and "when we have found our passion in life, everything after that will be very easy".
+During that time, I always believed in the 2 quotes which are "Follow your passion, success will follow you", and "When we have found our passion in life, everything after that will be very easy".
 
 But life is not simple. When I graduated from school, the feelings of anxiety and pressure from family and society were heavier than I ever thought. When I realized that my passion couldn't sustain me, I started to fear.
 

@@ -17,7 +17,7 @@ Sometimes, we have to learn to let go of our advantages, relationships, knowledg
 
 There are things that we have to let go before we know if they are really important. Giving up something gives us a chance to reevaluate if it's really necessary for our life. The house, the wardrobe, or the bed, are things that I realize are not as important as I thought. But there are some books, a pen, and a working desk which are more important than those things.
 
-After a few years of leaving Hanoi, I still choose to go back.
+After a few years of leaving Hanoi, I choose to go back.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

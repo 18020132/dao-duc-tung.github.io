@@ -27,13 +27,13 @@ At 27, I have started my third dream job in a world-top-7-in-revenue tech compan
 
 ## Discovery
 
-But the more successful I became, the more scared I became. Fear of losing what I have, fear of becoming arrogant and selfish. I feared failure. But the lack of failure was freaking me out.
+But the more successful I achieved, the more scared I felt. Fear of losing what I have, fear of becoming arrogant and selfish. I feared failure. But the lack of failure was freaking me out.
 
 What do I need to do?
 
 Instead of hiding, I decided to face it. Exposing myself more, dreaming bigger, choosing higher and more risky goals. I am currently willing to sacrifice what I have, to achieve better things. The fear gradually disappears and hope appears.
 
-Anyone at any time has some kind of fear. But instead of avoiding them, let them follow and haunt us. Giving ourselves a chance to face them. So that when we look back, we won't regret the things we have not done, but we will be proud of them.
+Anyone at any time has some kind of fear. But instead of avoiding them, let them follow and haunt us. Giving ourselves a chance to face them. So that when we look back, we won't regret the things we have not done, but we will be proud of what we have done.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

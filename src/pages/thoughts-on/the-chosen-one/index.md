@@ -9,7 +9,7 @@ The time has come. When you have learned enough experience, understanding, and p
 
 ### The weak one
 
-There are always people like that. They are good, talented, but they always need a perfect environment in which they can thrive such as people who need a completely quiet space to work, people who always complain about their bad luck, about the injustice of society. If you meet them, sympathize with them, even help them, but don't choose them.
+There are always people like that. They are good, talented, but they usually need a perfect environment in which they can thrive such as people who need a completely quiet space to work. They are people who usually complain about their bad luck, about the injustice of life. If you meet them, sympathize with them, even help them, but don't choose them.
 
 ### The strong one
 
