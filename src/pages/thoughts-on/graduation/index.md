@@ -5,6 +5,8 @@ layout: post
 
 ![graduation][graduation]
 
+## Thoughts
+
 After more than 18 years of schooling, on the official graduation day, looking back on the journey, it was short but full of emotions, bewilderment, fear, and infatuated.
 
 During that time, I always believed in "Follow your passion, success will follow you", and "when we have found our passion in life, everything after that will be very easy".
@@ -16,6 +18,8 @@ I was afraid that I was wrong.
 Fear of letting my parents be disappointed.
 
 Or just afraid of poor, lonely life.
+
+## Discovery
 
 BUT just as failure is the mother of success, there is no courage that is not born from fear.
 

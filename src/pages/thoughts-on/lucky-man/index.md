@@ -5,6 +5,8 @@ layout: post
 
 ![lucky-man][lucky-man]
 
+## Thoughts
+
 I am a lucky person.
 
 16 years old - I experienced love and loss.
@@ -20,6 +22,8 @@ I need water to drink.
 I need to eat to survive.
 
 I ...
+
+## Discovery
 
 It might be a little bit too much of "I", isn't it? This life is not only for myself but also for many other people who are not as lucky as me.
 I do think that what we need to do is not to take anything more, but to give what we have.
