@@ -46,6 +46,15 @@
           "measure",
           "life"
         ]
+      },
+      {
+        "title": "The place",
+        "type": "post",
+        "url": "thoughts-on/the-place",
+        "tags": [
+          "living place",
+          "working place"
+        ]
       }
     ]
   },

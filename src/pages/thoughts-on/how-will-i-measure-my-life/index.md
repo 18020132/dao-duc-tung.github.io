@@ -30,8 +30,6 @@ In a company, for example, if you measure profitability by return on net assets,
 
 Similarly, if you measure profitability on innovation in terms of internal rate of return, you could get the ratio up by being successful with innovation, but you also could get that measure up by only investing in short-term projects.
 
-It's because we have to aggregate, we have the sense of hierarchy, wealth, and so on.
-
 ## Discovery 2 - How do I measure the success of my life?
 
 ![help][help]
