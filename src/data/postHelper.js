@@ -10,7 +10,7 @@ const N_LATEST_POSTS = 50;
 
 const deepCopy = (object) => {
   return JSON.parse(JSON.stringify(object));
-}
+};
 
 const getAllCategories = () => {
   return posts.filter((category) => {
@@ -120,6 +120,18 @@ const sortPostByLatestModifiedDate = (post1, post2) => {
   else return 0;
 };
 
+const getCreatedDate = (filePath) => {
+  return fse.statSync(filePath).ctime;
+};
+
+const sortPostByLatestCreatedDate = (post1, post2) => {
+  var modifiedDate1 = moment(getCreatedDate(getAbsolutePathFromRelativePath(post1.url)));
+  var modifiedDate2 = moment(getCreatedDate(getAbsolutePathFromRelativePath(post2.url)));
+  if (modifiedDate1.isAfter(modifiedDate2)) return -1;
+  else if (modifiedDate2.isAfter(modifiedDate1)) return 1;
+  else return 0;
+};
+
 const getLatestPosts = () => {
   var tempPosts = deepCopy(allPosts);
   tempPosts.sort(sortPostByLatestModifiedDate);
@@ -134,8 +146,7 @@ const getLatestPostsGroupedByCategory = () => {
     category.childs.forEach((categoryChild) => {
       if (categoryChild.type === POST_TYPE) {
         tempAllPosts.push(categoryChild);
-      }
-      else if (categoryChild.type === TOPIC_TYPE) {
+      } else if (categoryChild.type === TOPIC_TYPE) {
         categoryChild.childs.forEach((categoryChildChild) => {
           if (categoryChildChild.type === POST_TYPE) {
             tempAllPosts.push(categoryChildChild);
@@ -157,7 +168,7 @@ const getLatestPostsGroupedByCategory = () => {
     tempCategories[i].childs = tempPosts.slice(0, nLatest);
   }
   return tempCategories;
-}
+};
 
 var latestPostsGroupedByCategory = getLatestPostsGroupedByCategory();
 

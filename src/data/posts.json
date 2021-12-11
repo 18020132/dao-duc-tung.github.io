@@ -16,19 +16,19 @@
     ]
   },
   {
-    "title": "Advanced Skills",
+    "title": "ML Skills",
     "type": "category",
-    "url": "advanced-skills",
+    "url": "ml-skills",
     "childs": [
       {
         "title": "Machine Learning Systems Design",
         "type": "topic",
-        "url": "advanced-skills/machine-learning-systems-design",
+        "url": "ml-skills/machine-learning-systems-design",
         "childs": [
           {
             "title": "MLSD - Introduction",
             "type": "post",
-            "url": "advanced-skills/machine-learning-systems-design/introduction",
+            "url": "ml-skills/machine-learning-systems-design/introduction",
             "tags": [
               "machine learning systems",
               "design",
@@ -38,7 +38,7 @@
           {
             "title": "MLSD - Research vs. Production",
             "type": "post",
-            "url": "advanced-skills/machine-learning-systems-design/research-vs-production",
+            "url": "ml-skills/machine-learning-systems-design/research-vs-production",
             "tags": [
               "machine learning systems",
               "research",
@@ -47,23 +47,16 @@
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    "title": "Basic Skills",
-    "type": "category",
-    "url": "basic-skills",
-    "childs": [
+      },
       {
         "title": "Docker",
         "type": "topic",
-        "url": "basic-skills/docker",
+        "url": "ml-skills/docker",
         "childs": [
           {
             "title": "Docker - Introduction",
             "type": "post",
-            "url": "basic-skills/docker/introduction",
+            "url": "ml-skills/docker/introduction",
             "tags": [
               "docker",
               "introduction"
@@ -72,7 +65,7 @@
           {
             "title": "Docker - Image and Container",
             "type": "post",
-            "url": "basic-skills/docker/image-and-container",
+            "url": "ml-skills/docker/image-and-container",
             "tags": [
               "docker",
               "docker image",
@@ -82,7 +75,7 @@
           {
             "title": "Docker - Attach and Detach",
             "type": "post",
-            "url": "basic-skills/docker/attach-and-detach",
+            "url": "ml-skills/docker/attach-and-detach",
             "tags": [
               "docker",
               "docker attach",
@@ -94,7 +87,7 @@
           {
             "title": "Docker - Publish Port",
             "type": "post",
-            "url": "basic-skills/docker/publish-port",
+            "url": "ml-skills/docker/publish-port",
             "tags": [
               "docker",
               "publish port"
@@ -103,7 +96,7 @@
           {
             "title": "Docker - Container Networking",
             "type": "post",
-            "url": "basic-skills/docker/container-networking",
+            "url": "ml-skills/docker/container-networking",
             "tags": [
               "docker",
               "container networking",
@@ -113,7 +106,7 @@
           {
             "title": "Docker - Volumes",
             "type": "post",
-            "url": "basic-skills/docker/volumes",
+            "url": "ml-skills/docker/volumes",
             "tags": [
               "docker",
               "sharing data",
@@ -123,7 +116,7 @@
           {
             "title": "Docker - Registry",
             "type": "post",
-            "url": "basic-skills/docker/registry",
+            "url": "ml-skills/docker/registry",
             "tags": [
               "docker",
               "docker registry",
@@ -203,16 +196,16 @@
     "url": "projects",
     "childs": [
       {
-        "title": "Learning Vietnamese",
+        "title": "Sharing Knowledge",
         "type": "topic",
-        "url": "projects/learning-vietnamese",
+        "url": "projects/sharing-knowledge",
         "childs": [
           {
             "title": "How does AI work?",
             "type": "post",
-            "url": "projects/learning-vietnamese/how-does-ai-work",
+            "url": "projects/sharing-knowledge/how-does-ai-work",
             "tags": [
-              "learning vietnamese",
+              "sharing knowledge",
               "how",
               "ai",
               "work"
@@ -221,9 +214,9 @@
           {
             "title": "Is AI an existential threat to humanity?",
             "type": "post",
-            "url": "projects/learning-vietnamese/is-ai-an-existential-threat-to-humanity",
+            "url": "projects/sharing-knowledge/is-ai-an-existential-threat-to-humanity",
             "tags": [
-              "learning vietnamese",
+              "sharing knowledge",
               "ai",
               "threat",
               "humanity"
@@ -232,9 +225,9 @@
           {
             "title": "Should I teach my toddler Python?",
             "type": "post",
-            "url": "projects/learning-vietnamese/should-i-teach-my-toddler-python",
+            "url": "projects/sharing-knowledge/should-i-teach-my-toddler-python",
             "tags": [
-              "learning vietnamese",
+              "sharing knowledge",
               "teach",
               "toddler",
               "python"
