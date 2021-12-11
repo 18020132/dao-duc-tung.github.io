@@ -12,6 +12,15 @@
           "ask question",
           "art"
         ]
+      },
+      {
+        "title": "Graduation",
+        "type": "post",
+        "url": "thoughts-on/graduation",
+        "tags": [
+          "passion",
+          "success"
+        ]
       }
     ]
   },

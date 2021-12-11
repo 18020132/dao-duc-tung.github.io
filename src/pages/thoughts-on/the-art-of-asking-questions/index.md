@@ -39,8 +39,6 @@ This is not humility, this is the art.
 
 Scientifically, this question helps people to achieve a higher level of thinking, deepen their understanding of problems, and promote collaboration.
 
-To be continued...
-
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [raise-hand]: /assets/images/thoughts-on/the-art-of-asking-questions/raise-hand.png
