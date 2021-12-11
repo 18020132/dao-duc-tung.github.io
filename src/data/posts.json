@@ -55,6 +55,14 @@
           "living place",
           "working place"
         ]
+      },
+      {
+        "title": "The chosen one",
+        "type": "post",
+        "url": "thoughts-on/the-chosen-one",
+        "tags": [
+          "the chosen one"
+        ]
       }
     ]
   },
