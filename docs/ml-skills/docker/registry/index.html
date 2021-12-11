@@ -8,7 +8,7 @@
   
 
   
-  <title>Financial Statements Introduction</title>
+  <title>Docker - Registry</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -76,34 +76,52 @@
     <section class="main-content">
       <div class="pre-body">
   
-  <h1>Financial Statements Introduction</h1>
+  <h1>Docker - Registry</h1>
   <div class="post-info">
-    Aug 15, 2021 · 2 min
+    Dec 11, 2021 · 3 min
     read
   </div>
 </div>
 
-      <p><img src="/assets/images/investment/finance-foundations/financial-statements-introduction/financial-statements.jpg" alt="financial-statements"></p>
-<p><strong>Financial statements</strong> or financial reports give us the information/data to make financial decisions such as identifying things to buy, figuring out how to get the money to buy those things, and how to manage them efficiently.</p>
-<p>There are three primary financial statements including:</p>
+      <p><img src="/assets/images/ml-skills/docker/registry/infant-room.jpg" alt="infant-room"></p>
+<p>Today in this post, we will talk about the place from where we usually pull the docker images - <strong>Docker Registry</strong>.</p>
+<p><strong>Docker Registry</strong> is an application that runs on Docker&#39;s server. It stores docker images so you can download them or push your own docker images to your own repository just like GitHub.</p>
+<h2 id="searching">Searching</h2>
+<p>To search for a docker image, you can type:</p>
+<pre><code class="language-bash">docker search ubuntu
+</code></pre>
+<p><img src="/assets/images/ml-skills/docker/registry/cli-search.png" alt="cli-search"></p>
+<p>Alternatively, you can go to <a href="https://hub.docker.com">hub.docker.com</a>. This web version will provide more information about how to use the image, its description, the latest update and all of its tags.</p>
+<p><img src="/assets/images/ml-skills/docker/registry/hub-search.png" alt="hub-search"></p>
+<h2 id="publish-an-image-to-the-world">Publish an image to the world</h2>
+<pre><code class="language-bash"># You need to login first
+docker login
+
+# Give ubuntu image a new name with tag
+docker tag ubuntu:14.04 tungdao17/my-ubuntu:v1.0
+
+# push it to docker hub
+docker push tungdao17/my-ubuntu:v1.0
+</code></pre>
+<h2 id="start-your-own-docker-registry">Start your own docker registry</h2>
+<p>It&#39;s very simple to start your own registry. Refer to <a href="https://docs.docker.com/registry/">https://docs.docker.com/registry/</a> for more details.</p>
+<h2 id="key-notes">Key notes</h2>
 <ul>
-<li>Balance sheet</li>
-<li>Income statement</li>
-<li>Cash flow statement</li>
+<li>Some commands</li>
 </ul>
-<h2 id="balance-sheet">Balance sheet</h2>
-<p>The balance sheet includes information about a company&#39;s assets, obligations, liabilities at a point in time (e.g. end of the year).</p>
-<p>The assets might include short-term assets such as new products for inventory, new hiring staff; or long-term assets such as property, plant, and equipment (<strong>PP&amp;E</strong>).</p>
-<p>The balance sheet also shows three general sources where the company uses to get the money to buy assets including:</p>
+<pre><code class="language-bash"># Search for a published image
+docker search image_name
+
+# Give an image a new name with tag
+docker tag image_id your_docker_registry/image_name:tag
+
+# push image to docker hub
+docker push your_docker_registry/image_name:tag
+</code></pre>
 <ul>
-<li>Borrowing money from somewhere</li>
-<li>Take money from the company owner&#39;s private savings</li>
-<li>Take money from the company&#39;s profit</li>
+<li>Don&#39;t trust every docker images.</li>
+<li>Clean your local images frequently.</li>
 </ul>
-<h2 id="income-statement">Income statement</h2>
-<p>The income statement shows the company&#39;s profit, revenues, and expenses during a particular period such as a month, a quarter, and a year.</p>
-<h2 id="cash-flow-statement">Cash flow statement</h2>
-<p>The cash flow statement or the statement of cash flows shows where the cash came from and how the company spends it during a period.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 
@@ -115,11 +133,15 @@
       <div class="post-body-tags">
         <ul>
           
-          <li><a href="#">finance</a></li>
+          <li><a href="#">docker</a></li>
           
-          <li><a href="#">statement</a></li>
+          <li><a href="#">docker registry</a></li>
           
-          <li><a href="#">introduction</a></li>
+          <li><a href="#">docker search</a></li>
+          
+          <li><a href="#">docker tag</a></li>
+          
+          <li><a href="#">docker push</a></li>
           
         </ul>
       </div>
@@ -127,7 +149,7 @@
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/investment/finance-foundations/financial-statements-introduction'); return false;"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/docker/registry'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -137,16 +159,16 @@
     
     <div class="post-body-continue-left">
       
-      <a href="/investment/finance-foundations/finance-definition" class="btn">
+      <a href="/ml-skills/docker/volumes" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
-        Previous<span class="post-body-continue-post-title">: Finance Definition</span></a
+        Previous<span class="post-body-continue-post-title">: Docker - Volumes</span></a
       >
       
     </div>
     <div class="post-body-continue-right">
       
-      <a href="/investment/finance-foundations/financial-statements-detail" class="btn">
-        Next<span class="post-body-continue-post-title">: Financial Statements Detail</span>
+      <a href="/investment/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
       
@@ -156,7 +178,7 @@
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="investment/finance-foundations/financial-statements-introduction"
+  issue-term="ml-skills/docker/registry"
   theme="github-light"
   crossorigin="anonymous"
   async

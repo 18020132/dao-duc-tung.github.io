@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+  
+  
+  
+
+  
+  <title>Docker - Publish Port</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-white-bg-transparent.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+      <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+      <a href="/ml-skills" class="btn">ML Skills</a>
+    
+      <a href="/investment" class="btn">Investment</a>
+    
+      <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+  
+  <h1>Docker - Publish Port</h1>
+  <div class="post-info">
+    Dec 11, 2021 · 8 min
+    read
+  </div>
+</div>
+
+      <p><img src="/assets/images/ml-skills/docker/publish-port/ports.jpg" alt="ports"></p>
+<p>Docker is commonly used to run services that require network communication like websites.
+Docker makes this convenient by providing a range of networking options for <em>inter-communication</em> and <em>outer-communication</em>.</p>
+<p>In the <em>inter-communication</em>, Docker provides private networks for linking the containers so that the service in the container is not able to be accessed from outside Docker, but from the other Docker containers.</p>
+<p>In the <em>outer-communication</em>, the service in the container is available from anywhere, even outside the machine hosting Docker.</p>
+<p>This post will describe how to create the <em>outer-communication</em> to chit chat between containers.</p>
+<h2 id="publish-ports">Publish ports</h2>
+<p>Let&#39;s create a server and publish some ports on it.</p>
+<pre><code class="language-bash">docker run --rm -it -p 12345:12345 -p 12346:12346 --name server ubuntu:14.04 bash
+ifconfig # to check IP address
+nc -lp 12345 | nc -lp 12346
+</code></pre>
+<p><img src="/assets/images/ml-skills/docker/publish-port/publish-ports-01.png" alt="publish-ports-01"></p>
+<p>The syntax <code>-p host_port:container_port</code> binds a container&#39;s port to a host&#39;s port. The command <code>nc -lp 12345 | nc -lp 12346</code> will let our server listen on port <code>12345</code> and pass whatever it receives to port <code>12346</code> (google <code>netcat</code> for more detail).</p>
+<p>From the <code>server</code> terminal that we have just created, we can see that Docker creates an internal network and assigns IP <code>172.17.0.2</code> to our server. We will learn about Docker network in a future post.</p>
+<p>Now, open a new terminal to create client 1 container and connect to server at port <code>12345</code>.</p>
+<pre><code class="language-bash">docker run --rm -it ubuntu:14.04 bash
+nc 172.17.0.2 12345
+</code></pre>
+<p>Open another terminal to create client 2 container and connect to server at port <code>12346</code>.</p>
+<pre><code class="language-bash">docker run --rm -it ubuntu:14.04 bash
+nc 172.17.0.2 12346
+</code></pre>
+<p>Let&#39;s type a message on client 1 terminal and see the message is printed out in client 2 terminal. Hooray! We have just created a one-way chit chat application using Docker and <code>netcat</code>!</p>
+<p><img src="/assets/images/ml-skills/docker/publish-port/publish-ports-02.png" alt="publish-ports-02"></p>
+<p>We also can perform this communication by creating 2 clients on local machine (same as above but running on your host instead of running inside a Docker container), or one of them running on local machine whereas the other running on a Docker container. Check the example below.</p>
+<p><img src="/assets/images/ml-skills/docker/publish-port/publish-ports-03.png" alt="publish-ports-03"></p>
+<h2 id="publish-ports-dynamically">Publish ports dynamically</h2>
+<p>When we need to publish many ports on the host, it&#39;s very common that some of the host&#39;s ports are not available.
+Docker provides a functionality to let us choose the host&#39;s unused ports automatically.</p>
+<p>Let&#39;s open a terminal to create a <code>server</code> again, bind the container&#39;s ports <code>12346</code> and <code>12348</code>. Docker will then choose the host&#39;s ports for us.</p>
+<pre><code class="language-bash">docker run --rm -it -p 12346 -p 12348 --name server ubuntu:14.04 bash
+</code></pre>
+<p>Open a new terminal, run:</p>
+<pre><code class="language-bash">docker port server
+</code></pre>
+<p>The command result will the container <code>server</code>&#39;s ports <code>12346</code> and <code>12348</code> are bound with <code>xxxxx</code> and <code>yyyyy</code> of the host respectively.</p>
+<pre><code>12346/tcp -&gt; 0.0.0.0:xxxxx
+12348/tcp -&gt; 0.0.0.0:yyyyy
+</code></pre>
+<p>Now, we should be able to create the one-way chit chat application by running <code>netcat</code> on the host using <code>xxxxx</code> and <code>yyyyy</code> ports. This is a bonus exercise for you!</p>
+<h2 id="udp-and-tcp-ports">UDP and TCP ports</h2>
+<p>Let&#39;s open a terminal to create a <code>server</code> again. This time we specify the <code>/udp</code> text at the end of the port number. This will expose the port outside using UDP.</p>
+<pre><code class="language-bash">docker run --rm -it -p 12346/udp --name server ubuntu:14.04 bash
+</code></pre>
+<p>You can run <code>docker port server</code> to check the binding port on your machine.</p>
+<h2 id="key-notes">Key notes</h2>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-p A:B</code></td>
+<td>Bind container&#39;s TCP port B to host&#39;s port A</td>
+</tr>
+<tr>
+<td><code>-p C:A:B</code></td>
+<td>Bind container&#39;s TCP port B to host&#39;s port A for connections to host IP C</td>
+</tr>
+<tr>
+<td><code>-p A:B/udp</code></td>
+<td>Bind container&#39;s UDP port B to host&#39;s port A</td>
+</tr>
+<tr>
+<td><code>-p A-B:C-D/tcp</code></td>
+<td>Bind a range of ports</td>
+</tr>
+</tbody></table>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">docker</a></li>
+          
+          <li><a href="#">publish port</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/docker/publish-port'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/docker/attach-and-detach" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: Docker - Attach and Detach</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/docker/container-networking" class="btn">
+        Next<span class="post-body-continue-post-title">: Docker - Container Networking</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/docker/publish-port"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

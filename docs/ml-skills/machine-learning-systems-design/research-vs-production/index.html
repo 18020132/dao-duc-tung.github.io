@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+  
+  
+  
+
+  
+  <title>MLSD - Research vs. Production</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-white-bg-transparent.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+      <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+      <a href="/ml-skills" class="btn">ML Skills</a>
+    
+      <a href="/investment" class="btn">Investment</a>
+    
+      <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+  
+  <h1>MLSD - Research vs. Production</h1>
+  <div class="post-info">
+    Dec 11, 2021 · 10 min
+    read
+  </div>
+</div>
+
+      <p><img src="/assets/images/ml-skills/machine-learning-systems-design/research-vs-production/research.jpg" alt="research"></p>
+<p>My first ML project was in 2017. Most of the time, I was just reading papers and trying to understand every single line of it.</p>
+<p>In 2019, I tried to deploy a computer vision model to a web-based application. I realized that the model was too big and the time from receiving a query to returning the result was few decades. I mean few seconds.</p>
+<p>Besides that problem, there&#39;re lots of other problems that I still feel very tough to solve in 2021. Below are five major problems that show the differences between ML systems in research and in production.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Research</th>
+<th>Production</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Objectives</td>
+<td>Model performance</td>
+<td>Different stakeholders have different objectives</td>
+</tr>
+<tr>
+<td>Computational priority</td>
+<td>Fast training, high throughput</td>
+<td>Fast inference, low latency</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Static</td>
+<td>Constantly shifting</td>
+</tr>
+<tr>
+<td>Fairness</td>
+<td>Good to have (sadly)</td>
+<td>Important</td>
+</tr>
+<tr>
+<td>Interpretability</td>
+<td>Good to have</td>
+<td>Important</td>
+</tr>
+</tbody></table>
+<h2 id="objective">Objective</h2>
+<p><img src="/assets/images/ml-skills/machine-learning-systems-design/research-vs-production/conflict.jpg" alt="conflict"></p>
+<p>In academia, the objective of an ML system usually is model performance. Researchers want to achieve state-of-the-art results on benchmark datasets. Models often are too complicated to be useful in real-life applications.</p>
+<p>Different stakeholders have different objectives. For example, in Facebook, they want to train a model that recommends ads on users&#39; news feed:</p>
+<ul>
+<li><strong>ML engineers</strong> want that model to predict ads that have a high chance of being clicked by users.</li>
+<li><strong>Sales team</strong> wants that model predicts ads that were paid with the highest advertising fee to be shown in the user&#39;s news feed.</li>
+<li><strong>Manager</strong> wants to maximize the profit, maybe by sacking somebody.</li>
+</ul>
+<p>Users won&#39;t see the difference between a model with 98% accuracy and a model with 98.2% accuracy. This 0.2% can save Google millions of dollars.</p>
+<blockquote>
+<p>If a simple model can do a reasonable job, complex models must perform significantly better to justify the complexity.</p>
+</blockquote>
+<h2 id="computational-priority">Computational priority</h2>
+<p>In research, we want the training process faster. In production, we want the inference faster.</p>
+<p>In research, we want the training process can take as many samples as it can in a second (throughput). In production, latency matters a lot. If you can type your next word faster than what your iPhone predicts, do you ever want to wait and click on the predicted word?</p>
+<h2 id="data">Data</h2>
+<p><img src="/assets/images/ml-skills/machine-learning-systems-design/research-vs-production/data.jpg" alt="data"></p>
+<p>In research, data is clean and formatted. They are unchanged so people can use it as benchmarks for evaluation. The process of preparing data and feed it to your model usually was done by somebody.</p>
+<p>In production, data is messy. You have to clean it and re-format it. It&#39;s not easy to split into the training set, test set, or validation set because it usually has some issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merging two existing label classes. This is really a nightmare!</p>
+<p>In research, data usually was created a long time ago. In production, data could be created a long time ago, or streaming data, or both. In production, you need to care about data privacy and regulations.</p>
+<table>
+<thead>
+<tr>
+<th>Research</th>
+<th>Production</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Clean</td>
+<td>Messy</td>
+</tr>
+<tr>
+<td>Static</td>
+<td>Constantly shifting</td>
+</tr>
+<tr>
+<td>Mostly historical data</td>
+<td>Historical + streaming data</td>
+</tr>
+<tr>
+<td></td>
+<td>Privacy + regulatory concerns</td>
+</tr>
+</tbody></table>
+<h2 id="fairness">Fairness</h2>
+<p>You might be a victim of biased ML algorithms. Your resume might be ranked very low because your name is not common. The ranking model picks name as an important feature :)</p>
+<blockquote>
+<p>ML algorithms don&#39;t predict the future, but encode the past, perpetuating the biases in the data and more.</p>
+</blockquote>
+<p>The minority groups would be harm badly because the wrong predictions have minor consequences on the model&#39;s overall performance.</p>
+<h2 id="interpretability">Interpretability</h2>
+<p><img src="/assets/images/ml-skills/machine-learning-systems-design/research-vs-production/ai-surgeon.jpg" alt="ai-surgeon"></p>
+<p>Model interpretability is important to understand why the model makes that prediction/decision. Otherwise, we might feel uncomfortable with trusting it. It also makes the process of debugging, monitoring, and improving the model easier.</p>
+<blockquote>
+<p>While most of us are comfortable with using a microwave without understanding how it works, many don’t feel the same way about AI yet, especially if that AI makes important decisions about their lives.</p>
+</blockquote>
+<h2 id="addons">Addons</h2>
+<p>Most companies cannot pursue pure research unless it leads to short-term profitable applications.</p>
+<p>Nowadays, more people and organizations in different fields want to find applications for them due to the easy accessibility of state-of-the-art models. That&#39;s why the majority of ML-related jobs is in ML production.</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">machine learning systems</a></li>
+          
+          <li><a href="#">research</a></li>
+          
+          <li><a href="#">production</a></li>
+          
+          <li><a href="#">compare</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/machine-learning-systems-design/research-vs-production'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/machine-learning-systems-design/introduction" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: MLSD - Introduction</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/docker/introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Docker - Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/machine-learning-systems-design/research-vs-production"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>
