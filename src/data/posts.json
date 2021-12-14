@@ -285,6 +285,22 @@
             ]
           }
         ]
+      },
+      {
+        "title": "Good To Great",
+        "type": "topic",
+        "url": "projects/good-to-great",
+        "childs": [
+          {
+            "title": "Chapter 1 - Good is the enemy of great",
+            "type": "post",
+            "url": "projects/good-to-great/chapter-1-good-is-the-enemy-of-great",
+            "tags": [
+              "good to great",
+              "enemy of great"
+            ]
+          }
+        ]
       }
     ]
   }
