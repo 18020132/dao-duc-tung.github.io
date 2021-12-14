@@ -5,7 +5,7 @@ layout: post
 
 ![the-enemy-of-great][the-enemy-of-great]
 
-_"It's just so easy to settle for a good life. That's why few people attain great lives."_
+_"It's just so easy to settle for a good life. That's why few people attain great lives." - Jim Collins_
 
 This Good To Great project is a way to note down what I learned from Jim Collins's excellent book named Good To Great.
 This project will help to steer me in the right direction and remind me about the path that I'm following.
@@ -37,6 +37,8 @@ When selecting a set of comparison companies, the crucial question in the study 
 
 This is a preview of what's to come in the rest of the book. The authors divided the transformation into 3 stages of buildup followed by breakthroughs including disciplined people, disciplined thought, and disciplined action. Within each stage, there're 2 key concepts. Wrapping around this entire framework is a concept the authors called _the flywheel_, which captures the gestalt of the entire process of going from good to great.
 
+![good-to-great-flywheel][good-to-great-flywheel]
+
 ### Disciplined people
 
 - Level 5 Leadership: The good-to-great leaders seem to have come from Mars. They are described as self-effacing, quiet, reserved, and shy.
@@ -63,3 +65,4 @@ A good version of you might become a great one.
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [the-enemy-of-great]: /assets/images/projects/good-to-great/chapter-1-good-is-the-enemy-of-great/the-enemy-of-great.jpg
+[good-to-great-flywheel]: /assets/images/projects/good-to-great/chapter-1-good-is-the-enemy-of-great/good-to-great-flywheel.png
