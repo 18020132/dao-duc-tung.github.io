@@ -63,6 +63,14 @@
         "tags": [
           "the chosen one"
         ]
+      },
+      {
+        "title": "The last one",
+        "type": "post",
+        "url": "thoughts-on/the-last-one",
+        "tags": [
+          "the last one"
+        ]
       }
     ]
   },
