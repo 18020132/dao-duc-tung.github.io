@@ -104,6 +104,15 @@
               "production",
               "compare"
             ]
+          },
+          {
+            "title": "MLSD - Intro to machine learning systems design - Part 1",
+            "type": "post",
+            "url": "ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-1",
+            "tags": [
+              "machine learning systems",
+              "system design"
+            ]
           }
         ]
       },
