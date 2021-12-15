@@ -118,6 +118,8 @@ The table below shows some common challenges in ML production.
 
 ## ML deployment myths
 
+![myth][myth]
+
 The table below summarizes some common ML deployment myths.
 
 | #   | Myth                                                        | Description                                                                                                                                                                 |
@@ -136,3 +138,4 @@ The table below summarizes some common ML deployment myths.
 [data]: /assets/images/ml-skills/machine-learning-systems-design/research-vs-production/data.jpg
 [ai-surgeon]: /assets/images/ml-skills/machine-learning-systems-design/research-vs-production/ai-surgeon.jpg
 [ml-engineering]: /assets/images/ml-skills/machine-learning-systems-design/research-vs-production/ml-engineering.png
+[myth]: /assets/images/ml-skills/machine-learning-systems-design/research-vs-production/myth.jpg

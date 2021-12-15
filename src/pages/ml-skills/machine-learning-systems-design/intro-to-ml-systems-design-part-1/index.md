@@ -3,8 +3,6 @@ url: ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-1
 layout: post
 ---
 
-![design][design]
-
 In this post, we will see what the goals of designing an ML system look like. We will also get an idea about different types of ML systems.
 
 ## Goals of ML systems design
@@ -120,6 +118,5 @@ Let's keep this post not too long. In the next post, we will see the iterative p
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[design]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-1/design.jpg
 [ml-system]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-1/ml-system.png
 [categories]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-1/categories.jpg

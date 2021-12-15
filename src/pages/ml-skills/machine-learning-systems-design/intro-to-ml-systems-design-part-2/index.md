@@ -25,6 +25,8 @@ The workflow of building an ML system is more of a cycle than a waterfall. There
 
 ## Project scoping
 
+![planning][planning]
+
 This Project scoping stage is not like the other stages which are self-explained. We need to clearly answer a bunch of questions at the very beginning when starting an ML project.
 
 ### Goals
@@ -103,6 +105,8 @@ Any tool or system the the solution must be compatible with? E.g: legacy infrast
 
 ## When to use ML?
 
+![when-to][when-to]
+
 _Machine learning is an approach to **learn complex patterns** from **existing data** and use these patterns to make **predictions** on **unseen data**._
 
 We'll look at each of the bold keyphrases in the definition to understand its implications to the problems ML can solve.
@@ -162,6 +166,8 @@ However, even if ML can’t solve your problem, it might be possible to break yo
 
 ## Four phased of ML adoption
 
+![moon-phases][moon-phases]
+
 Once you decided to adopt ML into your project, your strategy depends on which phase of ML adoption you are in. Below is the four phases of adopting ML, with solutions from each phase can be used as baselines to evaluate the solutions from the next phase.
 
 ### 1. Before ML
@@ -195,4 +201,7 @@ To end this post, the below figure shows some helpful case studies that might he
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [iterative-process]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/iterative-process.png
+[planning]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/planning.jpg
+[when-to]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/when-to.jpg
+[moon-phases]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/moon-phases.jpg
 [case-studies]: /assets/images/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/case-studies.png
