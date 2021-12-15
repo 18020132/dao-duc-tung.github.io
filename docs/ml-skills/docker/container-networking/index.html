@@ -3,11 +3,7 @@
   <head>
   <meta charset="UTF-8" />
 
-  
-  
-  
-
-  
+     
   <title>Docker - Container Networking</title>
   
 
@@ -62,28 +58,30 @@
   </div>
   <div class="page-header-menu">
     
-      <a href="/thoughts-on" class="btn">Thoughts On</a>
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
     
-      <a href="/ml-skills" class="btn">ML Skills</a>
+    <a href="/ml-skills" class="btn">ML Skills</a>
     
-      <a href="/investment" class="btn">Investment</a>
+    <a href="/investment" class="btn">Investment</a>
     
-      <a href="/projects" class="btn">Projects</a>
+    <a href="/projects" class="btn">Projects</a>
     
   </div>
 </section>
 
     <section class="main-content">
       <div class="pre-body">
-  
+   
+   
+  <a href="/ml-skills/docker" class="btn"> Back to Docker </a>
+    
   <h1>Docker - Container Networking</h1>
+
   <div class="post-info">
-    Dec 11, 2021 · 7 min
-    read
+    Jun 25, 2021 · 7 min read
   </div>
 </div>
-
-      <p><img src="/assets/images/ml-skills/docker/container-networking/thor-ironman.jpg" alt="thor-ironman"></p>
+ <p><img src="/assets/images/ml-skills/docker/container-networking/thor-ironman.jpg" alt="thor-ironman"></p>
 <p>In the previous post about publishing ports, we knew that Docker can perform <em>outer-communication</em> to let a container chit chat with another machine or another container inside your machine.
 By doing that way, we publish ports outside the docker internal virtual network and even to the host network. That&#39;s why your machine can talk with a docker container.</p>
 <p>In this post, we will see how to create an <em>inter-communication</em> to control exactly which container will talk with which container.</p>
@@ -152,8 +150,7 @@ docker run --rm -it --net earth --name ironman ubuntu:14.04 bash
 </code></pre>
 <!-- MARKDOWN LINKS & IMAGES -->
 
-
-      <div class="post-body">
+ <div class="post-body">
   
 
   <div class="post-body-social">
