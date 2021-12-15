@@ -3,14 +3,14 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true,
-    "**/docs": true,
+    "**/docs": true
   },
   "emeraldwalk.runonsave": {
     "commands": [
       {
         "cmd": "npm run build"
-      },
+      }
     ]
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
 }

@@ -1,8 +1,11 @@
 <div class="pre-body">
-  <% var post = helper.dataHelper.getPost(page.url); %>
+  <% var parentUrl=helper.dataHelper.getParentUrl(page.url); %> <% if (parentUrl !==undefined) { %>
+  <% var parentName=helper.dataHelper.urlToName(parentUrl); %> <% if (parentName !==undefined) { %>
+  <a href="<%= site.basePath %>/<%= parentUrl %>" class="btn"> Back to <%= parentName %> </a>
+  <% } %> <% } %> <% var post=helper.dataHelper.getPost(page.url); %>
   <h1><%= post.title %></h1>
+
   <div class="post-info">
-    <%= helper.moment(page.modifiedDate).format('MMM DD, YYYY') %> · <%= page.readingTime %> min
-    read
+    <%= helper.moment(page.createdDate).format('MMM DD, YYYY') %> · <%= page.readingTime %> min read
   </div>
 </div>

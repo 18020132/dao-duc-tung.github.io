@@ -6,20 +6,27 @@ title: AI Engineer
 
 <p class="avatar">
   <a href="#" target="_blank">
-    <img alt="Personal Avatar" src="/assets/images/about/hagiang-ava.jpg">
+    <img alt="Personal Avatar" src="/assets/images/about/hagiang-ava.jpg" />
   </a>
 </p>
 
-<p>I'm an engineer who loves getting hands-on with different parts of a Machine Learning system like Project Scoping,
-  Data
-  Management, Model Development, Deployment, Monitoring, Maintenance, and Business Analysis.</p>
+<p>
+  I'm an engineer who loves getting hands-on with different parts of a Machine Learning system like
+  Project Scoping, Data Management, Model Development, Deployment, Monitoring, Maintenance, and
+  Business Analysis.
+</p>
 
-<p>I also like talking about the intersection of technology, investment, musical instruments, and life.</p>
+<p>
+  I also like talking about the intersection of technology, investment, musical instruments, and
+  life.
+</p>
 
-<p>I believe that learning is a lifetime journey, and my interests will be the rocket fuel to lead me along the way.</p>
+<p>
+  I believe that learning is a lifetime journey, and my interests will be the rocket fuel to lead me
+  along the way.
+</p>
 
 <p>If I were the last person on Earth, I would still make my art.</p>
-
 
 <h2>Latest Posts</h2>
 
@@ -39,10 +46,8 @@ title: AI Engineer
   <% }) %> -->
 
   <% helper.dataHelper.latestPosts.forEach((post)=> { %>
-    <li>
-      <a href="<%= site.basePath %>/<%= post.url %>">
-        <%= post.title %>
-      </a>
-    </li>
-    <% }) %>
+  <li>
+    <a href="<%= site.basePath %>/<%= post.url %>"> <%= post.title %> </a>
+  </li>
+  <% }) %>
 </ul>

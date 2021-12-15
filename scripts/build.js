@@ -43,6 +43,7 @@ files.forEach((file, i) => {
   const data = fse.readFileSync(pageFilePath, 'utf-8');
 
   // add data for current page
+  const createdDate = dataHelper.getCreatedDate(pageFilePath);
   const modifiedDate = dataHelper.getModifiedDate(pageFilePath);
   const readingTime = dataHelper.measureReadingTime(data);
   const url = `${destPath}/${fileData.name}`;
@@ -50,7 +51,11 @@ files.forEach((file, i) => {
   // render page
   const pageData = frontMatter(data);
   const templateConfig = Object.assign({}, config, {
-    page: Object.assign({}, pageData.attributes, { modifiedDate, readingTime }),
+    page: Object.assign({}, pageData.attributes, {
+      createdDate,
+      modifiedDate,
+      readingTime,
+    }),
     helper: {
       dataHelper,
       moment,

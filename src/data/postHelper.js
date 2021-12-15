@@ -1,5 +1,6 @@
 const fse = require('fs-extra');
 const moment = require('moment');
+const path = require('path');
 const posts = require('./posts');
 const srcPath = './src';
 
@@ -108,6 +109,31 @@ const getAbsolutePathFromRelativePath = (relativePath) => {
   }
 };
 
+const getParentUrl = (url) => {
+  const parent = path.dirname(url);
+  return parent;
+};
+
+const replaceAll = (str, find, replace) => {
+  return str.replace(new RegExp(find, 'g'), replace);
+};
+
+const upperFirstAllWords = (str) => {
+  var pieces = str.split(' ');
+  for (var i = 0; i < pieces.length; i++) {
+    var j = pieces[i].charAt(0).toUpperCase();
+    pieces[i] = j + pieces[i].substr(1);
+  }
+  return pieces.join(' ');
+};
+
+const urlToName = (url) => {
+  const lastElement = path.basename(url);
+  const removedHyphen = replaceAll(lastElement, '-', ' ');
+  const name = upperFirstAllWords(removedHyphen);
+  return name;
+};
+
 const getModifiedDate = (filePath) => {
   return fse.statSync(filePath).mtime;
 };
@@ -121,7 +147,7 @@ const sortPostByLatestModifiedDate = (post1, post2) => {
 };
 
 const getCreatedDate = (filePath) => {
-  return fse.statSync(filePath).ctime;
+  return fse.statSync(filePath).birthtime;
 };
 
 const sortPostByLatestCreatedDate = (post1, post2) => {
@@ -134,7 +160,7 @@ const sortPostByLatestCreatedDate = (post1, post2) => {
 
 const getLatestPosts = () => {
   var tempPosts = deepCopy(allPosts);
-  tempPosts.sort(sortPostByLatestModifiedDate);
+  tempPosts.sort(sortPostByLatestCreatedDate);
   return tempPosts.slice(0, N_LATEST_POSTS);
 };
 const latestPosts = getLatestPosts();
@@ -184,4 +210,7 @@ module.exports = {
   getPrevPost,
   getNextPost,
   getModifiedDate,
+  getCreatedDate,
+  getParentUrl,
+  urlToName,
 };
