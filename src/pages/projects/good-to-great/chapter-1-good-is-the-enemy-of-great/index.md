@@ -54,7 +54,7 @@ This is a preview of what's to come in the rest of the book. The authors divided
 - A culture of discipline: Combining culture and discipline. When you have disciplined people, you don't need hierarchy. When you have disciplined thought, you don't need bureaucracy. When you have disciplined action, you don't need excessive controls.
 - Technology Accelerators: The good-to-great companies _carefully selected_ technologies.
 
-## Takeaway
+## Takeaways
 
 This good-to-great problem is a _human_ problem, not just a business one.
 

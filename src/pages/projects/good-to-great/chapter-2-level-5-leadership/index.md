@@ -58,7 +58,7 @@ A: Level-5 is a very satisfying idea, a powerful idea, and, to produce the best 
 On the one hand, level 5 traits enable you to implement the other findings. On the other hand, practicing the other findings helps you to become level 5. Think of it this way this chapter is about what level 5s are; the rest of the book describes what they do.
 Leading with other disciplines can help you move in the right direction. There's no guarantee that doing so will turn you into a full-fledged level 5, but it gives you a tangible place to begin.
 
-## Takeaway
+## Takeaways
 
 Level 5 leadership is an empirical finding, not an ideological one.
 

@@ -46,7 +46,7 @@ It's important that you succeed at what you're succeeding at, but that isn't goi
 
 I hope that some of these ideas will be helpful to you and that you all will be successful in the way that God will measure success.
 
-## Takeaway
+## Takeaways
 
 I will end this post by giving you my reader a question.
 

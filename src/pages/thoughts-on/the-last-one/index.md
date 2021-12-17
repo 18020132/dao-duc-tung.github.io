@@ -57,7 +57,7 @@ Once upon a time, in front of the Quan Yin Temple on a late night, a man was kne
 
 **Lord Buddha**: The candle you just held in front of your eyes is like the "last" woman you are in love with right now. When you focus your attention on the candle, you see it brightest. When you put it back where it was, you couldn't get back the brightest feeling. Your so-called last and only love might be just the flower in the mirror, the moon in the water. After all, it might be just an empty love.
 
-## Takeaway
+## Takeaways
 
 Q: What is the most precious thing in life?
 
