@@ -1,5 +1,5 @@
 ---
-url: investment/finance-foundations/financial-ratios
+url: projects/finance-foundations/financial-ratios
 layout: post
 ---
 
@@ -114,7 +114,7 @@ Usually, P/E ratio of most companies ranges 10-30x.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[ratio]: /assets/images/investment/finance-foundations/financial-ratios/ratio.jpg
-[balancesheet-ex]: /assets/images/investment/finance-foundations/financial-statements-detail/balancesheet-ex.jpg
-[income-statement-ex]: /assets/images/investment/finance-foundations/financial-statements-detail/income-statement-ex.jpg
-[asset-turnover-ex]: /assets/images/investment/finance-foundations/financial-ratios/asset-turnover-ex.jpg
+[ratio]: /assets/images/projects/finance-foundations/financial-ratios/ratio.jpg
+[balancesheet-ex]: /assets/images/projects/finance-foundations/financial-statements-detail/balancesheet-ex.jpg
+[income-statement-ex]: /assets/images/projects/finance-foundations/financial-statements-detail/income-statement-ex.jpg
+[asset-turnover-ex]: /assets/images/projects/finance-foundations/financial-ratios/asset-turnover-ex.jpg

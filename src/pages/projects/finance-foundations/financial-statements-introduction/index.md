@@ -1,5 +1,5 @@
 ---
-url: investment/finance-foundations/financial-statements-introduction
+url: projects/finance-foundations/financial-statements-introduction
 layout: post
 ---
 
@@ -35,4 +35,4 @@ The cash flow statement or the statement of cash flows shows where the cash came
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[financial-statements]: /assets/images/investment/finance-foundations/financial-statements-introduction/financial-statements.jpg
+[financial-statements]: /assets/images/projects/finance-foundations/financial-statements-introduction/financial-statements.jpg

@@ -207,19 +207,19 @@
     ]
   },
   {
-    "title": "Investment",
+    "title": "Projects",
     "type": "category",
-    "url": "investment",
+    "url": "projects",
     "childs": [
       {
         "title": "Finance Foundations",
         "type": "topic",
-        "url": "investment/finance-foundations",
+        "url": "projects/finance-foundations",
         "childs": [
           {
             "title": "Finance Introduction",
             "type": "post",
-            "url": "investment/finance-foundations/finance-introduction",
+            "url": "projects/finance-foundations/finance-introduction",
             "tags": [
               "finance",
               "introduction"
@@ -228,7 +228,7 @@
           {
             "title": "Finance Definition",
             "type": "post",
-            "url": "investment/finance-foundations/finance-definition",
+            "url": "projects/finance-foundations/finance-definition",
             "tags": [
               "finance",
               "definition"
@@ -237,7 +237,7 @@
           {
             "title": "Financial Statements Introduction",
             "type": "post",
-            "url": "investment/finance-foundations/financial-statements-introduction",
+            "url": "projects/finance-foundations/financial-statements-introduction",
             "tags": [
               "finance",
               "statement",
@@ -247,7 +247,7 @@
           {
             "title": "Financial Statements Detail",
             "type": "post",
-            "url": "investment/finance-foundations/financial-statements-detail",
+            "url": "projects/finance-foundations/financial-statements-detail",
             "tags": [
               "finance",
               "statement",
@@ -257,21 +257,14 @@
           {
             "title": "Financial Ratios",
             "type": "post",
-            "url": "investment/finance-foundations/financial-ratios",
+            "url": "projects/finance-foundations/financial-ratios",
             "tags": [
               "finance",
               "ratio"
             ]
           }
         ]
-      }
-    ]
-  },
-  {
-    "title": "Projects",
-    "type": "category",
-    "url": "projects",
-    "childs": [
+      },
       {
         "title": "Sharing Knowledge",
         "type": "topic",

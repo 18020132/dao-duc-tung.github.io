@@ -1,5 +1,5 @@
 ---
-url: investment/finance-foundations/financial-statements-detail
+url: projects/finance-foundations/financial-statements-detail
 layout: post
 ---
 
@@ -85,8 +85,8 @@ The company can use this FCF to pay for the debt, pay dividends to shareholders,
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[financial-statements-detail]: /assets/images/investment/finance-foundations/financial-statements-detail/financial-statements-detail.jpg
-[balancesheet]: /assets/images/investment/finance-foundations/financial-statements-detail/balancesheet.jpg
-[balancesheet-ex]: /assets/images/investment/finance-foundations/financial-statements-detail/balancesheet-ex.jpg
-[income-statement-ex]: /assets/images/investment/finance-foundations/financial-statements-detail/income-statement-ex.jpg
-[cash-flow-statement-ex]: /assets/images/investment/finance-foundations/financial-statements-detail/cash-flow-statement-ex.jpg
+[financial-statements-detail]: /assets/images/projects/finance-foundations/financial-statements-detail/financial-statements-detail.jpg
+[balancesheet]: /assets/images/projects/finance-foundations/financial-statements-detail/balancesheet.jpg
+[balancesheet-ex]: /assets/images/projects/finance-foundations/financial-statements-detail/balancesheet-ex.jpg
+[income-statement-ex]: /assets/images/projects/finance-foundations/financial-statements-detail/income-statement-ex.jpg
+[cash-flow-statement-ex]: /assets/images/projects/finance-foundations/financial-statements-detail/cash-flow-statement-ex.jpg

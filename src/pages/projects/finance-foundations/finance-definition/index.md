@@ -1,5 +1,5 @@
 ---
-url: investment/finance-foundations/finance-definition
+url: projects/finance-foundations/finance-definition
 layout: post
 ---
 
@@ -85,4 +85,4 @@ Finance is defining what to purchase, how to get the money to purchase, and how 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[financial-management]: /assets/images/investment/finance-foundations/finance-definition/financial-management.jpg
+[financial-management]: /assets/images/projects/finance-foundations/finance-definition/financial-management.jpg
