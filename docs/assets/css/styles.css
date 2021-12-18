@@ -519,6 +519,10 @@ a:hover {
   text-decoration: underline;
 }
 
+li {
+  margin-left: -21px;
+}
+
 /* .btn */
 .btn {
   display: inline-block;
@@ -594,6 +598,21 @@ a:hover {
 
 .avatar img {
   border-radius: 999px;
+}
+
+/* .contact-list */
+.contact-list {
+  list-style: none;
+}
+
+.contact-list > li {
+  margin-left: -38px;
+}
+
+.contact-list .icon > svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.2em;
 }
 
 /* .page-header */
@@ -760,6 +779,7 @@ a:hover {
   letter-spacing: -0.011em;
   line-height: 56px;
   margin-top: 0.6em;
+  margin-bottom: 0.1em;
   font-weight: 700;
 }
 
