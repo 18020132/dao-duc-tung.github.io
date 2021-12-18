@@ -118,20 +118,24 @@ const replaceAll = (str, find, replace) => {
   return str.replace(new RegExp(find, 'g'), replace);
 };
 
-const upperFirstAllWords = (str) => {
-  var pieces = str.split(' ');
-  for (var i = 0; i < pieces.length; i++) {
-    var j = pieces[i].charAt(0).toUpperCase();
-    pieces[i] = j + pieces[i].substr(1);
+const getTopicTitleByUrl = (url) => {
+  const a = 1;
+  for (var i = 0; i < allTopics.length; ++i) {
+    if (allTopics[i].url === url) {
+      return allTopics[i].title;
+    }
   }
-  return pieces.join(' ');
+  return undefined;
 };
 
-const urlToName = (url) => {
-  const lastElement = path.basename(url);
-  const removedHyphen = replaceAll(lastElement, '-', ' ');
-  const name = upperFirstAllWords(removedHyphen);
-  return name;
+const getCategoryTitleByUrl = (url) => {
+  const a = 1;
+  for (var i = 0; i < allCategories.length; ++i) {
+    if (allCategories[i].url === url) {
+      return allCategories[i].title;
+    }
+  }
+  return undefined;
 };
 
 const getModifiedDate = (filePath) => {
@@ -212,5 +216,6 @@ module.exports = {
   getModifiedDate,
   getCreatedDate,
   getParentUrl,
-  urlToName,
+  getTopicTitleByUrl,
+  getCategoryTitleByUrl,
 };

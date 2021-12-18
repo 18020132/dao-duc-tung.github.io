@@ -5,9 +5,9 @@
     <%- include('./partials/navigation') %>
 
     <section class="main-content">
-      <% var parentUrl=helper.dataHelper.getParentUrl(page.url); %> <% if (parentUrl !==undefined) {
-      %> <% var parentName=helper.dataHelper.urlToName(parentUrl); %> <% if (parentName
-      !==undefined) { %>
+      <% var parentUrl=helper.dataHelper.getParentUrl(page.url); %> <% if (parentUrl !== undefined)
+      { %> <% var parentName=helper.dataHelper.getCategoryTitleByUrl(parentUrl); %> <% if
+      (parentName !== undefined) { %>
       <a href="<%= site.basePath %>/<%= parentUrl %>" class="btn"> Back to <%= parentName %> </a>
       <% } %> <% } %> <% var post=helper.dataHelper.getPost(page.url); %> <% var topic =
       helper.dataHelper.getTopic(page.url); if (topic !== undefined) { %>
