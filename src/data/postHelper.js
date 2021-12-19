@@ -119,7 +119,6 @@ const replaceAll = (str, find, replace) => {
 };
 
 const getTopicTitleByUrl = (url) => {
-  const a = 1;
   for (var i = 0; i < allTopics.length; ++i) {
     if (allTopics[i].url === url) {
       return allTopics[i].title;
@@ -129,13 +128,20 @@ const getTopicTitleByUrl = (url) => {
 };
 
 const getCategoryTitleByUrl = (url) => {
-  const a = 1;
   for (var i = 0; i < allCategories.length; ++i) {
     if (allCategories[i].url === url) {
       return allCategories[i].title;
     }
   }
   return undefined;
+};
+
+const getTopicTitleOrCategoryTitleByUrl = (url) => {
+  let title = getTopicTitleByUrl(url);
+  if (title === undefined) {
+    title = getCategoryTitleByUrl(url);
+  }
+  return title;
 };
 
 const getModifiedDate = (filePath) => {
@@ -218,4 +224,5 @@ module.exports = {
   getParentUrl,
   getTopicTitleByUrl,
   getCategoryTitleByUrl,
+  getTopicTitleOrCategoryTitleByUrl,
 };

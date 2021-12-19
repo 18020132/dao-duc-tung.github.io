@@ -1,7 +1,7 @@
 <div class="pre-body">
   <% var parentUrl=helper.dataHelper.getParentUrl(page.url); %> <% if (parentUrl !== undefined) { %>
-  <% var parentName=helper.dataHelper.getTopicTitleByUrl(parentUrl); %> <% if (parentName !==
-  undefined) { %>
+  <% var parentName=helper.dataHelper.getTopicTitleOrCategoryTitleByUrl(parentUrl); %> <% if
+  (parentName !== undefined) { %>
   <a href="<%= site.basePath %>/<%= parentUrl %>" class="btn"> Back to <%= parentName %> </a>
   <% } %> <% } %> <% var post=helper.dataHelper.getPost(page.url); %>
   <h1><%= post.title %></h1>
