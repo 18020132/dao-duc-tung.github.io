@@ -28,7 +28,7 @@ Let's look at an example of balance sheet from the previous post about Financial
 
 This balance sheet reports the company's total assets of ~$350B and the company's total liabilities of ~$160B. Using the formula above, the debt ratio is ~45%. The rest ~55% was invested by shareholders.
 
-Debt ratio can be interpreted as the proportion of a company’s assets that are financed by debt.
+Debt ratio can be interpreted as the proportion of a company's assets that are financed by debt.
 
 A high ratio indicates that a company may be putting itself at risk of default on its loans if interest rates were to rise suddenly.
 
@@ -50,7 +50,7 @@ Debt ratios vary widely across industries, with capital-intensive businesses suc
 
 The current ratio of Exxon Mobil corp in the example above is \~$350B / \~$160B= \~2.2.
 
-A current ratio of less than one may seem alarming, although different situations can affect the current ratio in a solid company. For example, a normal monthly cycle for the company’s collections and payment processes may lead to a high current ratio as payments are received, but a low current ratio as those collections downgrade.
+A current ratio of less than one may seem alarming, although different situations can affect the current ratio in a solid company. For example, a normal monthly cycle for the company's collections and payment processes may lead to a high current ratio as payments are received, but a low current ratio as those collections downgrade.
 
 ## Return on sales ratio
 
@@ -94,7 +94,7 @@ Return on equity (ROE) measures the profitability of shareholders' investment.
 
 We can find the net income in the income statement, and shareholders' equity or total equity in the balance sheet. In the above example of balance sheet, the total equity is ~$197B.
 
-For example, in the fiscal year ending Sept. 29, 2018, _Apple_ generated $59.5 billion in net income. At the end of the fiscal year, its shareholders’ equity was $107.1 billion versus $134 billion at the beginning. Thus, _Apple_’s return on equity is 49.4%, or $59.5 billion / [($107.1 billion + $134 billion) / 2]. This means _Apple_'s shareholders earned 49.4% on their investment that year.
+For example, in the fiscal year ending Sept. 29, 2018, _Apple_ generated $59.5 billion in net income. At the end of the fiscal year, its shareholders' equity was $107.1 billion versus $134 billion at the beginning. Thus, _Apple_'s return on equity is 49.4%, or $59.5 billion / [($107.1 billion + $134 billion) / 2]. This means _Apple_'s shareholders earned 49.4% on their investment that year.
 
 Usually, the ROE of most companies ranges 10-20%.
 

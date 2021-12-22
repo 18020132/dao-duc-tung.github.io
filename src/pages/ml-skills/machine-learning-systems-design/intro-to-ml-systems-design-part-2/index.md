@@ -160,7 +160,7 @@ Even though ML can solve a subset of problems very well, it can't solve and/or s
 - Every single decision the system makes must be explainable.
 - Not cost-effective.
 
-However, even if ML can’t solve your problem, it might be possible to break your problem into smaller components and ML can solve some of them.
+However, even if ML can't solve your problem, it might be possible to break your problem into smaller components and ML can solve some of them.
 
 > A technology might not be efficient now, but it might be in the future. If you wait for the technology to prove its worth to the rest of the industry before jumping on, you might be years or decades behind your competitors.
 

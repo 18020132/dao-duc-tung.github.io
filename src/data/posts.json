@@ -122,6 +122,40 @@
               "machine learning systems",
               "system design"
             ]
+          },
+          {
+            "title": "MLSD - Data engineering - Part 1",
+            "type": "post",
+            "url": "ml-skills/machine-learning-systems-design/data-engineering-part-1",
+            "tags": [
+              "machine learning systems",
+              "system design",
+              "data engineering",
+              "data source",
+              "data format",
+              "oltp",
+              "olap",
+              "ETL",
+              "structured",
+              "unstructured",
+              "batch processing",
+              "stream processing"
+            ]
+          },
+          {
+            "title": "MLSD - Data engineering - Part 2",
+            "type": "post",
+            "url": "ml-skills/machine-learning-systems-design/data-engineering-part-2",
+            "tags": [
+              "machine learning systems",
+              "system design",
+              "data engineering",
+              "traing dataset",
+              "bias source",
+              "data split",
+              "labeling",
+              "lack of labels"
+            ]
           }
         ]
       },

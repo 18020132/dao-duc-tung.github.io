@@ -74,7 +74,7 @@ The minority groups would be harm badly because the wrong predictions have minor
 
 Model interpretability is important to understand why the model makes that prediction/decision. Otherwise, we might feel uncomfortable with trusting it. It also makes the process of debugging, monitoring, and improving the model easier.
 
-> While most of us are comfortable with using a microwave without understanding how it works, many don’t feel the same way about AI yet, especially if that AI makes important decisions about their lives.
+> While most of us are comfortable with using a microwave without understanding how it works, many don't feel the same way about AI yet, especially if that AI makes important decisions about their lives.
 
 ### Addons
 
