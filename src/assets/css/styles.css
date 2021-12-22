@@ -519,10 +519,6 @@ a:hover {
   text-decoration: underline;
 }
 
-li {
-  margin-left: -21px;
-}
-
 /* .btn */
 .btn {
   display: inline-block;
@@ -598,21 +594,6 @@ li {
 
 .avatar img {
   border-radius: 999px;
-}
-
-/* .contact-list */
-.contact-list {
-  list-style: none;
-}
-
-.contact-list > li {
-  margin-left: -38px;
-}
-
-.contact-list .icon > svg {
-  width: 16px;
-  height: 16px;
-  margin-right: 0.2em;
 }
 
 /* .page-header */
@@ -779,7 +760,7 @@ li {
   letter-spacing: -0.011em;
   line-height: 56px;
   margin-top: 0.6em;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.6em;
   font-weight: 700;
 }
 
@@ -922,7 +903,7 @@ li {
 }
 
 .main-content .pre-body {
-  padding-top: 2rem;
+  padding-top: 0rem;
   line-height: 20px;
 }
 
@@ -933,6 +914,27 @@ li {
 .main-content .pre-body .post-info {
   color: rgba(117, 117, 117, 1);
   font-size: 16px;
+  margin-bottom: 0.75rem;
+}
+
+/* mid-body */
+.main-content .mid-body li {
+  margin-left: -1.3rem;
+}
+
+/* .contact-list */
+.main-content .mid-body .contact-list {
+  list-style: none;
+}
+
+.main-content .mid-body .contact-list > li {
+  margin-left: -2.35rem;
+}
+
+.main-content .mid-body .contact-list .icon > svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.2em;
 }
 
 /* post-body */
