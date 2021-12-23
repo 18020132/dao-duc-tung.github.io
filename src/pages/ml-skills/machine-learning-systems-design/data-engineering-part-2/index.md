@@ -18,7 +18,7 @@ After collecting and transforming data, we need to create training datasets. Dat
 ## Data split
 
 - Shuffle then split: Not reprentative of real-world usage
-- Time period splits: E.g. split valid/test for data in the same week
+- Time-period splits: E.g. split valid/test for data in the same week
 - Multiple train splits: E.g Train on data from n months, n weeks agao and validate on today data to see how worse performance gets over time
 - Multiple valid/test splits: Evaluate performance on different slices of data such as different subgroups, critical slices (E.g. object detection for self-driving cars: accuracy on road surfaces with cyclists is more important).
 
