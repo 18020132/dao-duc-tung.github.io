@@ -24,11 +24,13 @@ This way of looking at the world has an interesting effect on us. Because we hav
 We get the sense that people who achieve in a hierarchical sense, their lives will be judged somehow as better having lived than those below. We measure sometimes how high we go or how successful we are by how much money we make.
 
 These are all the results of our having limited minds and our having to aggregate measures of success. This choice of measurement
-is a big deal.
+is actually a big deal.
 
 In a company, for example, if you measure profitability by return on net assets, it causes you to manage it in a particular way. You could be innovative, develop successful new products, take that profitability and stick it into the numerator of the ratio, and you can also reduce the denominator of the ratio by outsourcing everything.
 
 Similarly, if you measure profitability on innovation in terms of internal rate of return, you could get the ratio up by being successful with innovation, but you also could get that measure up by only investing in short-term projects.
+
+In the end, this choice of measurement causes us to develop our company successfully.
 
 ## Discovery 2 - How do I measure the success of my life?
 
