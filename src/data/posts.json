@@ -80,6 +80,85 @@
     "url": "ml-skills",
     "childs": [
       {
+        "title": "Docker",
+        "type": "topic",
+        "url": "ml-skills/docker",
+        "childs": [
+          {
+            "title": "Docker - Introduction",
+            "type": "post",
+            "url": "ml-skills/docker/introduction",
+            "tags": [
+              "docker",
+              "introduction"
+            ]
+          },
+          {
+            "title": "Docker - Image and Container",
+            "type": "post",
+            "url": "ml-skills/docker/image-and-container",
+            "tags": [
+              "docker",
+              "docker image",
+              "docker container"
+            ]
+          },
+          {
+            "title": "Docker - Attach and Detach",
+            "type": "post",
+            "url": "ml-skills/docker/attach-and-detach",
+            "tags": [
+              "docker",
+              "docker attach",
+              "docker detach",
+              "docker run",
+              "docker exec"
+            ]
+          },
+          {
+            "title": "Docker - Publish Port",
+            "type": "post",
+            "url": "ml-skills/docker/publish-port",
+            "tags": [
+              "docker",
+              "publish port"
+            ]
+          },
+          {
+            "title": "Docker - Container Networking",
+            "type": "post",
+            "url": "ml-skills/docker/container-networking",
+            "tags": [
+              "docker",
+              "container networking",
+              "docker network"
+            ]
+          },
+          {
+            "title": "Docker - Volumes",
+            "type": "post",
+            "url": "ml-skills/docker/volumes",
+            "tags": [
+              "docker",
+              "sharing data",
+              "volumes-from"
+            ]
+          },
+          {
+            "title": "Docker - Registry",
+            "type": "post",
+            "url": "ml-skills/docker/registry",
+            "tags": [
+              "docker",
+              "docker registry",
+              "docker search",
+              "docker tag",
+              "docker push"
+            ]
+          }
+        ]
+      },
+      {
         "title": "Machine Learning Systems Design",
         "type": "topic",
         "url": "ml-skills/machine-learning-systems-design",
@@ -160,80 +239,17 @@
         ]
       },
       {
-        "title": "Docker",
+        "title": "Machine Learning Adoption",
         "type": "topic",
-        "url": "ml-skills/docker",
+        "url": "ml-skills/machine-learning-adoption",
         "childs": [
           {
-            "title": "Docker - Introduction",
+            "title": "MLA - Planning a machine learning project",
             "type": "post",
-            "url": "ml-skills/docker/introduction",
+            "url": "ml-skills/machine-learning-adoption/planning-a-machine-learning-project",
             "tags": [
-              "docker",
-              "introduction"
-            ]
-          },
-          {
-            "title": "Docker - Image and Container",
-            "type": "post",
-            "url": "ml-skills/docker/image-and-container",
-            "tags": [
-              "docker",
-              "docker image",
-              "docker container"
-            ]
-          },
-          {
-            "title": "Docker - Attach and Detach",
-            "type": "post",
-            "url": "ml-skills/docker/attach-and-detach",
-            "tags": [
-              "docker",
-              "docker attach",
-              "docker detach",
-              "docker run",
-              "docker exec"
-            ]
-          },
-          {
-            "title": "Docker - Publish Port",
-            "type": "post",
-            "url": "ml-skills/docker/publish-port",
-            "tags": [
-              "docker",
-              "publish port"
-            ]
-          },
-          {
-            "title": "Docker - Container Networking",
-            "type": "post",
-            "url": "ml-skills/docker/container-networking",
-            "tags": [
-              "docker",
-              "container networking",
-              "docker network"
-            ]
-          },
-          {
-            "title": "Docker - Volumes",
-            "type": "post",
-            "url": "ml-skills/docker/volumes",
-            "tags": [
-              "docker",
-              "sharing data",
-              "volumes-from"
-            ]
-          },
-          {
-            "title": "Docker - Registry",
-            "type": "post",
-            "url": "ml-skills/docker/registry",
-            "tags": [
-              "docker",
-              "docker registry",
-              "docker search",
-              "docker tag",
-              "docker push"
+              "machine learning adoption",
+              "project planning"
             ]
           }
         ]
