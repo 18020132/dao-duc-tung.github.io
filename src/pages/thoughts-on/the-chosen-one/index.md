@@ -17,7 +17,7 @@ These people are a little less. They are people who are good at enduring. They c
 
 ### The chosen one
 
-If the weak one falls in the face of difficulties, the strong one endures hardships and looks for opportunities to rise, then the chosen one benefits from what the majority consider difficult. It could be genetics, upbringing, or opportune. If you are lucky enough to come across such a person, lower your ego, and politely invite them to be your companion.
+If the weak one falls in the face of difficulties, the strong one endures hardships and looks for opportunities to rise, then the chosen one benefits from what the majority consider difficult. It could be genetics, upbringing, or opportuneness. If you are lucky enough to come across such a person, lower your ego, and politely invite them to be your companion.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
