@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>MLA - Process Model: CRISP-DM</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/machine-learning-adoption" class="btn"> Back to Machine Learning Adoption </a>
+    
+  <h1>MLA - Process Model: CRISP-DM</h1>
+
+  <div class="post-info">
+    Dec 27, 2021 · 9 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/machine-learning-adoption/process-model-crisp-dm/processes.jpg" alt="processes"></p>
+<p>CRISP-DM - CRoss Industry Standard Process for Data Mining - is a process model that helps you plan, organize, and implement your ML project. It includes six phases that describes the data science life cycle as below:</p>
+<ol>
+<li>Business understanding</li>
+<li>Data understanding</li>
+<li>Data preparation</li>
+<li>Modeling</li>
+<li>Evaluation</li>
+<li>Deployment</li>
+</ol>
+<p>This process model basically is the same as the iterative process that I covered in this post <a href="https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/">Intro to ML systems design - Part 2</a>.</p>
+<h2 id="business-understanding">Business understanding</h2>
+<p>Basically, we need to do these four steps:</p>
+<ul>
+<li>Understand business requirements<ul>
+<li>Form a business question</li>
+<li>Highlight project&#39;s critical features</li>
+</ul>
+</li>
+<li>Analyze supporting information<ul>
+<li>List required resources and assumptions</li>
+<li>Analyze associated risks</li>
+<li>Plan for contingencies</li>
+<li>Compare costs and benefits</li>
+</ul>
+</li>
+<li>Convert to ML objective<ul>
+<li>Review ML question</li>
+<li>Create technical data mining objective</li>
+<li>Define the criteria for successful outcome of the project</li>
+</ul>
+</li>
+<li>Create a project plan<ul>
+<li>Number and duration of stages</li>
+<li>Dependencies</li>
+<li>Risks</li>
+<li>Goals</li>
+<li>Evaluation methods</li>
+<li>Tools and techniques</li>
+</ul>
+</li>
+</ul>
+<p>For more details, please refer to the section <strong>Project Scoping</strong> in the post <a href="https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/">Intro to ML systems design - Part 2</a>.</p>
+<h2 id="data-understanding">Data understanding</h2>
+<p>In this phase, we need to complete these three steps:</p>
+<ul>
+<li>Collect data<ul>
+<li>Detail various sources and steps to extract data</li>
+<li>Analyze data for additional requirements</li>
+<li>Consider other data sources</li>
+</ul>
+</li>
+<li>Understand data<ul>
+<li>Describe data, amount of data used, and metadata properties</li>
+<li>Find key features and relationships in the data</li>
+<li>Use tools and techniques to explore data properties</li>
+</ul>
+</li>
+<li>Verify data quality<ul>
+<li>Verify features</li>
+<li>Identify data quality issues mentioned in the post <a href="https://aiengineer.net/ml-skills/machine-learning-systems-design/data-engineering-part-2/">Data engineering - Part 2</a></li>
+<li>Report solution</li>
+</ul>
+</li>
+</ul>
+<p>For more details, please refer to the post <a href="https://aiengineer.net/ml-skills/machine-learning-systems-design/data-engineering-part-1/">Data engineering - Part 1</a>.</p>
+<h2 id="data-preparation">Data preparation</h2>
+<p>In this phase, we will complete two steps:</p>
+<ul>
+<li>Select final dataset<ul>
+<li>Define size</li>
+<li>Included/Excluded features</li>
+<li>Select rows/records</li>
+<li>Define data type</li>
+</ul>
+</li>
+<li>Prepare the data:<ul>
+<li>Clean: solve data quality issues</li>
+<li>Transform: derive additional features from original ones, normalization, transform features</li>
+<li>Merge: merge features</li>
+<li>Format: rearrange features, shuffle data, format unicode if needed</li>
+</ul>
+</li>
+</ul>
+<p>After this phase, we can go back to Data Understanding phase to understand and check the data again.</p>
+<h2 id="modeling">Modeling</h2>
+<p>In this phase, we need to perform three main steps:</p>
+<ul>
+<li>Select and create model<ul>
+<li>Select modeling technique</li>
+<li>Identify constraints of the technique and tools</li>
+<li>Identify how those constraints tie back to Data preparation phase</li>
+</ul>
+</li>
+<li>Build test plan<ul>
+<li>Split data</li>
+<li>Identify evaluation criteria</li>
+</ul>
+</li>
+<li>Build model<ul>
+<li>Train model</li>
+<li>Tweak model for better performance</li>
+<li>Build multiple models with different parameter settings</li>
+<li>Describe the trained models and report on the findings</li>
+</ul>
+</li>
+</ul>
+<p>Note that this phase works together with the Data preparation phase.</p>
+<h2 id="evaluation">Evaluation</h2>
+<p>In this phase, we will complete three steps:</p>
+<ul>
+<li>Evaluate model performance<ul>
+<li>Evaluation criteria</li>
+<li>Model generalization on unseen data</li>
+<li>Business success criteria</li>
+</ul>
+</li>
+<li>Review process<ul>
+<li>Assess the steps taken in each phase: Was anything overlooked? Were all steps properly executed?</li>
+<li>Perform quality assurance checks: Summarize findings and correct anything if needed.</li>
+</ul>
+</li>
+<li>Determine the next step<ul>
+<li>Decide to deploy to production</li>
+<li>Or iterate the current project</li>
+<li>Or start a new project</li>
+</ul>
+</li>
+</ul>
+<h2 id="deployment">Deployment</h2>
+<p>In this phase, we need to complete these four steps:</p>
+<ul>
+<li>Plan deployment<ul>
+<li>Develop, document a plan for deployment</li>
+</ul>
+</li>
+<li>Maintain and monitor<ul>
+<li>Develop a plan for maintenance and monitoring data quality, model quality</li>
+</ul>
+</li>
+<li>Produce final report<ul>
+<li>Highlight processes used in the project</li>
+<li>Analyze if all the goals were met</li>
+<li>Report findings</li>
+<li>Identify and explain the model used and reason behind using the model</li>
+<li>Identify the customer groups to target using this model</li>
+</ul>
+</li>
+<li>Review project: Assess the outcomes of the project<ul>
+<li>Summarize results and write documents about common pitfalls and choosing the right ML solution</li>
+<li>Generalize the whole process to make it useful for the next iteration</li>
+</ul>
+</li>
+</ul>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">machine learning adoption</a></li>
+          
+          <li><a href="#">process model</a></li>
+          
+          <li><a href="#">crisp-dm</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/machine-learning-adoption/process-model-crisp-dm'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/machine-learning-adoption/planning-a-machine-learning-project" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: MLA - Planning a machine learning project</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/projects/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/machine-learning-adoption/process-model-crisp-dm"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>
