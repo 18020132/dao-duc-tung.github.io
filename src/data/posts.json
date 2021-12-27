@@ -261,6 +261,16 @@
               "machine learning adoption",
               "project planning"
             ]
+          },
+          {
+            "title": "MLA - Process Model: CRISP-DM",
+            "type": "post",
+            "url": "ml-skills/machine-learning-adoption/process-model-crisp-dm",
+            "tags": [
+              "machine learning adoption",
+              "process model",
+              "crisp-dm"
+            ]
           }
         ]
       }

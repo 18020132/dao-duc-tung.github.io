@@ -18,11 +18,11 @@ To know if an ML solution is appropriate, we will answer a few questions.
 
 ### How to determine if ML is the right solution?
 
-Businesses can determine if ML is the right solution if **the problem is clear and quantifiable**. To define a clear and quantifiable problem, we need to define goals, objectives, business constraints, and how to evaluate the system's performance. For more details, please refer to the section **Project Scoping** in the post [Intro to ML systems design part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/).
+Businesses can determine if ML is the right solution if **the problem is clear and quantifiable**. To define a clear and quantifiable problem, we need to define goals, objectives, business constraints, and how to evaluate the system's performance. For more details, please refer to the section **Project Scoping** in the post [Intro to ML systems design - Part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/).
 
 ### What aspects of the problem make it a good fit to apply ML?
 
-To be able to answer this question, we need to know when to use and when not to use ML. In the section **When to use ML** in the post [Intro to ML systems design part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/), I covered the details of when to use and when not to use ML.
+To be able to answer this question, we need to know when to use and when not to use ML. In the section **When to use ML** in the post [Intro to ML systems design - Part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/), I covered the details of when to use and when not to use ML.
 
 ## Is my data ready?
 
@@ -46,7 +46,7 @@ To answer this question, we should answer a few questions:
 
 ### Time expectation
 
-ML can take significant time from the start of a project through production deployment. It can take even months. Once you decided to adopt ML into your project, your strategy depends on which phase of ML adoption you are in. There're four phases of adopting ML, with solutions from each phase that can be used as baselines to evaluate the solutions from the next phase. These phases were discussed in the section **Four phased of ML adoption** in the post [Intro to ML systems design part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/).
+ML can take significant time from the start of a project through production deployment. It can take even months. Once you decided to adopt ML into your project, your strategy depends on which phase of ML adoption you are in. There're four phases of adopting ML, with solutions from each phase that can be used as baselines to evaluate the solutions from the next phase. These phases were discussed in the section **Four phased of ML adoption** in the post [Intro to ML systems design - Part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/).
 
 ### ML lifecycle
 
@@ -59,7 +59,7 @@ The workflow of building an ML system is more of a cycle than a waterfall. There
 - Monitoring and maintenance
 - Business analysis
 
-Please refer to the section **The iterative process** in the post [Intro to ML systems design part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/) for more details.
+Please refer to the section **The iterative process** in the post [Intro to ML systems design - Part 2](https://aiengineer.net/ml-skills/machine-learning-systems-design/intro-to-ml-systems-design-part-2/) for more details.
 
 ### Timeline expectation
 
