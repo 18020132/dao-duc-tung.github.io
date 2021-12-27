@@ -244,15 +244,6 @@
         "url": "ml-skills/machine-learning-adoption",
         "childs": [
           {
-            "title": "MLA - Planning a machine learning project",
-            "type": "post",
-            "url": "ml-skills/machine-learning-adoption/planning-a-machine-learning-project",
-            "tags": [
-              "machine learning adoption",
-              "project planning"
-            ]
-          },
-          {
             "title": "MLA - Building a ready organization",
             "type": "post",
             "url": "ml-skills/machine-learning-adoption/building-a-ready-organization",
@@ -260,6 +251,15 @@
               "machine learning adoption",
               "building",
               "ready organization"
+            ]
+          },
+          {
+            "title": "MLA - Planning a machine learning project",
+            "type": "post",
+            "url": "ml-skills/machine-learning-adoption/planning-a-machine-learning-project",
+            "tags": [
+              "machine learning adoption",
+              "project planning"
             ]
           }
         ]

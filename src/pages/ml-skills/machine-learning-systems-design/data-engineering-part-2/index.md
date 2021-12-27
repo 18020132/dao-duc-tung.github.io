@@ -5,22 +5,18 @@ layout: post
 
 ![matrix][matrix]
 
-## Bias sources
+## Common issues of data quality
 
-After collecting and transforming data, we need to create training datasets. Data is full of potentials for biases, which can come from any of the following sources such as:
+There're some known issues of data quality that we need to deal with.
 
-- Sampling/selection biases
-- Under/over-representation of subgroups
-- Human biases embedded in historical data
-- Labeling biases
-- Etc.
-
-## Data split
-
-- Shuffle then split: Not reprentative of real-world usage
-- Time-period splits: E.g. split valid/test for data in the same week
-- Multiple train splits: E.g Train on data from n months, n weeks agao and validate on today data to see how worse performance gets over time
-- Multiple valid/test splits: Evaluate performance on different slices of data such as different subgroups, critical slices (E.g. object detection for self-driving cars: accuracy on road surfaces with cyclists is more important).
+- Consistency of the data: Is the data we're using consistent with the problem we want to solve? E.g. Different languages, different scales/units, mixed type
+- Accuracy of the data: Are features, labels, methods to collect data correct?
+- Noisy data: How to remove noise from the input, output?
+- Missing data: How to deal with missing data?
+- Outliers in the data: How to detect and deal with outliers?
+- Correlated: Highly correlated features can cause collinearity problems and numerical instability
+- Bias: Sampling/selection biases, Under/over-representation of subgroups, Human biases embedded in historical data, Labeling biases
+- Variance, etc.
 
 ## Labeling
 
