@@ -5,11 +5,11 @@ layout: post
 
 ![processes][processes]
 
-Today in this post, I will introduce a common process model to organize an ML project - the CRISP-DM process model. After that, I will introduce a simple ML lifecycle and the four phased of ML adoption.
+Today in this post, I will introduce a common process model to organize an ML project - the CRISP-DM process model. After that, I will introduce a simple ML lifecycle and the four-phased of ML adoption.
 
 ## The CRISP-DM process model
 
-CRISP-DM - CRoss Industry Standard Process for Data Mining - is a process model that helps you plan, organize, and implement your ML project. It includes six phases that describes the data science life cycle as below:
+CRISP-DM - CRoss Industry Standard Process for Data Mining - is a process model that helps you plan, organize, and implement your ML project. It includes six phases that describe the data science life cycle as below:
 
 1. Business understanding
 1. Data understanding
@@ -22,11 +22,11 @@ CRISP-DM - CRoss Industry Standard Process for Data Mining - is a process model 
 
 ### Business understanding
 
-At the very beginning, we need to scope the project by laying out goals and objectives, constraints, and evaluation criteria. Stakeholders should be identified and involved. Resources should be estimated and allocated. This stage is also the place for business analysis where model performance needs to be evaluated against business goals and analyzed to generate business insights. These insights can then be used to eliminate unproductive projects or scope out new projects. Basically, we need to do these four steps:
+At the very beginning, we need to scope the project by laying out goals and objectives, constraints, and evaluation criteria. Stakeholders should be identified and involved. Resources should be estimated and allocated. This stage is also the place for business analysis where model performance needs to be evaluated against business goals and analyzed to generate business insights. These insights can then be used to eliminate unproductive projects or scope out new projects. We need to do these four steps:
 
 - Understand business requirements
   - Form a business question
-  - Highlight project's critical features
+  - Highlight the project's critical features
 - Analyze supporting information
   - List required resources and assumptions
   - Analyze associated risks
@@ -35,7 +35,7 @@ At the very beginning, we need to scope the project by laying out goals and obje
 - Convert to ML objective
   - Review ML question
   - Create technical data mining objective
-  - Define the criteria for successful outcome of the project
+  - Define the criteria for the successful outcome of the project
 - Create a project plan
   - Number and duration of stages
   - Dependencies
@@ -44,7 +44,7 @@ At the very beginning, we need to scope the project by laying out goals and obje
   - Evaluation methods
   - Tools and techniques
 
-We will discuss in more detailed in the future post.
+We will discuss this in more detail in the future post.
 
 ### Data understanding
 
@@ -80,16 +80,16 @@ In this phase, we will complete two steps:
   - Merge: merge features
   - Format: rearrange features, shuffle data, format unicode if needed
 
-After this phase, we can go back to Data Understanding phase to understand and check the data again.
+After this phase, we can go back to the Data Understanding phase to understand and check the data again.
 
 ### Modeling
 
 This stage is where you perform model exploration, model training, and model testing. In this phase, we need to perform three main steps:
 
-- Select and create model
+- Select and create the model
   - Select modeling technique
   - Identify constraints of the technique and tools
-  - Identify how those constraints tie back to Data preparation phase
+  - Identify how those constraints tie back to the Data preparation phase
 - Build test plan
   - Split data
   - Identify evaluation criteria
@@ -110,7 +110,7 @@ In this phase, we will complete three steps:
   - Model generalization on unseen data
   - Business success criteria
 - Review process
-  - Assess the steps taken in each phase: Was anything overlooked? Were all steps properly executed?
+  - Assess the steps in each phase: Was anything overlooked? Were all steps properly executed?
   - Perform quality assurance checks: Summarize findings and correct anything if needed.
 - Determine the next step
   - Decide to deploy to production
@@ -129,7 +129,7 @@ After a model is ready to be used, a deployment infrastructure should be ready t
   - Highlight processes used in the project
   - Analyze if all the goals were met
   - Report findings
-  - Identify and explain the model used and reason behind using the model
+  - Identify and explain the model used and the reason behind using the model
   - Identify the customer groups to target using this model
 - Review project: Assess the outcomes of the project
   - Summarize results and write documents about common pitfalls and choosing the right ML solution
@@ -137,7 +137,7 @@ After a model is ready to be used, a deployment infrastructure should be ready t
 
 ## The Machine Learning lifecycle
 
-I prefer to do things in a simple way. In my opinion, the data understand and data preparation steps can be combined into one data engineering step; the modeling and evaluation steps can be combined into one model development step. So now, we have four main phases:
+I prefer to do things in a simple way. In my opinion, the data understanding and data preparation steps can be combined into one data engineering step; the modeling and evaluation steps can be combined into one model development step. So now, we have four main phases:
 
 1. Problem definition (Business understanding)
 1. Data engineering
@@ -152,7 +152,7 @@ In reality, you can split these four phases into small steps depending on the sc
 
 ![moon-phases][moon-phases]
 
-Once you decided to adopt ML into your project, your strategy depends on which phase of ML adoption you are in. Below is the four phases of adopting ML, with solutions from each phase can be used as baselines to evaluate the solutions from the next phase.
+Once you decided to adopt ML into your project, your strategy depends on which phase of ML adoption you are in. Below are the four phases of adopting ML, with solutions from each phase that can be used as baselines to evaluate the solutions from the next phase.
 
 ### 1. Before ML
 

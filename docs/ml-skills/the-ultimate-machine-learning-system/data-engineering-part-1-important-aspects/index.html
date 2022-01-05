@@ -86,14 +86,14 @@
 <li>Collect data</li>
 <li>Understand data</li>
 <li>Verify data quality</li>
-<li>Select final dataset</li>
+<li>Select the final dataset</li>
 <li>Prepare data for training</li>
 </ul>
 <p>Before diving into each step, firstly this post will introduce some important aspects of data that we should consider including:</p>
 <ul>
 <li>Data sources</li>
 <li>Data formats</li>
-<li>Structured vs. Unstructured data</li>
+<li>Structured vs. Unstructured Data</li>
 <li>OLTP vs. OLAP databases</li>
 <li>Extract - Transform - Load processes</li>
 <li>Batch processing vs. Stream processing</li>
@@ -165,7 +165,7 @@
 <td>Require lots of reads with almost no writes</td>
 </tr>
 </tbody></table>
-<p><strong>Note</strong>: NumPy creates array with row-major by default. Pandas creates DataFrame which is columnar.</p>
+<p><strong>Note</strong>: NumPy creates arrays with row-major by default. Pandas creates DataFrame which is columnar.</p>
 <h3 id="text-vs-binary-format">Text vs. binary format</h3>
 <table>
 <thead>
@@ -215,7 +215,7 @@
 </tbody></table>
 <p><strong>Note</strong>: AWS recommends using the Parquet format because &quot;<em>the Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats.</em>&quot;</p>
 <h2 id="structured-vs-unstructured-data">Structured vs. Unstructured data</h2>
-<p>When the data schema evolved and the number of possible data sources expanded, companies just store all data in a data lake so to not have to deal with schema changes. This process of loading data into storage first then processing it later is sometimes called ELT (extract, load, transform).</p>
+<p>When the data schema evolved and the number of possible data sources expanded, companies just store all data in a data lake to not have to deal with schema changes. This process of loading data into storage first then processing it later is sometimes called ELT (extract, load, transform).</p>
 <p>As data keeps on growing and companies switch to running applications on the cloud and infrastructures become standardized, data structures also become standardized, which makes some companies store data in a structured way.</p>
 <table>
 <thead>
@@ -263,8 +263,8 @@
 </thead>
 <tbody><tr>
 <td>Traits</td>
-<td>Most of operations will be inserting, deleting, and updating an existing transaction</td>
-<td>Most of operations will be aggregating data in columns across multiple rows. Ex: compute average price for all rides in Sept in Singapore</td>
+<td>Most operations will be inserting, deleting, and updating an existing transaction</td>
+<td>Most operations will be aggregating data in columns across multiple rows. Ex: compute the average price for all rides in Sept in Singapore</td>
 </tr>
 <tr>
 <td>Use case</td>
@@ -301,11 +301,11 @@
 <tbody><tr>
 <td>Definition</td>
 <td>Data is processed in batches</td>
-<td>Data is processed as soon as sample arrives. This enables <strong>online prediction</strong></td>
+<td>Data is processed as soon as the sample arrives. This enables <strong>online prediction</strong></td>
 </tr>
 <tr>
 <td>Data type</td>
-<td>usually process static features such as age, gender, job, city, income; when account was created; rating</td>
+<td>usually process static features such as age, gender, job, city, income; when the account was created; rating</td>
 <td>usually process dynamic features such as locations in the last 10 minutes; what user&#39;s watching; what user just liked</td>
 </tr>
 <tr>
@@ -321,15 +321,15 @@
 </tbody></table>
 <p>The stream processing is more complicated and has some requirements as below.</p>
 <ul>
-<li>Real-time pipeline: process features, put into model, return prediction in milliseconds.</li>
-<li>Manage streaming data: Keep user&#39;s events in-memory as much as possible, and stay there as long as they&#39;re useful (e.g. 7 days) then goes into permanent storage (e.g. S3) or is discarded. For example, recent history, recent trips, recent transactions, choose location, book a trip, cancel a trip, add a credit card, remove a credit card, etc.</li>
+<li>Real-time pipeline: process features, put into the model, return prediction in milliseconds.</li>
+<li>Manage streaming data: Keep user&#39;s events in memory as much as possible, and stay there as long as they&#39;re useful (e.g. 7 days) then goes into permanent storage (e.g. S3) or is discarded. For example, recent history, recent trips, recent transactions, choose a location, book a trip, cancel a trip, add a credit card, remove a credit card, etc.</li>
 <li>Process data: Join features from various data sources</li>
 </ul>
 <p>Apache Kafka stream processing is limited in its ability to deal with various data sources. The most popular tool for stream processing is Apache Flink, with native support for batch processing.</p>
 <p>There&#39;re some barriers in Stream processing adoption such as:</p>
 <ul>
-<li>Companies don&#39;t see benefits of streaming: System not at scale, batch predictions work fine, online predictions would work better but they don&#39;t know</li>
-<li>High initial investment on infrastructure</li>
+<li>Companies don&#39;t see benefits of streaming: The system isn&#39;t at scale, batch predictions work fine, online predictions would work better but they don&#39;t know</li>
+<li>High initial investment in infrastructure</li>
 <li>Mental shift</li>
 <li>Python incompatibility</li>
 </ul>
@@ -337,7 +337,7 @@
 <p>There&#39;re some known issues of data quality that we need to deal with.</p>
 <ul>
 <li>Consistency of the data: Is the data we&#39;re using consistent with the problem we want to solve? E.g. Different languages, different scales/units, mixed type</li>
-<li>Accuracy of the data: Are features, labels, methods to collect data correct?</li>
+<li>Accuracy of the data: Are features, labels, methods to collect data correctly?</li>
 <li>Noisy data: How to remove noise from the input, output?</li>
 <li>Missing data: How to deal with missing data?</li>
 <li>Outliers in the data: How to detect and deal with outliers?</li>

@@ -7,7 +7,7 @@ layout: post
 
 ## Create a data repository
 
-The whole field of ML revolves around data. Data helps you making strategic business decisions and understand your customers at a deeper level. After collecting the data, now it's the time to store your data in **a centralized repository**. With a **data lake**, you can store structured and unstructured data.
+The whole field of ML revolves around data. Data helps you make strategic business decisions and understand your customers at a deeper level. After collecting the data, now it's time to store your data in **a centralized repository**. With a **data lake**, you can store structured and unstructured data.
 
 This post focuses on the recommended practical AWS workshops/courses that you should take to gain from basic to advanced understanding and skills needed to create a data repository. You can skip the introduction of AWS courses. You only need to get the idea of creating a data repository and its purpose.
 
@@ -19,12 +19,12 @@ Lake Formation is a data lake solution, and S3 is the preferred storage option f
 
 To learn more, refer to:
 
-- [AWS Lake Formation Workshop](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/78572df7-d2ee-4f78-b698-7cafdb55135d/en-US/). This workshop provides tutorial about:
+- [AWS Lake Formation Workshop](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/78572df7-d2ee-4f78-b698-7cafdb55135d/en-US/). This workshop provides a tutorial about:
   - Glue basics
   - Lake Formation basics
   - Integration with EMR
   - Handling real-time data using Kinesis
-    - Note: In the `Kinesis Data Generator`, `Create a Data Stream`, `Create Stream Table` sections, login with your admin user because creating CloudFormation stack requires permissions related to IAM, Lambda, S3, Glue, etc.
+    - Note: In the `Kinesis Data Generator`, `Create a Data Stream`, `Create Stream Table` sections, log in with your admin user because creating CloudFormation stack requires permissions related to IAM, Lambda, S3, Glue, etc.
   - Glue to Lake Formation migration: This part has some problems with created user's permission and outdated AMI ID. You can skip this part
 - [Data Engineering Immersion Day](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/976050cc-0606-4b23-b49f-ca7b8ac4b153/en-US/). This workshop covers:
   - Streaming data analytics using Kinesis, Glue, and MSK
@@ -40,9 +40,9 @@ When your training data is already in S3 and you plan to run training jobs sever
 To learn more, refer to:
 
 - [Amazon Web Services HPC Workshops](https://www.hpcworkshops.com/04-amazon-fsx-for-lustre.html)
-  - This workshop is about High Performance Computing
+  - This workshop is about High-Performance Computing
 - [Kubernetes and EKS](https://www.eksworkshop.com/beginner/190_fsx_lustre/)
-  - This workshop explores multiple ways to configure VPC, ALB, and EC2 Kubernetes workers, and Elastic Kubernetes Service
+  - This workshop explores multiple ways to configure VPC, ALB, and EC2 Kubernetes workers and Elastic Kubernetes Service
 
 ### Elastic File System
 
@@ -52,7 +52,7 @@ To learn more, refer to:
 
 - [Cloud File Storage the AWSome Way!](https://github.com/aws-samples/amazon-efs-workshop)
 - [Kubernetes and EKS](https://www.eksworkshop.com/beginner/190_efs/launching-efs/)
-  - This workshop explores multiple ways to configure VPC, ALB, and EC2 Kubernetes workers, and Elastic Kubernetes Service
+  - This workshop explores multiple ways to configure VPC, ALB, and EC2 Kubernetes workers and Elastic Kubernetes Service
 
 ### Training load time comparison
 

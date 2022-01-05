@@ -5,7 +5,7 @@ layout: post
 
 ![planning][planning]
 
-Before deep diving into the ML system design, today in this post, we will go through a plan of an ML project by answering four questions. These four questions will help us to get an idea of what we should concern about and what expectations we should set. The four questions include:
+Before deep-diving into the ML system design, today in this post, we will go through a plan of an ML project by answering four questions. These four questions will help us to get an idea of what we should concern about and what expectations we should set. The four questions include:
 
 - Is an ML solution appropriate for my problem?
 - Is my data ready for ML?
@@ -30,7 +30,7 @@ To be able to answer this question, we need to know when to use and when not to 
 
 _Machine learning is an approach to **learn complex patterns** from **existing data** and use these patterns to make **predictions** on **unseen data**._
 
-We'll look at each of the bold keyphrases in the definition to understand its implications to the problems ML can solve.
+We'll look at each of the bold keyphrases in the definition to understand its implications for the problems ML can solve.
 
 1. **Patterns**: Data must have patterns
 2. **Learn**: Possible to form an objective function to guide the learning
@@ -38,7 +38,7 @@ We'll look at each of the bold keyphrases in the definition to understand its im
 4. **Existing data**: Data is available, or it's possible to collect
 5. **Unseen data**: Unseen data shares patterns with training data
 6. **Predictions**: It's a predictive problem
-7. **It's repetitive**: When taks is repetitive, pattern is repeated multiple times
+7. **It's repetitive**: When the task is repetitive, the pattern is repeated multiple times
 8. **It's at scale**: A lot of data will be used for training
 9. **Patterns are constantly changing**: ML allows you to learn from changing data
 
@@ -120,7 +120,7 @@ The workflow of building an ML system is more of a cycle than a waterfall. There
 - Model development: perform model exploration, model training, and model testing.
 - Deployment: make the model accessible to users, monitor and maintain data quality and model quality to detect their decay as soon as possible to be adaptive to changing environments and changing requirements.
 
-We will discuss further about this ML lifecycle in the next post.
+We will discuss further this ML lifecycle in the next post.
 
 ### Timeline expectation
 

@@ -81,9 +81,9 @@
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/research.jpg" alt="research"></p>
-<p>This post will discuss about the differences between ML in research and ML in production, between traditional software and ML systems, some ML challenges in production and some ML deployment myths.</p>
+<p>This post will discuss the differences between ML in research and ML in production, between traditional software and ML systems, some ML challenges in production, and some ML deployment myths.</p>
 <h2 id="research-vs-production">Research vs. Production</h2>
-<p>The table below shows five major problems and the differences between ML systems in research and in production.</p>
+<p>The table below shows five major problems and the differences between ML systems in research and production.</p>
 <table>
 <thead>
 <tr>
@@ -136,8 +136,8 @@
 <p>In research, we want the training process can take as many samples as it can in a second (throughput). In production, latency matters a lot. If you can type your next word faster than what your iPhone predicts, do you ever want to wait and click on the predicted word?</p>
 <h3 id="data">Data</h3>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/data.jpg" alt="data"></p>
-<p>In research, data is clean and formatted. They are unchanged so people can use it as benchmarks for evaluation. The process of preparing data and feed it to your model usually was done by somebody.</p>
-<p>In production, data is messy. You have to clean it and re-format it. It&#39;s not easy to split into the training set, test set, or validation set because it usually has some issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merging two existing label classes. This is really a nightmare!</p>
+<p>In research, data is clean and formatted. They are unchanged so people can use them as benchmarks for evaluation. The process of preparing data and feeding it to your model usually was done by somebody.</p>
+<p>In production, data is messy. You have to clean it and re-format it. It&#39;s not easy to split into the training set, test set, or validation set because it usually has some issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merge two existing label classes. This is really a nightmare!</p>
 <p>In research, data usually was created a long time ago. In production, data could be created a long time ago, or streaming data, or both. In production, you need to care about data privacy and regulations.</p>
 <table>
 <thead>
@@ -168,7 +168,7 @@
 <blockquote>
 <p>ML algorithms don&#39;t predict the future, but encode the past, perpetuating the biases in the data and more.</p>
 </blockquote>
-<p>The minority groups would be harm badly because the wrong predictions have minor consequences on the model&#39;s overall performance.</p>
+<p>The minority groups would be harmed badly because the wrong predictions have minor consequences on the model&#39;s overall performance.</p>
 <h3 id="interpretability">Interpretability</h3>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/ai-surgeon.jpg" alt="ai-surgeon"></p>
 <p>Model interpretability is important to understand why the model makes that prediction/decision. Otherwise, we might feel uncomfortable with trusting it. It also makes the process of debugging, monitoring, and improving the model easier.</p>
@@ -177,9 +177,9 @@
 </blockquote>
 <h3 id="addons">Addons</h3>
 <p>Most companies cannot pursue pure research unless it leads to short-term profitable applications.</p>
-<p>Nowadays, more people and organizations in different fields want to find applications for them due to the easy accessibility of state-of-the-art models. That&#39;s why the majority of ML-related jobs is in ML production.</p>
+<p>Nowadays, more people and organizations in different fields want to find applications for them due to the easy accessibility of state-of-the-art models. That&#39;s why the majority of ML-related jobs are in ML production.</p>
 <h2 id="traditional-software-vs-ml-systems">Traditional software vs. ML systems</h2>
-<p>ML production would be much better place if ML experts were better software engineers. Many traditional software engineering tools can be used to develop and deploy ML applications.</p>
+<p>ML production would be a much better place if ML experts were better software engineers. Many traditional software engineering tools can be used to develop and deploy ML applications.</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/ml-engineering.png" alt="ml-engineering"></p>
 <p>However, many challenges are unique to ML applications and require their own tools. Below is the table to compare traditional software and ML systems.</p>
 <table>
@@ -225,7 +225,7 @@
 <tbody><tr>
 <td>1</td>
 <td>Data labeling</td>
-<td>Quickly label new data or re-label existing data for new model?</td>
+<td>Quickly label new data or re-label existing data for a new model?</td>
 <td>Snorkel</td>
 </tr>
 <tr>
@@ -279,7 +279,7 @@
 <tr>
 <td>10</td>
 <td>Inference optimization</td>
-<td>Speed up inference time? Can we fuse operations together? Can we use lower precision?</td>
+<td>Speed up inference time? Can we fuse operations? Can we use lower precision?</td>
 <td>TensorRT</td>
 </tr>
 <tr>
@@ -314,7 +314,7 @@
 <tr>
 <td>2</td>
 <td>Only deploy one or two ML models at a time</td>
-<td>Companies have many ML models. Each different features of an application requires its own model</td>
+<td>Companies have many ML models. Each different feature of an application requires its own model</td>
 </tr>
 <tr>
 <td>3</td>
@@ -333,7 +333,7 @@
 </tr>
 <tr>
 <td>6</td>
-<td>ML can transform business overnight</td>
+<td>ML can transform the business overnight</td>
 <td>Magically - possible, but overnight - no. The longer you&#39;ve adopted ML, the faster your development cycle will run, and the higher your Returns On Investment (ROI) will be</td>
 </tr>
 </tbody></table>

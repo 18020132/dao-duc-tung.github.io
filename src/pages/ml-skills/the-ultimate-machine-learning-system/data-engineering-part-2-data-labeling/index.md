@@ -5,7 +5,7 @@ layout: post
 
 ![matrix][matrix]
 
-Despite the promise of unsupervised ML, most ML models today still need labels to learn. The performance of an ML model depends heavily on the quality and quantity of labels it's trained on. Today in this post, we will discuss about the data labeling topic.
+Despite the promise of unsupervised ML, most ML models today still need labels to learn. The performance of an ML model depends heavily on the quality and quantity of labels it's trained on. Today in this post, we will discuss the data labeling topic.
 
 ## Challenges of hand labels
 
@@ -17,7 +17,7 @@ Despite the promise of unsupervised ML, most ML models today still need labels t
 
 ## Label multiplicity
 
-To obtain a large quantity of labels, companies use data from multiple sources and rely on multiple annotators. Using them indiscriminately without examining them can cause your model to fail mysteriously. Some problems are:
+To obtain a large number of labels, companies use data from multiple sources and rely on multiple annotators. Using them indiscriminately without examining them can cause your model to fail mysteriously. Some problems are:
 
 - Different label sources and different annotators lead to different levels of accuracy
 - Different annotators lead to different levels of expertise which causes label ambiguity
@@ -35,16 +35,16 @@ Some solutions:
 
 ### Semi-supervised learning
 
-This method starts with a small set of labels and use structural assumptions to generate more labels. For examples: hashtag #AI, #ML refer to Computer Science.
+This method starts with a small set of labels and uses structural assumptions to generate more labels. For example hashtag #AI, #ML refer to Computer Science.
 
 ### Weak supervision
 
-We can use labeling function which is a function that encodes subject matter expertise with tools such as Snorkel.
+We can use the labeling function which is a function that encodes subject matter expertise with tools such as Snorkel.
 
 ```python
 def labeling_function(note):
     if "cancer" in note:
-	    return "HIGH"
+        return "HIGH"
 ```
 
 The table below compares hand labeling and programmatic methods.
@@ -58,7 +58,7 @@ The table below compares hand labeling and programmatic methods.
 
 ### Transfer learning
 
-This method applies the model trained for one task to another task. It might or might not require fine-tuning (gradient updates). For examples: Fine-tune a model trained on language modling to make it do sentiment analysis.
+This method applies the model trained for one task to another task. It might or might not require fine-tuning (gradient updates). For example Fine-tune a model trained on language modeling to make it do sentiment analysis.
 
 ### Active learning
 

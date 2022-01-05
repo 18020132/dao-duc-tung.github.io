@@ -82,14 +82,14 @@
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-data-ingestion/data-ingestion.png" alt="data-ingestion"></p>
 <h2 id="implement-a-data-ingestion-solution">Implement a data ingestion solution</h2>
-<p>In some cases, data resides outside the data repository solution like on-premises storage. To use this data, we need to ingest it into an AWS storage service like S3. This post will focus on the cloud services to implement two types of data ingestion solution which are <strong>Batch processing</strong> and <strong>Stream processing</strong>.</p>
+<p>In some cases, data resides outside the data repository solution like on-premises storage. To use this data, we need to ingest it into an AWS storage service like S3. This post will focus on the cloud services to implement two types of data ingestion solutions which are <strong>Batch processing</strong> and <strong>Stream processing</strong>.</p>
 <p>You can skip the introduction of AWS courses. You only need to get the idea of implementing a data ingestion solution and its purpose.</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-data-ingestion/data-ingestion-solutions.png" alt="data-ingestion-solutions"></p>
 <h3 id="batch-processing">Batch processing</h3>
-<p>With batch processing, the ingestion layer periodically collects and groups source data and sends it to a destination like S3. Batch processing is used when there is no real need for real-time or near-real-time data, because it is easier and more affordably implemented than other ingestion options.</p>
+<p>With batch processing, the ingestion layer periodically collects and groups source data and sends it to a destination like S3. Batch processing is used when there is no real need for real-time or near-real-time data because it is easier and more affordably implemented than other ingestion options.</p>
 <p>Options to collect and group source data and send it to S3:</p>
 <ul>
-<li>Use DMS (Database Migration Service) to read historical data from soure systems, such as relational database management systems, data warehouses, and NoSQL databases, at any desired interval</li>
+<li>Use DMS (Database Migration Service) to read historical data from source systems, such as relational database management systems, data warehouses, and NoSQL databases, at any desired interval</li>
 </ul>
 <p>Options to process raw data are:</p>
 <ul>
@@ -121,7 +121,7 @@
 </ul>
 <h3 id="stream-processing">Stream processing</h3>
 <p>Stream processing includes real-time processing and involves no grouping. Data is sourced, manipulated, and loaded as soon as it is created or recognized by the data ingestion layer. It requires systems to constantly monitor sources and accept new information. You might want to use it for real-time predictions or some real-time analytics that require continually refreshed data, like real-time dashboards.</p>
-<p>Kinesis, Confluent Cloud and MSK are the candidates for stream processing. Read <a href="https://www.softkraft.co/aws-kinesis-vs-kafka-comparison/">this article</a> to compare Kinesis and MSK. Read <a href="https://www.confluent.io/confluent-cloud-vs-amazon-msk/">this article</a> to compare Confluent Cloud and MSK.</p>
+<p>Kinesis, Confluent Cloud, and MSK are the candidates for stream processing. Read <a href="https://www.softkraft.co/aws-kinesis-vs-kafka-comparison/">this article</a> to compare Kinesis and MSK. Read <a href="https://www.confluent.io/confluent-cloud-vs-amazon-msk/">this article</a> to compare Confluent Cloud and MSK.</p>
 <ul>
 <li>Use Kinesis to capture and ingest fast-moving data<ul>
 <li>Kinesis video streams</li>
@@ -139,7 +139,7 @@
 <li>Using Kinesis Producer Library</li>
 </ul>
 </li>
-<li>Produce data to Kinesis Data Stream using <strong><em>in-memory</em></strong> table created in a Apache Zeppelin notebook with Apache Flink as the stream processing engine (so-called Kinesis Data Analytics)</li>
+<li>Produce data to Kinesis Data Stream using <strong><em>in-memory</em></strong> table created in an Apache Zeppelin notebook with Apache Flink as the stream processing engine (so-called Kinesis Data Analytics)</li>
 <li>Process streaming data using Kinesis Data Firehose and Lambda<ul>
 <li>The data flow looks like: Streaming data --&gt; Kinesis Data Stream --&gt; Kinesis Delivery Stream (Data Firehose) --&gt; Lambda (to preprocess data) --&gt; S3</li>
 <li>Streaming data and Kinesis Data Stream are in the ingestion layer</li>
@@ -152,23 +152,23 @@
 </ul>
 </li>
 <li>Preprocess streaming data from Kinesis Data Stream using Kinesis Client Library (KCL) before passing the data to the processing logic<ul>
-<li>KCL takes care complex tasks associated with distributed processing such as loading balance record processing across many instances</li>
+<li>KCL takes care of complex tasks associated with distributed processing such as loading balance record processing across many instances</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="https://streaming-analytics.workshop.aws/">Streaming Analytics Workshop</a>. This workshop covers:<ul>
-<li>End-to-end scalable streaming architecture to ingest, analyze, visualize streaming data using Kinesis with very detailed explaination</li>
+<li>End-to-end scalable streaming architecture to ingest, analyze, visualize streaming data using Kinesis with very detailed explanations</li>
 <li>Deploy a Flink application using Kinesis Data Analytics Studio Zeppelin notebook</li>
 <li>End-to-end streaming architecture that combines batch and streaming aspects in one uniform Apache Beam pipeline<ul>
-<li>Note: When creating the Cloud Formation stack, you might need to update the stack template to avoid timeout error on creating resources. In the stack template, you should change the Timeout property of <code>Cloud9DevEnvironmentKinesisReplayBuildPipelineWaitConditionAC504110</code> and <code>BeamConsumerBuildPipelineWaitCondition71C56893</code> to 3600, then recreate the stack</li>
+<li>Note: When creating the Cloud Formation stack, you might need to update the stack template to avoid the timeout error on creating resources. In the stack template, you should change the Timeout property of <code>Cloud9DevEnvironmentKinesisReplayBuildPipelineWaitConditionAC504110</code> and <code>BeamConsumerBuildPipelineWaitCondition71C56893</code> to 3600, then recreate the stack</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="https://docs.aws.amazon.com/kinesisanalytics/latest/java/getting-started-next-steps.html">Typical Kinesis solutions</a></li>
 <li><a href="https://confluent.awsworkshop.io/">Building Data in Motion Applications with Confluent on AWS</a><ul>
-<li>Note: this workshop requires your credit card credentials to use Confluent</li>
+<li>Note: This workshop requires your credit card credentials to use Confluent</li>
 </ul>
 </li>
 </ul>

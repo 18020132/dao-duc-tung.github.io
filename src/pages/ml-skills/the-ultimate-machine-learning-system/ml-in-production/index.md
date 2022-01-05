@@ -5,11 +5,11 @@ layout: post
 
 ![research][research]
 
-This post will discuss about the differences between ML in research and ML in production, between traditional software and ML systems, some ML challenges in production and some ML deployment myths.
+This post will discuss the differences between ML in research and ML in production, between traditional software and ML systems, some ML challenges in production, and some ML deployment myths.
 
 ## Research vs. Production
 
-The table below shows five major problems and the differences between ML systems in research and in production.
+The table below shows five major problems and the differences between ML systems in research and production.
 
 |                        | Research                       | Production                                       |
 | ---------------------- | ------------------------------ | ------------------------------------------------ |
@@ -45,9 +45,9 @@ In research, we want the training process can take as many samples as it can in 
 
 ![data][data]
 
-In research, data is clean and formatted. They are unchanged so people can use it as benchmarks for evaluation. The process of preparing data and feed it to your model usually was done by somebody.
+In research, data is clean and formatted. They are unchanged so people can use them as benchmarks for evaluation. The process of preparing data and feeding it to your model usually was done by somebody.
 
-In production, data is messy. You have to clean it and re-format it. It's not easy to split into the training set, test set, or validation set because it usually has some issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merging two existing label classes. This is really a nightmare!
+In production, data is messy. You have to clean it and re-format it. It's not easy to split into the training set, test set, or validation set because it usually has some issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merge two existing label classes. This is really a nightmare!
 
 In research, data usually was created a long time ago. In production, data could be created a long time ago, or streaming data, or both. In production, you need to care about data privacy and regulations.
 
@@ -64,7 +64,7 @@ You might be a victim of biased ML algorithms. Your resume might be ranked very 
 
 > ML algorithms don't predict the future, but encode the past, perpetuating the biases in the data and more.
 
-The minority groups would be harm badly because the wrong predictions have minor consequences on the model's overall performance.
+The minority groups would be harmed badly because the wrong predictions have minor consequences on the model's overall performance.
 
 ### Interpretability
 
@@ -78,11 +78,11 @@ Model interpretability is important to understand why the model makes that predi
 
 Most companies cannot pursue pure research unless it leads to short-term profitable applications.
 
-Nowadays, more people and organizations in different fields want to find applications for them due to the easy accessibility of state-of-the-art models. That's why the majority of ML-related jobs is in ML production.
+Nowadays, more people and organizations in different fields want to find applications for them due to the easy accessibility of state-of-the-art models. That's why the majority of ML-related jobs are in ML production.
 
 ## Traditional software vs. ML systems
 
-ML production would be much better place if ML experts were better software engineers. Many traditional software engineering tools can be used to develop and deploy ML applications.
+ML production would be a much better place if ML experts were better software engineers. Many traditional software engineering tools can be used to develop and deploy ML applications.
 
 ![ml-engineering][ml-engineering]
 
@@ -101,7 +101,7 @@ The table below shows some common challenges in ML production.
 
 | #   | Challenge                 | Description                                                                                                                                               | Example   |
 | --- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| 1   | Data labeling             | Quickly label new data or re-label existing data for new model?                                                                                           | Snorkel   |
+| 1   | Data labeling             | Quickly label new data or re-label existing data for a new model?                                                                                         | Snorkel   |
 | 2   | Data testing              | Test the usefulness and correctness of data? Is a sample good or bad for your system?                                                                     |           |
 | 3   | Data and model versioning | Version datasets and checkpoints? Merge different versions of data                                                                                        | DVC       |
 | 4   | Data format               | Take out a subset of features in datasets -> use column-based data format (e.g. PARQUET, ORC). Row-based data formats (CSV) requires to load all features |           |
@@ -110,7 +110,7 @@ The table below shows some common challenges in ML production.
 | 7   | Model compression         | Compress model to fit onto consumer devices?                                                                                                              | Xnor.ai   |
 | 8   | Deployment                | Package and deploy new model or replace existing model?                                                                                                   | OctoML    |
 | 9   | CI/CD test                | Run tests after each change of new model?                                                                                                                 | Argo      |
-| 10  | Inference optimization    | Speed up inference time? Can we fuse operations together? Can we use lower precision?                                                                     | TensorRT  |
+| 10  | Inference optimization    | Speed up inference time? Can we fuse operations? Can we use lower precision?                                                                              | TensorRT  |
 | 11  | Edge device               | Hardware designed to run ML algorithms fast and cheap?                                                                                                    | Coral SOM |
 | 12  | Privacy                   | Use user data while preserving their privacy? Make your process GDPR-compliant?                                                                           | PySyft    |
 
@@ -123,11 +123,11 @@ The table below summarizes some common ML deployment myths.
 | #   | Myth                                                        | Description                                                                                                                                                                 |
 | --- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | Deploying is hard                                           | Deploying is easy, deploying reliable is hard. Make model available to millions of users with a latency of milliseconds and 99% uptime is hard                              |
-| 2   | Only deploy one or two ML models at a time                  | Companies have many ML models. Each different features of an application requires its own model                                                                             |
+| 2   | Only deploy one or two ML models at a time                  | Companies have many ML models. Each different feature of an application requires its own model                                                                              |
 | 3   | If we don't do anything, model performance remains the same | Drift concept: the data your model runs inference on drifts further and further away from the data it was trained on. ML sys performs best right after training             |
 | 4   | No need to update models as much                            | Since a model performance decays over time, we want to update it as fast as possible                                                                                        |
 | 5   | No need to worry about scale                                | E.g: a system that serves hundreds of queries per second or millions of users per month                                                                                     |
-| 6   | ML can transform business overnight                         | Magically - possible, but overnight - no. The longer you've adopted ML, the faster your development cycle will run, and the higher your Returns On Investment (ROI) will be |
+| 6   | ML can transform the business overnight                     | Magically - possible, but overnight - no. The longer you've adopted ML, the faster your development cycle will run, and the higher your Returns On Investment (ROI) will be |
 
 ## Case studies
 
