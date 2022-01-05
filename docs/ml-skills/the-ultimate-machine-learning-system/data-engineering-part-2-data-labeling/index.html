@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Data Engineering - Part 2 - Data Labeling</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Data Engineering - Part 2 - Data Labeling</h1>
+
+  <div class="post-info">
+    Dec 31, 2021 · 6 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling/matrix.jpg" alt="matrix"></p>
+<p>Despite the promise of unsupervised ML, most ML models today still need labels to learn. The performance of an ML model depends heavily on the quality and quantity of labels it&#39;s trained on. Today in this post, we will discuss about the data labeling topic.</p>
+<h2 id="challenges-of-hand-labels">Challenges of hand labels</h2>
+<ul>
+<li>Expensive</li>
+<li>Violate strict privacy requirements if someone has to look at your data</li>
+<li>Slow as it&#39;s on a linear scale</li>
+<li>Aren&#39;t adaptive: when the task changes or data changes, we need to relabel</li>
+<li>Etc.</li>
+</ul>
+<h2 id="label-multiplicity">Label multiplicity</h2>
+<p>To obtain a large quantity of labels, companies use data from multiple sources and rely on multiple annotators. Using them indiscriminately without examining them can cause your model to fail mysteriously. Some problems are:</p>
+<ul>
+<li>Different label sources and different annotators lead to different levels of accuracy</li>
+<li>Different annotators lead to different levels of expertise which causes label ambiguity</li>
+<li>More data isn&#39;t always better. E.g. new data has is less accurate than original data</li>
+</ul>
+<p>Some solutions:</p>
+<ul>
+<li>Need to have a clear problem definition</li>
+<li>Provide annotation training</li>
+<li>Data lineage: need to track where data/labels come from</li>
+</ul>
+<h2 id="deal-with-the-lack-of-labels">Deal with the lack of labels</h2>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling/get-more-labeled-training-data.png" alt="get-more-labeled-training-data"></p>
+<h3 id="semi-supervised-learning">Semi-supervised learning</h3>
+<p>This method starts with a small set of labels and use structural assumptions to generate more labels. For examples: hashtag #AI, #ML refer to Computer Science.</p>
+<h3 id="weak-supervision">Weak supervision</h3>
+<p>We can use labeling function which is a function that encodes subject matter expertise with tools such as Snorkel.</p>
+<pre><code class="language-python">def labeling_function(note):
+    if &quot;cancer&quot; in note:
+        return &quot;HIGH&quot;
+</code></pre>
+<p>The table below compares hand labeling and programmatic methods.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hand labeling</th>
+<th>Programmatic labeling</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cost</td>
+<td>Expensive: esp. when subject matter expertise required</td>
+<td>Cost saving: Expertise can be versioned, shared, reused across organization</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td>Non-private: Need to ship data to human annotators</td>
+<td>Private: Create LFs using a cleared data subsample then apply LFs to other data without looking at individual samples.</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Slow: Time required scales linearly with # labels needed</td>
+<td>Fast: Easily scale 1K -&gt; 1M samples</td>
+</tr>
+<tr>
+<td>Adaptability</td>
+<td>Non-adaptive: Every change requires re-labeling the dataset</td>
+<td>Adaptive: When changes happen, just reapply LFs!</td>
+</tr>
+</tbody></table>
+<h3 id="transfer-learning">Transfer learning</h3>
+<p>This method applies the model trained for one task to another task. It might or might not require fine-tuning (gradient updates). For examples: Fine-tune a model trained on language modling to make it do sentiment analysis.</p>
+<h3 id="active-learning">Active learning</h3>
+<p>Active learning still requires hand labels, but instead of randomly labeling a subset of data, you label the samples that are most helpful to your model. Check the image below for more details.</p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling/active-learning.png" alt="active-learning"></p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">data engineering</a></li>
+          
+          <li><a href="#">data labeling</a></li>
+          
+          <li><a href="#">lack of labels</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 1 - Important Aspects</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 3 - Data Repository</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Data Engineering - Part 3 - Data Repository</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Data Engineering - Part 3 - Data Repository</h1>
+
+  <div class="post-info">
+    Jan 01, 2022 · 8 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository/tunnel.jpg" alt="tunnel"></p>
+<h2 id="create-a-data-repository">Create a data repository</h2>
+<p>The whole field of ML revolves around data. Data helps you making strategic business decisions and understand your customers at a deeper level. After collecting the data, now it&#39;s the time to store your data in <strong>a centralized repository</strong>. With a <strong>data lake</strong>, you can store structured and unstructured data.</p>
+<p>This post focuses on the recommended practical AWS workshops/courses that you should take to gain from basic to advanced understanding and skills needed to create a data repository. You can skip the introduction of AWS courses. You only need to get the idea of creating a data repository and its purpose.</p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository/data-lake.png" alt="data-lake"></p>
+<h3 id="lake-formation">Lake Formation</h3>
+<p>Lake Formation is a data lake solution, and S3 is the preferred storage option for data science processing on AWS.</p>
+<p>To learn more, refer to:</p>
+<ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/78572df7-d2ee-4f78-b698-7cafdb55135d/en-US/">AWS Lake Formation Workshop</a>. This workshop provides tutorial about:<ul>
+<li>Glue basics</li>
+<li>Lake Formation basics</li>
+<li>Integration with EMR</li>
+<li>Handling real-time data using Kinesis<ul>
+<li>Note: In the <code>Kinesis Data Generator</code>, <code>Create a Data Stream</code>, <code>Create Stream Table</code> sections, login with your admin user because creating CloudFormation stack requires permissions related to IAM, Lambda, S3, Glue, etc.</li>
+</ul>
+</li>
+<li>Glue to Lake Formation migration: This part has some problems with created user&#39;s permission and outdated AMI ID. You can skip this part</li>
+</ul>
+</li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/976050cc-0606-4b23-b49f-ca7b8ac4b153/en-US/">Data Engineering Immersion Day</a>. This workshop covers:<ul>
+<li>Streaming data analytics using Kinesis, Glue, and MSK</li>
+<li>Data ingestion using DMS</li>
+<li>Transforming data using Glue</li>
+<li>Query and visualize data using Athena, QuickSight, and SageMaker</li>
+<li>Data lake automation using Lake Formation</li>
+</ul>
+</li>
+</ul>
+<h3 id="fsx-for-lustre">FSx for Lustre</h3>
+<p>When your training data is already in S3 and you plan to run training jobs several times using different algorithms and parameters, consider using FSx for Lustre, a file system service. The first time you run a training job, FSx for Lustre copies data from S3 and makes it available to SageMaker. You can use the same FSx file system for subsequent iterations of training jobs, preventing repeated downloads of common S3 objects.</p>
+<p>To learn more, refer to:</p>
+<ul>
+<li><a href="https://www.hpcworkshops.com/04-amazon-fsx-for-lustre.html">Amazon Web Services HPC Workshops</a><ul>
+<li>This workshop is about High Performance Computing</li>
+</ul>
+</li>
+<li><a href="https://www.eksworkshop.com/beginner/190_fsx_lustre/">Kubernetes and EKS</a><ul>
+<li>This workshop explores multiple ways to configure VPC, ALB, and EC2 Kubernetes workers, and Elastic Kubernetes Service</li>
+</ul>
+</li>
+</ul>
+<h3 id="elastic-file-system">Elastic File System</h3>
+<p>Alternatively, if your training data is already in Elastic File System (EFS), we recommend using that as your training data source. EFS can directly launch your training jobs from the service without the need for data movement, resulting in faster training start times. For example, a data scientist can use a Jupyter notebook to do initial cleansing on a training set, launch a training job from SageMaker, then use their notebook to drop a column and re-launch the training job, comparing the resulting models to see which works better.</p>
+<p>To learn more, refer to:</p>
+<ul>
+<li><a href="https://github.com/aws-samples/amazon-efs-workshop">Cloud File Storage the AWSome Way!</a></li>
+<li><a href="https://www.eksworkshop.com/beginner/190_efs/launching-efs/">Kubernetes and EKS</a><ul>
+<li>This workshop explores multiple ways to configure VPC, ALB, and EC2 Kubernetes workers, and Elastic Kubernetes Service</li>
+</ul>
+</li>
+</ul>
+<h3 id="training-load-time-comparison">Training load time comparison</h3>
+<p>When choosing a file system, take into consideration the training load time. The table below shows an example of some different file systems and the relative rate that they can transfer images to a compute cluster. Relative speed is the comparison of the relative (to EFS) <strong>images</strong> per second that each file system can load.</p>
+<table>
+<thead>
+<tr>
+<th>File system</th>
+<th>Relative Speed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S3</td>
+<td>&lt;1.0</td>
+</tr>
+<tr>
+<td>EFS</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EBS</td>
+<td>1.29</td>
+</tr>
+<tr>
+<td>FSx</td>
+<td>&gt;1.6</td>
+</tr>
+</tbody></table>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">data engineering</a></li>
+          
+          <li><a href="#">aws</a></li>
+          
+          <li><a href="#">data repository</a></li>
+          
+          <li><a href="#">lake formation</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 2 - Data Labeling</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-data-ingestion" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 4 - Data Ingestion</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

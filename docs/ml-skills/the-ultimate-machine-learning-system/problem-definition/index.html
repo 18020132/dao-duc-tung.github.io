@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Problem Definition</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Problem Definition</h1>
+
+  <div class="post-info">
+    Dec 29, 2021 · 8 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/problem-definition/planning.jpg" alt="planning"></p>
+<p>Today in this post, we will discuss about the first stage in an ML project - the problem definition stage. This Problem definition stage is not like the other stages which are self-explained. We need to clearly answer a bunch of questions at the very beginning when starting an ML project.</p>
+<h2 id="understand-business-requirements">Understand business requirements</h2>
+<p>The first step is to form a business question, or goals.</p>
+<blockquote>
+<p>Goals define general purpose of a project.</p>
+</blockquote>
+<p>For example, goals of a Visual Search Based Recommendation System might be:</p>
+<ul>
+<li>Minimize irrelevant search results</li>
+<li>Maximize revenue of new products by recommending them</li>
+<li>Maximize user&#39;s engagement</li>
+</ul>
+<p>After that, we need to be more specific about project&#39;s critical features by defining the objectives.</p>
+<blockquote>
+<p>Objectives define specific steps on how to realize the goals.</p>
+</blockquote>
+<p>For example, to maximize revenue of new products, objectives might be:</p>
+<ul>
+<li>Rank search results by the newest product and promotions</li>
+<li>Filter out outlook-similar products but not profitable</li>
+</ul>
+<h3 id="multiple-objective-optimization">Multiple-objective optimization</h3>
+<p>Objectives can be multiple. When there&#39;re multiple objectives, it might be a good idea to decouple them because:</p>
+<ul>
+<li>Optimizing for one objective when training ML models is easier than optimizing for multiple objectives.</li>
+<li>Easier to tweak the system without retraining models</li>
+<li>Easier for maintenance since different objectives might need different maintenance schedules.</li>
+</ul>
+<h2 id="analyze-supporting-information">Analyze supporting information</h2>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/problem-definition/constraints.png" alt="constraints"></p>
+<p>The second step is to list down constraints.</p>
+<blockquote>
+<p>Project&#39;s constraints rule out impossible solutions.</p>
+</blockquote>
+<h3 id="time">Time</h3>
+<ul>
+<li>How does the schedule look like?</li>
+<li>What and when do the milestones need to be reached?</li>
+</ul>
+<h3 id="performance">Performance</h3>
+<ul>
+<li><strong>Baselines</strong>: What are you comparing the system to? E.g. existing solutions, competitors solution, etc.</li>
+<li><strong>Usefulness threshold</strong>: How fast/good the solution needs to be for it to be useful?. E.g: self-driving cars need human-level performance to be useful; a system that predicts what word a user will type next on their phone doesn&#39;t., etc.</li>
+<li><strong>Tradeoffs</strong>: What&#39;s more important - false negatives or false positives? E.g: covid screening must not have false negative (patients with covid shouldn&#39;t be classified as no covid). Fingerprint unlocking must not have false positive (unauthorized people shouldn&#39;t be given access).</li>
+<li><strong>Interpretability</strong>: Does the solution need to be interpretable? If yes, to whom?</li>
+<li><strong>Confidence measurement</strong>: Does the solution need confidence score? If yes:<ul>
+<li>What is the threshold to be usable?</li>
+<li>What do you want to do with predictions below that threshold? discard it, loop in humans, ask for more info from users?</li>
+</ul>
+</li>
+</ul>
+<h3 id="costs-and-benefits">Costs and benefits</h3>
+<ul>
+<li>Maximum initial budget?</li>
+<li>What needs to be achieved to increase budget?</li>
+<li>Compare costs and benefits</li>
+</ul>
+<h3 id="stakeholders">Stakeholders</h3>
+<ul>
+<li>Who will be affected by the project?</li>
+<li>Who needs to be informed about the project?</li>
+</ul>
+<h3 id="privacy">Privacy</h3>
+<ul>
+<li>Privacy requirements for annotation, storage, 3rd-party solutions, cloud services, regulations, etc.</li>
+<li>Data:<ul>
+<li>Can data be shipped outside organizations for annotation?</li>
+<li>Can the system be connected to the internet?</li>
+<li>How long can we keep users&#39; data?</li>
+</ul>
+</li>
+</ul>
+<h3 id="techincal-constraints">Techincal constraints</h3>
+<p>Any tool or system the the solution must be compatible with? E.g: legacy infrastructure is a huge bottleneck for organizations to adopt ML.</p>
+<h3 id="risks">Risks</h3>
+<ul>
+<li>Analize associcated risks</li>
+</ul>
+<h3 id="evaluation">Evaluation</h3>
+<ul>
+<li>How to evaluate system&#39;s performance during development and production?<ul>
+<li>If you need ground truth labels, how can they be generated or inferred from users&#39; reactions?</li>
+</ul>
+</li>
+<li>How to tie model performance to business goals and objectives?</li>
+</ul>
+<h2 id="create-a-project-plan">Create a project plan</h2>
+<p>The last step is to summarize all the answers to build a project plan that includes:</p>
+<ul>
+<li>Number and duration of stages</li>
+<li>Dependencies</li>
+<li>Risks</li>
+<li>Goals</li>
+<li>Evaluation methods</li>
+<li>Tools and techniques</li>
+</ul>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">problem definition</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/problem-definition'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Intro To Machine Learning Systems Design - Part 2 - The Machine Learning Lifecycle</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 1 - Important Aspects</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/problem-definition"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

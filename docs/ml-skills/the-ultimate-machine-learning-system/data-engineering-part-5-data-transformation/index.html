@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Data Engineering - Part 5 - Data Transformation</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Data Engineering - Part 5 - Data Transformation</h1>
+
+  <div class="post-info">
+    Jan 04, 2022 · 7 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation/transformation.jpg" alt="transformation"></p>
+<h2 id="implement-a-data-transformation-solution">Implement a data transformation solution</h2>
+<p>The raw data ingested into the data repository is usually not ML ready as is. The data needs to be transformed and cleaned, which includes deduplication, incomplete data management, and attribute standardization. Data transformation can also involve changing the data structures, if necessary, usually into an OLAP model to facilitate easy querying of data. This post will focus on the AWS&#39;s resources you might need to implement data transformation solutions. The general process using AWS&#39;s cloud services looks like:</p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation/data-pipeline.png" alt="data-pipeline"></p>
+<p>You can skip the introduction of AWS courses. You only need to get the idea of implementing a data transformation solution and its purpose.</p>
+<h3 id="data-preparation-etl">Data preparation ETL</h3>
+<p>Data preparation ETL might deal with huge amounts of data. Distributed computation frameworks like MapReduce and Apache Spark provide a protocol of data processing and node task distribution and management. They also use algorithms to split datasets into subsets and distribute them across nodes in a compute cluster.</p>
+<p>Using Apache Spark on EMR is one of cloud-based solution for Data preparation ETL. EMR supports many instance types that have proportionally high CPU with increased network performance, which is well suited for HPC (high-performance computing) applications.</p>
+<p>To learn more, refer to:</p>
+<ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/3c29bc13-0f30-42f7-9f97-4ce8e2ef9b17/en-US/">Amazon EMR Developer Experience Workshop</a><ul>
+<li>Note: This workshop requires you to create an AWS organization. Make sure you have the permission to create one in <a href="https://aws.amazon.com/organizations/">AWS Organizations service</a></li>
+</ul>
+</li>
+<li><a href="https://emr-etl.workshop.aws/">ETL on Amazon EMR Workshop</a>. This workshop covers:<ul>
+<li>Submitting and monitoring Spark-based ETL work to an EMR cluster</li>
+<li>Running Hive on EMR cluster</li>
+<li>Running Pig on EMR cluster</li>
+<li>Using SageMaker in EMR notebooks</li>
+<li>Orchestrating EMR with Step Functions</li>
+<li>EMR cluster automatic scaling</li>
+</ul>
+</li>
+</ul>
+<h3 id="batch-data-preparation">Batch data preparation</h3>
+<p>Datasets required for ML applications are often pulled from database warehouses, streaming input, or centralized data lakes. In many use cases, you can use S3 as a target endpoint for the training datasets.</p>
+<p>ETL processing services (Athena, AWS Glue, Redshift Spectrum) are functionally complementary. In addition to transforming data with services like Athena and Redshift Spectrum, you can use services like AWS Glue to provide metadata discovery and management features.</p>
+<p>The choice of ETL processing tool is largely dictated by the type of data you have. For example, tabular data processing with Athena lets you manipulate your data files in S3 using SQL. If your datasets or computations are not optimally compatible with SQL, you can use AWS Glue to run Spark jobs (Scala and Python support).</p>
+<p>To learn more, refer to:</p>
+<ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/9981f1a1-abdc-49b5-8387-cb01d238bb78/en-US/">Amazon Athena Workshop</a>. This workshop covers:<ul>
+<li>Basic Athena capabilities (query, ETL with CTAS, workgroups)</li>
+<li>Federated query</li>
+<li>User defined functions (UDF)</li>
+<li>Deploying custom connector</li>
+<li>Text analysis using UDF</li>
+<li>SageMaker endpoint integration</li>
+</ul>
+</li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/9f29cdba-66c0-445e-8cbb-28a092cb5ba7/en-US/">Redshift Immersion Labs</a></li>
+</ul>
+<h3 id="example-solution-for-healthcare-data">Example solution for healthcare data</h3>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation/aws-healthcare-system.png" alt="aws-healthcare-system"></p>
+<p>This architecture builds a scalable analytical layer for healthcare data. Customers can:</p>
+<ul>
+<li>Store a single source of data in S3</li>
+<li>Perform ad hoc analysis with Athena</li>
+<li>Integrate with a data warehouse on Redshift</li>
+<li>Build a visual dashboard for metrics using QuickSight</li>
+<li>Build an ML model to predict readmissions using SageMaker</li>
+</ul>
+<p>By not moving the data around and connecting to it using different services, customers avoid building redundant copies of the same data.</p>
+<p>To learn more, refer to:</p>
+<ul>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/cd8ebba2-2ef8-431a-8f72-ca7f6761713d/en-US">QuickSight Workshops</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/4c08a00f-9400-4a0f-aa3e-4c458d2a9983/en-US/">Amazon Quicksight Workshop Covid 19 Data Analysis</a></li>
+</ul>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">data engineering</a></li>
+          
+          <li><a href="#">data transformation</a></li>
+          
+          <li><a href="#">data preparation etl</a></li>
+          
+          <li><a href="#">batch data preparation</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-data-ingestion" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 4 - Data Ingestion</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 6 - Data Analysis</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>
