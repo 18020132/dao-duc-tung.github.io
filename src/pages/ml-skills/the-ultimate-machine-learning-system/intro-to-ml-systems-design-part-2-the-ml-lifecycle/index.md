@@ -1,5 +1,5 @@
 ---
-url: ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2
+url: ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle
 layout: post
 ---
 
@@ -178,7 +178,7 @@ After you reached the limit of simple models and your use case demands significa
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[processes]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2/processes.jpg
-[crisp-dm-model]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2/crisp-dm-model.png
-[ml-lifecycle]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2/ml-lifecycle.png
-[moon-phases]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2/moon-phases.jpg
+[processes]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle/processes.jpg
+[crisp-dm-model]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle/crisp-dm-model.png
+[ml-lifecycle]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle/ml-lifecycle.png
+[moon-phases]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle/moon-phases.jpg

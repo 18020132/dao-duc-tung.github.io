@@ -1,5 +1,5 @@
 ---
-url: ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1
+url: ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1-overview
 layout: post
 ---
 
@@ -118,5 +118,5 @@ Let's keep this post not too long. In the next post, we will see the iterative p
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[ml-system]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1/ml-system.png
-[categories]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1/categories.jpg
+[ml-system]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1-overview/ml-system.png
+[categories]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1-overview/categories.jpg

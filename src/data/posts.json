@@ -5,7 +5,7 @@
     "url": "thoughts-on",
     "childs": [
       {
-        "title": "The art of asking questions",
+        "title": "The Art Of Asking Questions",
         "type": "post",
         "url": "thoughts-on/the-art-of-asking-questions",
         "tags": [
@@ -23,7 +23,7 @@
         ]
       },
       {
-        "title": "Lucky man",
+        "title": "Lucky Man",
         "type": "post",
         "url": "thoughts-on/lucky-man",
         "tags": [
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "title": "I desire failure",
+        "title": "I Desire Failure",
         "type": "post",
         "url": "thoughts-on/i-desire-failure",
         "tags": [
@@ -39,7 +39,7 @@
         ]
       },
       {
-        "title": "How will I measure my life",
+        "title": "How Will I Measure My Life",
         "type": "post",
         "url": "thoughts-on/how-will-i-measure-my-life",
         "tags": [
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "title": "The place",
+        "title": "The Place",
         "type": "post",
         "url": "thoughts-on/the-place",
         "tags": [
@@ -57,7 +57,7 @@
         ]
       },
       {
-        "title": "The chosen one",
+        "title": "The Chosen One",
         "type": "post",
         "url": "thoughts-on/the-chosen-one",
         "tags": [
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "title": "The last one",
+        "title": "The Last One",
         "type": "post",
         "url": "thoughts-on/the-last-one",
         "tags": [
@@ -94,7 +94,7 @@
             ]
           },
           {
-            "title": "Docker - Image and Container",
+            "title": "Docker - Image And Container",
             "type": "post",
             "url": "ml-skills/docker/image-and-container",
             "tags": [
@@ -104,7 +104,7 @@
             ]
           },
           {
-            "title": "Docker - Attach and Detach",
+            "title": "Docker - Attach And Detach",
             "type": "post",
             "url": "ml-skills/docker/attach-and-detach",
             "tags": [
@@ -174,7 +174,7 @@
             ]
           },
           {
-            "title": "UMLS - Machine Learning in production",
+            "title": "UMLS - Machine Learning In Production",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/ml-in-production",
             "tags": [
@@ -185,7 +185,7 @@
             ]
           },
           {
-            "title": "UMLS - Building a ready organization",
+            "title": "UMLS - Building A Ready Organization",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization",
             "tags": [
@@ -196,7 +196,7 @@
             ]
           },
           {
-            "title": "UMLS - Planning a machine learning project",
+            "title": "UMLS - Planning A Machine Learning Project",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/planning-an-ml-project",
             "tags": [
@@ -206,33 +206,120 @@
             ]
           },
           {
-            "title": "UMLS - Intro to machine learning systems design - Part 1",
+            "title": "UMLS - Intro To Machine Learning Systems Design - Part 1 - Overview",
             "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1",
+            "url": "ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1-overview",
             "tags": [
               "ultimate",
               "machine learning system",
-              "system design"
+              "system design",
+              "overview"
             ]
           },
           {
-            "title": "UMLS - Intro to machine learning systems design - Part 2",
+            "title": "UMLS - Intro To Machine Learning Systems Design - Part 2 - The Machine Learning Lifecycle",
             "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2",
+            "url": "ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle",
             "tags": [
               "ultimate",
               "machine learning system",
-              "system design"
+              "system design",
+              "machine learning lifecycle"
             ]
           },
           {
-            "title": "UMLS - Problem definition",
+            "title": "UMLS - Problem Definition",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/problem-definition",
             "tags": [
               "ultimate",
               "machine learning system",
               "problem definition"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 1 - Important Aspects",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "data source",
+              "data format",
+              "oltp database",
+              "olap database",
+              "structured data",
+              "unstructured data",
+              "etl process",
+              "batch processing",
+              "stream processing"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 2 - Data Labeling",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "data labeling",
+              "lack of labels"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 3 - Data Repository",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "aws",
+              "data repository",
+              "lake formation"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 4 - Data Ingestion",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-data-ingestion",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "data ingestion",
+              "batch processing",
+              "stream processing"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 5 - Data Transformation",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "data transformation",
+              "data preparation etl",
+              "batch data preparation"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 6 - Data Analysis",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "data analysis",
+              "sanitize data",
+              "clean data",
+              "visualize data",
+              "feature engineering"
             ]
           }
         ]
@@ -304,7 +391,7 @@
         "url": "projects/sharing-knowledge",
         "childs": [
           {
-            "title": "How does AI work?",
+            "title": "How Does Ai Work?",
             "type": "post",
             "url": "projects/sharing-knowledge/how-does-ai-work",
             "tags": [
@@ -315,7 +402,7 @@
             ]
           },
           {
-            "title": "Is AI an existential threat to humanity?",
+            "title": "Is AI An Existential Threat To Humanity?",
             "type": "post",
             "url": "projects/sharing-knowledge/is-ai-an-existential-threat-to-humanity",
             "tags": [
@@ -326,7 +413,7 @@
             ]
           },
           {
-            "title": "Should I teach my toddler Python?",
+            "title": "Should I Teach My Toddler Python?",
             "type": "post",
             "url": "projects/sharing-knowledge/should-i-teach-my-toddler-python",
             "tags": [
@@ -344,7 +431,7 @@
         "url": "projects/good-to-great",
         "childs": [
           {
-            "title": "Chapter 1 - Good is the enemy of great",
+            "title": "Chapter 1 - Good Is The Enemy Of Great",
             "type": "post",
             "url": "projects/good-to-great/chapter-1-good-is-the-enemy-of-great",
             "tags": [
@@ -353,7 +440,7 @@
             ]
           },
           {
-            "title": "Chapter 2 - Level 5 leadership",
+            "title": "Chapter 2 - Level 5 Leadership",
             "type": "post",
             "url": "projects/good-to-great/chapter-2-level-5-leadership",
             "tags": [
@@ -362,7 +449,7 @@
             ]
           },
           {
-            "title": "Chapter 3 - First who, then what",
+            "title": "Chapter 3 - First Who Then What",
             "type": "post",
             "url": "projects/good-to-great/chapter-3-first-who-then-what",
             "tags": [
