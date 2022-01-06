@@ -76,7 +76,7 @@
   <h1>Docker - Container Networking</h1>
 
   <div class="post-info">
-    Jun 25, 2021 · 7 min read
+    Jan 06, 2022 · 7 min read
   </div>
 </div>
 
@@ -84,6 +84,13 @@
 <p>In the previous post about publishing ports, we knew that Docker can perform <em>outer-communication</em> to let a container chit chat with another machine or another container inside your machine.
 By doing that way, we publish ports outside the docker internal virtual network and even to the host network. That&#39;s why your machine can talk with a docker container.</p>
 <p>In this post, we will see how to create an <em>inter-communication</em> to control exactly which container will talk with which container.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#default-networks">Default networks</a> </li>
+<li><a href="#create-an-user-defined-network">Create an user-defined network</a> </li>
+<li><a href="#connect-a-container-with-a-network">Connect a container with a network</a> </li>
+<li><a href="#key-notes">Key notes</a> </li>
+</ol>
 <h2 id="default-networks">Default networks</h2>
 <p>Let&#39;s show the available networks by running</p>
 <pre><code class="language-bash">docker network ls

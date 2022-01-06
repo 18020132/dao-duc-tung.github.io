@@ -76,18 +76,22 @@
   <h1>UMLS - Data Engineering - Part 5 - Data Transformation</h1>
 
   <div class="post-info">
-    Jan 04, 2022 · 7 min read
+    Jan 06, 2022 · 7 min read
   </div>
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation/transformation.jpg" alt="transformation"></p>
+<p>This post will focus on the AWS&#39;s resources you might need to implement data transformation solutions. You can skip the introduction of AWS courses. You only need to get the idea of implementing a data transformation solution and its purpose.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#implement-a-data-transformation-solution">Implement a data transformation solution</a> </li>
+</ol>
 <h2 id="implement-a-data-transformation-solution">Implement a data transformation solution</h2>
-<p>The raw data ingested into the data repository is usually not ML-ready as is. The data needs to be transformed and cleaned, which includes deduplication, incomplete data management, and attribute standardization. Data transformation can also involve changing the data structures, if necessary, usually into an OLAP model to facilitate easy querying of data. This post will focus on the AWS&#39;s resources you might need to implement data transformation solutions. The general process using AWS&#39;s cloud services looks like this:</p>
+<p>The raw data ingested into the data repository is usually not ML ready as is. The data needs to be transformed and cleaned, which includes deduplication, incomplete data management, and attribute standardization. Data transformation can also involve changing the data structures, if necessary, usually into an OLAP model to facilitate easy querying of data. The general process using AWS&#39;s cloud services looks like:</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation/data-pipeline.png" alt="data-pipeline"></p>
-<p>You can skip the introduction of AWS courses. You only need to get the idea of implementing a data transformation solution and its purpose.</p>
 <h3 id="data-preparation-etl">Data preparation ETL</h3>
 <p>Data preparation ETL might deal with huge amounts of data. Distributed computation frameworks like MapReduce and Apache Spark provide a protocol of data processing and node task distribution and management. They also use algorithms to split datasets into subsets and distribute them across nodes in a compute cluster.</p>
-<p>Using Apache Spark on EMR is one cloud-based solution for Data preparation ETL. EMR supports many instance types that have proportionally high CPUs with increased network performance, which is well suited for HPC (high-performance computing) applications.</p>
+<p>Using Apache Spark on EMR is one of cloud-based solution for Data preparation ETL. EMR supports many instance types that have proportionally high CPU with increased network performance, which is well suited for HPC (high-performance computing) applications.</p>
 <p>To learn more, refer to:</p>
 <ul>
 <li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/3c29bc13-0f30-42f7-9f97-4ce8e2ef9b17/en-US/">Amazon EMR Developer Experience Workshop</a><ul>

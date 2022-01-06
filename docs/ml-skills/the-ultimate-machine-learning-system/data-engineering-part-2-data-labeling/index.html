@@ -76,12 +76,18 @@
   <h1>UMLS - Data Engineering - Part 2 - Data Labeling</h1>
 
   <div class="post-info">
-    Dec 31, 2021 · 6 min read
+    Jan 06, 2022 · 6 min read
   </div>
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling/matrix.jpg" alt="matrix"></p>
-<p>Despite the promise of unsupervised ML, most ML models today still need labels to learn. The performance of an ML model depends heavily on the quality and quantity of labels it&#39;s trained on. Today in this post, we will discuss the data labeling topic.</p>
+<p>Despite the promise of unsupervised ML, most ML models today still need labels to learn. The performance of an ML model depends heavily on the quality and quantity of labels it&#39;s trained on. Today in this post, we will discuss about the data labeling topic.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#challenges-of-hand-labels">Challenges of hand labels</a> </li>
+<li><a href="#label-multiplicity">Label multiplicity</a> </li>
+<li><a href="#deal-with-the-lack-of-labels">Deal with the lack of labels</a> </li>
+</ol>
 <h2 id="challenges-of-hand-labels">Challenges of hand labels</h2>
 <ul>
 <li>Expensive</li>
@@ -91,7 +97,7 @@
 <li>Etc.</li>
 </ul>
 <h2 id="label-multiplicity">Label multiplicity</h2>
-<p>To obtain a large number of labels, companies use data from multiple sources and rely on multiple annotators. Using them indiscriminately without examining them can cause your model to fail mysteriously. Some problems are:</p>
+<p>To obtain a large quantity of labels, companies use data from multiple sources and rely on multiple annotators. Using them indiscriminately without examining them can cause your model to fail mysteriously. Some problems are:</p>
 <ul>
 <li>Different label sources and different annotators lead to different levels of accuracy</li>
 <li>Different annotators lead to different levels of expertise which causes label ambiguity</li>
@@ -106,9 +112,9 @@
 <h2 id="deal-with-the-lack-of-labels">Deal with the lack of labels</h2>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling/get-more-labeled-training-data.png" alt="get-more-labeled-training-data"></p>
 <h3 id="semi-supervised-learning">Semi-supervised learning</h3>
-<p>This method starts with a small set of labels and uses structural assumptions to generate more labels. For example hashtag #AI, #ML refer to Computer Science.</p>
+<p>This method starts with a small set of labels and use structural assumptions to generate more labels. For examples: hashtag #AI, #ML refer to Computer Science.</p>
 <h3 id="weak-supervision">Weak supervision</h3>
-<p>We can use the labeling function which is a function that encodes subject matter expertise with tools such as Snorkel.</p>
+<p>We can use labeling function which is a function that encodes subject matter expertise with tools such as Snorkel.</p>
 <pre><code class="language-python">def labeling_function(note):
     if &quot;cancer&quot; in note:
         return &quot;HIGH&quot;
@@ -144,7 +150,7 @@
 </tr>
 </tbody></table>
 <h3 id="transfer-learning">Transfer learning</h3>
-<p>This method applies the model trained for one task to another task. It might or might not require fine-tuning (gradient updates). For example Fine-tune a model trained on language modeling to make it do sentiment analysis.</p>
+<p>This method applies the model trained for one task to another task. It might or might not require fine-tuning (gradient updates). For examples: Fine-tune a model trained on language modling to make it do sentiment analysis.</p>
 <h3 id="active-learning">Active learning</h3>
 <p>Active learning still requires hand labels, but instead of randomly labeling a subset of data, you label the samples that are most helpful to your model. Check the image below for more details.</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling/active-learning.png" alt="active-learning"></p>
