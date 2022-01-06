@@ -14,6 +14,8 @@ There are 2 main types of volumes:
 
 - **Ephemeral volume**: the data will exist if there's at least 1 container using them.
 
+<toc>
+
 ## Sharing data between container and host
 
 Let's type some commands first to see if you get the idea.

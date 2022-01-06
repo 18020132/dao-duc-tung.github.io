@@ -12,6 +12,8 @@ Before deep-diving into the ML system design, today in this post, we will go thr
 - How will ML impact a project timeline?
 - What early questions should I ask in deployment?
 
+<toc>
+
 ## Is an ML solution appropriate?
 
 To know if an ML solution is appropriate, we will answer a few questions.

@@ -13,6 +13,8 @@ There are three primary financial statements including:
 - Income statement
 - Cash flow statement
 
+<toc>
+
 ## Balance sheet
 
 The balance sheet includes information about a company's assets, obligations, liabilities at a point in time (e.g. end of the year).

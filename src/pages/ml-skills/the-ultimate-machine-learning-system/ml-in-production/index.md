@@ -5,7 +5,9 @@ layout: post
 
 ![research][research]
 
-This post will discuss the differences between ML in research and ML in production, between traditional software and ML systems, some ML challenges in production, and some ML deployment myths.
+This post will discuss the differences between ML in research and ML in production, between traditional software and ML systems, some ML challenges in production, and some ML deployment myths. This information will help you set the right expectation for your ML project.
+
+<toc>
 
 ## Research vs. Production
 

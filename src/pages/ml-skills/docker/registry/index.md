@@ -9,6 +9,8 @@ Today in this post, we will talk about the place from where we usually pull the 
 
 **Docker Registry** is an application that runs on Docker's server. It stores docker images so you can download them or push your own docker images to your own repository just like GitHub.
 
+<toc>
+
 ## Searching
 
 To search for a docker image, you can type:

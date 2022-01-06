@@ -7,6 +7,8 @@ layout: post
 
 What is the definition of **finance**?
 
+<toc>
+
 ## Finance inside companies
 
 **Finance inside companies** includes three activities. Each activity is determined by a question:

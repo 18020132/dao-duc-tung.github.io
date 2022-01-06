@@ -14,6 +14,8 @@ In this post, we will take a look on six common key financial ratios including:
 - Return on equity ratio
 - Price-earnings ratio
 
+<toc>
+
 ## Debt ratio
 
 > Debt ratio = total debt (liabilities) / total assets

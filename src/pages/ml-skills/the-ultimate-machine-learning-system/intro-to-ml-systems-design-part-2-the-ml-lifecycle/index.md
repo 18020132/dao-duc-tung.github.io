@@ -7,6 +7,8 @@ layout: post
 
 Today in this post, I will introduce a common process model to organize an ML project - the CRISP-DM process model. After that, I will introduce a simple ML lifecycle and the four-phased of ML adoption.
 
+<toc>
+
 ## The CRISP-DM process model
 
 CRISP-DM - CRoss Industry Standard Process for Data Mining - is a process model that helps you plan, organize, and implement your ML project. It includes six phases that describe the data science life cycle as below:

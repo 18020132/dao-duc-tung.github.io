@@ -5,19 +5,21 @@ layout: post
 
 ![transformation][transformation]
 
+This post will focus on the AWS's resources you might need to implement data transformation solutions. You can skip the introduction of AWS courses. You only need to get the idea of implementing a data transformation solution and its purpose.
+
+<toc>
+
 ## Implement a data transformation solution
 
-The raw data ingested into the data repository is usually not ML-ready as is. The data needs to be transformed and cleaned, which includes deduplication, incomplete data management, and attribute standardization. Data transformation can also involve changing the data structures, if necessary, usually into an OLAP model to facilitate easy querying of data. This post will focus on the AWS's resources you might need to implement data transformation solutions. The general process using AWS's cloud services looks like this:
+The raw data ingested into the data repository is usually not ML ready as is. The data needs to be transformed and cleaned, which includes deduplication, incomplete data management, and attribute standardization. Data transformation can also involve changing the data structures, if necessary, usually into an OLAP model to facilitate easy querying of data. The general process using AWS's cloud services looks like:
 
 ![data-pipeline][data-pipeline]
-
-You can skip the introduction of AWS courses. You only need to get the idea of implementing a data transformation solution and its purpose.
 
 ### Data preparation ETL
 
 Data preparation ETL might deal with huge amounts of data. Distributed computation frameworks like MapReduce and Apache Spark provide a protocol of data processing and node task distribution and management. They also use algorithms to split datasets into subsets and distribute them across nodes in a compute cluster.
 
-Using Apache Spark on EMR is one cloud-based solution for Data preparation ETL. EMR supports many instance types that have proportionally high CPUs with increased network performance, which is well suited for HPC (high-performance computing) applications.
+Using Apache Spark on EMR is one of cloud-based solution for Data preparation ETL. EMR supports many instance types that have proportionally high CPU with increased network performance, which is well suited for HPC (high-performance computing) applications.
 
 To learn more, refer to:
 

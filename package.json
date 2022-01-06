@@ -18,7 +18,9 @@
     "url": "https://github.com/dao-duc-tung/dao-duc-tung.github.io/issues"
   },
   "homepage": "https://github.com/dao-duc-tung/dao-duc-tung.github.io#readme",
-  "dependencies": {},
+  "dependencies": {
+    "await-spawn": "^4.0.2"
+  },
   "devDependencies": {
     "cross-env": "^7.0.3",
     "ejs": "^3.1.6",

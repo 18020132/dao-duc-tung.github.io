@@ -10,6 +10,8 @@ By doing that way, we publish ports outside the docker internal virtual network 
 
 In this post, we will see how to create an _inter-communication_ to control exactly which container will talk with which container.
 
+<toc>
+
 ## Default networks
 
 Let's show the available networks by running

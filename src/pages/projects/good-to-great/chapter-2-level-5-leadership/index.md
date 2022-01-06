@@ -7,6 +7,8 @@ layout: post
 
 _"You can accomplish anything in life, provided that you do not mind who gets the credit." - Harry S. Truman_
 
+<toc>
+
 ## Definition
 
 Level 5 leadership refers to a five-level hierarchy of executive capabilities, with level 5 at the top. Level 5 leaders embody a paradoxical mix of personal humility and professional will. They are ambitious, but ambitions first and foremost for the company, not themselves.

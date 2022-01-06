@@ -12,6 +12,8 @@ This project will help to steer me in the right direction and remind me about th
 
 Let's start with this post as the introduction of the book.
 
+<toc>
+
 ## Overview
 
 In this book, the authors will:

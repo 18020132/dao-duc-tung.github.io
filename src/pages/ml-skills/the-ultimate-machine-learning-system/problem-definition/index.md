@@ -7,6 +7,8 @@ layout: post
 
 Today in this post, we will discuss the first stage in an ML project - the problem definition stage. This Problem definition stage is not like the other stages which are self-explained. We need to clearly answer a bunch of questions at the very beginning when starting an ML project.
 
+<toc>
+
 ## Understand business requirements
 
 The first step is to form a business question, or goals.

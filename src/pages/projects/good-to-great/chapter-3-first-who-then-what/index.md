@@ -5,6 +5,8 @@ layout: post
 
 ![people][people]
 
+<toc>
+
 ## The mindset
 
 The good-to-great leaders began the transformation by first getting the right people on the bus and the wrong people off the bus then figuring out where to drive it.

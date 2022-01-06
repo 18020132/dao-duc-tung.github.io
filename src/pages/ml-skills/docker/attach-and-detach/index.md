@@ -8,6 +8,8 @@ layout: post
 It is common and necessary if we want to take a look on what is happening inside a container by interacting with it.
 In this post, we will see how to attach and detach from a container.
 
+<toc>
+
 ## Detach
 
 In the previous post about **Docker Image and Container**, we knew how to use `docker run` command.

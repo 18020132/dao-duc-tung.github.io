@@ -5,6 +5,8 @@ layout: post
 
 ![financial-statements-detail][financial-statements-detail]
 
+<toc>
+
 ## The balance sheet
 
 [The balance sheet](https://www.investopedia.com/terms/b/balancesheet.asp) shows us the information of the company's assets, its obligations (its liabilities), and its equities.

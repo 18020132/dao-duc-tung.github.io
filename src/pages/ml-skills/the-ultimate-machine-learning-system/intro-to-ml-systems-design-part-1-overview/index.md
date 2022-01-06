@@ -5,6 +5,8 @@ layout: post
 
 In this post, we will see how the goals of designing an ML system look like. We will also get an idea about different types of ML systems.
 
+<toc>
+
 ## Goals of ML systems design
 
 ML system design is the process of defining the **interface**, **algorithms**, **data**, **infrastructure**, and **hardware** for an ML system to satisfy specified requirements.

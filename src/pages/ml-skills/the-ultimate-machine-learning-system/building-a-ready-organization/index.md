@@ -5,12 +5,14 @@ layout: post
 
 ![ready][ready]
 
-Today we will discuss the components needed for the successful organizational adoption of ML. This post focuses on business leaders and other decision-makers currently or potentially involved in ML projects.
+Behind successful ML projects are well-organized teams. Today we will discuss the needed components for the successful organizational adoption of ML. This post focuses on business leaders and other decision-makers currently or potentially involved in ML projects.
 
 To figure out which components are needed, we are going to answer two main questions including:
 
 - How to prepare my organization for using ML?
 - How to start my ML journey?
+
+<toc>
 
 ## How to prepare my organization?
 
