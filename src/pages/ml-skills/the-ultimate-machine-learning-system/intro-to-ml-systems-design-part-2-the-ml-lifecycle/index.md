@@ -139,7 +139,7 @@ After a model is ready to be used, a deployment infrastructure should be ready t
 
 ## The Machine Learning lifecycle
 
-I prefer to do things in a simple way. In my opinion, the data understanding and data preparation steps can be combined into one data engineering step; the modeling and evaluation steps can be combined into one model development step. So now, we have four main phases:
+I prefer to do things in simple ways. In my opinion, the data understanding and data preparation steps can be combined into one data engineering step; the modeling and evaluation steps can be combined into one model development step. So now, we have four main phases:
 
 1. Problem definition (Business understanding)
 1. Data engineering

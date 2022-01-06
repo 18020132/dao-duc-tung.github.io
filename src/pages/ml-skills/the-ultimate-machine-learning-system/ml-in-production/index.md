@@ -144,7 +144,7 @@ To end this post, these are some helpful case studies that might help you to see
 7. [Space, Time and Groceries](https://tech.instacart.com/space-time-and-groceries-a315925acf3a)
 8. [Creating a Modern OCR Pipeline Using Computer Vision and Deep Learning](https://tech.instacart.com/space-time-and-groceries-a315925acf3a)
 9. [Scaling Machine Learning at Uber with Michelangelo](https://tech.instacart.com/space-time-and-groceries-a315925acf3a)
-10. [Spotify’s Discover Weekly: How machine learning finds your new music](https://tech.instacart.com/space-time-and-groceries-a315925acf3a)
+10. [Spotify's Discover Weekly: How machine learning finds your new music](https://tech.instacart.com/space-time-and-groceries-a315925acf3a)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

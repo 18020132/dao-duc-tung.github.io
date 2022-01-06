@@ -321,6 +321,21 @@
               "visualize data",
               "feature engineering"
             ]
+          },
+          {
+            "title": "UMLS - Model Development",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/model-development",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "model development",
+              "select model",
+              "train model",
+              "optimize hyperparameter",
+              "evaluate model"
+            ]
           }
         ]
       }
