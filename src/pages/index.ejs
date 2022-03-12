@@ -75,23 +75,34 @@ title: AI Engineer
     </li>
   </ul>
 
+  <h2>Pinned</h2>
+  <ul>
+    <% helper.dataHelper.pinnedItems.forEach((item)=> { %>
+    <li>
+      <a href="<%= site.basePath %>/<%= item.url %>"> <%= item.title %> </a>
+    </li>
+    <% }) %>
+  </ul>
+
   <h2>Latest Posts</h2>
 
   <ul>
+    <!-- Group by category -->
     <!-- <% helper.dataHelper.latestPostsGroupedByCategory.forEach((category) => { %>
-  <li>
-    <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a>
-    <ul>
-    <% category.childs.forEach((post) => { %>
-      <li>
-        <a href="<%= site.basePath %>/<%= post.url %>"><%= post.title %></a>
-      </li>
-    <% }) %>
-    </ul>
-  </li>
-  </br>
-  <% }) %> -->
+    <li>
+      <a href="<%= site.basePath %>/<%= category.url %>"><%= category.title %></a>
+      <ul>
+      <% category.childs.forEach((post) => { %>
+        <li>
+          <a href="<%= site.basePath %>/<%= post.url %>"><%= post.title %></a>
+        </li>
+      <% }) %>
+      </ul>
+    </li>
+    </br>
+    <% }) %> -->
 
+    <!-- No grouping -->
     <% helper.dataHelper.latestPosts.forEach((post)=> { %>
     <li>
       <a href="<%= site.basePath %>/<%= post.url %>"> <%= post.title %> </a>

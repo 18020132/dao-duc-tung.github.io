@@ -11,7 +11,8 @@
         "tags": [
           "ask question",
           "art"
-        ]
+        ],
+        "pinned": true
       },
       {
         "title": "Graduation",
@@ -45,7 +46,8 @@
         "tags": [
           "measure",
           "life"
-        ]
+        ],
+        "pinned": true
       },
       {
         "title": "The Place",
@@ -162,6 +164,7 @@
         "title": "The Ultimate Machine Learning System",
         "type": "topic",
         "url": "ml-skills/the-ultimate-machine-learning-system",
+        "pinned": true,
         "childs": [
           {
             "title": "UMLS - Introduction",
@@ -444,6 +447,7 @@
         "title": "Good To Great",
         "type": "topic",
         "url": "projects/good-to-great",
+        "pinned": true,
         "childs": [
           {
             "title": "Chapter 1 - Good Is The Enemy Of Great",

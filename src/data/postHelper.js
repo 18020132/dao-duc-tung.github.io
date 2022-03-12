@@ -206,7 +206,34 @@ const getLatestPostsGroupedByCategory = () => {
   return tempCategories;
 };
 
-var latestPostsGroupedByCategory = getLatestPostsGroupedByCategory();
+const latestPostsGroupedByCategory = getLatestPostsGroupedByCategory();
+
+const getPinnedItems = () => {
+  var pinnedItems = [];
+
+  allPosts.forEach((post) => {
+    if (post['pinned'] === true) {
+      pinnedItems.push(post);
+    }
+  });
+  pinnedItems.sort(sortPostByLatestCreatedDate);
+
+  allTopics.forEach((topic) => {
+    if (topic['pinned'] === true) {
+      pinnedItems.push(topic);
+    }
+  });
+
+  allCategories.forEach((category) => {
+    if (category['pinned'] === true) {
+      pinnedItems.push(category);
+    }
+  });
+
+  return pinnedItems;
+};
+
+const pinnedItems = getPinnedItems();
 
 module.exports = {
   allCategories,
@@ -214,6 +241,7 @@ module.exports = {
   allPosts,
   latestPosts,
   latestPostsGroupedByCategory,
+  pinnedItems,
   getCategory,
   getTopic,
   getPost,
