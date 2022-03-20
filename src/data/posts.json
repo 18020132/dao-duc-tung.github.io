@@ -15,31 +15,6 @@
         "pinned": true
       },
       {
-        "title": "Graduation",
-        "type": "post",
-        "url": "thoughts-on/graduation",
-        "tags": [
-          "passion",
-          "success"
-        ]
-      },
-      {
-        "title": "Lucky Man",
-        "type": "post",
-        "url": "thoughts-on/lucky-man",
-        "tags": [
-          "lucky man"
-        ]
-      },
-      {
-        "title": "I Desire Failure",
-        "type": "post",
-        "url": "thoughts-on/i-desire-failure",
-        "tags": [
-          "desire failure"
-        ]
-      },
-      {
         "title": "How Will I Measure My Life",
         "type": "post",
         "url": "thoughts-on/how-will-i-measure-my-life",
@@ -48,15 +23,6 @@
           "life"
         ],
         "pinned": true
-      },
-      {
-        "title": "The Place",
-        "type": "post",
-        "url": "thoughts-on/the-place",
-        "tags": [
-          "living place",
-          "working place"
-        ]
       },
       {
         "title": "The Chosen One",
