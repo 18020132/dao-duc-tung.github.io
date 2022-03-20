@@ -3,6 +3,8 @@ url: ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-samp
 layout: post
 ---
 
+![sampling][sampling]
+
 In the previous post, we covered how to deal with some data issues, and how to perform feature engineering. In this post, we discuss about some techniques to sample a good training data and some issues related to data sampling.
 
 ## Sampling
@@ -57,6 +59,8 @@ There are two types of data leakage including feature leakage and training data 
 
 ## Imbalanced data
 
+![balance][balance]
+
 The imbalanced data issue causes some consequences such as.
 
 - Insufficient signal: if the number of minority-class samples is low, the problem becomes one of few-shot learning on minority-class samples
@@ -87,3 +91,8 @@ Class imbalance for binary problem is much easier to deal with than the problems
 
 - Bagging: reduces variance and helps to avoid overfitting
 - Boosting: converts weak learners to strong ones
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[sampling]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling/sampling.jpg
+[balance]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling/balance.jpg
