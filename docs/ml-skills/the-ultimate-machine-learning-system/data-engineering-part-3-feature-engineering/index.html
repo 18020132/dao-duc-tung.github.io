@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
 
      
-  <title>UMLS - Data Engineering - Part 6 - Data Analysis</title>
+  <title>UMLS - Data Engineering - Part 3 - Feature Engineering</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -73,80 +73,31 @@
    
   <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
     
-  <h1>UMLS - Data Engineering - Part 6 - Data Analysis</h1>
+  <h1>UMLS - Data Engineering - Part 3 - Feature Engineering</h1>
 
   <div class="post-info">
-    Jan 05, 2022 · 16 min read
+    Sep 15, 2021 · 11 min read
   </div>
 </div>
 
-      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis/understand.jpg" alt="understand"></p>
-<p>After the data is ingested, transformed, and stored in a centralized repository, it&#39;s now ready for the data analysis phase. In order to understand the data, we need to solve some data problems such as missing, noisy, biased, and imbalanced. This post will cover the topic <strong>Data Analysis</strong> where we try to sanitize data, clean data, perform feature engineering, and visualize data to understand it.</p>
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering/understand.jpg" alt="understand"></p>
+<p>After cleaning, we need to create new features from the original ones to give the ML model strong prediction power. You need to perform feature engineering because of the dimensionality of your dataset, especially when there&#39;re too many features. Please refer to <a href="https://whimsical.com/cs-329s-machine-learning-systems-design-note-E7oPi8C6VUU89j8yPJdgzK@7YNFXnKbZALHYHhFdywLJ">this board</a> for an overview of Feature Engineering.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
-<li><a href="#sanitize-data">Sanitize data</a> </li>
-<li><a href="#clean-data">Clean data</a> </li>
 <li><a href="#feature-engineering">Feature engineering</a> </li>
-<li><a href="#visualization">Visualization</a> </li>
+<li><a href="#data-augmentation">Data augmentation</a> </li>
 </ol>
-<h2 id="sanitize-data">Sanitize data</h2>
-<p>The first thing we should do is using descriptive statistics to gain insights into our data so that we can more effectively clean data later.</p>
-<h3 id="overall-statistics">Overall statistics</h3>
-<p>Overall statistics include:</p>
-<ul>
-<li>Number of rows (instances/data points)</li>
-<li>Number of columns (features/attributes)</li>
-</ul>
-<p>These information indicates whether you have too many features, which might lead to high dimensionality and overfit problems.</p>
-<h3 id="attribute-statistics">Attribute statistics</h3>
-<p>Attribute statistics include the following properties of each attribute:</p>
-<ul>
-<li>Mean</li>
-<li>Standard deviation</li>
-<li>Variance</li>
-<li>Minimum value</li>
-<li>Maximum value</li>
-</ul>
-<p>These properties help you to get a better sense of the shape of attributes.</p>
-<h3 id="multivariate-statistics">Multivariate statistics</h3>
-<p>Multivariate statistics deal with correlations and relationships between the attributes. High correlation between two attributes can cause collinearity problems and numerical instability.</p>
-<h4 id="numerical-variables-relationships">Numerical variables&#39; relationships</h4>
-<p>Using scatter plot is a good visualization to spot special relationships among numerical variables. For example, the image below shows strong linear relationships between <code>Area</code> and <code>Lot Size</code>, between <code>Area</code> and <code>Price</code>.</p>
-<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis/numerical-variables-relationships.png" alt="numerical-variables-relationships"></p>
-<h4 id="correlation-matrices">Correlation matrices</h4>
-<p>Using scatter plot to visualize numerical variables&#39; linear relationships. But to quantify these linear relationships, we use correlation matrix to convey both the strong and weak linear relationships among those variables. For example, if the correlation is zero, there&#39;s no linear relationship, but there still might be non-linear relationship.</p>
-<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis/correlation-matrix.png" alt="correlation-matrix"></p>
-<h2 id="clean-data">Clean data</h2>
-<p>After we have an overall understanding about the data, it&#39;s time to take a closer look and clean it.</p>
-<p>Your data can be messy in some ways:</p>
-<ul>
-<li>Different language</li>
-<li>Special characters in some words: Njce to m33t you</li>
-<li>Lot of space between words: H e l l o</li>
-<li>Capital characters: Hello, heLLo</li>
-<li>Different scales: 40km, 10m, 2in</li>
-<li>Mixed types: 20, 5h45, 300m/s</li>
-<li>Outliers: Not always you want to clean up</li>
-<li>Missing data: solutions might be:<ul>
-<li>Drop rows</li>
-<li>Drop columns</li>
-<li>Replace values by column mean, zero, or other value using imputation</li>
-</ul>
-</li>
-</ul>
-<p>Make sure to standardize your data if your model requires to solve those problems.</p>
 <h2 id="feature-engineering">Feature engineering</h2>
-<p>After cleaning, we need to create new features from the original ones to give the ML model strong prediction power. You need to perform feature engineering because of the dimensionality of your dataset, especially when there&#39;re too many features. Please refer to <a href="https://whimsical.com/cs-329s-machine-learning-systems-design-note-E7oPi8C6VUU89j8yPJdgzK@7YNFXnKbZALHYHhFdywLJ">this board</a> for an overview of Feature Engineering.</p>
 <p>There&#39;re two types of feature engineering which are <em>Feature Selection</em> and <em>Feature Extraction</em>. Both are used to reduce the dimensionality of the feature space.</p>
 <ul>
-<li>Feature selection: use algorithms to remove some features from the model (e.g: transform, linear or non-linear combination, etc.)</li>
+<li>Feature selection: use algorithms to remove some features from the model (e.g. transform, linear or non-linear combination, etc.)</li>
 <li>Feature extraction: use algorithms to combine original features to generate a set of new features, and the number of new features to be used in the model is less than the number of original features</li>
 </ul>
 <p>There&#39;re some common techniques such as Filtering, Scaling, and Transformation.</p>
 <h3 id="filtering">Filtering</h3>
 <p>Filtering is the process of selecting relevant features. For example, removing channels from an image if color is not important, removing frequencies from audio if the power is less than a threshold.</p>
 <h3 id="scaling">Scaling</h3>
-<p>On the one hand, many algorithms are sensitive to features being on different scales, e.g: for gradient descent and kNN, we need to scale all features to one range. On the other hand, some algorihtms like decision trees, random forests, aren&#39;t sensitive to features on different scales. Note that we fit the scaler to training data only, then transform both train and validation data.</p>
+<p>On the one hand, many algorithms are sensitive to features being on different scales, e.g. for gradient descent and kNN, we need to scale all features to one range. On the other hand, some algorihtms like decision trees, random forests, aren&#39;t sensitive to features on different scales. Note that we fit the scaler to training data only, then transform both train and validation data.</p>
 <p>There&#39;re common choices such as Normalization and Scaling methods. Scaling is for columns, normalization is for each row independently.</p>
 <h4 id="normalization-methods">Normalization methods</h4>
 <ul>
@@ -222,7 +173,7 @@
 <p>There&#39;re some other techniques to consider:</p>
 <ul>
 <li>For binary categorical variable: <code>Yes/No</code> -&gt; <code>1/0</code></li>
-<li>For general numerical variables: Use above numeric value binding to split them into Small, Medium, Large bins and map them to 5, 10, 20 numbers respectively. These numbers are derived from your business insight.</li>
+<li>For general numerical variables: Use above numeric value binding to split them into <code>Small</code>, <code>Medium</code>, <code>Large</code> bins and map them to <code>5</code>, <code>10</code>, <code>20</code> numbers respectively. These numbers are derived from your business insight.</li>
 <li>For nominal variables like object types: Use one-hot encoding</li>
 </ul>
 <h3 id="the-more-the-better">The more the better?</h3>
@@ -230,7 +181,7 @@
 <ul>
 <li>Overfitting</li>
 <li>Too many features makes model hard to maintain</li>
-<li>Label leaking: The more feature engineering you do, the more chance for labels to leak. For example, feature A doesn&#39;t cause leakage, but A + B can cause leakage</li>
+<li>Label leaking: The more feature engineering you do, the more chance for labels to leak. For example, feature A doesn&#39;t cause leakage, but <code>A + B</code> can cause leakage</li>
 </ul>
 <p>The solutions might be:</p>
 <ul>
@@ -242,30 +193,40 @@
 <ul>
 <li>Use your intuition</li>
 <li>Try to generate many features first, then apply dimensionality reduction</li>
-<li>Use non-linear transformation: square, cube, etc.</li>
-<li>Combine features: x*y, x+y, etc.</li>
+<li>Use non-linear transformation: <code>square</code>, <code>cube</code>, etc.</li>
+<li>Combine features: <code>x\*y</code>, <code>x+y</code>, etc.</li>
 <li>Try not to overthink</li>
 <li>Don&#39;t include too many manual logic because it will be too difficult to maintain</li>
 </ul>
-<h2 id="visualization">Visualization</h2>
-<p>Visualizing data helps you better understand features and relationships among them. Visualization should be done during the sanitizing and feature engineering processes. Visualization helps you answer questions such as:</p>
+<h2 id="data-augmentation">Data augmentation</h2>
+<p>The goals of data augmentation are:</p>
 <ul>
-<li>What&#39;s the range of the data?</li>
-<li>What&#39;s the peak of the data?</li>
-<li>Are there any outliers?</li>
-<li>Are there any interesting patterns in the data?</li>
-<li>Should we sanitize/clean/preprocess this and that features?</li>
+<li>To improve model&#39;s overall performance or on certain classes</li>
+<li>To generalize the model better</li>
+<li>To enforce certain behaviors of model</li>
 </ul>
-<p>Visualization techniques include visualizing averages and summary statistics using</p>
+<p>Some example of text augmentation:</p>
 <ul>
-<li>Line charts</li>
-<li>Scatter plots</li>
-<li>Box plots</li>
-<li>Histograms</li>
-<li>Correlation matrix</li>
-<li>Heatmaps</li>
-<li>Confusion matrix</li>
-<li>Etc.</li>
+<li>Replace words with <code>[MASK]</code> token</li>
+<li>Replace words with a random word</li>
+<li>Keep words unchanged -&gt; to bias the representation towards the actual observed words</li>
+</ul>
+<p>Some example of image augmentation:</p>
+<ul>
+<li>Basic image manipulation<ul>
+<li>Kernel filters: Gaussian, Sobel, etc.</li>
+<li>Random erasing, cropping, etc.</li>
+<li>Geometric transformations: translation, rotation, flipping, warping, etc.</li>
+<li>Image properties adjustment: brightness, constrast, color space, etc.</li>
+<li>Mixing images: 70% dog, 30% cat -&gt; label 3.3</li>
+</ul>
+</li>
+<li>Deep learning approaches<ul>
+<li>Adversarial training</li>
+<li>Neural style transfer</li>
+<li>GAN data augmentation</li>
+</ul>
+</li>
 </ul>
 <!-- MARKDOWN LINKS & IMAGES -->
 
@@ -282,17 +243,9 @@
           
           <li><a href="#">machine learning system</a></li>
           
-          <li><a href="#">data engineering</a></li>
-          
-          <li><a href="#">data analysis</a></li>
-          
-          <li><a href="#">sanitize data</a></li>
-          
-          <li><a href="#">clean data</a></li>
-          
-          <li><a href="#">visualize data</a></li>
-          
           <li><a href="#">feature engineering</a></li>
+          
+          <li><a href="#">data augmentation</a></li>
           
         </ul>
       </div>
@@ -300,7 +253,7 @@
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis'); return false;"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -310,16 +263,16 @@
     
     <div class="post-body-continue-left">
       
-      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation" class="btn">
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
-        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 5 - Data Transformation</span></a
+        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 2 - Data Issues</span></a
       >
       
     </div>
     <div class="post-body-continue-right">
       
-      <a href="/ml-skills/the-ultimate-machine-learning-system/model-development" class="btn">
-        Next<span class="post-body-continue-post-title">: UMLS - Model Development</span>
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 4 - Sampling</span>
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
       
@@ -329,7 +282,7 @@
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering"
   theme="github-light"
   crossorigin="anonymous"
   async

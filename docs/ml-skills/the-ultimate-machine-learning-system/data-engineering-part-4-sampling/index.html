@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Data Engineering - Part 4 - Sampling</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Data Engineering - Part 4 - Sampling</h1>
+
+  <div class="post-info">
+    Oct 15, 2021 · 11 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling/sampling.jpg" alt="sampling"></p>
+<p>In the previous post, we covered how to deal with some data issues, and how to perform feature engineering. In this post, we discuss about some techniques to sample a good training data and some issues related to data sampling.</p>
+<h2 id="sampling">Sampling</h2>
+<p>Sampling is an important part of the ML workflow especially when we don&#39;t have access to all possible data in the real world, or we don&#39;t have enough computing resources to use all the data for training process.</p>
+<p>There are two types of sampling including non-probability sampling and random sampling.</p>
+<h3 id="non-probability-sampling">Non-probability sampling</h3>
+<p>In non-probability sampling, the selection of data isn&#39;t based on any probability criteria. The result data usually doesn&#39;t represent the real-world data and cause selection bias. There are some common techniques such as.</p>
+<ul>
+<li>Convenience sampling: samples are selected based on their availability</li>
+<li>Snowball sampling: future samples are selected based on the existing samples</li>
+<li>Judgement sampling: some experts decide what samples to include</li>
+<li>Quota sampling: samples are selected based on quotas for certain slices of data without any randomization</li>
+</ul>
+<h3 id="random-sampling">Random sampling</h3>
+<p><strong>Simple random sampling</strong>: In this simple method, we select equally k% of all examples. This method is easy to implement, but the rare classes might not appear in the selection.</p>
+<p><strong>Stratified sampling</strong>: This method divides samples to different groups, then selects equally k% from each class. The groups might be gender, category, age, etc. This method cannot handle the case that one sample might belong to multiple groups.</p>
+<p><strong>Weighted sampling</strong>: This method gives each sample a weight to be selected. E.g. if recent data is more valuable, we give it a higher weight.</p>
+<p><strong>Importance sampling</strong>: This method is common in reinforcement learning.</p>
+<p><strong>Reservoir sampling</strong>: This method deals with continually incoming data like streaming data. When a new sample come, we swap it with a random sample in our <code>N</code>-sample set with the probability of <code>1/N</code>.</p>
+<h2 id="data-leakage">Data leakage</h2>
+<p>There are two types of data leakage including feature leakage and training data leakage.</p>
+<p><strong>Feature leakage</strong>: some form of label <em>leaks</em> into the features.</p>
+<p><strong>Training data leakage</strong>: There are some sources that cause this issue such as.</p>
+<ul>
+<li>Premature featurization: create feature on the entire dataset instead of just training data</li>
+<li>Oversampling before splits: train splits might contain test samples</li>
+<li>Time leakage: randomly splitting data instead of temporal split can cause training data to be able to see the future</li>
+<li>Group leakage: A patient has 3 CT scans. 2 of them are in the training set, the last one is in the test set</li>
+</ul>
+<p><strong>Solutions</strong>: There are some solutions to fix the data leakage issues such as.</p>
+<ul>
+<li>Check for duplication between train and valid/test splits</li>
+<li>Temporal split data if possible</li>
+<li>Use only train splits for feature engineering</li>
+<li>Measure correlation between features and labels</li>
+<li>Train model on subset of features. If model&#39;s performance is very high on a subset, either the features are superb or there&#39;s a feature leakage issue.</li>
+<li>Monitor model&#39;s performance as more features are added. If model&#39;s performance suddenly increases, either the features are superb or there&#39;s a feature leakage issue.</li>
+<li>Involve Subject Matter Experts in the feature engineering and sampling processes</li>
+</ul>
+<h2 id="imbalanced-data">Imbalanced data</h2>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling/balance.jpg" alt="balance"></p>
+<p>The imbalanced data issue causes some consequences such as.</p>
+<ul>
+<li>Insufficient signal: if the number of minority-class samples is low, the problem becomes one of few-shot learning on minority-class samples</li>
+<li><em>Satisfactory</em> defaults: by learning from the majority-class samples, model can obtain low loss and high accuracy, while learning relatively little about the underlying structure of data</li>
+<li>Asymmetric cost of error: the human cost of misclassifying a minority class may be asymmetrically great</li>
+</ul>
+<p>Some sources of error might be.</p>
+<ul>
+<li>Sampling bias: the way dataset was constructed excludes certain cases</li>
+<li>Domain specific: labels are just very rare given the domain in which the model is operating</li>
+<li>Labeling errors: this is less common</li>
+</ul>
+<h3 id="how-to-deal-with-imbalanced-data">How to deal with imbalanced data</h3>
+<p>Class imbalance for binary problem is much easier to deal with than the problems with more than two classes. Some people argue that you shouldn&#39;t fix this issue if that is how the data is in real world, and a good model should learn to work with that. Despite of that argument, we have some techniques to deal with this issue.</p>
+<p><strong>Resampling</strong>: add more minority samples or remove majority samples</p>
+<ul>
+<li>Undersampling: remove majority samples. This might cause the losing of important data. E.g. Tomek Links find pairs of samples from opposite classes that are close in proximity, and remove the sample of majority class in each pair</li>
+<li>Oversampling: add more minority samples. E.g. SMOTE combines existing minority-class data points linearly</li>
+</ul>
+<p><strong>Weight balacing</strong>: give higher weight for wrong prediction in loss function</p>
+<ul>
+<li>Biasing toward rare classes: the weight of a class is inversely proportional to the number of samples in that class, so that the rarer classes have higher weights</li>
+<li>Biasing toward difficult samples: adjust the loss function so that if a sample has a lower probability of being right, it&#39;ll have a higher weight</li>
+</ul>
+<p><strong>Ensembles</strong>: choose algorithm more robust to class imbalance</p>
+<ul>
+<li>Bagging: reduces variance and helps to avoid overfitting</li>
+<li>Boosting: converts weak learners to strong ones</li>
+</ul>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">data engineering</a></li>
+          
+          <li><a href="#">sampling</a></li>
+          
+          <li><a href="#">data leakage</a></li>
+          
+          <li><a href="#">imbalanced data</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 3 - Feature Engineering</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-pipeline" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 5 - Data Pipeline</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

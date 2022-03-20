@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Data Engineering - Part 2 - Data Issues</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Data Engineering - Part 2 - Data Issues</h1>
+
+  <div class="post-info">
+    Aug 30, 2021 · 15 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/data-issues.jpg" alt="data-issues"></p>
+<p>There&#39;re some known issues of data quality such as.</p>
+<ul>
+<li>Common issues: consistency, accuracy, noisy data, missing data, bias, correlated data</li>
+<li>Labeling issues</li>
+</ul>
+<p>This post will discuss and describe the solution to deal with them.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#common-issues">Common issues</a> </li>
+<li><a href="#labeling-issue">Labeling issue</a> </li>
+</ol>
+<h2 id="common-issues">Common issues</h2>
+<p><strong>Consistency</strong>: There are some examples about the inconsistency of data as below.</p>
+<ul>
+<li>Typo: <em>Njce to m33t you</em>, <em>H e l l o</em>, <em>heLLo</em></li>
+<li>Different languages: <em>thank you</em>, <em>merci</em></li>
+<li>Different scales/units: <em>10 cm</em>, <em>10 ft</em>, <em>10 km/h</em></li>
+<li>Mixed types: <em>10 cats</em>, <em>10h</em></li>
+</ul>
+<p><strong>Accuracy</strong>: The sources that cause the data accuracy issue might be the method we use to collect the data or the features, the labels we assign to samples, or the function we write to perform feature engineering, etc.</p>
+<p><strong>Noisy data</strong>: An example of noisy data is the outliers.</p>
+<p><strong>Bias data</strong>: There are different sources that cause the bias data. They might be sampling/selection biases, under/over-representation of some subgroups, human biases embedded in historical data, or labeling biases, etc.</p>
+<p><strong>Correlated data</strong>: Highly correlated features can cause collinearity problems and numerical instability.</p>
+<p><strong>Missing data</strong>: Some features of some samples miss the value.</p>
+<h3 id="how-to-deal-with-common-data-issues">How to deal with common data issues</h3>
+<p><strong>Sanitize data</strong>: The first thing we should do is using descriptive statistics to gain insights into our data so that we can more effectively clean data later. Some overall statistics:</p>
+<ul>
+<li>Number of rows (instances/data points)</li>
+<li>Number of columns (features/attributes)</li>
+</ul>
+<p>These information indicates whether you have too many features, which might lead to high dimensionality and overfit problems.</p>
+<p><strong>Attribute statistics</strong>: Attribute statistics include the following properties of each attribute:</p>
+<ul>
+<li>Mean</li>
+<li>Standard deviation</li>
+<li>Variance</li>
+<li>Minimum value</li>
+<li>Maximum value</li>
+</ul>
+<p>These properties help you to get a better sense of the shape of attributes. This step helps you to detect the missing values, check the data consistency and the data bias issues.</p>
+<p><strong>Multivariate statistics</strong>: Multivariate statistics deal with correlations and relationships between the attributes. High correlation between two attributes can cause collinearity problems and numerical instability. This step helps you to detect the correlated data issue.</p>
+<ul>
+<li><strong>Numerical variables&#39; relationships</strong>: Using scatter plot is a good visualization to spot special relationships among numerical variables. For example, the image below shows strong linear relationships between <code>Area</code> and <code>Lot Size</code>, between <code>Area</code> and <code>Price</code>.</li>
+</ul>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/numerical-variables-relationships.png" alt="numerical-variables-relationships"></p>
+<ul>
+<li><strong>Correlation matrices</strong>: Using scatter plot to visualize numerical variables&#39; linear relationships. But to quantify these linear relationships, we use correlation matrix to convey both the strong and weak linear relationships among those variables. For example, if the correlation is zero, there&#39;s no linear relationship, but there still might be non-linear relationship.</li>
+</ul>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/correlation-matrix.png" alt="correlation-matrix"></p>
+<p><strong>Clean data</strong>: After we have an overall understanding about the data, it&#39;s time to take a closer look and clean it. This step deals with the data consistency, noisy data, and missing data issues.</p>
+<p>For data inconsistency, you might need to write some custom scripts to fix this. For noisy data, you might not want to remove the outliers because they might imply some hidden features. For missing data, solutions might be:</p>
+<ul>
+<li>Drop rows: may lose too much data -&gt; cause overfitting</li>
+<li>Drop columns: may lose information in features -&gt; cause underfitting</li>
+<li>Replace values by column mean, median, zero, most frequent value, other estimated value, or imputation method like <em>MICEImputer</em> from <code>sklearn</code>, <code>fancyimpute</code> python package, etc.</li>
+<li>Before performing above methods, you should ask yourself:<ul>
+<li>What were the mechanisms that caused the missing values?</li>
+<li>Are these missing values missing at random?</li>
+<li>Are there rows or columns missing that you are not aware of?</li>
+</ul>
+</li>
+</ul>
+<p><strong>Visualization</strong>: Visualizing data helps you better understand features and relationships among them. Visualization should be done during the sanitizing and feature engineering processes. Visualization helps you answer questions such as:</p>
+<ul>
+<li>What&#39;s the range of the data?</li>
+<li>What&#39;s the peak of the data?</li>
+<li>Are there any outliers?</li>
+<li>Are there any interesting patterns in the data?</li>
+<li>Should we sanitize/clean/preprocess this and that features?</li>
+</ul>
+<p>Visualization techniques include visualizing averages and summary statistics using</p>
+<ul>
+<li>Line charts</li>
+<li>Scatter plots</li>
+<li>Box plots</li>
+<li>Histograms</li>
+<li>Correlation matrix</li>
+<li>Heatmaps</li>
+<li>Confusion matrix</li>
+<li>etc.</li>
+</ul>
+<h2 id="labeling-issue">Labeling issue</h2>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/labeling-issue.jpg" alt="labeling-issue"></p>
+<p>Despite the promise of unsupervised ML, most ML models today still need labels to learn. The performance of an ML model depends heavily on the quality and quantity of labels it&#39;s trained on. Today in this post, we will discuss about the data labeling topic.</p>
+<h3 id="challenges-of-hand-labels">Challenges of hand labels</h3>
+<ul>
+<li>Expensive</li>
+<li>Violate strict privacy requirements if someone has to look at your data</li>
+<li>Slow as it&#39;s on a linear scale</li>
+<li>Aren&#39;t adaptive: when the task changes or data changes, we need to relabel</li>
+<li>etc.</li>
+</ul>
+<h3 id="label-multiplicity">Label multiplicity</h3>
+<p>To obtain a large quantity of labels, companies use data from multiple sources and rely on multiple annotators. Using them indiscriminately without examining them can cause your model to fail mysteriously. Some problems are:</p>
+<ul>
+<li>Different label sources and different annotators lead to different levels of accuracy</li>
+<li>Different annotators lead to different levels of expertise which causes label ambiguity</li>
+<li>More data isn&#39;t always better. E.g. new data has is less accurate than original data</li>
+</ul>
+<p>Some solutions:</p>
+<ul>
+<li>Need to have a clear problem definition</li>
+<li>Provide annotation training</li>
+<li>Data lineage: need to track where data/labels come from</li>
+</ul>
+<h3 id="deal-with-the-lack-of-labels">Deal with the lack of labels</h3>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/get-more-labeled-training-data.png" alt="get-more-labeled-training-data"></p>
+<p><strong>Semi-supervised learning</strong>: This method starts with a small set of labels and use structural assumptions to generate more labels. For examples: hashtag #AI, #ML refer to Computer Science.</p>
+<p><strong>Weak supervision</strong>: We can use labeling function which is a function that encodes subject matter expertise with tools such as Snorkel.</p>
+<pre><code class="language-python">def labeling_function(note):
+    if &quot;cancer&quot; in note:
+        return &quot;HIGH&quot;
+</code></pre>
+<p>The table below compares hand labeling and programmatic methods.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Hand labeling</th>
+<th>Programmatic labeling</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cost</td>
+<td>Expensive: esp. when subject matter expertise required</td>
+<td>Cost saving: Expertise can be versioned, shared, reused across organization</td>
+</tr>
+<tr>
+<td>Privacy</td>
+<td>Non-private: Need to ship data to human annotators</td>
+<td>Private: Create LFs using a cleared data subsample then apply LFs to other data without looking at individual samples.</td>
+</tr>
+<tr>
+<td>Scalability</td>
+<td>Slow: Time required scales linearly with # labels needed</td>
+<td>Fast: Easily scale 1K -&gt; 1M samples</td>
+</tr>
+<tr>
+<td>Adaptability</td>
+<td>Non-adaptive: Every change requires re-labeling the dataset</td>
+<td>Adaptive: When changes happen, just reapply LFs!</td>
+</tr>
+</tbody></table>
+<p><strong>Transfer learning</strong>: This method applies the model trained for one task to another task. It might or might not require fine-tuning (gradient updates). For examples: Fine-tune a model trained on language modling to make it do sentiment analysis.</p>
+<p><strong>Active learning</strong>: Active learning still requires hand labels, but instead of randomly labeling a subset of data, you label the samples that are most helpful to your model. Check the image below for more details.</p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/active-learning.png" alt="active-learning"></p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">data engineering</a></li>
+          
+          <li><a href="#">data issue</a></li>
+          
+          <li><a href="#">data analysis</a></li>
+          
+          <li><a href="#">sanitize data</a></li>
+          
+          <li><a href="#">clean data</a></li>
+          
+          <li><a href="#">visualize data</a></li>
+          
+          <li><a href="#">labeling issue</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 1 - What to consider</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 3 - Feature Engineering</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<script
+  src="https://utteranc.es/client.js"
+  repo="dao-duc-tung/dao-duc-tung.github.io"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues"
+  theme="github-light"
+  crossorigin="anonymous"
+  async
+></script>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+  </div>
+</footer>
+
+  </body>
+</html>

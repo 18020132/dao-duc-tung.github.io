@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
 
      
-  <title>UMLS - Data Engineering - Part 1 - Important Aspects</title>
+  <title>UMLS - Data Engineering - Part 1 - What to consider</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -73,20 +73,19 @@
    
   <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
     
-  <h1>UMLS - Data Engineering - Part 1 - Important Aspects</h1>
+  <h1>UMLS - Data Engineering - Part 1 - What to consider</h1>
 
   <div class="post-info">
-    Aug 25, 2021 · 18 min read
+    Aug 25, 2021 · 17 min read
   </div>
 </div>
 
-      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects/data-engineering.jpg" alt="data-engineering"></p>
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider/data-engineering.jpg" alt="data-engineering"></p>
 <p>Data engineering is the second phase of the ML lifecycle. In this phase, we will perform some steps such as:</p>
 <ul>
 <li>Collect data</li>
 <li>Understand data</li>
 <li>Verify data quality</li>
-<li>Select final dataset</li>
 <li>Prepare data for training</li>
 </ul>
 <p>Before diving into each step, firstly this post will introduce some important aspects of data that we should consider including:</p>
@@ -106,7 +105,6 @@
 <li><a href="#oltp-vs-olap-databases">OLTP vs. OLAP databases</a> </li>
 <li><a href="#extract---transform---load">Extract - Transform - Load</a> </li>
 <li><a href="#batch-processing-vs-stream-processing">Batch processing vs. Stream processing</a> </li>
-<li><a href="#common-issues-of-data-quality">Common issues of data quality</a> </li>
 </ol>
 <h2 id="data-sources">Data sources</h2>
 <p>Data can be from different sources. The table below shows the four common sources.</p>
@@ -298,7 +296,7 @@
 <li>Load: loading it into the target destination e.g. a file or a data warehouse.</li>
 </ul>
 <h2 id="batch-processing-vs-stream-processing">Batch processing vs. Stream processing</h2>
-<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects/streaming.jpg" alt="streaming"></p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider/streaming.jpg" alt="streaming"></p>
 <p>The table below compares these two types of processing.</p>
 <table>
 <thead>
@@ -343,19 +341,6 @@
 <li>Mental shift</li>
 <li>Python incompatibility</li>
 </ul>
-<h2 id="common-issues-of-data-quality">Common issues of data quality</h2>
-<p>There&#39;re some known issues of data quality that we need to deal with.</p>
-<ul>
-<li>Consistency of the data: Is the data we&#39;re using consistent with the problem we want to solve? E.g. Different languages, different scales/units, mixed type</li>
-<li>Accuracy of the data: Are features, labels, methods to collect data correct?</li>
-<li>Noisy data: How to remove noise from the input, output?</li>
-<li>Missing data: How to deal with missing data?</li>
-<li>Outliers in the data: How to detect and deal with outliers?</li>
-<li>Correlated: Highly correlated features can cause collinearity problems and numerical instability</li>
-<li>Bias: Sampling/selection biases, Under/over-representation of subgroups, Human biases embedded in historical data, Labeling biases</li>
-<li>Variance, etc.</li>
-</ul>
-<p>We will deal with these issues in the future post.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>
@@ -397,7 +382,7 @@
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects'); return false;"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -415,8 +400,8 @@
     </div>
     <div class="post-body-continue-right">
       
-      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling" class="btn">
-        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 2 - Data Labeling</span>
+      <a href="/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Data Engineering - Part 2 - Data Issues</span>
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
       
@@ -426,7 +411,7 @@
 <script
   src="https://utteranc.es/client.js"
   repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects"
+  issue-term="ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider"
   theme="github-light"
   crossorigin="anonymous"
   async
