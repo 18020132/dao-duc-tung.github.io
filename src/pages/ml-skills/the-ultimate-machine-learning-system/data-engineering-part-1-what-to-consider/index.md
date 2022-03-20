@@ -1,5 +1,5 @@
 ---
-url: ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects
+url: ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider
 layout: post
 ---
 
@@ -10,7 +10,6 @@ Data engineering is the second phase of the ML lifecycle. In this phase, we will
 - Collect data
 - Understand data
 - Verify data quality
-- Select final dataset
 - Prepare data for training
 
 Before diving into each step, firstly this post will introduce some important aspects of data that we should consider including:
@@ -134,22 +133,7 @@ There're some barriers in Stream processing adoption such as:
 - Mental shift
 - Python incompatibility
 
-## Common issues of data quality
-
-There're some known issues of data quality that we need to deal with.
-
-- Consistency of the data: Is the data we're using consistent with the problem we want to solve? E.g. Different languages, different scales/units, mixed type
-- Accuracy of the data: Are features, labels, methods to collect data correct?
-- Noisy data: How to remove noise from the input, output?
-- Missing data: How to deal with missing data?
-- Outliers in the data: How to detect and deal with outliers?
-- Correlated: Highly correlated features can cause collinearity problems and numerical instability
-- Bias: Sampling/selection biases, Under/over-representation of subgroups, Human biases embedded in historical data, Labeling biases
-- Variance, etc.
-
-We will deal with these issues in the future post.
-
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[data-engineering]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects/data-engineering.jpg
-[streaming]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects/streaming.jpg
+[data-engineering]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider/data-engineering.jpg
+[streaming]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider/streaming.jpg

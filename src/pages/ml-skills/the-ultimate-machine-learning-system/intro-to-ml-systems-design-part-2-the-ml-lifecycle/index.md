@@ -164,7 +164,7 @@ _"If you think that machine learning will give you a 100% boost, then a heuristi
 
 ### 2. Simplest ML models
 
-At this stage, you should start with simple algorithms. E.g: Logistic regression XGBoost, K-nearest neighbors, etc.
+At this stage, you should start with simple algorithms. E.g. Logistic regression XGBoost, K-nearest neighbors, etc.
 
 This stage allows you to quickly build out a framework from data management from development to deployment that you can test and trust.
 

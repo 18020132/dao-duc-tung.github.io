@@ -241,9 +241,9 @@
             ]
           },
           {
-            "title": "UMLS - Data Engineering - Part 1 - Important Aspects",
+            "title": "UMLS - Data Engineering - Part 1 - What to consider",
             "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-important-aspects",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -260,69 +260,59 @@
             ]
           },
           {
-            "title": "UMLS - Data Engineering - Part 2 - Data Labeling",
+            "title": "UMLS - Data Engineering - Part 2 - Data Issues",
             "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-labeling",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues",
             "tags": [
               "ultimate",
               "machine learning system",
               "data engineering",
-              "data labeling",
-              "lack of labels"
-            ]
-          },
-          {
-            "title": "UMLS - Data Engineering - Part 3 - Data Repository",
-            "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-data-repository",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "data engineering",
-              "aws",
-              "data repository",
-              "lake formation"
-            ]
-          },
-          {
-            "title": "UMLS - Data Engineering - Part 4 - Data Ingestion",
-            "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-data-ingestion",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "data engineering",
-              "data ingestion",
-              "batch processing",
-              "stream processing"
-            ]
-          },
-          {
-            "title": "UMLS - Data Engineering - Part 5 - Data Transformation",
-            "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-transformation",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "data engineering",
-              "data transformation",
-              "data preparation etl",
-              "batch data preparation"
-            ]
-          },
-          {
-            "title": "UMLS - Data Engineering - Part 6 - Data Analysis",
-            "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-6-data-analysis",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "data engineering",
+              "data issue",
               "data analysis",
               "sanitize data",
               "clean data",
               "visualize data",
-              "feature engineering"
+              "labeling issue"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 3 - Feature Engineering",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "feature engineering",
+              "data augmentation"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 4 - Sampling",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "sampling",
+              "data leakage",
+              "imbalanced data"
+            ]
+          },
+          {
+            "title": "UMLS - Data Engineering - Part 5 - Data Pipeline",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-pipeline",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "data engineering",
+              "data repository",
+              "data ingestion",
+              "batch processing",
+              "stream processing",
+              "data transformation",
+              "data preparation etl"
             ]
           },
           {

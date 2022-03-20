@@ -128,7 +128,7 @@ The table below summarizes some common ML deployment myths.
 | 2   | Only deploy one or two ML models at a time                  | Companies have many ML models. Each different feature of an application requires its own model                                                                              |
 | 3   | If we don't do anything, model performance remains the same | Drift concept: the data your model runs inference on drifts further and further away from the data it was trained on. ML sys performs best right after training             |
 | 4   | No need to update models as much                            | Since a model performance decays over time, we want to update it as fast as possible                                                                                        |
-| 5   | No need to worry about scale                                | E.g: a system that serves hundreds of queries per second or millions of users per month                                                                                     |
+| 5   | No need to worry about scale                                | E.g. a system that serves hundreds of queries per second or millions of users per month                                                                                     |
 | 6   | ML can transform the business overnight                     | Magically - possible, but overnight - no. The longer you've adopted ML, the faster your development cycle will run, and the higher your Returns On Investment (ROI) will be |
 
 ## Case studies

@@ -54,8 +54,8 @@ The second step is to list down constraints.
 ### Performance
 
 - **Baselines**: What are you comparing the system to? E.g. existing solutions, competitors' solutions, etc.
-- **Usefulness threshold**: How fast/good the solution needs to be for it to be useful?. E.g: self-driving cars need human-level performance to be useful; a system that predicts what word a user will type next on their phone doesn't., etc.
-- **Tradeoffs**: What's more important - false negatives or false positives? E.g: covid screening must not have false negatives (patients with covid shouldn't be classified as no covid). Fingerprint unlocking must not have false positives (unauthorized people shouldn't be given access).
+- **Usefulness threshold**: How fast/good the solution needs to be for it to be useful?. E.g. self-driving cars need human-level performance to be useful; a system that predicts what word a user will type next on their phone doesn't., etc.
+- **Tradeoffs**: What's more important - false negatives or false positives? E.g. covid screening must not have false negatives (patients with covid shouldn't be classified as no covid). Fingerprint unlocking must not have false positives (unauthorized people shouldn't be given access).
 - **Interpretability**: Does the solution need to be interpretable? If yes, to whom?
 - **Confidence measurement**: Does the solution need the confidence score? If yes:
   - What is the threshold to be usable?
@@ -82,7 +82,7 @@ The second step is to list down constraints.
 
 ### Techincal constraints
 
-Any tool or system that the solution must be compatible with? E.g: legacy infrastructure is a huge bottleneck for organizations to adopt ML.
+Any tool or system that the solution must be compatible with? E.g. legacy infrastructure is a huge bottleneck for organizations to adopt ML.
 
 ### Risks
 
