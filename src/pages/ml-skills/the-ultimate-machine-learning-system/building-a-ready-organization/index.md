@@ -68,8 +68,6 @@ Secondly, we need to think about the strategic plans to collect and use data. Fo
 - The data sources can be collected: enterprise databases, sensors, server logs, social media, etc.
 - The repository to store all the data: data lake
 
-I covered all the details to design an ML system in this post [Data engineering - Part 1](https://aiengineer.net/ml-skills/machine-learning-systems-design/data-engineering-part-1/). Please refer to it for more details.
-
 ### A culture of learning and collaboration
 
 Before going to determine the learning and collaboration culture, we should have an idea of how an ML team looks like. The table below shows possible roles in an ML team.
