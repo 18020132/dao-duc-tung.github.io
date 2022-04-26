@@ -11,59 +11,75 @@ Model development is the third phase of the ML lifecycle where we build the ML m
 
 ## Select models
 
-This part focuses on mapping our ML problems to appropriate ML algorithms.
+This part focuses on mapping our ML problems to appropriate ML algorithms. Knowledge of common ML tasks and the typical approaches to solve them is essential in this process.
 
-### Classification problem
+When selecting a model, we need to consider:
 
-On the one hand, the answer to the binary classification problems falls into one of two categories. On the other hand, the multiclass classification problems' answer might fall into one of three or more categories. Both of these ML problems represent classification problems.
+- Model's performance measured by metrics such as accuracy, F1, log loss, etc.
+- How much data it needs to run
+- How much compute and time it needs to both train and do inference
+- Model interpretability
 
-SageMaker provides a few built-in algorithms for these problems such as Linear Learner, XGBoost, and kNN. To learn more, please refer to:
+**Tips to select models**
 
-- [Amazon SageMaker Workshop](https://sagemaker-workshop.com/)
-- [SageMaker Immersion Day](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/63069e26-921c-4ce1-9cc7-dd882ff62575/en-US/)
-- [Another Amazon Sagemaker Workshop](https://www.sagemakerworkshop.com/)
-- [Amazon SageMaker Examples](https://github.com/aws/amazon-sagemaker-examples)
+1. Avoid the state-of-the-art models
+1. Start with the simplest models. Eg: simple model or complex model with ready-made implementation
+1. Avoid human biases in model selection
+1. Take into account the incoming new data. Eg: evaluate the model learning ability by using [learning curve](https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html)
+1. Evaluate trade-offs. Eg: false positives vs. false negatives, model accuracy vs. computing resources, etc.
+1. Understand model's assumptions
+   - [Independent and identically distributed](https://stats.stackexchange.com/questions/213464/on-the-importance-of-the-i-i-d-assumption-in-statistical-learning): in ANN, all examples are independently drawn from the same joint distribution
+   - Smoothness: supervised ML method assumes that if an input X produces an output Y, then an input close to X would produce an output proportionally close to Y
+   - Boundaries: a linear classifier assumes that decision boundaries are linear
 
-### Regression problem
+### Ensembles
 
-In a regression problem, you're mapping an input to a continuous value.
+At the beginning, we start with one model. Later, we might want to improve the system by using an ensemble of several models to make predictions. Each model in the ensemble is called a _base learner_.
 
-SageMaker provides similar built-in algorithms like Linear Learner and XGBoost. The difference is that you set the hyperparameter to direct these algorithms to produce quantitative results.
+**Bagging (Boostrap aggregating)**
 
-### Natural Language Processing
+1. Bootstrap data: randomly sample data records to create N sets of data. The records can be overlapped
+1. Use N identical models to train on those N sets of data
+1. Final prediction is the average predictions of N models
 
-There are SageMaker built-in algorithms for NLP such as:
+**Boosting**
 
-- BlazingText: provides highly-optimized implementations of the Word2Vec and text classification algorithms
-- Sequence2Sequence: has the input as a sequence of tokens (for example, text, audio) and generates the output as another sequence of tokens
-- Object2Vec: generalizes the well-known Word2Vec embedding technique for words
+1. Train model 1 on the dataset, take out the wrong predicted data
+1. Train model 2 on the original dataset and the wrong predited data in the previous step
+1. Continue training like that until model N
+1. Final prediction is the weighted predictions of each model
 
-### Computer Vision
+**Stacking**
 
-There are SageMaker built-in algorithms for computer vision:
+1. Split data into 2 parts, P1 and P2
+1. Train N base models which are different in architecture on P1
+1. Perform inference for these N trained models on P2 to generate a set of new features
+1. Train 1 meta-model on the new features in the previous step. Final prediction is the meta-model's prediction
 
-- Image classification: classifies images
-- Object detection: identifies all instances of objects within the image scene
-- Semantic segmentation: classifies every pixel in an image to a class label from a predefined set of classes
+Below is the table to compare those 3 ensembles.
 
-### Other options
+|               | Bagging                                                                                  | Boosting                                                                            | Stacking                                                                                        |
+| ------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Data sampling | Use boostrap to create N datasets, records can be overlapped (sampling with replacement) | The later model's data is the original data + previous model's wrong-predicted data | Split data into 2 parts, one is for N base models, the other is for meta-model (or generalizer) |
+| Architecture  | N identical models                                                                       | N identical models                                                                  | N different models + 1 meta-model                                                               |
+| Application   | Decrease high variance of N complex models                                               | Decrease high bias of N simple models                                               | Improve model performance                                                                       |
+| Example       | Random forest use N decision trees                                                       | Use N decision trees with low depth (to have low complexity model -> high bias)     | Use 3 base models (decision tree, kNN, SVM) + 1 meta-model (ANN)                                |
 
-There are other options for training algorithms:
+**Note**:
 
-- Use Apache Spark with Amazon SageMaker
-- Use custom code with a deep learning framework like TensorFlow or Apache MXNet
-- Use a custom algorithm in a Docker image
-- Use an algorithm from AWS Marketplace
+- High bias/high variance is the trade-off when training a model, not a model's characteristic
+- Low complexity model or high bias: underfitted, prediction is biased
+- High complexity model or high variance: overfitted, prediction fluctuates
 
 ## Train models
 
 ![model-development][model-development]
 
-Training, tuning, and evaluation is iterative process. You can use SageMaker to create the training job. To learn more, take the above SageMaker workshops.
+Training, tuning, and evaluation is iterative process.
 
 ### Split data
 
-Firstly, we need to split the data to ensure the division between the training and evaluation efforts. A common strategy is to split data into training, validation, and testing subsets with a common ratio of 80:10:10 or 75:15:15.
+Firstly, we need to split the data to ensure the division between the training and evaluation efforts. A common strategy is to split data into training, validation, and testing subsets with a common ratio of `80:10:10` or `75:15:15`.
 
 Cross-validation is another technique to compare multiple models' performance. The goal is to choose the model that will eventually perform the best in production.
 
@@ -76,6 +92,8 @@ If you have a small dataset, consider leave-one-out cross-validation (LOOCV), wh
 If you have imbalanced data, consider Stratified k-fold cross-validation where the distribution of classes in each fold is kept. Learn more [here](https://machinelearningmastery.com/cross-validation-for-imbalanced-classification/).
 
 > Cross-validation techniques will increase the computational power needed for your training.
+
+For more details about data sampling, please refer to the post **Data Engineering - Sampling** in this **The Ultimate Machine Learning System** topic.
 
 ## Optimize hyperparameters
 
@@ -91,24 +109,49 @@ There are different categories of hyperparameters such as:
 
 Traditionally, this was done manually. Someone who has domain experience related to that hyperparameter and the use case would manually select the hyperparameters based on their intuition and experience. Then they would train the model and score it on the validation data. This process would be repeated over and over again until satisfactory results are achieved. As a result, several other methods for hyperparameter tuning have been developed.
 
-Alternatively, SageMaker offers automated hyperparameter tuning, which uses methods like gradient descent, Bayesian optimization, and evolutionary algorithms to conduct a guided search for the best hyperparameter settings, by running many training jobs on your dataset using the algorithm and ranges of hyperparameters that you specify. To learn more, take the above SageMaker workshops.
+Alternatively, some tools offers automated hyperparameter tuning, which uses methods like gradient descent, Bayesian optimization, and evolutionary algorithms to conduct a guided search for the best hyperparameter settings, by running many training jobs on your dataset using the algorithm and ranges of hyperparameters that you specify. For example, [Weights and Biases](https://wandb.ai/).
 
-## Evaluate models
+## Experiment tracking and versioning
 
-Once you have trained, tuned your models, and decided which model is the best for your problem, it's time to evaluate that model on the test set that you split earlier.
+In the model development phase, we experiment different models with different hyperparameter configurations. It's important to keep track of all the experiments and their artifacts such as the loss curve, evaluation loss graph, logs, etc. This helps us to compare different experiments to understand the effect of different changes in model's performance in order to choose the best model.
 
-For classification problems, a confusion matrix is the building block for your model evaluation with derived metrics like:
+> Experiment tracking is the process of tracking the progress and results of an experiment.
 
-- Precision
-- Recall
-- Accuracy
-- F1-score
-- Area under the curve: Receiver operator curve (AUC-ROC)
+> Versioning is the process of logging all the details of an experiment for the purpose of recreating it later or comparing it with other experiments.
 
-For regression problems, you can use:
+Below is the list of some possible things we might want to track.
 
-- Sum of squared errors
-- RMSE
+- Who run the experiment?
+- Start time, end time
+- Model configuration
+  - Feature names
+  - Hyperparameters: learning rate, learning rate schedule, gradient norms, weight decay, momentum, etc.
+- Data: reference to training data, validation data, test data, feature distribution, statistics
+- Speed of the trained model
+  - Number of steps per second
+  - Number of tokens processed per second
+- Model performance
+  - Performance metrics: accuracy, F1, etc.
+  - Charts: loss curve, ROC, PR, confusion matrix, etc.
+- System performance: memory/CPU/GPU utilization
+- Full learned weights
+- Summary of the trained model
+
+Some tools to track experiments and versioning are [Weights and Biases](https://wandb.ai/), [DVC](https://dvc.org/), [mlflow](https://MLflow.org/), etc.
+
+## Debug models
+
+Below is the list of things that might cause an ML model to fail.
+
+- **Theoretical constraints**: the assumptions about the data and the features that the model uses are wrong
+- **Poor implementation of model**: forget to stop gradient updates during evaluation, etc.
+- **Poor choice of hyperparameters**: different sets of hyperparameters give different results
+- **Data issues**: data is collected unproperly, labels are wrong, features are processed wrongly, etc. For more details of data issues, please refer to the post **Data Engineering - Data Issues** in this **The Ultimate Machine Learning System** topic.
+- **Poor choice of features**: too many or too few features
+
+## AutoML
+
+We can actually use AutoML tools to automate the process of preprocessing data, selecting models, tuning hyperparameter, and choosing the best model. For the comparision of AutoML libraries, please refer to this [AutoML Libraries Comparision article](https://www.kaggle.com/code/andreshg/automl-libraries-comparison/notebook).
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

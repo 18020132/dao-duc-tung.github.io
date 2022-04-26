@@ -293,7 +293,10 @@
               "select model",
               "train model",
               "optimize hyperparameter",
-              "evaluate model"
+              "evaluate model",
+              "track experiment",
+              "versioning",
+              "automl"
             ]
           }
         ]
