@@ -153,14 +153,27 @@ is actually a big deal.</p>
     </div>
   </div>
 </div>
-<script
-  src="https://utteranc.es/client.js"
-  repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="thoughts-on/how-will-i-measure-my-life"
-  theme="github-light"
-  crossorigin="anonymous"
-  async
-></script>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = 'https://aiengineer.net/';
+    var PAGE_IDENTIFIER = 'https://aiengineer.net/';
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
 
     </section>
     <footer class="site-footer">
@@ -174,7 +187,7 @@ is actually a big deal.</p>
     </a>
   </div>
   <div class="footer-right">
-    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
   </div>
 </footer>
 

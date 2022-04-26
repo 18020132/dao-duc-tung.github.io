@@ -76,7 +76,7 @@
   <h1>UMLS - Model Development</h1>
 
   <div class="post-info">
-    Jan 06, 2022 · 13 min read
+    Jan 06, 2022 · 21 min read
   </div>
 </div>
 
@@ -87,49 +87,101 @@
 <li><a href="#select-models">Select models</a> </li>
 <li><a href="#train-models">Train models</a> </li>
 <li><a href="#optimize-hyperparameters">Optimize hyperparameters</a> </li>
-<li><a href="#evaluate-models">Evaluate models</a> </li>
+<li><a href="#experiment-tracking-and-versioning">Experiment tracking and versioning</a> </li>
+<li><a href="#debug-models">Debug models</a> </li>
+<li><a href="#automl">AutoML</a> </li>
 </ol>
 <h2 id="select-models">Select models</h2>
-<p>This part focuses on mapping our ML problems to appropriate ML algorithms.</p>
-<h3 id="classification-problem">Classification problem</h3>
-<p>On the one hand, the answer to the binary classification problems falls into one of two categories. On the other hand, the multiclass classification problems&#39; answer might fall into one of three or more categories. Both of these ML problems represent classification problems.</p>
-<p>SageMaker provides a few built-in algorithms for these problems such as Linear Learner, XGBoost, and kNN. To learn more, please refer to:</p>
+<p>This part focuses on mapping our ML problems to appropriate ML algorithms. Knowledge of common ML tasks and the typical approaches to solve them is essential in this process.</p>
+<p>When selecting a model, we need to consider:</p>
 <ul>
-<li><a href="https://sagemaker-workshop.com/">Amazon SageMaker Workshop</a></li>
-<li><a href="https://catalog.us-east-1.prod.workshops.aws/v2/workshops/63069e26-921c-4ce1-9cc7-dd882ff62575/en-US/">SageMaker Immersion Day</a></li>
-<li><a href="https://www.sagemakerworkshop.com/">Another Amazon Sagemaker Workshop</a></li>
-<li><a href="https://github.com/aws/amazon-sagemaker-examples">Amazon SageMaker Examples</a></li>
+<li>Model&#39;s performance measured by metrics such as accuracy, F1, log loss, etc.</li>
+<li>How much data it needs to run</li>
+<li>How much compute and time it needs to both train and do inference</li>
+<li>Model interpretability</li>
 </ul>
-<h3 id="regression-problem">Regression problem</h3>
-<p>In a regression problem, you&#39;re mapping an input to a continuous value.</p>
-<p>SageMaker provides similar built-in algorithms like Linear Learner and XGBoost. The difference is that you set the hyperparameter to direct these algorithms to produce quantitative results.</p>
-<h3 id="natural-language-processing">Natural Language Processing</h3>
-<p>There are SageMaker built-in algorithms for NLP such as:</p>
-<ul>
-<li>BlazingText: provides highly-optimized implementations of the Word2Vec and text classification algorithms</li>
-<li>Sequence2Sequence: has the input as a sequence of tokens (for example, text, audio) and generates the output as another sequence of tokens</li>
-<li>Object2Vec: generalizes the well-known Word2Vec embedding technique for words</li>
+<p><strong>Tips to select models</strong></p>
+<ol>
+<li>Avoid the state-of-the-art models</li>
+<li>Start with the simplest models. Eg: simple model or complex model with ready-made implementation</li>
+<li>Avoid human biases in model selection</li>
+<li>Take into account the incoming new data. Eg: evaluate the model learning ability by using <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html">learning curve</a></li>
+<li>Evaluate trade-offs. Eg: false positives vs. false negatives, model accuracy vs. computing resources, etc.</li>
+<li>Understand model&#39;s assumptions<ul>
+<li><a href="https://stats.stackexchange.com/questions/213464/on-the-importance-of-the-i-i-d-assumption-in-statistical-learning">Independent and identically distributed</a>: in ANN, all examples are independently drawn from the same joint distribution</li>
+<li>Smoothness: supervised ML method assumes that if an input X produces an output Y, then an input close to X would produce an output proportionally close to Y</li>
+<li>Boundaries: a linear classifier assumes that decision boundaries are linear</li>
 </ul>
-<h3 id="computer-vision">Computer Vision</h3>
-<p>There are SageMaker built-in algorithms for computer vision:</p>
+</li>
+</ol>
+<h3 id="ensembles">Ensembles</h3>
+<p>At the beginning, we start with one model. Later, we might want to improve the system by using an ensemble of several models to make predictions. Each model in the ensemble is called a <em>base learner</em>.</p>
+<p><strong>Bagging (Boostrap aggregating)</strong></p>
+<ol>
+<li>Bootstrap data: randomly sample data records to create N sets of data. The records can be overlapped</li>
+<li>Use N identical models to train on those N sets of data</li>
+<li>Final prediction is the average predictions of N models</li>
+</ol>
+<p><strong>Boosting</strong></p>
+<ol>
+<li>Train model 1 on the dataset, take out the wrong predicted data</li>
+<li>Train model 2 on the original dataset and the wrong predited data in the previous step</li>
+<li>Continue training like that until model N</li>
+<li>Final prediction is the weighted predictions of each model</li>
+</ol>
+<p><strong>Stacking</strong></p>
+<ol>
+<li>Split data into 2 parts, P1 and P2</li>
+<li>Train N base models which are different in architecture on P1</li>
+<li>Perform inference for these N trained models on P2 to generate a set of new features</li>
+<li>Train 1 meta-model on the new features in the previous step. Final prediction is the meta-model&#39;s prediction</li>
+</ol>
+<p>Below is the table to compare those 3 ensembles.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Bagging</th>
+<th>Boosting</th>
+<th>Stacking</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Data sampling</td>
+<td>Use boostrap to create N datasets, records can be overlapped (sampling with replacement)</td>
+<td>The later model&#39;s data is the original data + previous model&#39;s wrong-predicted data</td>
+<td>Split data into 2 parts, one is for N base models, the other is for meta-model (or generalizer)</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>N identical models</td>
+<td>N identical models</td>
+<td>N different models + 1 meta-model</td>
+</tr>
+<tr>
+<td>Application</td>
+<td>Decrease high variance of N complex models</td>
+<td>Decrease high bias of N simple models</td>
+<td>Improve model performance</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Random forest use N decision trees</td>
+<td>Use N decision trees with low depth (to have low complexity model -&gt; high bias)</td>
+<td>Use 3 base models (decision tree, kNN, SVM) + 1 meta-model (ANN)</td>
+</tr>
+</tbody></table>
+<p><strong>Note</strong>:</p>
 <ul>
-<li>Image classification: classifies images</li>
-<li>Object detection: identifies all instances of objects within the image scene</li>
-<li>Semantic segmentation: classifies every pixel in an image to a class label from a predefined set of classes</li>
-</ul>
-<h3 id="other-options">Other options</h3>
-<p>There are other options for training algorithms:</p>
-<ul>
-<li>Use Apache Spark with Amazon SageMaker</li>
-<li>Use custom code with a deep learning framework like TensorFlow or Apache MXNet</li>
-<li>Use a custom algorithm in a Docker image</li>
-<li>Use an algorithm from AWS Marketplace</li>
+<li>High bias/high variance is the trade-off when training a model, not a model&#39;s characteristic</li>
+<li>Low complexity model or high bias: underfitted, prediction is biased</li>
+<li>High complexity model or high variance: overfitted, prediction fluctuates</li>
 </ul>
 <h2 id="train-models">Train models</h2>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/model-development.png" alt="model-development"></p>
-<p>Training, tuning, and evaluation is iterative process. You can use SageMaker to create the training job. To learn more, take the above SageMaker workshops.</p>
+<p>Training, tuning, and evaluation is iterative process.</p>
 <h3 id="split-data">Split data</h3>
-<p>Firstly, we need to split the data to ensure the division between the training and evaluation efforts. A common strategy is to split data into training, validation, and testing subsets with a common ratio of 80:10:10 or 75:15:15.</p>
+<p>Firstly, we need to split the data to ensure the division between the training and evaluation efforts. A common strategy is to split data into training, validation, and testing subsets with a common ratio of <code>80:10:10</code> or <code>75:15:15</code>.</p>
 <p>Cross-validation is another technique to compare multiple models&#39; performance. The goal is to choose the model that will eventually perform the best in production.</p>
 <p>k-fold cross-validation is a common validation method. In k-fold cross-validation, you split the input data into k subsets of data so-called folds. You train your models on all but one (k-1) of the subsets and then evaluate them on the subset that was not used for training. This process is repeated k times, with a different subset reserved for evaluation (and excluded from training) each time.</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/k-fold-cross-validation.png" alt="k-fold-cross-validation"></p>
@@ -138,6 +190,7 @@
 <blockquote>
 <p>Cross-validation techniques will increase the computational power needed for your training.</p>
 </blockquote>
+<p>For more details about data sampling, please refer to the post <strong>Data Engineering - Sampling</strong> in this <strong>The Ultimate Machine Learning System</strong> topic.</p>
 <h2 id="optimize-hyperparameters">Optimize hyperparameters</h2>
 <p>To find the right model, we usually have to tune our model after training by performing additional feature engineering, experimenting with new algorithms, etc., by training and evaluating multiple models that use different data setup and algorithms. This model tuning also involves modifying the model&#39;s hyperparameters.</p>
 <p>Hyperparameters are settings that can be tuned before running a training job to control the behavior of an ML algorithm. They can have a big impact on model training as it relates to training time, model convergence, and model accuracy. Unlike model parameters that are derived from the training job, the values of hyperparameters do not change during the training.</p>
@@ -148,22 +201,51 @@
 <li><strong>Data hyperparameters</strong>: are related to the attributes of the data, often used when you don&#39;t have enough data or enough variation in data. For example, data augmentation techniques like cropping, resizing</li>
 </ul>
 <p>Traditionally, this was done manually. Someone who has domain experience related to that hyperparameter and the use case would manually select the hyperparameters based on their intuition and experience. Then they would train the model and score it on the validation data. This process would be repeated over and over again until satisfactory results are achieved. As a result, several other methods for hyperparameter tuning have been developed.</p>
-<p>Alternatively, SageMaker offers automated hyperparameter tuning, which uses methods like gradient descent, Bayesian optimization, and evolutionary algorithms to conduct a guided search for the best hyperparameter settings, by running many training jobs on your dataset using the algorithm and ranges of hyperparameters that you specify. To learn more, take the above SageMaker workshops.</p>
-<h2 id="evaluate-models">Evaluate models</h2>
-<p>Once you have trained, tuned your models, and decided which model is the best for your problem, it&#39;s time to evaluate that model on the test set that you split earlier.</p>
-<p>For classification problems, a confusion matrix is the building block for your model evaluation with derived metrics like:</p>
+<p>Alternatively, some tools offers automated hyperparameter tuning, which uses methods like gradient descent, Bayesian optimization, and evolutionary algorithms to conduct a guided search for the best hyperparameter settings, by running many training jobs on your dataset using the algorithm and ranges of hyperparameters that you specify. For example, <a href="https://wandb.ai/">Weights and Biases</a>.</p>
+<h2 id="experiment-tracking-and-versioning">Experiment tracking and versioning</h2>
+<p>In the model development phase, we experiment different models with different hyperparameter configurations. It&#39;s important to keep track of all the experiments and their artifacts such as the loss curve, evaluation loss graph, logs, etc. This helps us to compare different experiments to understand the effect of different changes in model&#39;s performance in order to choose the best model.</p>
+<blockquote>
+<p>Experiment tracking is the process of tracking the progress and results of an experiment.</p>
+</blockquote>
+<blockquote>
+<p>Versioning is the process of logging all the details of an experiment for the purpose of recreating it later or comparing it with other experiments.</p>
+</blockquote>
+<p>Below is the list of some possible things we might want to track.</p>
 <ul>
-<li>Precision</li>
-<li>Recall</li>
-<li>Accuracy</li>
-<li>F1-score</li>
-<li>Area under the curve: Receiver operator curve (AUC-ROC)</li>
+<li>Who run the experiment?</li>
+<li>Start time, end time</li>
+<li>Model configuration<ul>
+<li>Feature names</li>
+<li>Hyperparameters: learning rate, learning rate schedule, gradient norms, weight decay, momentum, etc.</li>
 </ul>
-<p>For regression problems, you can use:</p>
+</li>
+<li>Data: reference to training data, validation data, test data, feature distribution, statistics</li>
+<li>Speed of the trained model<ul>
+<li>Number of steps per second</li>
+<li>Number of tokens processed per second</li>
+</ul>
+</li>
+<li>Model performance<ul>
+<li>Performance metrics: accuracy, F1, etc.</li>
+<li>Charts: loss curve, ROC, PR, confusion matrix, etc.</li>
+</ul>
+</li>
+<li>System performance: memory/CPU/GPU utilization</li>
+<li>Full learned weights</li>
+<li>Summary of the trained model</li>
+</ul>
+<p>Some tools to track experiments and versioning are <a href="https://wandb.ai/">Weights and Biases</a>, <a href="https://dvc.org/">DVC</a>, <a href="https://MLflow.org/">mlflow</a>, etc.</p>
+<h2 id="debug-models">Debug models</h2>
+<p>Below is the list of things that might cause an ML model to fail.</p>
 <ul>
-<li>Sum of squared errors</li>
-<li>RMSE</li>
+<li><strong>Theoretical constraints</strong>: the assumptions about the data and the features that the model uses are wrong</li>
+<li><strong>Poor implementation of model</strong>: forget to stop gradient updates during evaluation, etc.</li>
+<li><strong>Poor choice of hyperparameters</strong>: different sets of hyperparameters give different results</li>
+<li><strong>Data issues</strong>: data is collected unproperly, labels are wrong, features are processed wrongly, etc. For more details of data issues, please refer to the post <strong>Data Engineering - Data Issues</strong> in this <strong>The Ultimate Machine Learning System</strong> topic.</li>
+<li><strong>Poor choice of features</strong>: too many or too few features</li>
 </ul>
+<h2 id="automl">AutoML</h2>
+<p>We can actually use AutoML tools to automate the process of preprocessing data, selecting models, tuning hyperparameter, and choosing the best model. For the comparision of AutoML libraries, please refer to this <a href="https://www.kaggle.com/code/andreshg/automl-libraries-comparison/notebook">AutoML Libraries Comparision article</a>.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>
@@ -190,6 +272,12 @@
           <li><a href="#">optimize hyperparameter</a></li>
           
           <li><a href="#">evaluate model</a></li>
+          
+          <li><a href="#">track experiment</a></li>
+          
+          <li><a href="#">versioning</a></li>
+          
+          <li><a href="#">automl</a></li>
           
         </ul>
       </div>
@@ -223,14 +311,27 @@
     </div>
   </div>
 </div>
-<script
-  src="https://utteranc.es/client.js"
-  repo="dao-duc-tung/dao-duc-tung.github.io"
-  issue-term="ml-skills/the-ultimate-machine-learning-system/model-development"
-  theme="github-light"
-  crossorigin="anonymous"
-  async
-></script>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = 'https://aiengineer.net/';
+    var PAGE_IDENTIFIER = 'https://aiengineer.net/';
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
 
     </section>
     <footer class="site-footer">
@@ -244,7 +345,7 @@
     </a>
   </div>
   <div class="footer-right">
-    <a href="/" class="site-footer-credits">AI Engineer @ 2021</a>
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
   </div>
 </footer>
 
