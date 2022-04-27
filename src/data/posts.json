@@ -288,7 +288,6 @@
             "tags": [
               "ultimate",
               "machine learning system",
-              "data engineering",
               "model development",
               "select model",
               "train model",
@@ -297,6 +296,16 @@
               "track experiment",
               "versioning",
               "automl"
+            ]
+          },
+          {
+            "title": "UMLS - Model Evaluation",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/model-evaluation",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "model evaluation"
             ]
           }
         ]
