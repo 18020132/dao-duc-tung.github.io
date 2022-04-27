@@ -3,7 +3,7 @@
     "title": "Thoughts On",
     "type": "category",
     "url": "thoughts-on",
-    "childs": [
+    "children": [
       {
         "title": "The Art Of Asking Questions",
         "type": "post",
@@ -46,12 +46,12 @@
     "title": "ML Skills",
     "type": "category",
     "url": "ml-skills",
-    "childs": [
+    "children": [
       {
         "title": "Docker",
         "type": "topic",
         "url": "ml-skills/docker",
-        "childs": [
+        "children": [
           {
             "title": "Docker - Introduction",
             "type": "post",
@@ -131,7 +131,7 @@
         "type": "topic",
         "url": "ml-skills/the-ultimate-machine-learning-system",
         "pinned": true,
-        "childs": [
+        "children": [
           {
             "title": "UMLS - Introduction",
             "type": "post",
@@ -316,12 +316,12 @@
     "title": "Projects",
     "type": "category",
     "url": "projects",
-    "childs": [
+    "children": [
       {
         "title": "Finance Foundations",
         "type": "topic",
         "url": "projects/finance-foundations",
-        "childs": [
+        "children": [
           {
             "title": "Finance Introduction",
             "type": "post",
@@ -375,7 +375,7 @@
         "title": "Sharing Knowledge",
         "type": "topic",
         "url": "projects/sharing-knowledge",
-        "childs": [
+        "children": [
           {
             "title": "How Does Ai Work?",
             "type": "post",
@@ -416,7 +416,7 @@
         "type": "topic",
         "url": "projects/good-to-great",
         "pinned": true,
-        "childs": [
+        "children": [
           {
             "title": "Chapter 1 - Good Is The Enemy Of Great",
             "type": "post",

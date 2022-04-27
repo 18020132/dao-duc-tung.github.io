@@ -24,7 +24,7 @@ const allCategories = getAllCategories();
 const getAllTopics = () => {
   var allTopics = [];
   allCategories.forEach((category) => {
-    category.childs.forEach((topic) => {
+    category.children.forEach((topic) => {
       if (topic.type === TOPIC_TYPE) {
         allTopics.push(topic);
       }
@@ -37,12 +37,12 @@ const allTopics = getAllTopics();
 const getAllPosts = () => {
   var allPosts = [];
   allCategories.forEach((category) => {
-    category.childs.forEach((categoryChild) => {
+    category.children.forEach((categoryChild) => {
       if (categoryChild.type === POST_TYPE) {
         allPosts.push(categoryChild);
       }
       if (categoryChild.type === TOPIC_TYPE) {
-        categoryChild.childs.forEach((categoryChildChild) => {
+        categoryChild.children.forEach((categoryChildChild) => {
           if (categoryChildChild.type === POST_TYPE) {
             allPosts.push(categoryChildChild);
           }
@@ -179,11 +179,11 @@ const getLatestPostsGroupedByCategory = () => {
   var tempCategories = [];
   allCategories.forEach((category) => {
     var tempAllPosts = [];
-    category.childs.forEach((categoryChild) => {
+    category.children.forEach((categoryChild) => {
       if (categoryChild.type === POST_TYPE) {
         tempAllPosts.push(categoryChild);
       } else if (categoryChild.type === TOPIC_TYPE) {
-        categoryChild.childs.forEach((categoryChildChild) => {
+        categoryChild.children.forEach((categoryChildChild) => {
           if (categoryChildChild.type === POST_TYPE) {
             tempAllPosts.push(categoryChildChild);
           }
@@ -192,16 +192,16 @@ const getLatestPostsGroupedByCategory = () => {
     });
     if (tempAllPosts.length > 0) {
       var tempCategory = deepCopy(category);
-      tempCategory.childs = tempAllPosts;
+      tempCategory.children = tempAllPosts;
       tempCategories.push(tempCategory);
     }
   });
 
   const nLatest = Math.floor(N_LATEST_POSTS / allCategories.length);
   for (var i = 0; i < tempCategories.length; ++i) {
-    var tempPosts = tempCategories[i].childs;
+    var tempPosts = tempCategories[i].children;
     tempPosts.sort(sortPostByLatestModifiedDate);
-    tempCategories[i].childs = tempPosts.slice(0, nLatest);
+    tempCategories[i].children = tempPosts.slice(0, nLatest);
   }
   return tempCategories;
 };

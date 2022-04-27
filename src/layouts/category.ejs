@@ -8,7 +8,7 @@
       <% var category = helper.dataHelper.getCategory(page.url); if (category !== undefined) { %>
       <h1><%= category.title %></h1>
       <ul>
-        <% category.childs.forEach((categoryChild) => { %>
+        <% category.children.forEach((categoryChild) => { %>
         <li>
           <a href="<%= site.basePath %>/<%= categoryChild.url %>"><%= categoryChild.title %></a>
         </li>

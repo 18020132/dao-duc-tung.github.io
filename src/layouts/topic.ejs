@@ -13,7 +13,7 @@
       helper.dataHelper.getTopic(page.url); if (topic !== undefined) { %>
       <h1><%= topic.title %></h1>
       <ul>
-        <% topic.childs.forEach((topicChild) => { %>
+        <% topic.children.forEach((topicChild) => { %>
         <li>
           <a href="<%= site.basePath %>/<%= topicChild.url %>"><%= topicChild.title %></a>
         </li>
