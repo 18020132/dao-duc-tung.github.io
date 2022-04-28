@@ -1,5 +1,5 @@
 ---
-url: ml-skills/the-ultimate-machine-learning-system/model-development
+url: ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training
 layout: post
 ---
 
@@ -189,7 +189,7 @@ Many organizations use both data parallelism and model parallelism for better ut
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[coding]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/coding.jpg
-[model-development]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/model-development.png
-[k-fold-cross-validation]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/k-fold-cross-validation.png
-[distributed-training]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/distributed-training.png
+[coding]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/coding.jpg
+[model-development]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/model-development.png
+[k-fold-cross-validation]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/k-fold-cross-validation.png
+[distributed-training]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/distributed-training.png

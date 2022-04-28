@@ -282,9 +282,9 @@
             ]
           },
           {
-            "title": "UMLS - Model Development",
+            "title": "UMLS - Model Development - Part 1 - Training",
             "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/model-development",
+            "url": "ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -299,9 +299,9 @@
             ]
           },
           {
-            "title": "UMLS - Model Evaluation",
+            "title": "UMLS - Model Development - Part 2 - Evaluation",
             "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/model-evaluation",
+            "url": "ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation",
             "tags": [
               "ultimate",
               "machine learning system",

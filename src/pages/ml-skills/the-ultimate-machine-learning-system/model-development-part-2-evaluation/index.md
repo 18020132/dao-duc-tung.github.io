@@ -1,5 +1,5 @@
 ---
-url: ml-skills/the-ultimate-machine-learning-system/model-evaluation
+url: ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation
 layout: post
 ---
 
@@ -69,4 +69,4 @@ Selecting the critical slices is more of an art than a science, requiring intens
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[assessment]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-evaluation/assessment.jpg
+[assessment]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation/assessment.jpg
