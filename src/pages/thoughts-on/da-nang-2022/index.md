@@ -1,15 +1,19 @@
 ---
-url: thoughts-on/da-nang-01
+url: thoughts-on/da-nang-2022
 layout: post
 ---
 
 ![sun-flower-bana-hills][sun-flower-bana-hills]
 
-Tháng 4 năm COVID thứ 3, tôi tới Đà Nẵng để dành thời gian với gia đình sau gần 2.5 năm không về Việt Nam được. Đà Nẵng có nhiều thứ để chơi, nhiều nơi để chụp ảnh, mà cứ rảnh lại phải đi ăn. Đồ ăn ở đây có cái chất của miền Trung chịu khó, và sự hiền lành tử tế của người dân nơi đây. Tuy vậy, những địa điểm nổi tiếng đó và những đồ ăn nổi tiếng đó, ai cũng có thể tới và ai cũng có thể ăn, chỉ có những câu chuyện của những người tôi gặp thì không phải ai cũng biết. Hãy để tôi chia sẻ cho mọi người cùng nghe 4 câu chuyện xinh.
+Tháng 4 năm COVID thứ 3, tôi tới Đà Nẵng để dành thời gian với gia đình sau gần 2.5 năm không về Việt Nam được. Đà Nẵng có nhiều thứ để chơi, có nhiều nơi để chụp ảnh, mà cứ rảnh lại phải đi ăn. Đồ ăn ở đây có cái chất của miền Trung chịu khó, và sự hiền lành tử tế của người dân nơi đây. Tuy vậy, những địa điểm nổi tiếng đó và những đồ ăn nổi tiếng đó, ai cũng có thể tới và ai cũng có thể ăn, chỉ có những câu chuyện của những người tôi gặp thì không phải ai cũng biết. Hãy để tôi chia sẻ cho mọi người cùng nghe 4 câu chuyện xinh.
 
 ## Câu chuyện 1
 
-Một tối, tôi đi dạo ra biển. Tôi gặp một bạn nữ người Hà Nội tên S, đang đi bộ một mình, mang một đôi dép nữ tính, với một mái tóc cá tính, đính kèm một chiếc khẩu trang để lộ ra đôi mắt lấp lánh. Bạn ấy học ngành báo chí, mới đi làm 1 năm, không hợp công ty nên vừa nghỉ việc, đã nhảy 3 công ty rồi, đang đi du lịch một mình để “enjoy cái moment”. Ngồi nói chuyện với nhau, tôi hiểu thêm về những trăn trở về sự nghiệp của bạn ấy. Có những câu chuyện rất giản dị về cuộc sống hàng ngày, về bạn bè của bạn ấy, về gia đình của bạn ấy, và cả những đam mê nhỏ bé chưa có cơ hội vụt sáng của bạn ấy. Chúng tôi chia sẻ những kỉ niệm thời sinh viên, những suy nghĩ về những cuốn sách và những bản nhạc chúng tôi cùng thích, về những nơi mà chúng tôi đã tới và sẽ tới ở Việt Nam, về những món ăn của quê hương, về những con người chúng tôi gặp, và những câu chuyện chúng tôi thu lượm được. Một bạn nữ thú vị.
+Một tối, tôi đi dạo ra biển. Tôi gặp một bạn nữ người Hà Nội tên S, đang đi bộ một mình, mang một đôi dép nữ tính, với một mái tóc cá tính, đính kèm một chiếc khẩu trang để lộ ra đôi mắt lấp lánh. Bạn ấy học ngành báo chí, mới đi làm 1 năm, không hợp công ty nên vừa nghỉ việc, đã nhảy 3 công ty rồi, đang đi du lịch một mình để “enjoy cái moment”.
+
+Bạn ấy kể ngày trước bạn ấy chọn học báo chí vì mong ước được đi nhiều nơi. Bạn ấy chọn ngành Báo in vì không thích sự xô bồ của các phương tiện điện tử. Bạn ấy làm được cả thiết kế quảng cáo, biết luôn cả quay phim, dựng phim, biên tập và làm phim. Bạn ấy cũng thích Haruki Murakami, cũng đọc Nguyễn Nhật Ánh, và thích những truyện ngắn của một tác giả trẻ gì đó tôi quên rồi. Bố bạn ấy ngày trước làm rất nhiều nghề, đi rất nhiều nơi nên bạn ấy bảo chắc mình giống bố, cái số cứ đưa đẩy đi khắp nơi. Bạn ấy không từ chối đi chơi với bạn bè, nhưng đi du lịch một mình thực sự rất tuyệt vời.
+
+Ngồi nói chuyện với nhau, tôi hiểu thêm về những trăn trở về sự nghiệp của bạn ấy. Có những câu chuyện rất giản dị về cuộc sống hàng ngày, về bạn bè của bạn ấy, về gia đình của bạn ấy, và cả những đam mê nhỏ bé chưa có cơ hội vụt sáng của bạn ấy. Chúng tôi chia sẻ những kỉ niệm thời sinh viên, những suy nghĩ về những cuốn sách chúng tôi đọc, và những bản nhạc chúng tôi cùng thích. Chúng tôi nói về những nơi mà chúng tôi đã tới và sẽ tới ở Việt Nam, về những món ăn của quê hương, về những con người chúng tôi gặp, và những câu chuyện chúng tôi thu lượm được. Một bạn nữ thú vị.
 
 ## Câu chuyện 2
 
@@ -25,13 +29,15 @@ Ngồi chơi một lúc, chị T gọi bạn chị ý là 2 anh L và T tới nh
 
 Ngồi nhậu tới 22h30 thì mấy anh em tạm biệt nhau. Tôi định về nhà ngủ vì mệt rồi nhưng nghĩ thế nào lại đi ra biển. Tôi ra nơi đuôi sóng đầu bãi cát dạo loanh quanh, nhìn thấy một bạn nữ mặc áo phông trắng, kiểu áo vai lười suông rộng, trên áo còn có hình con thú gì đó, mang đôi giày cũng trắng, đeo khẩu trang cũng trắng nốt, tiếc là tóc không trắng, đang đi bộ tung tăng một mình. Tôi đi ra bắt chuyện, hóa ra bạn ý còn đi cùng với 2 bạn nữ nữa. Cả 3 bạn đều là sinh viên năm nhất chơi với nhau từ bé, trong đó có 2 bạn là sinh viên Đại học Kinh tế Đà Nẵng tên H và T, bạn còn lại cũng tên T là cô giáo tiếng Anh tương lai, đang học trường Đại học Ngoại ngữ Huế. Mấy bạn ở Quảng Trị, nhà gần vùng núi giáp biên giới Việt Lào nên biết gió Lào, không gần biển nên thích ăn hải sản. Có 1 bạn nhà có 3 anh chị em, 2 bạn còn lại nhà có 4 anh chị em. Rất mắn.
 
-Ngồi nói chuyện với các bạn, tôi được khai sáng về tỉnh Quảng Trị và con người ở đó. Hóa ra ở vùng núi cũng có lũ lụt ngập đến tận nóc nhà, chó gà chạy trên mái luôn. Lũ lụt xảy ra có đợt 2 năm 1 lần, có đợt lại 2 lần 1 năm. Như trong bài Ai Cũng Có Ngày Xưa của Phan Mạnh Quỳnh, hồi bé các bạn ấy cũng “bé lắm có biết đâu, thích bão giông ngập lũ”, vì được chuyển sang nhà người khác ở. Được sang ở nhà người khác là một điều gì đó rất hạnh phúc. Sau này lớn lên rồi phải chuẩn bị đồ đạc để đi tránh lũ cùng bố mẹ nên không còn thích lũ nữa. Đồ đạc mang đi được cũng không có nhiều, chỉ có vài thứ quan trọng. Mỗi lần như vậy, nhà cửa phải sửa lại, đồ đạc cũng phải mua sắm lại ít nhiều. Có nhà bạn có vườn cây hoa màu thì cũng ngập úng. Tôi ngồi nghe và tưởng tượng về những hình ảnh ấy.
+Ngồi nói chuyện với các bạn, tôi được khai sáng về tỉnh Quảng Trị và con người ở đó. Hóa ra ở vùng núi cũng có lũ lụt ngập đến tận nóc nhà, chó gà chạy trên mái luôn. Lũ lụt xảy ra có đợt 2 năm 1 lần, có đợt lại 2 lần 1 năm. Như trong bài Ai Cũng Có Ngày Xưa của Phan Mạnh Quỳnh, hồi bé các bạn ấy cũng "bé lắm có biết đâu, thích bão giông ngập lũ", vì được chuyển sang nhà người khác ở. Được sang ở nhà người khác là một điều gì đó rất hạnh phúc. Sau này lớn lên rồi phải chuẩn bị đồ đạc để đi tránh lũ cùng bố mẹ nên không còn thích lũ nữa. Đồ đạc mang đi được cũng không có nhiều, chỉ có vài thứ quan trọng. Mỗi lần như vậy, nhà cửa phải sửa lại, đồ đạc cũng phải mua sắm lại ít nhiều. Có nhà bạn có vườn cây hoa màu thì cũng ngập úng. Tôi ngồi nghe và tưởng tượng về những hình ảnh ấy.
 
-Tôi cũng biết thêm về địa hình sông suối phong cảnh của nơi các bạn ý sống, có những cánh đồng hoa tím và homestay đẹp không kém mà chỉ có bằng hoặc hơn Đà Lạt, có những cột sản xuất điện gió chẳng thua kém gì Quy Nhơn, có hồ Lao Bảo thơ mộng ngay sát trường cấp 3 Lao Bảo của các bạn với nhiều câu chuyện rùng rợn như mọi cái hồ khác. Tôi còn được nghe một loạt những chuyến phiêu lưu hay ho “đặc sản” của vùng biên giới, về những chuyến đi rừng “lội” sông Xê Pôn, mà tôi không tiện kể ở đây. Đang ngồi nói chuyện thì có 3 ông cực kì “danh danh” đi gửi tình yêu vào sóng. Trong tiếng địa phương Quảng Trị thì “danh danh” có nghĩa là “vô duyên” hoặc “nói nhiều”. Giọng người Quảng Trị thì dễ thương khỏi bàn. Muốn té luôn.
+Tôi cũng biết thêm về địa hình sông suối phong cảnh của nơi các bạn ý sống, có những cánh đồng hoa tím và homestay đẹp không kém mà chỉ có bằng hoặc hơn Đà Lạt, có những cột sản xuất điện gió chẳng thua kém gì Quy Nhơn, có hồ Lao Bảo thơ mộng ngay sát trường cấp 3 Lao Bảo của các bạn với nhiều câu chuyện rùng rợn như mọi cái hồ khác. Tôi còn được nghe một loạt những chuyến phiêu lưu hay ho "đặc sản" của vùng biên giới, về những chuyến đi rừng "lội" sông Xê Pôn, mà tôi không tiện kể ở đây. Đang ngồi nói chuyện thì có 1 ông cực kì "danh danh" đi gửi tình yêu vào những ngọn sóng đang vỗ về dạt dào trong đêm đen. Ông 1 vừa hành sự xong thì 2 đồng bọn khác thấy phong cảnh nước non hữu tình nên bất bình cũng muốn gửi gắm thêm chút tình cảm cho nó giảm bớt cái sự hữu tình đi. Trong tiếng địa phương Quảng Trị thì "danh danh" có nghĩa là "vô duyên" hoặc "nói nhiều".
 
-Hội “danh danh” ngồi nói chuyện 4 tiếng đồng hồ tới tận 2h30 sáng, nói gì mà nói lắm như mới yêu. Nhưng phải nói lắm như vậy thì hội mới có duyên thấy được sao băng rơi vào bầu khí quyển. Sao băng rơi vào bầu khí quyển thì nó không trắng sáng như bình thường, mà nó có tia lửa ở đuôi như pháo bông. Chưa hết, hội còn chứng kiến cả mặt trăng máu trên biển Mỹ Khê. Mấy bạn coi cái ảnh ở dưới chưa qua chỉnh sửa gì, mặt trăng khuyết lưỡi liềm nó đỏ như vậy luôn. Trưa hôm sau để tạm biệt, tôi mời mấy ẻm đi ăn, mấy ẻm cứ đòi mời tôi ăn kem bơ thì mới cho tôi mời ăn bún mắm. Cưng dễ sợ.
+Hội "danh danh" ngồi nói chuyện tới tận 2h30 sáng, nói gì mà nói lắm như mới yêu. Nhưng phải nói lắm như vậy thì hội mới có duyên thấy được sao băng rơi vào bầu khí quyển. Sao băng rơi vào bầu khí quyển thì nó không trắng sáng như bình thường, mà nó có tia lửa ở đuôi như pháo bông. Chưa hết, hội còn chứng kiến cả mặt trăng máu trên biển Mỹ Khê. Mấy bạn coi cái ảnh ở dưới chưa qua chỉnh sửa gì, mặt trăng khuyết lưỡi liềm nó đỏ như vậy luôn.
 
 ![blood-moon][blood-moon]
+
+Trưa hôm sau để tạm biệt, tôi mời mấy ẻm đi ăn, mấy ẻm cứ đòi mời tôi ăn kem bơ thì mới cho tôi mời ăn bún mắm. Cưng dễ sợ.
 
 ## Câu chuyện 4
 
@@ -53,7 +59,7 @@ Gia đình chị mía có 2 cháu, một cháu lớp 10, một cháu lớp 1. Ch
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[sun-flower-bana-hills]: /assets/images/thoughts-on/da-nang-01/sun-flower-bana-hills.jpg
-[jellyfish]: /assets/images/thoughts-on/da-nang-01/jellyfish.jpg
-[blood-moon]: /assets/images/thoughts-on/da-nang-01/blood-moon.jpg
-[da-nang-sky]: /assets/images/thoughts-on/da-nang-01/da-nang-sky.jpg
+[sun-flower-bana-hills]: /assets/images/thoughts-on/da-nang-2022/sun-flower-bana-hills.jpg
+[jellyfish]: /assets/images/thoughts-on/da-nang-2022/jellyfish.jpg
+[blood-moon]: /assets/images/thoughts-on/da-nang-2022/blood-moon.jpg
+[da-nang-sky]: /assets/images/thoughts-on/da-nang-2022/da-nang-sky.jpg
