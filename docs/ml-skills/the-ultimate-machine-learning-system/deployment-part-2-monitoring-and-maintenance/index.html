@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Deployment - Part 2 - Monitoring and maintenance</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Deployment - Part 2 - Monitoring and maintenance</h1>
+
+  <div class="post-info">
+    Apr 29, 2022 · 24 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance/monitoring.jpg" alt="monitoring"></p>
+<p>Deploying a model is not the end of the process. The model&#39;s performance degrades over time in production. We have to continually monitor the model&#39;s performance to detect issues and deploy updates to fix them.</p>
+<blockquote>
+<p>Monitoring tracks statistics about an ML system to understand its environment and behavior.</p>
+</blockquote>
+<blockquote>
+<p>Maintenance updates a deployed ML system to improve performance or correct for failure.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#causes-of-ml-system-failures">Causes of ML system failures</a> </li>
+<li><a href="#data-distribution-shifts">Data distribution shifts</a> </li>
+<li><a href="#edge-cases">Edge cases</a> </li>
+<li><a href="#degenerate-feedback-loop">Degenerate feedback loop</a> </li>
+<li><a href="#monitoring-and-observability">Monitoring and observability</a> </li>
+</ol>
+<h2 id="causes-of-ml-system-failures">Causes of ML system failures</h2>
+<p>A failure happens when one or more expectations of the system are violated. In traditional software, we care about the system&#39;s operational metrics. For an ML system, we care about both its operational metrics and its ML performance metrics. Operational expectation violations are easier to detect as they are usually associated with a breakage such as a timeout, 404 error, segmentation fault, etc. ML performance expectation violations are harder to detect as it requires measuring and monitoring the model&#39;s performance in production.</p>
+<p>Below are some examples of software system failures.</p>
+<ul>
+<li>Dependency failure: a software package that the system depends on breaks.</li>
+<li>Deployment failure: deployment errors happen when deploying a new version. Eg: permission errors.</li>
+<li>Hardware failure: CPU overheats and breaks down</li>
+<li>Downtime or crashing: the server is down</li>
+</ul>
+<p>Most of the issues are related to distributed systems (where the workflow scheduler or orchestrator makes a mistake), or related to the data pipeline (where data from multiple sources is joined incorrectly or the wrong data structure is being used). Watch <a href="https://www.youtube.com/watch?v=hBMHohkRgAA">this video</a> for more details.</p>
+<p>Some examples of ML-specific failures are data collection and data processing problems, poor hyperparameters, changes in the training pipeline not correctly replicated in the inference pipeline and vice versa, data distribution shifts that cause the model&#39;s performance to degrade over time, edge cases, and degenerate feedback loops, etc.</p>
+<h2 id="data-distribution-shifts">Data distribution shifts</h2>
+<p>Data distribution shifts or data shifts refer to the phenomenon in supervised learning when the data changes over time, which causes the model&#39;s predictions to become less accurate as time passes. The training data&#39;s distribution is called the source distribution. The inference&#39;s data distribution in production is called the target distribution.</p>
+<p>Given a model&#39;s inputs X and its outputs Y. In supervised learning, the training data can be viewed as a set of samples from the joint distribution <code>P(X, Y)</code>, and then ML usually models <code>P(Y|X)</code>. This joint distribution <code>P(X, Y)</code> can be decomposed in two ways:</p>
+<ol>
+<li><code>P(X, Y) = P(Y|X).P(X)</code></li>
+<li><code>P(X, Y) = P(X|Y).P(Y)</code></li>
+</ol>
+<p><code>P(Y|X)</code> denotes the conditional probability of output given an input. For example, the probability of an email being spam given the content of the email. <code>P(X)</code> denotes the probability density of the input. <code>P(Y)</code> denotes the probability density of the output. Label shift, covariate shift, and concept drift are defined as follows.</p>
+<ul>
+<li>Covariate shift is when <code>P(X)</code> changes, but <code>P(Y|X)</code> remains the same. This refers to the first decomposition of the joint distribution.</li>
+<li>Label shift is when <code>P(Y)</code> changes, but <code>P(X|Y)</code> remains the same. This refers to the second decomposition of the joint distribution.</li>
+<li>Concept drift is when <code>P(Y|X)</code> changes, but <code>P(X)</code> remains the same. This refers to the first decomposition of the joint distribution.</li>
+</ul>
+<p>For more details about label shift, covariate shift, concept drift, and handling data shifts, please refer to this <a href="https://docs.google.com/document/d/14uX2m9q7BUn_mgnM3h6if-s-r0MZrvDb-ZHNjgA1Uyo/edit#">Google docs file</a>.</p>
+<h2 id="edge-cases">Edge cases</h2>
+<p>An ML model that performs well in most cases but fails in a small number of cases might not be usable if these failures cause catastrophic consequences. Edge cases are the data samples so extreme that they cause the model to make catastrophic mistakes.</p>
+<p>Outliers refer to data: an example that differs significantly from other examples. Edge cases refer to performance: an example where a model performs significantly worse than other examples. An outlier can cause a model to perform poorly, which makes it an edge case. However, not all outliers are edge cases. A person jay-walking on a highway is an outlier, but it&#39;s not an edge case if the self-driving car can accurately detect that person and decide on a motion response appropriately.</p>
+<p>In many cases, it might be beneficial to remove outliers to help the model to learn better decision boundaries and generalize better to unseen data. However, during inference, we don&#39;t have the option to remove or ignore the queries that differ significantly from other queries. We can choose to transform it e.g. &quot;mechin learnin&quot; to &quot;machine learning&quot;. But most likely, we want to develop a model to perform well even on unexpected inputs.</p>
+<h2 id="degenerate-feedback-loop">Degenerate feedback loop</h2>
+<p>Natural labels are ideal for evaluating a model&#39;s performance. However, even if the problem doesn&#39;t have natural labels, it&#39;s possible to set up the system to collect some feedback on the model. For example, asking users to submit feedback for the predictions, adding the like button to the newsfeed ranked items, etc.</p>
+<p>For tasks with natural ground truth labels, the time it takes from when a prediction is served until the feedback is provided is the feedback loop length. A short feedback loop can be within minutes. The long one can be in hours, weeks, or months. Labels with long feedback loops help report the model&#39;s performance quarterly or yearly. However, they are not useful if we want to detect issues as soon as possible. For example, fraud detection.</p>
+<p>There&#39;s no guarantee that users will respond to the recommended items in a recommendation system. Typically, a recommendation is presumed to be bad if there&#39;s a lack of positive feedback. Choosing the right window length requires thorough consideration, as it involves the speed and accuracy tradeoff.</p>
+<p>A degenerate feedback loop happens when the predictions themselves influence the feedback, which is then used to extract labels to train the next iteration of the model. Degenerate feedback loops are common in tasks in natural labels from users, such as recommendation systems and ad click-through-rate prediction.</p>
+<h3 id="detecting-degenerate-feedback-loops">Detecting degenerate feedback loops</h3>
+<p>For the task of recommendation systems, we can measure the popularity diversity of a system&#39;s outputs even when the system is offline. An item&#39;s popularity can be measured based on how many times it has interacted with in the past. The popularity of all the items will likely follow a long tail distribution: a small number of items interact with a lot while most items are rarely interacted with.</p>
+<h3 id="correcting-degenerate-feedback-loops">Correcting degenerate feedback loops</h3>
+<p>The first method is to use randomization. Degenerate feedback loops can cause a system&#39;s outputs to be more homogeneous over time. Adding randomization to predictions can reduce their homogeneity. For example, instead of showing the users only the top-ranked items, we show users random items and use their feedback to determine the true quality of these items. Randomization improves diversity but at the cost of user experience. Showing users random items might cause users to lose interest in the product.</p>
+<p>The second method is to use positional features. If the position in which a prediction is shown affects its feedback, we might want to encode the position information using positional features. During the inference, we want to predict whether a user will click on an item regardless of where the item is located.</p>
+<h2 id="monitoring-and-observability">Monitoring and observability</h2>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance/observe.jpg" alt="observe"></p>
+<p>Monitoring refers to the act of tracking, measuring, and logging metrics to determine when something goes wrong. Observability means setting up the system to help us easily investigate what went wrong. The process of setting up the system is called &quot;instrumentation&quot;. Examples of instrumentation are adding timers to functions, counting NaNs in features, tracking how inputs are transformed through the system, logging unusual events such as unusually long inputs, etc. Observability is a part of monitoring.</p>
+<h3 id="monitoring">Monitoring</h3>
+<p>In monitoring, we want to monitor the operational metrics and ML-specific metrics. The operational metrics are divided into three levels: the network, the computing machine, and the application. Examples of these metrics are latency, throughput, the number of prediction requests the model receives in the last minute, the percentage of requests that return with a 2XX code, CPU/GPU/memory utilization, etc.</p>
+<p>For ML-specific metrics, there are four artifacts to monitor: the model&#39;s accuracy-related metrics, predictions, features, and raw inputs. These are artifacts generated at four different stages of an ML system pipeline. The deeper into the pipeline an artifact, the more transformations it has gone through, which makes a change in that artifact more likely to be caused by errors in one of those transformations. However, the more transformations an artifact has gone through, the more structured it becomes and the closer it is to the metrics we actually care about, which makes it easier to monitor.</p>
+<ul>
+<li>Accuracy-related metrics: click, purchase, upvote, downvote, favorite, bookmark, share, duration of time users spend on a video, whether users complete watching a video, etc.</li>
+<li>Predictions: for distribution shifts</li>
+<li>Features: for checking feature validation (min, max, median, format, values in the range, etc.), for checking feature distribution shifts</li>
+<li>Raw inputs: can come from multiple sources, might not be able to get raw inputs because it&#39;s often managed by a data platform team that moves data to a data warehouse.</li>
+</ul>
+<h4 id="monitoring-toolbox">Monitoring toolbox</h4>
+<p>A set of the right tools helps us to measure, track, and make sense of metrics for the complex system. From the perspective of users of the monitoring systems, the common tools are logs, dashboards, and alerts.</p>
+<ul>
+<li>Logs: traditional software systems rely on logs to record events produced at runtime.</li>
+<li>Dashboards: visualizing a series of numbers on a graph might reveal the relationships among them.</li>
+<li>Alerts: alert the right people about something suspicious. An alert consists of three components.<ul>
+<li>Alert policy: describes the condition for an alert.</li>
+<li>Notification channels: describe who is to be notified when the condition is met.</li>
+<li>Alert description: helps the alerted person understand what&#39;s going on.</li>
+</ul>
+</li>
+</ul>
+<h3 id="observability">Observability</h3>
+<p>Monitoring does not assume the relationship between the internal state of a system and its outputs. There&#39;s no guarantee that the external outputs will help us to figure out <em>what</em> goes wrong. Observability is a concept drawn from control theory and refers to bringing better <em>visibility into understanding the complex behavior of software using outputs collected from the system at run time</em>. When something goes wrong with an observable system, we should be able to figure out what went wrong by looking at the system&#39;s logs and metrics without having to ship new code to the system.</p>
+<p>Telemetry is a system&#39;s outputs collected at run time. The word &quot;telemetry&quot; comes from the Greek roots &quot;tele&quot; meaning &quot;remote&quot;, and &quot;metron&quot;, meaning &quot;measure&quot;. So telemetry means &quot;remote measures&quot;. In the monitoring context, it refers to logs and metrics collected from remote components such as cloud services or applications run on customer devices.</p>
+<p>In ML, observability encompasses interpretability. Interpretability helps us understand how an ML model works, and observability helps us understand how the entire ML system, which includes the ML model, works.</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">system failure</a></li>
+          
+          <li><a href="#">data distribution shifts</a></li>
+          
+          <li><a href="#">covariate shift</a></li>
+          
+          <li><a href="#">label shift</a></li>
+          
+          <li><a href="#">concept drift</a></li>
+          
+          <li><a href="#">edge cases</a></li>
+          
+          <li><a href="#">degenerate feedback loop</a></li>
+          
+          <li><a href="#">monitoring</a></li>
+          
+          <li><a href="#">observability</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Deployment - Part 1 - What to consider</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Deployment - Part 3 - ML infrastructure</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>

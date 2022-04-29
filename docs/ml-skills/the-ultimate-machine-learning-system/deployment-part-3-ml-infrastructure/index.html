@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Deployment - Part 3 - ML infrastructure</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Deployment - Part 3 - ML infrastructure</h1>
+
+  <div class="post-info">
+    Apr 29, 2022 · 14 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure/ml-system.png" alt="ml-system"></p>
+<p>ML system design is the process of defining the <strong>interface</strong>, <strong>algorithms</strong>, <strong>data</strong>, <strong>infrastructure</strong>, and <strong>hardware</strong> for an ML system to satisfy specified requirements. When it comes to ML infrastructure, you might have heard about a bunch of keywords like microservices, lambda functions, load balancers, auto-scaling, serverless, etc. Indeed, ML infrastructure is complex. This post gives you a high-level overview of what ML infrastructure is and which components aggregate it.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#storage-and-compute">Storage and compute</a> </li>
+<li><a href="#resource-management">Resource management</a> </li>
+<li><a href="#ml-platform">ML platform</a> </li>
+<li><a href="#development-environment">Development environment</a> </li>
+</ol>
+<p>In general, infrastructure is the set of fundamental facilities and systems that support the sustainable functionality of households and firms. ML infrastructure is the set of fundamental facilities that support the development and maintenance of ML systems. Every company&#39;s infrastructure needs are different. For example, a simple ML app doesn&#39;t even need a dedicated ML infrastructure, the vast majority of apps at a reasonable scale just need a simple ML infrastructure, some apps from big tech companies need highly specialized infrastructure which supports millions of requests per hour.</p>
+<p>The ML infrastructure has four main layers including the storage and computes layer, resource management layer, ML platform layer, and development environment layer.</p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure/infra-layers.png" alt="infra-layers"></p>
+<h2 id="storage-and-compute">Storage and compute</h2>
+<p>Storage is where data is collected and stored. Some examples are HDD, SSD, data lake, and data warehouse. Some services and platforms are very famous such as AWS S3, Redshift, Snowflake, BigQuery, etc. Most companies use storage provided by other companies (e.g. cloud). Storage has become so cheap that most companies just store everything.</p>
+<p>Compute is the engine to execute our jobs. In short, they are CPU, GPU, memory, and cloud computing. When talking about computing, there are some aspects we should consider.</p>
+<ul>
+<li>The number of CPU/GPU cores</li>
+<li>Amount of memory</li>
+<li>I/O bandwidth: the speed at which data can be loaded into memory. For example, floating-point operations per second (FLOPS).</li>
+<li>Cost: on-premises, cloud, or multi-cloud</li>
+</ul>
+<h2 id="resource-management">Resource management</h2>
+<p>ML workloads are repetitive with lots of dependencies such as batch prediction, periodical retraining, periodical analytics, etc.</p>
+<h3 id="scheduler-and-orchestrator">Scheduler and Orchestrator</h3>
+<p>In the resource management context, we want to use Scheduler or Orchestrator. Schedulers are cron programs that can handle dependencies. Most schedulers require to specify the workloads as Directed Acyclic Graphs (DAGs). The scheduler can handle event-based and time-based triggers. If a job fails, we need to specify how many times to retry before giving up. Jobs can be queued, prioritized, and allocated resources. Schedulers are aware of the resources available and resources needed for each job. There are some known challenges to designing a scheduler such as:</p>
+<ul>
+<li>General-purpose schedulers are extremely hard to design</li>
+<li>Need to handle any workload with any number of concurrent machines</li>
+<li>If the scheduler is down, every workflow that the scheduler touches will also be down</li>
+</ul>
+<p>Scheduler helps to define when to run jobs. It handles jobs, queues, user-level quotas, etc. The scheduler is typically used for periodical jobs like batch jobs.</p>
+<p>Orchestrator helps to define where to run jobs. It handles containers, instances, clusters, replication, etc. It also helps in provisioning to allocate more instances to the instance pool as needed. Orchestrator is typically used for long-running jobs like services.</p>
+<p>Schedulers usually have some orchestrating capacity and vice versa. Often, a scheduler is run on top of orchestrators. For example, running Spark&#39;s job on top of k8s, running AWS Batch scheduler on top of EKS.</p>
+<h3 id="ml-workflow-management">ML workflow management</h3>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure/ml-workflow-management.png" alt="ml-workflow-management"></p>
+<p>The ML workflow can be defined by using a programming language (Python), or configuration files (YAML). Some tool examples are Airflow, Argo, KubeFlow, Metaflow.</p>
+<h2 id="ml-platform">ML platform</h2>
+<p>To deploy an image classification model, X&#39;s team needs to build tools like feature store, model store, model deployment, etc. To deploy an object detection model, Y&#39;s team needs to build the same tools. The company decides to build <em>a centralized platform</em> to provide the above tools for multiple use cases. This centralized platform is the ML platform.</p>
+<p>ML platform consists of three key components.</p>
+<ul>
+<li>Model deployment<ul>
+<li>Deployment service<ul>
+<li>Package the model and dependencies</li>
+<li>Push the package to production</li>
+<li>Expose an endpoint for prediction</li>
+</ul>
+</li>
+<li>Common MLOps tool<ul>
+<li>Cloud providers: SageMaker (AWS), Vertex AI (GCP), AzureML (Azure), etc.</li>
+<li>Independent: MLflow Models, Seldon, Cortex, Ray Serve, etc.</li>
+</ul>
+</li>
+<li>Challenges<ul>
+<li>How to ensure a model&#39;s quality pre and during deployment?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Model store must ensure when something happens, how to figure out:<ul>
+<li>Who is responsible for a model?</li>
+<li>If the correct model binary was deployed?</li>
+<li>If the used features are correct?</li>
+<li>If the code is up-to-date?</li>
+<li>If something happened with the data pipeline?</li>
+</ul>
+</li>
+<li>The feature store has some key challenges<ul>
+<li>Feature management<ul>
+<li>How to share features between multiple models</li>
+<li>How to allow different teams to find and use features discovered by other teams?</li>
+<li>Solution: use the feature catalog</li>
+</ul>
+</li>
+<li>Feature consistency<ul>
+<li>Features might be written in Python during training and in Java during deployment</li>
+<li>How to ensure consistency between different feature pipelines?</li>
+</ul>
+</li>
+<li>Feature computation<ul>
+<li>It might be expensive to compute the same feature multiple times for different models</li>
+<li>How to store computed features so that other models can use them?</li>
+<li>Solution: use the data warehouse</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>ML platform might consist of other components such as.</p>
+<ul>
+<li>Monitoring: for operational metrics and ML-specific metrics</li>
+<li>Experimentation platform</li>
+<li>Measurement: for business metrics</li>
+</ul>
+<p>When working with MLOps tools, we need to evaluate them based on some questions.</p>
+<ul>
+<li>Does it work with our cloud provider?</li>
+<li>Is it an open-source or managed service?</li>
+<li>Does it satisfy data security requirements?</li>
+<li>etc.</li>
+</ul>
+<h2 id="development-environment">Development environment</h2>
+<p>The development environment includes the following concerns.</p>
+<ul>
+<li>The IDE: vscode, vim</li>
+<li>Notebook: Jupyter notebooks, Colab</li>
+<li>Versioning tools: Git for code versioning, DVC for data versioning, WandB and MLflow for experiment versioning</li>
+<li>CI/CD test suite</li>
+<li>Standardization<ul>
+<li>Standardize dependencies with versions</li>
+<li>Standardize tools and versions</li>
+<li>Standardize hardware: use a cloud development environment<ul>
+<li>Simplify IT support</li>
+<li>Security: revoke access if the laptop is stolen</li>
+<li>Bring the development environment closer to the production environment</li>
+<li>Make the debugger easier</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">ml infrastructure</a></li>
+          
+          <li><a href="#">storage layer</a></li>
+          
+          <li><a href="#">compute layer</a></li>
+          
+          <li><a href="#">resource management</a></li>
+          
+          <li><a href="#">scheduler</a></li>
+          
+          <li><a href="#">orchestrator</a></li>
+          
+          <li><a href="#">workflow management</a></li>
+          
+          <li><a href="#">ml platform</a></li>
+          
+          <li><a href="#">model store</a></li>
+          
+          <li><a href="#">feature store</a></li>
+          
+          <li><a href="#">development environment</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Deployment - Part 2 - Monitoring and maintenance</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/projects/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>

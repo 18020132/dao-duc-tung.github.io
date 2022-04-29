@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
 
      
-  <title>UMLS - Model Evaluation</title>
+  <title>UMLS - Model Development - Part 2 - Evaluation</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -73,14 +73,14 @@
    
   <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
     
-  <h1>UMLS - Model Evaluation</h1>
+  <h1>UMLS - Model Development - Part 2 - Evaluation</h1>
 
   <div class="post-info">
-    Apr 27, 2022 · 7 min read
+    Apr 27, 2022 · 9 min read
   </div>
 </div>
 
-      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-evaluation/assessment.jpg" alt="assessment"></p>
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation/assessment.jpg" alt="assessment"></p>
 <p>Model evaluation helps us to decide if one ML algorithm is better than another. Ideally, the evaluation methods should be the same in both the development and production environments. In practice, we might not have ground truths to evaluate models. This post covers the methods to evaluate models in development environments. For evaluating models in production, we will discuss in a future post.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
@@ -131,6 +131,30 @@
 <li>Slice finder: uses algorithms such as beam search, and clustering. Eg: <a href="https://ieeexplore.ieee.org/abstract/document/8731353">Slice Finder: Automated Data Slicing for Model Validation</a>, <a href="https://jcst.ict.ac.cn/EN/10.1007/s11390-016-1647-1">Subgroup Discovery Algorithms: A Survey and Empirical Evaluation</a>.</li>
 </ul>
 <p><strong>Model calibration</strong>: Our model usually returns probabilities. A well-calibrated model is a model that returns probabilities of outcome A that match the real probabilities of that outcome A in production (given a big enough number of data to consider <em>matched</em>). This topic merits a dedicated post. For more details, please check <a href="https://www.unofficialgoogledatascience.com/2021/04/why-model-calibration-matters-and-how.html">Why model calibration matters and how to achieve it</a>, <a href="https://youtu.be/hWb-MIXKe-s">video 1</a>, <a href="https://youtu.be/AunotauS5yI">video 2</a>.</p>
+<p><strong>Data testing</strong></p>
+<p>For data, we need to test the following things.</p>
+<ul>
+<li>Test feature correlation, multiplicity, label quality, missing values</li>
+<li>Test assumption about features, data distribution, pre-train data, post-train data</li>
+<li>Check feature meaning</li>
+</ul>
+<p><strong>Pipeline testing</strong></p>
+<p>For system pipeline, we need to test:</p>
+<ul>
+<li>The consistency of feature engineering in training and inference</li>
+<li>The consistency of predictions in training, inference, and on multiple runs</li>
+<li>The reproducibility of the pipeline (fix the random seed)</li>
+<li>Test the edge case by giving an invalid input</li>
+</ul>
+<p><strong>System benchmarking</strong></p>
+<p>We need to perform several actions as below.</p>
+<ul>
+<li>Reproducible experiments: log hyperparameters, metrics, rules, etc.</li>
+<li>Development guide: documents</li>
+<li>Track progress: benchmark dataset</li>
+<li>Metrics to compare: latency, memory usage, prediction cost, accuracy, etc.</li>
+<li>Compare with other systems: <code>MLPerf</code></li>
+</ul>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>
@@ -148,13 +172,27 @@
           
           <li><a href="#">model evaluation</a></li>
           
+          <li><a href="#">baseline</a></li>
+          
+          <li><a href="#">perturbation test</a></li>
+          
+          <li><a href="#">invariance test</a></li>
+          
+          <li><a href="#">directional expectation test</a></li>
+          
+          <li><a href="#">confidence measurement</a></li>
+          
+          <li><a href="#">slice-based evaluation</a></li>
+          
+          <li><a href="#">model calibration</a></li>
+          
         </ul>
       </div>
     </div>
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/model-evaluation'); return false;"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -164,16 +202,16 @@
     
     <div class="post-body-continue-left">
       
-      <a href="/ml-skills/the-ultimate-machine-learning-system/model-development" class="btn">
+      <a href="/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training" class="btn">
         <i class="material-icons"> arrow_back_ios </i>
-        Previous<span class="post-body-continue-post-title">: UMLS - Model Development</span></a
+        Previous<span class="post-body-continue-post-title">: UMLS - Model Development - Part 1 - Training</span></a
       >
       
     </div>
     <div class="post-body-continue-right">
       
-      <a href="/projects/finance-foundations/finance-introduction" class="btn">
-        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+      <a href="/ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Deployment - Part 1 - What to consider</span>
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
       

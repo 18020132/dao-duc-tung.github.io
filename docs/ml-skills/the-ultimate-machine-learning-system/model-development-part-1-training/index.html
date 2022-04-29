@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
 
      
-  <title>UMLS - Model Development</title>
+  <title>UMLS - Model Development - Part 1 - Training</title>
   
 
   <meta name="description" content="AI Engineer Skills" />
@@ -73,14 +73,14 @@
    
   <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
     
-  <h1>UMLS - Model Development</h1>
+  <h1>UMLS - Model Development - Part 1 - Training</h1>
 
   <div class="post-info">
     Jan 06, 2022 · 26 min read
   </div>
 </div>
 
-      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/coding.jpg" alt="coding"></p>
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/coding.jpg" alt="coding"></p>
 <p>Model development is the third phase of the ML lifecycle where we build the ML models for our problems and evaluate their performances.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
@@ -175,13 +175,13 @@
 <li>High complexity model or high variance: overfitted, prediction fluctuates</li>
 </ul>
 <h2 id="train-models">Train models</h2>
-<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/model-development.png" alt="model-development"></p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/model-development.png" alt="model-development"></p>
 <p>Training, tuning, and evaluation is iterative process.</p>
 <h3 id="split-data">Split data</h3>
 <p>Firstly, we need to split the data to ensure the division between the training and evaluation efforts. A common strategy is to split data into training, validation, and testing subsets with a common ratio of <code>80:10:10</code> or <code>75:15:15</code>.</p>
 <p>Cross-validation is another technique to compare multiple models&#39; performance. The goal is to choose the model that will eventually perform the best in production.</p>
 <p>k-fold cross-validation is a common validation method. In k-fold cross-validation, you split the input data into k subsets of data so-called folds. You train your models on all but one (k-1) of the subsets and then evaluate them on the subset that was not used for training. This process is repeated k times, with a different subset reserved for evaluation (and excluded from training) each time.</p>
-<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/k-fold-cross-validation.png" alt="k-fold-cross-validation"></p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/k-fold-cross-validation.png" alt="k-fold-cross-validation"></p>
 <p>If you have a small dataset, consider leave-one-out cross-validation (LOOCV), which is k-fold cross-validation where k is set to the number of examples in the dataset. Learn more about LOOCV <a href="https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/">here</a>.</p>
 <p>If you have imbalanced data, consider Stratified k-fold cross-validation where the distribution of classes in each fold is kept. Learn more <a href="https://machinelearningmastery.com/cross-validation-for-imbalanced-classification/">here</a>.</p>
 <blockquote>
@@ -244,7 +244,7 @@
 <h3 id="automl">AutoML</h3>
 <p>We can use AutoML tools to automate the process of preprocessing data, selecting models, tuning hyperparameters, and choosing the best model. For the comparison of AutoML libraries, please refer to this <a href="https://www.kaggle.com/code/andreshg/automl-libraries-comparison/notebook">AutoML Libraries Comparision article</a>.</p>
 <h2 id="distributed-training">Distributed training</h2>
-<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development/distributed-training.png" alt="distributed-training"></p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/distributed-training.png" alt="distributed-training"></p>
 <p>It&#39;s common to train a model using a dataset that doesn&#39;t fit into memory such as CT scans. In this case, we need algorithms for preprocessing, shuffling, and batching data out-of-memory and in parallel. This requires training ML models on multiple machines using multiple CPUs, GPUs, and TPUs.</p>
 <h3 id="data-parallelism">Data parallelism</h3>
 <p>The most common parallelization method is <strong>data parallelism</strong>: we split the dataset on multiple machines, train the model on all of them, and accumulate gradients.</p>
@@ -297,7 +297,7 @@
     <div class="post-body-social-right">
       <a
         href="#"
-        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/model-development'); return false;"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training'); return false;"
         class="btn"
         ><i class="material-icons"> link </i></a
       >
@@ -315,8 +315,8 @@
     </div>
     <div class="post-body-continue-right">
       
-      <a href="/ml-skills/the-ultimate-machine-learning-system/model-evaluation" class="btn">
-        Next<span class="post-body-continue-post-title">: UMLS - Model Evaluation</span>
+      <a href="/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation" class="btn">
+        Next<span class="post-body-continue-post-title">: UMLS - Model Development - Part 2 - Evaluation</span>
         <i class="material-icons"> arrow_forward_ios </i>
       </a>
       
