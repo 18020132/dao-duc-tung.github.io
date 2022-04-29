@@ -305,7 +305,74 @@
             "tags": [
               "ultimate",
               "machine learning system",
-              "model evaluation"
+              "model evaluation",
+              "baseline",
+              "perturbation test",
+              "invariance test",
+              "directional expectation test",
+              "confidence measurement",
+              "slice-based evaluation",
+              "model calibration"
+            ]
+          },
+          {
+            "title": "UMLS - Deployment - Part 1 - What to consider",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "model compression",
+              "inference optimization",
+              "deployment pattern",
+              "monolith",
+              "microservices",
+              "deployment strategies",
+              "high availability",
+              "disaster recovery",
+              "scalability",
+              "scaling",
+              "caching",
+              "container orchestration",
+              "test in production"
+            ]
+          },
+          {
+            "title": "UMLS - Deployment - Part 2 - Monitoring and maintenance",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "system failure",
+              "data distribution shifts",
+              "covariate shift",
+              "label shift",
+              "concept drift",
+              "edge cases",
+              "degenerate feedback loop",
+              "monitoring",
+              "observability"
+            ]
+          },
+          {
+            "title": "UMLS - Deployment - Part 3 - ML infrastructure",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "ml infrastructure",
+              "storage layer",
+              "compute layer",
+              "resource management",
+              "scheduler",
+              "orchestrator",
+              "workflow management",
+              "ml platform",
+              "model store",
+              "feature store",
+              "development environment"
             ]
           }
         ]

@@ -67,6 +67,33 @@ Selecting the critical slices is more of an art than a science, requiring intens
 
 **Model calibration**: Our model usually returns probabilities. A well-calibrated model is a model that returns probabilities of outcome A that match the real probabilities of that outcome A in production (given a big enough number of data to consider _matched_). This topic merits a dedicated post. For more details, please check [Why model calibration matters and how to achieve it](https://www.unofficialgoogledatascience.com/2021/04/why-model-calibration-matters-and-how.html), [video 1](https://youtu.be/hWb-MIXKe-s), [video 2](https://youtu.be/AunotauS5yI).
 
+**Data testing**
+
+For data, we need to test the following things.
+
+- Test feature correlation, multiplicity, label quality, missing values
+- Test assumption about features, data distribution, pre-train data, post-train data
+- Check feature meaning
+
+**Pipeline testing**
+
+For system pipeline, we need to test:
+
+- The consistency of feature engineering in training and inference
+- The consistency of predictions in training, inference, and on multiple runs
+- The reproducibility of the pipeline (fix the random seed)
+- Test the edge case by giving an invalid input
+
+**System benchmarking**
+
+We need to perform several actions as below.
+
+- Reproducible experiments: log hyperparameters, metrics, rules, etc.
+- Development guide: documents
+- Track progress: benchmark dataset
+- Metrics to compare: latency, memory usage, prediction cost, accuracy, etc.
+- Compare with other systems: `MLPerf`
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [assessment]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation/assessment.jpg
