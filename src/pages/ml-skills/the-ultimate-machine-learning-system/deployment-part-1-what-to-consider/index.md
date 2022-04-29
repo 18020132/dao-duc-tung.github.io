@@ -87,13 +87,13 @@ The table below compares the difference between some common deployment strategie
 
 ## High availability
 
-![availability][availability]
-
 High availability is a characteristic of a system that aims to ensure an agreed level of operational performance, usually uptime, for a designated period. To achieve high availability, we want to have the redundancy of computing resources to avoid a single point of failure and to prepare for the disaster.
 
 The computing resources usually will be replicated in several instances. Those instances will even live in several physical buildings in different physical regions on different continents.
 
 ### Disaster recovery
+
+![disaster-recovery][disaster-recovery]
 
 In the disaster recovery context, we have a disaster point at which the system is down. To prepare for the disaster recovery, we need to answer some questions.
 
@@ -169,4 +169,4 @@ There are several ways of testing in production.
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [deployment]: /assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider/deployment.jpg
-[availability]: /assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider/availability.jpg
+[disaster-recovery]: /assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider/disaster-recovery.png
