@@ -215,7 +215,7 @@
             ]
           },
           {
-            "title": "UMLS - Data Engineering - Part 1 - What to consider",
+            "title": "UMLS - Data Engineering - Part 1 - What To Consider",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider",
             "tags": [
@@ -324,7 +324,7 @@
             ]
           },
           {
-            "title": "UMLS - Deployment - Part 1 - What to consider",
+            "title": "UMLS - Deployment - Part 1 - What To Consider",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider",
             "tags": [
@@ -346,7 +346,7 @@
             ]
           },
           {
-            "title": "UMLS - Deployment - Part 2 - Monitoring and maintenance",
+            "title": "UMLS - Deployment - Part 2 - Monitoring And Maintenance",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance",
             "tags": [
@@ -364,7 +364,7 @@
             ]
           },
           {
-            "title": "UMLS - Deployment - Part 3 - ML infrastructure",
+            "title": "UMLS - Deployment - Part 3 - ML Infrastructure",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure",
             "tags": [
@@ -517,6 +517,15 @@
             "tags": [
               "first who",
               "then what"
+            ]
+          },
+          {
+            "title": "Chapter 4 - Confront The Brutal Facts",
+            "type": "post",
+            "url": "projects/good-to-great/chapter-4-confront-the-brutal-facts",
+            "tags": [
+              "confront",
+              "brutal fact"
             ]
           }
         ]

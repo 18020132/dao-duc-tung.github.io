@@ -21,7 +21,7 @@ In short, Personal Humility + Professional Will = Level 5
 
 ### The successors
 
-Set up their successors for even greater success in the next generation, whereas egocentric Level 4 leaders often set up their successors for failure.
+Set up their successors for even greatr success in the next generation, whereas egocentric Level 4 leaders often set up their successors for failure.
 
 ### A compelling modesty
 
