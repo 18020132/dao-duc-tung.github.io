@@ -384,6 +384,63 @@
             ]
           }
         ]
+      },
+      {
+        "title": "Machine Learning System Interview",
+        "type": "topic",
+        "url": "ml-skills/machine-learning-system-interview",
+        "pinned": true,
+        "children": [
+          {
+            "title": "MLSI - Introduction",
+            "type": "post",
+            "url": "ml-skills/machine-learning-system-interview/introduction",
+            "tags": [
+              "machine learning system",
+              "interview",
+              "introduction"
+            ]
+          },
+          {
+            "title": "MLSI - Machine Learning System Roadmap",
+            "type": "post",
+            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-roadmap",
+            "tags": [
+              "machine learning system",
+              "interview",
+              "roadmap"
+            ]
+          },
+          {
+            "title": "MLSI - Machine Learning System Interview Process",
+            "type": "post",
+            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-interview-process",
+            "tags": [
+              "machine learning system",
+              "interview process",
+              "interview structure"
+            ]
+          },
+          {
+            "title": "MLSI - Machine Learning System Learning Resources",
+            "type": "post",
+            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-learning-resources",
+            "tags": [
+              "machine learning system",
+              "interview",
+              "learning resources"
+            ]
+          },
+          {
+            "title": "MLSI - Machine Learning System Interview Questions",
+            "type": "post",
+            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-interview-questions",
+            "tags": [
+              "machine learning system",
+              "interview questions"
+            ]
+          }
+        ]
       }
     ]
   },

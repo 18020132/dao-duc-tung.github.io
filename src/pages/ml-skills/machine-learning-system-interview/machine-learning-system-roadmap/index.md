@@ -3,7 +3,7 @@ url: ml-skills/machine-learning-system-interview/machine-learning-system-roadmap
 layout: post
 ---
 
-![system][system]
+![the-road][the-road]
 
 Today in this post, I will share with you my journey from when I was a student until the time I have been falling in love with Machine Learning Systems.
 
@@ -17,11 +17,13 @@ In my fifth year in 2017, I got a chance to work on a big Computer Vision projec
 
 From 2019 to 2020, I was diving into the world of Computer Vision. During this time, I also worked for some companies where I had a chance to learn about software architecture, and to design and implement several software applications from the very beginning to the end products. At that time I was just trying to deliver the products as perfectly as I can. I didn't know that my software architecture design experience helped me a lot when it comes to Machine Learning Systems later on in recent years.
 
+![software-architecture-stack][software-architecture-stack]
+
 In the entire year 2021, I started learning about machine learning system design. I just learned it myself by taking online courses, reading tutorial articles, searching for best practices, and building my own machine learning systems. I was very lucky in the sense that I could also apply what I learned to what I was doing at my company. Moreover, I volunteered for a community project as an MLOps engineer. This was really the moment when my experience was boosted like a rocket.
 
 That is a short description of my career so far. I'm still considered a young engineer, so please don't expect a few pages of experience here. The thing I want to emphasize about my journey from a student to a Senior in the machine learning system design area is that machine learning knowledge is crucial, and software architecture is crucial to shaping my mindset into a systematic structure.
 
-## Machine learning system roadmap
+## The roadmap
 
 Instead of giving you a comprehensive list of things that you might get overwhelmed with, I will give you a list of topics that you might need to get familiar with.
 
@@ -39,4 +41,5 @@ During the learning journey, remember that no one can learn those topics once an
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[system]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-roadmap/system.jpg
+[the-road]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-roadmap/the-road.jpg
+[software-architecture-stack]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-roadmap/software-architecture-stack.png

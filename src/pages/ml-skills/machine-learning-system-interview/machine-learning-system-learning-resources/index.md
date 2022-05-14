@@ -1,9 +1,9 @@
 ---
-url: ml-skills/machine-learning-system-interview/machine-learning-system-interview-process
+url: ml-skills/machine-learning-system-interview/machine-learning-system-learning-resources
 layout: post
 ---
 
-![interview][interview]
+![bookshelf][bookshelf]
 
 In this post, I will share with you a comprehensive list of the interview questions and learning sources that you might need to study before your interview. The real interview questions that I was interviewed will be share in the next post.
 
@@ -15,10 +15,11 @@ The learning resources that you will see in this post are the resources that I h
 
 - [Introduction to algorithms](https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/)
 - [Cracking the Coding Interview](https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850)
-- [LeetCode](https://leetcode.com/assessment/)
-- [HackerRank](https://www.hackerrank.com/interview/interview-preparation-kit)
-- [CodeSignal](https://app.codesignal.com/interview-practice)
-- [CodeForces](https://codeforces.com/)
+- Coding platform
+  - [LeetCode](https://leetcode.com/assessment/)
+  - [HackerRank](https://www.hackerrank.com/interview/interview-preparation-kit)
+  - [CodeSignal](https://app.codesignal.com/interview-practice)
+  - [CodeForces](https://codeforces.com/)
 - [Dynamic Programming tutorial on Quora](https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-DP-besides-the-TopCoder-tutorial/answer/Michal-Danil%C3%A1k)
 
 ## Computer science
@@ -30,13 +31,14 @@ The learning resources that you will see in this post are the resources that I h
 - [The Full-stack Software Design & Architecture Map](https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/)
 - [Clean Code](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 - [Clean Architecture](https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164)
-- [Understanding the Single Responsibility Principle](https://www.youtube.com/watch?v=L2m-S0Pj_Xk)
-- [Single Responsibility Principle Explained Practically in C#](https://www.youtube.com/watch?v=5RwhyZnVRS8)
-- [Understanding the Open Closed Principle](https://www.youtube.com/watch?v=Ryhy7333mqQ)
-- [Open Closed Principle Explained Practically in C#](https://www.youtube.com/watch?v=VFlk43QGEgc)
-- [Understanding the Liskov Substitution Principle](https://www.youtube.com/watch?v=Mmy1EUKC_iE)
-- [Liskov Substitution Principle Explained Practically in C#](https://www.youtube.com/watch?v=-3UXq2krhyw)
-- [Interface Segregation Principle Explained Practically in C#](https://www.youtube.com/watch?v=y1JiMGP51NE)
+- SOLID principles
+  - [Understanding the Single Responsibility Principle](https://www.youtube.com/watch?v=L2m-S0Pj_Xk)
+  - [Single Responsibility Principle Explained Practically in C#](https://www.youtube.com/watch?v=5RwhyZnVRS8)
+  - [Understanding the Open Closed Principle](https://www.youtube.com/watch?v=Ryhy7333mqQ)
+  - [Open Closed Principle Explained Practically in C#](https://www.youtube.com/watch?v=VFlk43QGEgc)
+  - [Understanding the Liskov Substitution Principle](https://www.youtube.com/watch?v=Mmy1EUKC_iE)
+  - [Liskov Substitution Principle Explained Practically in C#](https://www.youtube.com/watch?v=-3UXq2krhyw)
+  - [Interface Segregation Principle Explained Practically in C#](https://www.youtube.com/watch?v=y1JiMGP51NE)
 - [Microservice Architecture](https://microservices.io/patterns/microservices.html)
 
 ## Machine learning
@@ -45,7 +47,7 @@ The learning resources that you will see in this post are the resources that I h
 - [Machine Learning Interviews Book](https://huyenchip.com/ml-interviews-book/)
 - [Deep Learning Interviews book](https://github.com/BoltzmannEntropy/interviews.ai)
 
-# Cloud
+## Cloud
 
 - [Cloud Foundations Learning Plan](https://explore.skillbuilder.aws/learn/lp/82/cloud-foundations-learning-plan)
 - [AWS General Immersion Day](https://catalog.workshops.aws/general-immersionday/en-US/)
@@ -90,11 +92,11 @@ The learning resources that you will see in this post are the resources that I h
 - [CS 329S: Machine Learning Systems Design](https://stanford-cs329s.github.io/syllabus.html)
 - [The Data Engineering Cookbook](https://github.com/andkret/Cookbook)
 - [MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
-- [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
 - [MLOps Basics](https://www.ravirajag.dev/blog)
 - [Deploying Python ML Models with Flask, Docker and Kubernetes](https://alexioannides.com/2019/01/10/deploying-python-ml-models-with-flask-docker-and-kubernetes/)
 - [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
 - [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
+- [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
 
 ## DevOps
 
@@ -117,14 +119,16 @@ The learning resources that you will see in this post are the resources that I h
 Below is some other useful resources that I haven't checked thoroughly but you might need them.
 
 - [Awesome Software Engineering Interview Github](https://github.com/imkgarg/Awesome-Software-Engineering-Interview)
-- [The System Design Primer](https://github.com/donnemartin/system-design-primer)
-- [Large scale system design](https://github.com/binhnguyennus/awesome-scalability)
 - [Backend development best practices](https://github.com/futurice/backend-best-practices)
-- [DVC](https://dvc.org/)
-- [WandB](https://wandb.ai/site)
-- [MLflow](https://mlflow.org/)
-- [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/#)
+- System design
+  - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+  - [Large scale system design](https://github.com/binhnguyennus/awesome-scalability)
+- Machine learning system tools
+  - [DVC](https://dvc.org/)
+  - [WandB](https://wandb.ai/site)
+  - [MLflow](https://mlflow.org/)
+  - [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/#)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[interview]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/interview.jpg
+[bookshelf]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-learning-resources/bookshelf.jpg

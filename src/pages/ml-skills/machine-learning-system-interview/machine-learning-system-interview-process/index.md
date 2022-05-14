@@ -3,13 +3,13 @@ url: ml-skills/machine-learning-system-interview/machine-learning-system-intervi
 layout: post
 ---
 
-![interview][interview]
+![micro][micro]
 
 Today in this post, I will share with you the typical structure of the interview process for the roles of Machine Learning System Engineer, Machine Learning Infrastructure Engineer, Machine Learning Platform Engineer, and MLOps Engineer at the Senior level. At the end of this post, I will also give you some very helpful tips to use before, during, and after the interview sessions.
 
 <toc>
 
-## Interview structure
+## Interview process structure
 
 Different companies at different scales have different interview structures. Fortunately, the interview structure for the machine learning system engineer-related roles is not so different.
 
@@ -19,6 +19,10 @@ Commonly, there are four types of interview rounds of a typical interview proces
 1. Hard round
 1. Homework round
 1. Offer round
+
+The image below shows examples of the interview rounds.
+
+![interview-rounds][interview-rounds]
 
 ### Soft round
 
@@ -63,11 +67,9 @@ Congratulations, after passing all the above rounds, you will get an offer from 
 
 Usually, you will make the decision at the Offer round 3 or 4. Each Offer round might take three days to one week.
 
-The image below shows examples of the interview rounds.
-
-![interview-rounds][interview-rounds]
-
 ## Interview tips
+
+![trick][trick]
 
 ### Before the interview
 
@@ -125,4 +127,6 @@ For the tips, I will just leave here the link to a video about [Tips for negotia
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[interview]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/interview.jpg
+[micro]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/micro.jpg
+[interview-rounds]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/interview-rounds.png
+[trick]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/trick.jpg
