@@ -7,7 +7,7 @@ layout: post
 
 This series of **The Ultimate Machine Learning System** will cover the key concepts, the common techniques, and the common tools for designing and developing a Machine Learning system from **Problem Definition**, **Data Engineering**, **Model Development** to **Deployment**.
 
-This series is intended for ML practitioners with at least one year of experience working with ML and they should:
+This series intends for ML practitioners with at least one year of experience working with ML and they should:
 
 - Be able to express the intuition behind basic ML algorithms and perform basic hyperparameter optimization
 - Understand the ML lifecycle and its components
