@@ -25,6 +25,7 @@ The learning resources that you will see in this post are the resources that I h
 ## Computer science
 
 - [Computer Science questions](https://github.com/vietnakid/learning-material/blob/master/computer-science/cs_questions.md)
+- [The 10 Operating System Concepts Software Developers Need to Remember](https://data-notes.co/the-10-operating-system-concepts-software-developers-need-to-remember-480d0734d710)
 
 ## Software architecture
 
@@ -63,6 +64,9 @@ The learning resources that you will see in this post are the resources that I h
 ## System design
 
 - [System Design Tutorial](https://www.geeksforgeeks.org/system-design-tutorial/)
+- [Getting Started with System Design](https://www.geeksforgeeks.org/getting-started-with-system-design/)
+- [How to Crack System Design Round in Interviews?](https://www.geeksforgeeks.org/how-to-crack-system-design-round-in-interviews/)
+- [How to start with distributed systems?](https://www.youtube.com/watch?v=SqcXvc3ZmRU)
 - [Design Caching System](https://www.youtube.com/watch?v=DUbEgNw-F9c)
 - Design TinyURL
   - [Design TinyURL 1](https://www.youtube.com/watch?v=He-V_RuHwek)
@@ -113,7 +117,9 @@ The learning resources that you will see in this post are the resources that I h
 - [Building your first DevOps Blue/Green pipeline with Amazon ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/4b59b9fb-48b6-461c-9377-907b2e33c9df/en-US/)
 - [DevSecOps on AWS](https://catalog.us-east-1.prod.workshops.aws/workshops/95ee7fde-4d85-47a5-99fc-7e0dee07fc94/en-US)
 - [Running Kubernetes on AWS (EKS)](https://www.linkedin.com/learning/running-kubernetes-on-aws-eks)
-- [A visual guide on troubleshooting Kubernetes deployments](https://learnk8s.io/troubleshooting-deployments)
+- [Kubernetes Interview Questions 1](https://www.youtube.com/watch?v=OvOQJba-edM)
+- [Kubernetes Interview Questions 2](https://www.youtube.com/watch?v=lHC7xpFack8)
+- [Kubernetes Best Practices for Interview](https://www.youtube.com/watch?v=p4ZJMPUdm4c)
 
 ## Others
 

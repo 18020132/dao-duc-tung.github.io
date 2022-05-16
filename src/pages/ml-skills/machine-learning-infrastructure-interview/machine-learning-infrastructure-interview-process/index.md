@@ -30,6 +30,8 @@ The Soft round usually will be the first or the third round where the interviewe
 
 Due to the nature of the technical roles, Soft rounds sometimes are merged into the Hard round to reduce one round of the interview. That means those soft-round questions will be asked in the Hard rounds.
 
+A Soft round lasts from 30 minutes to 1 hour.
+
 ### Hard round
 
 Hard round doesn't mean the round is very difficult although it might be. It means the interviewer will test your technical skills. Hard rounds usually will be conducted by the Senior Engineers, Solution Architects, Team Leaders, Tech Leads, the CTO, etc. The questions in the Hard rounds include the following topics.
@@ -44,6 +46,8 @@ Hard round doesn't mean the round is very difficult although it might be. It mea
 Depending on the hiring strategies and hiring targets of the companies, the number of Hard rounds and the distribution of the above topics is different. For some companies like Shopee, ByteDance, TikTok, etc., there are usually three Hard rounds. You might be asked about all of the above topics in every single Hard round.
 
 Other than that, there are at most two Hard rounds in the other companies (not necessarily smaller companies than the above companies in anyways), and they ask less about basic Computer Science knowledge, fewer live coding tests, and fewer system design questions.
+
+A Hard round lasts from 1 hour to 1 hour 30 minutes.
 
 ### Homework round
 
@@ -83,6 +87,7 @@ There are some tips during the interview as follows.
 
 - Play a song that makes you sing along **until** the interviewer joins the online meeting room. This keeps your guts comfortable.
 - Be confident, talk confident. Your attitude is super important.
+- Every question has a purpose, at least to test your explaining skill.
 - If you don't know or don't remember the answer to a question, after telling the interviewer that you don't know the answer exactly, give them a guess, and tell them what you can interpret. This might help to show your logical thinking capability and your problem-solving skill when approaching an unknown issue.
 
 At the end of each interview, you have to ask some questions. Below is the list of the important questions that you should ask the interviewer.
