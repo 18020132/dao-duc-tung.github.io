@@ -40,7 +40,7 @@ docker push tungdao17/my-ubuntu:v1.0
 
 ## Start your own docker registry
 
-It's very simple to start your own registry. Refer to https://docs.docker.com/registry/ for more details.
+It's very simple to start your own registry. Refer to [Docker registry](https://docs.docker.com/registry/) for more details.
 
 ## Key notes
 

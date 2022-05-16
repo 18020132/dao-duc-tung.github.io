@@ -9,7 +9,7 @@ _Save the best for the last_.
 
 Today in this post, I will finally reveal the real interview questions of the **Machine Learning Infrastructure Interview** that I experienced.
 
-The questions will not be organized by the group of question types such as Coding tests, Computer science fundamentals, System design, MLOps, etc. Instead, I will group them by the interview round types such as Hard round and Soft round so you can have an idea of what the question types' distribution looks like in an interview. All questions are presented in the order of time during the interview. This means for each set of questions, you are seeing the real questions in the real order in a real interview. Moreover, I will give you instructions to get you through some questions. For the interview tips, please refer to the previous post **Machine Learning Infrastructure Interview Process** in this series.
+The questions will not be organized by the group of question types such as Coding tests, Computer science fundamentals, System design, MLOps, etc. Instead, I will group them by the interview round types such as Hard round and Soft round so you can have an idea of what the question types' distribution looks like in an interview. All questions are presented in the order of time during the interview. This means for each set of questions, you are seeing the real questions in the real order in a real interview. Moreover, I will give you instructions to get you through some questions. For the interview tips, please refer to the previous post **[Machine Learning Infrastructure Interview Process](../machine-learning-infrastructure-interview-process/)** in this series.
 
 <toc>
 

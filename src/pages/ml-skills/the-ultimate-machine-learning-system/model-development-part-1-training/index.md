@@ -93,7 +93,7 @@ If you have imbalanced data, consider Stratified k-fold cross-validation, where 
 
 > Cross-validation techniques will increase the computational power needed for your training.
 
-Please refer to the post **Data Engineering - Sampling** in this **The Ultimate Machine Learning System** topic for more details about data sampling.
+For more details about data sampling, please refer to the post **[Data Engineering - Sampling](../data-engineering-part-4-sampling/)** in this **[The Ultimate Machine Learning System](../../the-ultimate-machine-learning-system/)** topic.
 
 ### Optimize hyperparameters
 
@@ -146,7 +146,7 @@ Below is the list of things that might cause an ML model to fail.
 - **Theoretical constraints**: the assumptions about the data and the features that the model uses are wrong
 - **Poor model implementation**: forget to stop gradient updates during evaluation, etc.
 - **Poor choice of hyperparameters**: different sets of hyperparameters give different results
-- **Data issues**: data is collected unproperly, labels are wrong, features are processed wrongly, etc. Please refer to the post **Data Engineering - Data Issues** in this **The Ultimate Machine Learning System** topic for more details on data issues.
+- **Data issues**: data is collected unproperly, labels are wrong, features are processed wrongly, etc. For more details on data issues, please refer to the post **[Data Engineering - Data Issues](../data-engineering-part-2-data-issues/)** in this **[The Ultimate Machine Learning System](../../the-ultimate-machine-learning-system/)** topic.
 - **Poor choice of features**: too many or too few features
 
 ### AutoML

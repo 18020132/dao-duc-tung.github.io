@@ -44,7 +44,7 @@ Deployment patterns could be in many contexts.
 - Computing technologies: Cloud computing vs. Edge computing
 - Architecture: Monolith vs. Microservices
 
-For Batch prediction vs. Online prediction, Cloud computing vs. Edge computing, please refer to the post **Intro To Machine Learning Systems Design - Overview** in this **The Ultimate Machine Learning System** topic.
+For Batch prediction vs. Online prediction, Cloud computing vs. Edge computing, please refer to the post **[Intro To Machine Learning Systems Design - Overview](../intro-to-ml-systems-design-part-1-overview/)** in this **[The Ultimate Machine Learning System](../../the-ultimate-machine-learning-system/)** topic.
 
 ### Monolith vs. Microservices
 

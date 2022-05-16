@@ -45,9 +45,9 @@ You may have _container A_ running Ubuntu 14.04 and _container B_ running Debian
 
 ## Installation
 
-Please refer to the [docker docs](https://docs.docker.com/engine/install/) to download **Docker Engine** based on your OS.
+Please refer to [this docker install page](https://docs.docker.com/engine/install/) to download **Docker Engine** based on your OS.
 
-> Docker Engine is an open source containerization technology for building and containerizing your applications. ([Docker docs](https://docs.docker.com/engine/))
+> Docker Engine is an open source containerization technology for building and containerizing your applications. ([Docker Engine](https://docs.docker.com/engine/))
 
 By installing **Docker Engine**, you will also install:
 
