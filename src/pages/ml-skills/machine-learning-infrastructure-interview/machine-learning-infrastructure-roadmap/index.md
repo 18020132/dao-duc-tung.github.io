@@ -19,7 +19,7 @@ From 2019 to 2020, I was diving into the world of Computer Vision. During this t
 
 ![software-architecture-stack][software-architecture-stack]
 
-In the entire year 2021, I started learning about machine learning system design. I just learned it myself by taking online courses, reading tutorial articles, searching for best practices, and building my own machine learning systems. I was very lucky in the sense that I could also apply what I learned to what I was doing at my company. Moreover, I volunteered for a community project as an MLOps engineer. This was really the moment when my experience was boosted like a rocket.
+In the beginning of 2021, I started learning about machine learning system design. I just learned it myself by taking online courses, reading tutorial articles, searching for best practices, and building my own machine learning systems. I was very lucky in the sense that I could also apply what I learned to what I was doing at my company. Moreover, I volunteered for a community project as an MLOps engineer. This was really the moment when my experience was boosted like a rocket.
 
 That is a short description of my career so far. I'm still considered a young engineer, so please don't expect a few pages of experience here. The thing I want to emphasize about my journey from a student to a Senior in the machine learning system design area is that machine learning knowledge is crucial, and software architecture is crucial to shaping my mindset into a systematic structure.
 

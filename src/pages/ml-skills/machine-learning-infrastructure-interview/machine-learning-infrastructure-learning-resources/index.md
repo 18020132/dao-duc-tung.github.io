@@ -84,7 +84,8 @@ The learning resources that you will see in this post are the resources that I h
   - [Design WhatsApp 1](https://www.youtube.com/watch?v=vvhC64hQZMk)
   - [Design WhatsApp 2](https://www.youtube.com/watch?v=L7LtmfFYjc4)
   - [Design WhatsApp 3](https://www.youtube.com/watch?v=ovnrSH6G6vw)
-- [Design Facebook](https://www.youtube.com/watch?v=9-hjBGxuiEs)
+- Design social networking app
+  - [Design Facebook](https://www.youtube.com/watch?v=9-hjBGxuiEs)
   - [Design TikTok](https://www.youtube.com/watch?v=Z-0g_aJL5Fw)
 
 ## Machine learning system
@@ -116,7 +117,7 @@ The learning resources that you will see in this post are the resources that I h
 
 ## Others
 
-Below is some other useful resources that I haven't checked thoroughly but you might need them.
+Below is some other useful resources that you might need them.
 
 - [Awesome Software Engineering Interview Github](https://github.com/imkgarg/Awesome-Software-Engineering-Interview)
 - [Backend development best practices](https://github.com/futurice/backend-best-practices)
