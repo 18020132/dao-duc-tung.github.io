@@ -190,6 +190,8 @@ The questions will not be organized by the group of question types such as Codin
 - Do you think embedded systems or hardware knowledge are needed for a computer science engineer?
   - An open question to see your viewpoint as an engineer
 
+And that's all for the **Machine Learning Infrastructure Interview** series. Thank you my reader to be a part of this series and to make it happen. Please don't hesitate to contact me if you have any questions. Hope to see you again soon in the future series when I reach the next level of my career path.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [the-thinker]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-questions/the-thinker.jpg
