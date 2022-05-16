@@ -1,5 +1,5 @@
 ---
-url: ml-skills/machine-learning-system-interview/machine-learning-system-learning-resources
+url: ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources
 layout: post
 ---
 
@@ -7,7 +7,7 @@ layout: post
 
 In this post, I will share with you a comprehensive list of the interview questions and learning sources that you might need to study before your interview. The real interview questions that I was interviewed will be share in the next post.
 
-The learning resources that you will see in this post are the resources that I had been learning for years. You might not find any other detailed list dedicated for machine learning system interview like in this post anywhere else.
+The learning resources that you will see in this post are the resources that I had been learning for years. You might not find any other detailed list dedicated for machine learning infrastructure interview like in this post anywhere else.
 
 <toc>
 
@@ -131,4 +131,4 @@ Below is some other useful resources that I haven't checked thoroughly but you m
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[bookshelf]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-learning-resources/bookshelf.jpg
+[bookshelf]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources/bookshelf.jpg

@@ -1,17 +1,17 @@
 ---
-url: ml-skills/machine-learning-system-interview/machine-learning-system-interview-process
+url: ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process
 layout: post
 ---
 
 ![micro][micro]
 
-Today in this post, I will share with you the typical structure of the interview process for the roles of Machine Learning System Engineer, Machine Learning Infrastructure Engineer, Machine Learning Platform Engineer, and MLOps Engineer at the Senior level. At the end of this post, I will also give you some very helpful tips to use before, during, and after the interview sessions.
+Today in this post, I will share with you the typical structure of the interview process for the roles of Machine Learning Infrastructure Engineer, Machine Learning Infrastructure Engineer, Machine Learning Platform Engineer, and MLOps Engineer at the Senior level. At the end of this post, I will also give you some very helpful tips to use before, during, and after the interview sessions.
 
 <toc>
 
 ## Interview process structure
 
-Different companies at different scales have different interview structures. Fortunately, the interview structure for the machine learning system engineer-related roles is not so different.
+Different companies at different scales have different interview structures. Fortunately, the interview structure for the machine learning infrastructure engineer-related roles is not so different.
 
 Commonly, there are four types of interview rounds of a typical interview process as follows.
 
@@ -127,6 +127,6 @@ For the tips, I will just leave here the link to a video about [Tips for negotia
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[micro]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/micro.jpg
-[interview-rounds]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/interview-rounds.png
-[trick]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-interview-process/trick.jpg
+[micro]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/micro.jpg
+[interview-rounds]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/interview-rounds.png
+[trick]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/trick.jpg

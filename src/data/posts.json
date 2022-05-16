@@ -386,57 +386,57 @@
         ]
       },
       {
-        "title": "Machine Learning System Interview",
+        "title": "Machine Learning Infrastructure Interview",
         "type": "topic",
-        "url": "ml-skills/machine-learning-system-interview",
+        "url": "ml-skills/machine-learning-infrastructure-interview",
         "pinned": true,
         "children": [
           {
             "title": "MLSI - Introduction",
             "type": "post",
-            "url": "ml-skills/machine-learning-system-interview/introduction",
+            "url": "ml-skills/machine-learning-infrastructure-interview/introduction",
             "tags": [
-              "machine learning system",
+              "machine learning infrastructure",
               "interview",
               "introduction"
             ]
           },
           {
-            "title": "MLSI - Machine Learning System Roadmap",
+            "title": "MLSI - Machine Learning Infrastructure Roadmap",
             "type": "post",
-            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-roadmap",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap",
             "tags": [
-              "machine learning system",
+              "machine learning infrastructure",
               "interview",
               "roadmap"
             ]
           },
           {
-            "title": "MLSI - Machine Learning System Interview Process",
+            "title": "MLSI - Machine Learning Infrastructure Interview Process",
             "type": "post",
-            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-interview-process",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process",
             "tags": [
-              "machine learning system",
+              "machine learning infrastructure",
               "interview process",
               "interview structure"
             ]
           },
           {
-            "title": "MLSI - Machine Learning System Learning Resources",
+            "title": "MLSI - Machine Learning Infrastructure Learning Resources",
             "type": "post",
-            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-learning-resources",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources",
             "tags": [
-              "machine learning system",
+              "machine learning infrastructure",
               "interview",
               "learning resources"
             ]
           },
           {
-            "title": "MLSI - Machine Learning System Interview Questions",
+            "title": "MLSI - Machine Learning Infrastructure Interview Questions",
             "type": "post",
-            "url": "ml-skills/machine-learning-system-interview/machine-learning-system-interview-questions",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-questions",
             "tags": [
-              "machine learning system",
+              "machine learning infrastructure",
               "interview questions"
             ]
           }

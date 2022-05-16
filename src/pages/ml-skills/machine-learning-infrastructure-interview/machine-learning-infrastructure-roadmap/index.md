@@ -1,5 +1,5 @@
 ---
-url: ml-skills/machine-learning-system-interview/machine-learning-system-roadmap
+url: ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap
 layout: post
 ---
 
@@ -41,5 +41,5 @@ During the learning journey, remember that no one can learn those topics once an
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[the-road]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-roadmap/the-road.jpg
-[software-architecture-stack]: /assets/images/ml-skills/machine-learning-system-interview/machine-learning-system-roadmap/software-architecture-stack.png
+[the-road]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap/the-road.jpg
+[software-architecture-stack]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap/software-architecture-stack.png
