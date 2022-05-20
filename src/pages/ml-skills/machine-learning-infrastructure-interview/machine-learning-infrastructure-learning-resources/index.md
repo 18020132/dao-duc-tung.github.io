@@ -5,9 +5,9 @@ layout: post
 
 ![bookshelf][bookshelf]
 
-In this post, I will share with you a comprehensive list of the interview questions and learning sources that you might need to study before your interview. The real interview questions that I was interviewed will be share in the next post.
+In this post, I will share a comprehensive list of the interview questions and learning sources that you might need to study before your interview. The actual interview questions that I was asked will be shared in the next post.
 
-The learning resources that you will see in this post are the resources that I had been learning for years. You might not find any other detailed list dedicated for machine learning infrastructure interview like in this post anywhere else.
+The learning resources that you will see in this post are the resources I have been learning for years. You might not find any other detailed list dedicated to machine learning infrastructure interviews like in this post anywhere else.
 
 <toc>
 
@@ -98,7 +98,7 @@ The learning resources that you will see in this post are the resources that I h
 - [The Data Engineering Cookbook](https://github.com/andkret/Cookbook)
 - [MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
 - [MLOps Basics](https://www.ravirajag.dev/blog)
-- [Deploying Python ML Models with Flask, Docker and Kubernetes](https://alexioannides.com/2019/01/10/deploying-python-ml-models-with-flask-docker-and-kubernetes/)
+- [Deploying Python ML Models with Flask, Docker, and Kubernetes](https://alexioannides.com/2019/01/10/deploying-python-ml-models-with-flask-docker-and-kubernetes/)
 - [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
 - [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
 - [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
@@ -123,7 +123,7 @@ The learning resources that you will see in this post are the resources that I h
 
 ## Others
 
-Below is some other useful resources that you might need them.
+Below are some other useful resources that you might need them.
 
 - [Awesome Software Engineering Interview Github](https://github.com/imkgarg/Awesome-Software-Engineering-Interview)
 - [Backend development best practices](https://github.com/futurice/backend-best-practices)
@@ -138,7 +138,7 @@ Below is some other useful resources that you might need them.
 
 ## Ending
 
-I know that the list here is very long but don't be scared, you can start slow, _crawl_, _walk_, then _run_. At least you are better than me in the sense that you have an overview picture before starting it.
+I know that the list here is very long but don't be scared. You can start slow, _crawl_, _walk_, then _run_. At least you are better than me in the sense that you have an overview picture before starting it.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

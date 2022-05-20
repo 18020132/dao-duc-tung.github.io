@@ -7,9 +7,11 @@ layout: post
 
 _Save the best for the last_.
 
-Today in this post, I will finally reveal the real interview questions of the **Machine Learning Infrastructure Interview** that I experienced.
+Today in this post, I will finally reveal the actual interview questions of the **Machine Learning Infrastructure Interview** that I experienced.
 
-The questions will not be organized by the group of question types such as Coding tests, Computer science fundamentals, System design, MLOps, etc. Instead, I will group them by the interview round types such as Hard round and Soft round so you can have an idea of what the question types' distribution looks like in an interview. All questions are presented in the order of time during the interview. This means for each set of questions, you are seeing the real questions in the real order in a real interview. Moreover, I will give you instructions to get you through some questions. For the interview tips, please refer to the previous post **[Machine Learning Infrastructure Interview Process](../machine-learning-infrastructure-interview-process/)** in this series.
+I don't organize the questions in the order of the group of question types such as Coding tests, Computer science fundamentals, System design, MLOps, etc. Instead, I will group them by the interview round types, such as Hard round and Soft round, so you can understand what the question types' distribution looks like in an interview.
+
+All questions are presented in the order of time during the interview. This means for each set of questions, you are seeing the real questions in the actual order in a real interview. Moreover, I will give you instructions to get you through some questions. For the interview tips, please refer to the previous post **[Machine Learning Infrastructure Interview Process](../machine-learning-infrastructure-interview-process/)** in this series.
 
 <toc>
 
@@ -73,7 +75,7 @@ The questions will not be organized by the group of question types such as Codin
   - A _soft_ question to check the way you approach and solve a problem
 - When you use some services that people built, do you try to understand how it works?
   - A _soft_ question to check your engineering mindset
-- Implement 2 threads that alternatively print out numbers from 1 to 100. For example, thread A prints 1, then thread B prints 2, then thread A prints 3, etc.
+- Implement two threads that alternatively print out numbers from 1 to 100. For example, thread A prints 1, thread B prints 2, thread A prints 3, etc.
 - What happens when you type a command in the terminal?
 - System design: Design the API Rate Limiting system
 - Coding test: Reverse nodes in a linked list by every k element. [LeetCode link](https://leetcode.com/problems/reverse-nodes-in-k-group/)
@@ -81,27 +83,27 @@ The questions will not be organized by the group of question types such as Codin
 ### Hard round 06
 
 - Interviewer: Team Lead, ML Engineer
-- Talk about 2 projects in which you built ML systems
+- Talk about two projects in which you built ML systems
 - Define and differentiate Supervised, Unsupervised, and Semi-supervised ML
 - Define and differentiate input/output of Object Detection, Image Classification, Image Segmentation
 - What things need to be logged for a training experiment?
-- What libraries do you use for every stage of an ML lifecycle such as data engineering, model development, and model deployment?
-- Do you have experience in using NVIDIA technologies such as CUDA programming, and `nvidia-docker`?
+- What libraries do you use for every stage of an ML lifecycle, such as data engineering, model development, and model deployment?
+- Do you have experience using NVIDIA technologies such as CUDA programming and `nvidia-docker`?
 - Do you have experience in using NVIDIA for streaming video?
 
 ### Hard round 07
 
 - Interviewer: Senior Vice President Lead, Assistant Vice President Lead, Solution Architect
 - Introduce yourself
-- Talk about 2 projects in which you built ML systems
+- Talk about two projects in which you built ML systems
 - Talk about your major in university and some awards
 - Do you have experience in TensorRT?
 - Do you have experience in Kubernetes?
 - What do we need to consider when designing an ML system?
-  - This is a very broad question to test your system design skill, especially your ML system design skill. You should be familiar with the ML system's components, ML lifecycle, ML Infrastructure layers, and ML Platform
+  - This is an extensive question to test your system design skill, especially your ML system design skill. You should be familiar with the ML system's components, ML lifecycle, ML Infrastructure layers, and ML Platform
 - How many MLOps team members should we have?
   - A _soft_ question to check your understanding of how ML team members collaborate and work together, what their responsibilities are at different stages of an ML project
-- What are your plans for the next 3 years, 5 years?
+- What are your plans for the next three years, five years?
 - What are your hobbies?
 
 ### Hard round 08
@@ -120,7 +122,7 @@ The questions will not be organized by the group of question types such as Codin
 - Talk about projects in which you train some models
 - Have you used Horovod?
 - Do you have experience in distributed training?
-- Do you have experience in serving models for hundreds of thousands of users or more?
+- Do you have experience serving models for hundreds of thousands of users or more?
 - Coding test: implement binary search
 
 ### Hard round 09
@@ -131,10 +133,10 @@ The questions will not be organized by the group of question types such as Codin
 - Talk about your Kubernetes experience
 - What are `Deployment`, `Pod`, `Service`, `Ingress` in Kubernetes?
 - What are the differences between `ReplicaSets` and `StatefulSets`?
-- Coding test: You will be given a BST, in which exactly two nodes have been swapped on purpose. Recover this BST without changing its data structure. [LeedCode link](https://leetcode.com/problems/recover-binary-search-tree/)
+- Coding test: Given a BST, in which exactly two nodes have been swapped on purpose. Recover this BST without changing its data structure. [LeedCode link](https://leetcode.com/problems/recover-binary-search-tree/)
 - Talk about your C++ experience
 - Talk about some ML libraries that you used for different stages of the ML lifecycle
-  - You should be familiar with tools to version data, version, and track training experiments, deploy models, CI/CD automation, etc.
+  - You should be familiar with tools to version data, version and track training experiments, deploy models, CI/CD automation, etc.
 - Talk about your Cloud services experience
 - Talk about your distributed training experience
 
@@ -143,7 +145,7 @@ The questions will not be organized by the group of question types such as Codin
 - Interviewer: Team Manager
 - Introduce yourself
 - Talk about your experience in building an ML system
-- In an ML pipeline, different steps have different dependencies, how to run them in order?
+- In an ML pipeline, different steps have different dependencies. How to run them in order?
   - This is a coding question. The answer is to use topological sort.
   - Follow-up questions: How to implement topological sort? How to detect the cyclic dependencies?
 - How do you pass the results to the next step in the training pipeline?
@@ -153,7 +155,7 @@ The questions will not be organized by the group of question types such as Codin
 - What are the differences between a `thread` in C++ and Python?
 - When to use multi-threading?
 - What do we need to do if we have too much data that cannot fit 1 GPU?
-- Explain any kind of `AllReduce`?
+- Explain any type of `AllReduce`?
 - How do you merge the gradients in distributed training?
 - How do you detect when a GPU is overloaded or when there's a problem with the network?
 
@@ -185,14 +187,14 @@ The questions will not be organized by the group of question types such as Codin
 - What is MLOps? What do you think about MLOps?
   - An open question to see your viewpoint when it comes to MLOps
 - What do you think about different teams in an organization?
-  - An open question to check how you collaborate with teammates and what you think about different team members in different roles with different responsibilities
+  - An open question to check how you collaborate with teammates and what you think about different team members in various roles with different responsibilities
 - What approach do you take when you work with team members as a leader?
 - Do you think embedded systems or hardware knowledge are needed for a computer science engineer?
   - An open question to see your viewpoint as an engineer
 
 ## Ending
 
-And that's all for the **Machine Learning Infrastructure Interview** series. Thank you my reader to be a part of this series and to make it happen. Please don't hesitate to contact me if you have any questions. Hope to see you again soon in the future series when I reach the next level of my career path.
+And that's all for the **Machine Learning Infrastructure Interview** series. Thank you, my reader, for being a part of this series and making it happen. Please don't hesitate to contact me if you have any questions. I hope to see you again soon in the future series when I reach the next level of my career path.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
