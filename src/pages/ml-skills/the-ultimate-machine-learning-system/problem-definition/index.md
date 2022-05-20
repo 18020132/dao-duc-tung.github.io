@@ -105,6 +105,10 @@ The last step is to summarize all the answers to build a project plan that inclu
 - Evaluation methods
 - Tools and techniques
 
+## Ending
+
+This post is a simple version of the ML problem definition process. The stakeholders, product owner, product manager, and engineers need to be involved in this process to define the ML problem thoughtfully and set the right expectation for each business decision.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [planning]: /assets/images/ml-skills/the-ultimate-machine-learning-system/problem-definition/planning.jpg

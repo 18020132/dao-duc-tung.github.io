@@ -178,6 +178,10 @@ This stage allows you to answer questions like how quickly your model decays in 
 
 After you reached the limit of simple models and your use case demands significant model improvement.
 
+## Ending
+
+Some people define the ML lifecycle differently but in general, things just happen around four pillars which are problem definition, data engineering, ML model development, and deployment. I do make it simple, but I don't oversimplify it.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [processes]: /assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle/processes.jpg

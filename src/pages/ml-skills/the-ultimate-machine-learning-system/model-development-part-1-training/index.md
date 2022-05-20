@@ -187,6 +187,10 @@ To solve this, we can use the **pipeline parallelism** technique to make differe
 
 Many organizations use both data parallelism and model parallelism for better utilization of their hardware. However, the setup to use both methods can require significant engineering effort.
 
+## Ending
+
+This post covered the common steps when developing ML models which are model selection and model training processes. The distributed training is usually handled by the ML infrastructure engineer or ML platform engineer. A data scientist doesn't necessarily need to know about it.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [coding]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/coding.jpg

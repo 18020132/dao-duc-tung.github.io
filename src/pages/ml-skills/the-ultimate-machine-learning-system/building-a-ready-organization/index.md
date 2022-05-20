@@ -137,6 +137,10 @@ There're two common mistakes that some organizations' transitions take in:
 - Viewing AI as a plug-and-play technology with immediate returns.
 - Thinking too narrowly about AI applications.
 
+## Ending
+
+Preparing your organization to take advantage of ML is a long journey with much careful thought. When you start the ML journey, please take note of the three main phases above and the common mistakes. Let's build your own ML-ready team!
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [ready]: /assets/images/ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization/ready.jpg

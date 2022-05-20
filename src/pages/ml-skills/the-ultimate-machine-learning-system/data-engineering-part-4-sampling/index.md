@@ -92,6 +92,10 @@ Class imbalance for binary problem is much easier to deal with than the problems
 - Bagging: reduces variance and helps to avoid overfitting
 - Boosting: converts weak learners to strong ones
 
+## Ending
+
+In this post, we discussed sampling, data leakage, and imbalanced data. Some sampling methods only work with some problems, some cause the data leakage, and some help us to solve the data-imbalanced issue. In production, things are different. For example, we don't use SMOTE in large-scale applications. To be aware of this, you might need to search for more information about ML system design in production.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [sampling]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling/sampling.jpg

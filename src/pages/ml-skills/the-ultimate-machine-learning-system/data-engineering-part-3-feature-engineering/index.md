@@ -111,6 +111,10 @@ Some example of image augmentation:
   - Neural style transfer
   - GAN data augmentation
 
+## Ending
+
+Feature engineering is an art. Sometimes we need some levels of experience to select features. Sometimes we even need to borrow some terms from other fields like mechanical engineering or electronic engineering to generate some special meaningful features such as homogeneous transformation matrix, Euler angles, etc.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [understand]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering/understand.jpg

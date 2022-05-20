@@ -205,6 +205,10 @@ To learn more, refer to:
 - [QuickSight Workshops](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/cd8ebba2-2ef8-431a-8f72-ca7f6761713d/en-US)
 - [Amazon Quicksight Workshop Covid 19 Data Analysis](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/4c08a00f-9400-4a0f-aa3e-4c458d2a9983/en-US/)
 
+## Ending
+
+This post covered the typical data pipeline for an ML application in production. In large-scale applications, the data pipeline might require some data-streaming infrastructure, a feature store that can share features among teams, etc. The data transformation part might require some levels of automation and parallelism to transform data quickly to serve the online ML models.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [data-ingestion]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-pipeline/data-ingestion.png

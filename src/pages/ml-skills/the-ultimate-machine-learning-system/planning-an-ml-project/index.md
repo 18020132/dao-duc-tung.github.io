@@ -126,12 +126,12 @@ We will discuss further this ML lifecycle in the next post.
 
 ### Timeline expectation
 
-| Week #             | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  | 12  |
-| ------------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Problem definition | [x] |     |     |     |     |     |     |     |     |     |     |     |
-| Data engineering   |     | [x  | x   | x]  |     |     |     |     |     |     |     |     |
-| Model development  |     |     |     |     | [x  | x   | x   | x]  |     |     |     |     |
-| Deployment         |     |     |     |     |     |     |     |     | [x  | x   | x   | x]  |
+| Week #             | 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  |
+| ------------------ | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Problem definition | [x  | x]  |     |     |     |     |     |     |     |     |     |
+| Data engineering   |     | [x  | x   | x   | x]  |     |     |     |     |     |     |
+| Model development  |     |     |     |     | [x  | x   | x   | x]  |     |     |     |
+| Deployment         |     |     |     |     |     |     |     | [x  | x   | x   | x]  |
 
 ## What early questions should I ask in deployment?
 
@@ -148,6 +148,10 @@ Answering these questions early in the productions process helps you avoid issue
 - Does the model's performance meet the business need?
   - Think about how the business conditions will change over time such as goals, objectives, and constraints. Your model might need to be adjusted as conditions change.
   - Do you have product lines launching? Are there new regulations in your business sector? Are you expanding into new geographies?
+
+## Ending
+
+This post covered the four most important questions you should ask before planning your ML project. Be aware that there are still more questions you might need to consider when you answer those four questions.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

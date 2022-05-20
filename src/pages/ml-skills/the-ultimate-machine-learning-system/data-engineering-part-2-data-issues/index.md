@@ -150,6 +150,10 @@ The table below compares hand labeling and programmatic methods.
 
 ![active-learning][active-learning]
 
+## Ending
+
+In this post, we covered some common data issues and some solutions to solve them. In reality, you might need to consider whether you want to solve some issues or you might even need to train some ML models with bad data to create some baselines. This really depends on the project and on your experience.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [data-issues]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues/data-issues.jpg

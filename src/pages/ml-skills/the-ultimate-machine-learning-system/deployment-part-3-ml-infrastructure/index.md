@@ -115,6 +115,10 @@ The development environment includes the following concerns.
     - Bring the development environment closer to the production environment
     - Make the debugger easier
 
+## Ending
+
+A typical ML Infrastructure has four layers and the ML Platform is the third layer of it. ML Infrastructure is just a part of an ML System besides the hardware, data, ML algorithms, and the interface. This post helps you to differentiate the ML System, ML Infrastructure, and ML Platform in a simple way.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [ml-system]: /assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure/ml-system.png

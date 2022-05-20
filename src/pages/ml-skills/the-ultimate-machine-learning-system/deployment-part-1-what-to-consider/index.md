@@ -166,6 +166,10 @@ There are several ways of testing in production.
   - Mix them together and show them to users
   - See which recommendations are clicked on
 
+## Ending
+
+Deployment is more engineering with much of the knowledge transferred from DevOps or Software Engineering in general. Each of the aspects we covered in this post plays an equally important role in the deployment process. In the next post, we will talk another essential aspect which is about maintenance and monitoring.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [deployment]: /assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider/deployment.jpg

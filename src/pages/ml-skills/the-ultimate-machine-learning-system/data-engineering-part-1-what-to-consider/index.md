@@ -133,6 +133,10 @@ There're some barriers in Stream processing adoption such as:
 - Mental shift
 - Python incompatibility
 
+## Ending
+
+Data engineering is an essential phase of the ML lifecycle. In this post, we have talked about some important things to consider when we reach this phase. In reality, there're many more things you might need to think about beyond the list provided above. Be ready for the changes in a data-centric world.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [data-engineering]: /assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider/data-engineering.jpg

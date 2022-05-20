@@ -109,6 +109,10 @@ Telemetry is a system's outputs collected at run time. The word "telemetry" come
 
 In ML, observability encompasses interpretability. Interpretability helps us understand how an ML model works, and observability helps us understand how the entire ML system, which includes the ML model, works.
 
+## Ending
+
+The junior engineers usually focus on the fun parts which are data engineering or model development. To build a successful ML system, we need a maintainable and observable infrastructure to run the ML models on. This post covered some issues when deploying such kind of infrastructure but they are not enough. In reality, we don't know what bad things will happen in the next second. So prepare for it!
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [monitoring]: /assets/images/ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance/monitoring.jpg

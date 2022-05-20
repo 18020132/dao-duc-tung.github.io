@@ -94,6 +94,10 @@ We need to perform several actions as below.
 - Metrics to compare: latency, memory usage, prediction cost, accuracy, etc.
 - Compare with other systems: `MLPerf`
 
+## Ending
+
+Without the baseline, you don't know how much your model is improved after each experiment. This post just gives you some common keywords when comparing your model with the baseline. You still might need to search for more information based on these keywords.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [assessment]: /assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation/assessment.jpg
