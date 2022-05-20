@@ -18,8 +18,10 @@ def generateTOC(filename, out_filename, max_level=2):
                     temp["text"] = searchObj.group(2)
                     temp["link"] = "#" + \
                         searchObj.group(2).replace(" ", "-").lower()
+                    # Remove special characters
                     temp["link"] = temp["link"].replace(".", "")
                     temp["link"] = temp["link"].replace(",", "")
+                    temp["link"] = temp["link"].replace("?", "")
                     contents.append(temp)
 
     toctext = "## Table of Contents\n"
