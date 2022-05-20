@@ -136,6 +136,10 @@ Below is some other useful resources that you might need them.
   - [MLflow](https://mlflow.org/)
   - [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/#)
 
+## Ending
+
+I know that the list here is very long but don't be scared, you can start slow, _crawl_, _walk_, then _run_. At least you are better than me in the sense that you have an overview picture before starting it.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [bookshelf]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources/bookshelf.jpg

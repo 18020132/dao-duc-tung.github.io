@@ -130,6 +130,10 @@ In the previous section where I describe the Offer round, you can see that it's 
 
 For the tips, I will just leave here the link to a video about [Tips for negotiating your salary](https://youtu.be/u9BoG1n1948). Watch it and you will know what you need to do.
 
+## Ending
+
+And that's it for the interview process. It's quite similar to the other interviews for engineering roles. In the next post, I will share with you all the learning resources that I have been learning for years along my Machine Learning Systems Design journey.
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [micro]: /assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/micro.jpg
