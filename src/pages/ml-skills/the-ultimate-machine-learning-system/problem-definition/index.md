@@ -5,13 +5,13 @@ layout: post
 
 ![planning][planning]
 
-Today in this post, we will discuss the first stage in an ML project - the problem definition stage. This Problem definition stage is not like the other stages which are self-explained. We need to clearly answer a bunch of questions at the very beginning when starting an ML project.
+Today in this post, we will discuss the first stage in an ML project - the problem definition stage. This Problem definition stage is not like the other stages, which are self-explained. We need to answer many questions at the very beginning when starting an ML project.
 
 <toc>
 
 ## Understand business requirements
 
-The first step is to form a business question, or goals.
+The first step is to form a business question or goals.
 
 > Goals define the general purpose of a project.
 
@@ -19,7 +19,7 @@ For example, the goals of a Visual Search-Based Recommendation System might be:
 
 - Minimize irrelevant search results
 - Maximize revenue of new products by recommending them
-- Maximize user's engagement
+- Maximize user engagement
 
 After that, we need to be more specific about the project's critical features by defining the objectives.
 
@@ -36,7 +36,7 @@ Objectives can be multiple. When there're multiple objectives, it might be a goo
 
 - Optimizing for one objective when training ML models is easier than optimizing for multiple objectives.
 - Easier to tweak the system without retraining models
-- Easier for maintenance since different objectives might need different maintenance schedules.
+- Easier to maintain since different objectives might need different maintenance schedules.
 
 ## Analyze supporting information
 
@@ -53,13 +53,13 @@ The second step is to list down constraints.
 
 ### Performance
 
-- **Baselines**: What are you comparing the system to? E.g. existing solutions, competitors' solutions, etc.
-- **Usefulness threshold**: How fast/good the solution needs to be for it to be useful?. E.g. self-driving cars need human-level performance to be useful; a system that predicts what word a user will type next on their phone doesn't., etc.
-- **Tradeoffs**: What's more important - false negatives or false positives? E.g. covid screening must not have false negatives (patients with covid shouldn't be classified as no covid). Fingerprint unlocking must not have false positives (unauthorized people shouldn't be given access).
+- **Baselines**: What are you comparing the system to? E.g., existing solutions, competitors' solutions, etc.
+- **Usefulness threshold**: How fast/reasonable the solution needs to be for it to be useful?. E.g., self-driving cars need human-level performance to be useful; a system that predicts what word a user will type next on their phone doesn't., etc.
+- **Tradeoffs**: What's more critical - false negatives or false positives? E.g., covid screening must not have false negatives (patients with covid shouldn't be classified as no covid). Fingerprint unlocking must not have false positives (unauthorized people shouldn't be given access).
 - **Interpretability**: Does the solution need to be interpretable? If yes, to whom?
 - **Confidence measurement**: Does the solution need the confidence score? If yes:
   - What is the threshold to be usable?
-  - What do you want to do with predictions below that threshold? discard it, loop in humans, ask for more info from users?
+  - What do you want to do with predictions below that threshold? Discard it, loop in humans, and ask for more info from users?
 
 ### Costs and benefits
 
@@ -82,7 +82,7 @@ The second step is to list down constraints.
 
 ### Techincal constraints
 
-Any tool or system that the solution must be compatible with? E.g. legacy infrastructure is a huge bottleneck for organizations to adopt ML.
+Any tool or system that the solution must be compatible with? E.g., legacy infrastructure is a huge bottleneck for organizations to adopt ML.
 
 ### Risks
 

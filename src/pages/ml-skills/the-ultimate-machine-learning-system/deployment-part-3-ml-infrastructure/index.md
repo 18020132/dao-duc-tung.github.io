@@ -5,19 +5,19 @@ layout: post
 
 ![ml-system][ml-system]
 
-ML system design is the process of defining the **interface**, **algorithms**, **data**, **infrastructure**, and **hardware** for an ML system to satisfy specified requirements. When it comes to ML infrastructure, you might have heard about a bunch of keywords like microservices, lambda functions, load balancers, auto-scaling, serverless, etc. Indeed, ML infrastructure is complex. This post gives you a high-level overview of what ML infrastructure is and which components aggregate it.
+ML system design is the process of defining the **interface**, **algorithms**, **data**, **infrastructure**, and **hardware** for an ML system to satisfy specified requirements. When it comes to ML infrastructure, you might have heard about many keywords like microservices, lambda functions, load balancers, auto-scaling, serverless, etc. Indeed, ML infrastructure is complex. This post gives you a high-level overview of ML infrastructure and which components aggregate it.
 
 <toc>
 
-In general, infrastructure is the set of fundamental facilities and systems that support the sustainable functionality of households and firms. ML infrastructure is the set of fundamental facilities that support the development and maintenance of ML systems. Every company's infrastructure needs are different. For example, a simple ML app doesn't even need a dedicated ML infrastructure, the vast majority of apps at a reasonable scale just need a simple ML infrastructure, some apps from big tech companies need highly specialized infrastructure which supports millions of requests per hour.
+In general, infrastructure is the set of basic facilities and systems that support the sustainable functionality of households and firms. ML infrastructure is the set of basic facilities that support the development and maintenance of ML systems. Every company's infrastructure needs are different. For example, a simple ML app doesn't even need a dedicated ML infrastructure, the vast majority of apps at a reasonable scale just need a simple ML infrastructure, some apps from big tech companies need highly specialized infrastructure which supports millions of requests per hour.
 
-The ML infrastructure has four main layers including the storage and computes layer, resource management layer, ML platform layer, and development environment layer.
+The ML infrastructure has four primary layers, including the storage and computes layer, resource management layer, ML platform layer, and development environment layer.
 
 ![infra-layers][infra-layers]
 
 ## Storage and compute
 
-Storage is where data is collected and stored. Some examples are HDD, SSD, data lake, and data warehouse. Some services and platforms are very famous such as AWS S3, Redshift, Snowflake, BigQuery, etc. Most companies use storage provided by other companies (e.g. cloud). Storage has become so cheap that most companies just store everything.
+Storage is where data is collected and stored. Some examples are HDD, SSD, data lake, and data warehouse. Some services and platforms are very famous such as AWS S3, Redshift, Snowflake, BigQuery, etc. Most companies use storage provided by other companies (e.g., cloud). Storage has become so cheap that most companies just store everything.
 
 Compute is the engine to execute our jobs. In short, they are CPU, GPU, memory, and cloud computing. When talking about computing, there are some aspects we should consider.
 
@@ -28,11 +28,11 @@ Compute is the engine to execute our jobs. In short, they are CPU, GPU, memory, 
 
 ## Resource management
 
-ML workloads are repetitive with lots of dependencies such as batch prediction, periodical retraining, periodical analytics, etc.
+ML workloads are repetitive with many dependencies such as batch prediction, periodical retraining, periodical analytics, etc.
 
 ### Scheduler and Orchestrator
 
-In the resource management context, we want to use Scheduler or Orchestrator. Schedulers are cron programs that can handle dependencies. Most schedulers require to specify the workloads as Directed Acyclic Graphs (DAGs). The scheduler can handle event-based and time-based triggers. If a job fails, we need to specify how many times to retry before giving up. Jobs can be queued, prioritized, and allocated resources. Schedulers are aware of the resources available and resources needed for each job. There are some known challenges to designing a scheduler such as:
+In the resource management context, we want to use Scheduler or Orchestrator. Schedulers are cron programs that can handle dependencies. Most schedulers require to specify the workloads as Directed Acyclic Graphs (DAGs). The scheduler can handle event-based and time-based triggers. If a job fails, we need to determine how many times to retry before giving up. Jobs can be queued, prioritized, and allocated resources. Schedulers are aware of the resources available and resources needed for each job. There are some known challenges to designing a scheduler, such as:
 
 - General-purpose schedulers are extremely hard to design
 - Need to handle any workload with any number of concurrent machines
@@ -40,19 +40,19 @@ In the resource management context, we want to use Scheduler or Orchestrator. Sc
 
 Scheduler helps to define when to run jobs. It handles jobs, queues, user-level quotas, etc. The scheduler is typically used for periodical jobs like batch jobs.
 
-Orchestrator helps to define where to run jobs. It handles containers, instances, clusters, replication, etc. It also helps in provisioning to allocate more instances to the instance pool as needed. Orchestrator is typically used for long-running jobs like services.
+Orchestrator helps to define where to run jobs. It handles containers, instances, clusters, replication, etc. It also helps to allocate more instances to the instance pool as needed. Orchestrator is typically used for long-running jobs like services.
 
-Schedulers usually have some orchestrating capacity and vice versa. Often, a scheduler is run on top of orchestrators. For example, running Spark's job on top of k8s, running AWS Batch scheduler on top of EKS.
+Schedulers usually have some orchestrating capacity and vice versa. Often, a scheduler is run on top of orchestrators. For example, running Spark's job on top of k8s and running AWS Batch scheduler on top of EKS.
 
 ### ML workflow management
 
 ![ml-workflow-management][ml-workflow-management]
 
-The ML workflow can be defined by using a programming language (Python), or configuration files (YAML). Some tool examples are Airflow, Argo, KubeFlow, Metaflow.
+The ML workflow can be defined by using a programming language (Python) or configuration files (YAML). Some tool examples are Airflow, Argo, KubeFlow, and Metaflow.
 
 ## ML platform
 
-To deploy an image classification model, X's team needs to build tools like feature store, model store, model deployment, etc. To deploy an object detection model, Y's team needs to build the same tools. The company decides to build _a centralized platform_ to provide the above tools for multiple use cases. This centralized platform is the ML platform.
+To deploy an image classification model, X's team needs to build tools like feature store, model store, model deployment, etc. Y's team needs to create the same tools to deploy an object detection model. The company decided to build _a centralized platform_ to provide the above tools for multiple use cases. This centralized platform is the ML platform.
 
 ML platform consists of three key components.
 
@@ -117,7 +117,7 @@ The development environment includes the following concerns.
 
 ## Ending
 
-A typical ML Infrastructure has four layers and the ML Platform is the third layer of it. ML Infrastructure is just a part of an ML System besides the hardware, data, ML algorithms, and the interface. This post helps you to differentiate the ML System, ML Infrastructure, and ML Platform in a simple way.
+A typical ML Infrastructure has four layers, and the ML Platform is the third layer of it. ML Infrastructure is just a part of an ML System besides the hardware, data, ML algorithms, and the interface. This post helps you differentiate the ML System, ML Infrastructure, and ML Platform in a simple way.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

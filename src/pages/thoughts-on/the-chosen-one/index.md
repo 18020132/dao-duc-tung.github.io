@@ -9,7 +9,7 @@ The time has come. When you have learned enough experience, understanding, and p
 
 ### The weak one
 
-There are always people like that. They are good, talented, but they usually need a perfect environment in which they can thrive such as people who need a completely quiet space to work. They are people who usually complain about their bad luck, about the injustice of life. If you meet them, sympathize with them, even help them, but don't choose them.
+There are always people like that. They are excellent and talented, but they usually need a perfect environment in which they can thrive, such as people who need a tranquil space to work. They are people who typically complain about their bad luck, about the injustice of life. If you meet them, sympathize with them, even help them, but don't choose them.
 
 ### The strong one
 
@@ -17,7 +17,7 @@ These people are a little less. They are people who are good at enduring. They c
 
 ### The chosen one
 
-If the weak one falls in the face of difficulties, the strong one endures hardships and looks for opportunities to rise, then the chosen one benefits from what the majority consider difficult. It could be genetics, upbringing, or opportuneness. If you are lucky enough to come across such a person, lower your ego, and politely invite them to be your companion.
+Suppose the weak one falls in the face of difficulties. In that case, the strong one endures hardships and looks for opportunities to rise, then the chosen one benefits from what the majority consider difficult. It could be genetics, upbringing, or opportuneness. If you are lucky enough to come across such a person, lower your ego and politely invite them to be your companion.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

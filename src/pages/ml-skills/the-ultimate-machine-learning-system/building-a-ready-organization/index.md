@@ -5,9 +5,9 @@ layout: post
 
 ![ready][ready]
 
-Behind successful ML projects are well-organized teams. Today we will discuss the needed components for the successful organizational adoption of ML. This post focuses on business leaders and other decision-makers currently or potentially involved in ML projects.
+Behind successful ML projects are well-organized teams. Today we will discuss the needed components for the successful organizational adoption of ML. This post focuses on business leaders and decision-makers currently or potentially involved in ML projects.
 
-To figure out which components are needed, we are going to answer two main questions including:
+To figure out which components are needed, we are going to answer two main questions:
 
 - How to prepare my organization for using ML?
 - How to start my ML journey?
@@ -28,13 +28,13 @@ To progress from having few or no ML projects to advanced production ML expertis
 
 Firstly, we should concern about the infrastructure. Usually, in the early stage of ML adoption, your organization will want to implement an ML strategy where you don't have to start from scratch.
 
-You want to accelerate the ML adoption process by using existing cloud-based ML solutions on the market such as Google Cloud Platform, Microsoft Azure, or Amazon Web Services.
+You want to accelerate the ML adoption process by using existing cloud-based ML solutions on the market, such as Google Cloud Platform, Microsoft Azure, or Amazon Web Services.
 
 By taking advantage of the cloud services, you don't need to worry about the on-premise infrastructure development or training, so your team can experiment at a rapid pace.
 
 #### Problem selection
 
-Secondly, we should find the right problem to solve in order to yield early wins. Choosing worthy problems that:
+Secondly, we should find the right problem to solve to yield early wins. Choosing worthy issues that:
 
 - Get early executive buy-in
 - Are data-rich
@@ -51,11 +51,11 @@ We use failure as an iterative opportunity to become fault-tolerant and find a s
 
 #### Scale
 
-Last but not least, after testing the ML project against design, idea, assumptions, and determining potential feasibility, we should scale it to solve challenges across the business before making large production investments.
+Last but not least, after testing the ML project against design, idea, assumptions, and determining potential feasibility, we should scale it to solve challenges across the business before making significant production investments.
 
 ### A data strategy
 
-Firstly, we should care about the readiness of your organization's current data. Based on the status of readiness, we will have the corresponding solutions. The table below shows three statuses of data readiness.
+Firstly, we should care about your organization's current data readiness. Based on the status of readiness, we will have the corresponding solutions. The table below shows three statuses of data readiness.
 
 | #   | Status     | Description                                                                  | Solution                                       |
 | --- | ---------- | ---------------------------------------------------------------------------- | ---------------------------------------------- |
@@ -70,7 +70,7 @@ Secondly, we need to think about the strategic plans to collect and use data. Fo
 
 ### A culture of learning and collaboration
 
-Before going to determine the learning and collaboration culture, we should have an idea of how an ML team looks like. The table below shows possible roles in an ML team.
+Before determining the learning and collaboration culture, we should have an idea of what an ML team looks like. The table below shows possible roles in an ML team.
 
 | #   | Role                          | Responsibility                                              | Skills                                                                                 |
 | --- | ----------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ The skills needed for some roles overlap each other are shown in the below figur
 
 #### A culture of learning
 
-An ML team can grow rapidly through several development phases, which include inter-collaboration, training, and hiring domain experts.
+An ML team can grow rapidly through several development phases, including inter-collaboration, training, and hiring domain experts.
 
 **Phase 1:**
 
@@ -120,15 +120,15 @@ To support the culture shift, as a leader, you can:
 
 ![journey][journey]
 
-The research team, software engineering team, and HR teams are involved to determine how ML will be used in your organization. They will also identify sources of ML adoption challenges, and develop clear strategies to overcome barriers.
+The research team, software engineering team, and HR teams determine how ML will be used in your organization. They will also identify sources of ML adoption challenges and develop clear strategies to overcome barriers.
 
 An organization's ML journey contains three main phases as below.
 
 | #   | Phase                         | ML strategy                                                                                                                                          | Data strategy                                                                                                         | Culture                                                                                                  |
 | --- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | 1   | Limited expertise             | - Start with important projects as POC<br />- Gain momentum using these projects<br />- Explain WHY shifting towards AI                              | - Explore where data resides<br />- Document if data can be used<br />- Prepare a timeline for building data pipeline | - Allow teams to explore data<br />- Team up with external resources<br />- Leverage managed services    |
-| 2   | Few production workloads      | - Build AI capabilities for the entire organization<br />- Scale from POC to production<br />- Collaborate between teams                             | - Consolidate various data sources into 1 repo<br />- Build data literacy across organization                         | - Build internal AI team<br />- Train existing workforce using online and in-person courses              |
-| 3   | Multiple production workloads | - Build long-term AI strategy into core business<br />- Create AI leadership to maintain the long-term vision<br />- Create a robust hiring pipeline | - Add useful external data to improve quality and effectiveness of data                                               | - Build AI org that collaborates with internal teams<br />- Continue to explore and experiment with data |
+| 2   | Few production workloads      | - Build AI capabilities for the entire organization<br />- Scale from POC to production<br />- Collaborate between teams                             | - Consolidate various data sources into one repo<br />- Build data literacy across the organization                   | - Build internal AI team<br />- Train existing workforce using online and in-person courses              |
+| 3   | Multiple production workloads | - Build long-term AI strategy into core business<br />- Create AI leadership to maintain the long-term vision<br />- Create a robust hiring pipeline | - Add useful external data to improve the quality and effectiveness of data                                           | - Build AI org that collaborates with internal teams<br />- Continue to explore and experiment with data |
 
 ## Common mistakes
 
