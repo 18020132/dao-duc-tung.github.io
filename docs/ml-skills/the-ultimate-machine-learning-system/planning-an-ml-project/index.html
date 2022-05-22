@@ -81,7 +81,7 @@
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/planning-an-ml-project/planning.jpg" alt="planning"></p>
-<p>Before deep-diving into the ML system design, today in this post, we will go through a plan of an ML project by answering four questions. These four questions will help us to get an idea of what we should concern about and what expectations we should set. The four questions include:</p>
+<p>Before deep-diving into the ML system design, today in this post, we will go through a plan of an ML project by answering four questions. These four questions will help us get an idea of what we should be concerned about and what expectations we should set. The four questions include:</p>
 <ul>
 <li>Is an ML solution appropriate for my problem?</li>
 <li>Is my data ready for ML?</li>
@@ -90,20 +90,21 @@
 </ul>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
-<li><a href="#is-an-ml-solution-appropriate?">Is an ML solution appropriate?</a> </li>
-<li><a href="#is-my-data-ready?">Is my data ready?</a> </li>
-<li><a href="#how-will-ml-impact-the-project-timeline?">How will ML impact the project timeline?</a> </li>
-<li><a href="#what-early-questions-should-i-ask-in-deployment?">What early questions should I ask in deployment?</a> </li>
+<li><a href="#is-an-ml-solution-appropriate">Is an ML solution appropriate?</a> </li>
+<li><a href="#is-my-data-ready">Is my data ready?</a> </li>
+<li><a href="#how-will-ml-impact-the-project-timeline">How will ML impact the project timeline?</a> </li>
+<li><a href="#what-early-questions-should-i-ask-in-deployment">What early questions should I ask in deployment?</a> </li>
+<li><a href="#ending">Ending</a> </li>
 </ol>
 <h2 id="is-an-ml-solution-appropriate">Is an ML solution appropriate?</h2>
 <p>To know if an ML solution is appropriate, we will answer a few questions.</p>
 <h3 id="how-to-determine-if-ml-is-the-right-solution">How to determine if ML is the right solution?</h3>
-<p>Businesses can determine if ML is the right solution if <strong>the problem is clear and quantifiable</strong>. If this is the case, ML can provide value in a model&#39;s predictions when compared to specific business objectives and success criteria.</p>
+<p>Businesses can determine if ML is the right solution if <strong>the problem is clear and quantifiable</strong>. If this is the case, ML can provide value in a model&#39;s predictions compared to specific business objectives and success criteria.</p>
 <h3 id="what-aspects-of-the-problem-make-it-a-good-fit-to-apply-ml">What aspects of the problem make it a good fit to apply ML?</h3>
-<p>To be able to answer this question, we need to know when to use and when not to use ML.</p>
+<p>To answer this question, we need to know when to use and when not to use ML.</p>
 <h4 id="when-to-use-ml">When to use ML?</h4>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/planning-an-ml-project/when-to.jpg" alt="when-to"></p>
-<p><em>Machine learning is an approach to <strong>learn complex patterns</strong> from <strong>existing data</strong> and use these patterns to make <strong>predictions</strong> on <strong>unseen data</strong>.</em></p>
+<p><em>Machine learning is an approach to <strong>learn complex patterns</strong> from <strong>existing data</strong> and using these patterns to make <strong>predictions</strong> on <strong>unseen data</strong>.</em></p>
 <p>We&#39;ll look at each of the bold keyphrases in the definition to understand its implications for the problems ML can solve.</p>
 <ol>
 <li><strong>Patterns</strong>: Data must have patterns</li>
@@ -122,14 +123,14 @@
 <li><strong>Machine translation</strong></li>
 <li><strong>Writing</strong>: autocorrection, autocompletion, predictive typing</li>
 <li><strong>Photos</strong>: auto-enhancements and filters<ul>
-<li>E.g. Google Photos, Instagram, Snapchat</li>
+<li>E.g., Google Photos, Instagram, Snapchat</li>
 </ul>
 </li>
 <li><strong>Personal assistant</strong>: automatically scheduling, booking flight tickets, placing orders, question answering<ul>
-<li>E.g. Siri, Google Assistant, Alexa</li>
+<li>E.g., Siri, Google Assistant, Alexa</li>
 </ul>
 </li>
-<li><strong>Home security</strong>: detecting when pets leave house or intrusion when no one is home</li>
+<li><strong>Home security</strong>: detecting when pets leave the house or intrusion when no one is home</li>
 <li><strong>Elderly care</strong>: at-home health monitoring, fall detection</li>
 <li><strong>Health care</strong>: skin cancer detection, diabetes diagnosis, drug-drug interaction predictions, drug discovery</li>
 <li><strong>General amusements</strong>: finding your celebrity doppelganger, converting your face into a cartoon character, changing your voice</li>
@@ -148,7 +149,7 @@
 </ul>
 <p>For more details, please check <a href="https://docs.google.com/document/d/15vCMf7SbDuxST9Q-rWtx8o7qHJQN2pE5urCDFTYI1zs/edit#heading=h.w8zj2fsf15p1">this document</a>.</p>
 <h4 id="when-not-to-use-machine-learning">When not to use machine learning</h4>
-<p>Even though ML can solve a subset of problems very well, it can&#39;t solve and/or shouldn&#39;t be used for problems that are under any of the following conditions.</p>
+<p>Even though ML can solve a subset of problems very well, it can&#39;t solve and/or shouldn&#39;t be used for problems under any of the following conditions.</p>
 <ul>
 <li>Unethical.</li>
 <li>Simpler solutions do the trick.</li>
@@ -157,12 +158,12 @@
 <li>Every single decision the system makes must be explainable.</li>
 <li>Not cost-effective.</li>
 </ul>
-<p>However, even if ML can&#39;t solve your problem, it might be possible to break your problem into smaller components and ML can solve some of them.</p>
+<p>However, even if ML can&#39;t solve your problem, it might be possible to break it into smaller components, and ML can solve some of them.</p>
 <blockquote>
 <p>A technology might not be efficient now, but it might be in the future. If you wait for the technology to prove its worth to the rest of the industry before jumping on, you might be years or decades behind your competitors.</p>
 </blockquote>
 <h2 id="is-my-data-ready">Is my data ready?</h2>
-<p>Data can come from anywhere and can be in any form. In general, there&#39;re four types of data including Text, Audio, Image, Video. Data readiness depends on the quality, quantity, diversity, and complexity of the data collected. After discovering and collecting all relevant data, the data should be cleansed, validated, transformed, and stored.</p>
+<p>Data can come from anywhere and can be in any form. There&#39;re four types of data Text, Audio, Image, and Video. Data readiness depends on the quality, quantity, diversity, and complexity of the data collected. After discovering and collecting all relevant data, the data should be cleansed, validated, transformed, and stored.</p>
 <p>To answer this question, we should answer a few questions:</p>
 <ul>
 <li>Can the data be used?<ul>
@@ -171,29 +172,29 @@
 </ul>
 </li>
 <li>Should the data be used?<ul>
-<li>Does the data respect the customers&#39; privacy? E.g. Citizenship, health info, etc. should be labeled private and protected by privacy laws.</li>
-<li>Does the project have adequate security? Industry regulations, gov laws, and compliance policies determine the importance of various data types and determine what and how data can be processed, stored, managed, or shared.</li>
+<li>Does the data respect the customers&#39; privacy? E.g., Citizenship, health info, etc., should be labeled private and protected by privacy laws.</li>
+<li>Does the project have adequate security? Industry regulations, gov laws, and compliance policies determine the importance of various data types and how data can be processed, stored, managed, or shared.</li>
 </ul>
 </li>
 <li>Is the data high quality?<ul>
 <li>Relevant? Data should be directly related to the goals. Training data should be as close to the actual data as possible.</li>
-<li>Fresh? E.g. the data to train a recommendation system should be collected day by day, but the data to train a dog/cat classification model doesn&#39;t need to be collected periodically.</li>
-<li>Representative? Data should be representative of the data across all data sources. E.g. your sale data should have all the products, categories existing in all data sources.</li>
-<li>Unbiased? Data should not tend to favor one area of a segment. E.g. when you predict forecast sales, your data should not ignore any product.</li>
+<li>Fresh? E.g., the data to train a recommendation system should be collected day by day, but the data to train a dog/cat classification model doesn&#39;t need to be collected periodically.</li>
+<li>Representative? Data should be representative of the data across all data sources. E.g., your sale data should have all the products and categories existing in all data sources.</li>
+<li>Unbiased? Data should not tend to favor one area of a segment. E.g., when you predict forecast sales, your data should not ignore any product.</li>
 </ul>
 </li>
 </ul>
 <h2 id="how-will-ml-impact-the-project-timeline">How will ML impact the project timeline?</h2>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/planning-an-ml-project/timeline.jpg" alt="timeline"></p>
 <h3 id="time-expectation">Time expectation</h3>
-<p>ML can take significant time from the start of a project through production deployment. It can take weeks or even months. Once you decided to adopt ML into your project, your strategy depends on which phase of ML adoption you are in.</p>
+<p>ML can take significant time from the start of a project through production deployment. It can take weeks or even months. Once you decide to adopt ML into your project, your strategy depends on which phase of ML adoption you are in.</p>
 <h3 id="ml-lifecycle">ML lifecycle</h3>
-<p>The workflow of building an ML system is more of a cycle than a waterfall. There&#39;re four main phases in this cycle including:</p>
+<p>The workflow of building an ML system is more of a cycle than a waterfall. There&#39;re four main phases in this cycle, including:</p>
 <ul>
 <li>Project definition: define goals and objectives, constraints, and evaluation criteria. Resources should be estimated and allocated.</li>
 <li>Data engineering: includes data exploration, data preparation, data storage, and scalable infrastructure.</li>
-<li>Model development: perform model exploration, model training, and model testing.</li>
-<li>Deployment: make the model accessible to users, monitor and maintain data quality and model quality to detect their decay as soon as possible to be adaptive to changing environments and changing requirements.</li>
+<li>Model development: perform model exploration, model training, and model testing.
+Deployment: make the model accessible to users, monitor and maintain data quality and model quality to detect their decay as soon as possible to adapt to changing environments and requirements.</li>
 </ul>
 <p>We will discuss further this ML lifecycle in the next post.</p>
 <h3 id="timeline-expectation">Timeline expectation</h3>
@@ -212,14 +213,12 @@
 <th>9</th>
 <th>10</th>
 <th>11</th>
-<th>12</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Problem definition</td>
-<td>[x]</td>
-<td></td>
-<td></td>
+<td>[x</td>
+<td>x]</td>
 <td></td>
 <td></td>
 <td></td>
@@ -235,9 +234,8 @@
 <td></td>
 <td>[x</td>
 <td>x</td>
+<td>x</td>
 <td>x]</td>
-<td></td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -258,11 +256,9 @@
 <td></td>
 <td></td>
 <td></td>
-<td></td>
 </tr>
 <tr>
 <td>Deployment</td>
-<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -277,11 +273,11 @@
 </tr>
 </tbody></table>
 <h2 id="what-early-questions-should-i-ask-in-deployment">What early questions should I ask in deployment?</h2>
-<p>Answering these questions early in the productions process helps you avoid issues when you launch your ML model.</p>
+<p>Answering these questions early in the production process helps you avoid issues when launching your ML model.</p>
 <ul>
 <li>What is the computational cost of generating predictions using your ML model?<ul>
 <li>CPU, GPU, memory, storage, etc.</li>
-<li>Failure to plan ahead on computational costs could hinder production later.</li>
+<li>Failure to plan on computational costs could hinder production later.</li>
 </ul>
 </li>
 <li>How quickly does your data change?<ul>
@@ -289,16 +285,16 @@
 <li>This could lead to increased time allotted for training since you will be cycling back from production to research and development.</li>
 </ul>
 </li>
-<li>How significant are the changes needed to deploy?<ul>
-<li>Think about which changes you&#39;d like to enter into production and the frequency of them. This will let you plan the strategy for maximizing the impact of updating your model.</li>
-</ul>
-</li>
+<li>How significant are the changes needed to deploy?</li>
+<li>Think about which changes you&#39;d like to enter into production and their frequency. This will let you plan the strategy for maximizing the impact of updating your model.</li>
 <li>Does the model&#39;s performance meet the business need?<ul>
-<li>Think about how the business conditions will change over time such as goals, objectives, and constraints. Your model might need to be adjusted as conditions change.</li>
+<li>Think about how the business conditions will change over time, such as goals, objectives, and constraints. Your model might need to be adjusted as conditions change.</li>
 <li>Do you have product lines launching? Are there new regulations in your business sector? Are you expanding into new geographies?</li>
 </ul>
 </li>
 </ul>
+<h2 id="ending">Ending</h2>
+<p>This post covered the four most important questions you should ask before planning your ML project. Be aware that there are still more questions you might need to consider when you answer those four questions.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>

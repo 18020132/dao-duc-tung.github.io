@@ -80,7 +80,7 @@
   </div>
 </div>
 
-      <div class="mid-body"><p>In this post, we will see how the goals of designing an ML system look like. We will also get an idea about different types of ML systems.</p>
+      <div class="mid-body"><p>In this post, we will discuss the goals of designing an ML system. We will also get an idea about different types of ML systems.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#goals-of-ml-systems-design">Goals of ML systems design</a> </li>
@@ -90,7 +90,7 @@
 <h2 id="goals-of-ml-systems-design">Goals of ML systems design</h2>
 <p>ML system design is the process of defining the <strong>interface</strong>, <strong>algorithms</strong>, <strong>data</strong>, <strong>infrastructure</strong>, and <strong>hardware</strong> for an ML system to satisfy specified requirements.</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1-overview/ml-system.png" alt="ml-system"></p>
-<p>There&#39;re four main characteristics that an ML system should have including:</p>
+<p>There&#39;re four main characteristics that an ML system should have, including:</p>
 <ol>
 <li>Reliability</li>
 <li>Scalability</li>
@@ -98,12 +98,12 @@
 <li>Adaptability</li>
 </ol>
 <h3 id="reliablity">Reliablity</h3>
-<p>The system should continue to perform the correct function at the desired level of performance even in the face of adversity (hardware or software faults, and even human error).</p>
-<p>For example, what if your <em>predict()</em> function is called properly, but the prediction is wrong? How do we know if it is wrong if we don&#39;t have the ground truth labels to compare with? You probably want to think about a way to handle this case in your system.</p>
+<p>The system should continue to perform the correct function at the desired level of performance even in adversity (hardware or software faults, and even human error).</p>
+<p>For example, what if your <em>predict()</em> function is called correctly, but the prediction is wrong? How do we know if it is wrong if we don&#39;t have the ground truth labels to compare? You probably want to think about a way to handle this case in your system.</p>
 <h3 id="scalablity">Scalablity</h3>
 <p>As the system grows in data, traffic, etc., there should be reasonable ways to <strong>expand</strong> and <strong>reduce</strong> resources when needed.</p>
 <h3 id="maintanability">Maintanability</h3>
-<p>ML engineers, DevOps/MLOps engineers, Subject Matter Experts (SMEs) should be able to work productively together.</p>
+<p>ML engineers, DevOps/MLOps engineers, and Subject Matter Experts (SMEs) should be able to work productively together.</p>
 <p>Besides the data labeling phase, you&#39;d want SMEs to be involved in steps such as:</p>
 <ul>
 <li>Problem forming</li>
@@ -113,10 +113,10 @@
 <li>Reranking predictions</li>
 <li>UI design</li>
 </ul>
-<p>There&#39;re some known problems when collaborating among cross-functional teams. For instance, how do you explain an ML algorithm&#39;s limitations and capabilities to SMEs who might not have engineering or statistical backgrounds? How do you version SMEs&#39; domain expertise (e.g. if the user&#39;s shoulder is tilted a little bit like this and that while his back is tilted a little bit like that and this then it might be a sign of back pain).</p>
+<p>There&#39;re some known problems when collaborating among cross-functional teams. For instance, how do you explain an ML algorithm&#39;s limitations and capabilities to SMEs who might not have engineering or statistical backgrounds? How do you version SMEs&#39; domain expertise (e.g., if the user&#39;s shoulder is tilted a little bit like this and that while his back is tilted a little bit like that and this, then it might be a sign of back pain).</p>
 <p>Many companies developed node-code/low-code platforms that allow people to make changes without writing code.</p>
 <h3 id="adaptability">Adaptability</h3>
-<p>To adapt to the change of data distribution and business requirements, the system should be able to both discover aspects for performance improvement and allow updates without service interruption.</p>
+<p>To adapt to the change in data distribution and business requirements, the system should be able to both discover aspects for performance improvement and allow updates without service interruption.</p>
 <p>For example, an ML system should have the functionalities such as:</p>
 <ul>
 <li>Data drift detection</li>
@@ -150,7 +150,7 @@
 <tr>
 <td>Useful for</td>
 <td>Processing accumulated data when we don&#39;t need immediate results</td>
-<td>When predictions are needed as soon as data sample is generated</td>
+<td>When predictions are required as soon as a data sample is generated</td>
 </tr>
 <tr>
 <td>Optimized</td>
@@ -165,17 +165,17 @@
 <tr>
 <td>Examples</td>
 <td>Generate recommendations for users every few hours</td>
-<td>Want to know a transaction is fraudulent as soon as possible</td>
+<td>Want to see a transaction is fraudulent as soon as possible</td>
 </tr>
 </tbody></table>
-<p>They can be used in one hybrid solution, not necessarily to be mutually exclusive.</p>
+<p>They can be used in one hybrid solution, not necessarily be mutually exclusive.</p>
 <p>When the online prediction is not cheap enough or is not fast enough, batch prediction is a workaround solution.</p>
-<p>When you do batch prediction, you need to take into account the solution for storing and retrieving the pre-generated predictions.</p>
-<h3 id="edge-computing-vs-cloud-computing">Edge computing vs Cloud computing</h3>
-<p>For edge computing, end devices should have enough memory and battery to store models and to do inference.</p>
+<p>When you make a batch prediction, you need to consider the solution for storing and retrieving the pre-generated predictions.</p>
+<h3 id="edge-computing-vs-cloud-computing">Edge computing vs. Cloud computing</h3>
+<p>For edge computing, end devices should have enough memory and battery to store models and to make the inference.</p>
 <p>The benefits of edge computing include:</p>
 <ul>
-<li>Might be able to work without internet connection, or with unreliable internet</li>
+<li>Might be able to work without an internet connection or with unreliable internet</li>
 <li>No need to worry about network latency</li>
 <li>Fewer concerns about privacy</li>
 <li>Save on server cost</li>
@@ -212,7 +212,7 @@
 <td>Mostly offline evaluation</td>
 </tr>
 </tbody></table>
-<p>If the infrastructure is set up properly, there&#39;s no difference between online learning and offline learning, we just need to tune the batch size, or how often to evaluate models.</p>
+<p>If the infrastructure is set up correctly, there&#39;s no difference between online and offline learning. We just need to tune the batch size or how often to evaluate models.</p>
 <p>Companies also train their models offline in parallel and then combine offline with online versions.</p>
 <h2 id="ending">Ending</h2>
 <p>Let&#39;s keep this post not too long. In the next post, we will see the iterative process of an ML system, especially the questions you need to discuss with your teammates to scope your ML system.</p>

@@ -81,18 +81,19 @@
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/coding.jpg" alt="coding"></p>
-<p>Model development is the third phase of the ML lifecycle where we build the ML models for our problems and evaluate their performances.</p>
+<p>Model development is the third phase of the ML lifecycle, where we build the ML models for our problems and evaluate their performances.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#select-models">Select models</a> </li>
 <li><a href="#train-models">Train models</a> </li>
 <li><a href="#distributed-training">Distributed training</a> </li>
+<li><a href="#ending">Ending</a> </li>
 </ol>
 <h2 id="select-models">Select models</h2>
 <p>This part focuses on mapping our ML problems to appropriate ML algorithms. Knowledge of common ML tasks and the typical approaches to solving them is essential in this process.</p>
 <p>When selecting a model, we need to consider:</p>
 <ul>
-<li>Model&#39;s performance measured by metrics such as accuracy, F1, log loss, etc.</li>
+<li>Model&#39;s performance is measured by metrics such as accuracy, F1, log loss, etc.</li>
 <li>How much data the model needs to run</li>
 <li>How much computing and time the model needs to do both training and inference</li>
 <li>Model interpretability</li>
@@ -100,10 +101,10 @@
 <p><strong>Tips to select models</strong></p>
 <ol>
 <li>Avoid the state-of-the-art models</li>
-<li>Start with the simplest models. Eg: a simple model or complex model with ready-made implementation</li>
+<li>Start with the simplest models. E.g., a simple model or complex model with ready-made implementation</li>
 <li>Avoid human biases in model selection</li>
-<li>Take into account the incoming new data. Eg: evaluate the model learning ability by using <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html">learning curve</a></li>
-<li>Evaluate trade-offs. Eg: false positives vs. false negatives, model accuracy vs. computing resources, etc.</li>
+<li>Take into account the incoming new data. E.g., evaluate the model learning ability by using <a href="https://scikit-learn.org/stable/auto_examples/model_selection/plot_learning_curve.html">learning curve</a></li>
+<li>Evaluate trade-offs. E.g., false positives vs. false negatives, model accuracy vs. computing resources, etc.</li>
 <li>Understand the model&#39;s assumptions<ul>
 <li><a href="https://stats.stackexchange.com/questions/213464/on-the-importance-of-the-i-i-d-assumption-in-statistical-learning">Independent and identically distributed</a>: in ANN, all examples are independently drawn from the same joint distribution</li>
 <li>Smoothness: supervised ML method assumes that if an input X produces an output Y, then an input close to X would produce an output proportionally close to Y</li>
@@ -128,12 +129,12 @@
 </ol>
 <p><strong>Stacking</strong></p>
 <ol>
-<li>Split data into 2 parts, P1 and P2</li>
+<li>Split data into two parts, P1 and P2</li>
 <li>Train N base models which are different in architecture on P1</li>
 <li>Perform inference for these N trained models on P2 to generate a set of new features</li>
 <li>Train 1 meta-model on the new features in the previous step. The final prediction is the meta-model&#39;s prediction</li>
 </ol>
-<p>Below is the table to compare those 3 ensembles.</p>
+<p>Below is the table to compare those three ensembles.</p>
 <table>
 <thead>
 <tr>
@@ -145,9 +146,9 @@
 </thead>
 <tbody><tr>
 <td>Data sampling</td>
-<td>Use bootstrap to create N datasets, records can be overlapped (sampling with replacement)</td>
+<td>Use bootstrap to create N datasets; records can be overlapped (sampling with replacement)</td>
 <td>The later model&#39;s data is the original data + previous model&#39;s wrong-predicted data</td>
-<td>Split data into 2 parts, one is for N base models, the other is for meta-model (or generalizer)</td>
+<td>Split data into two parts, one is for N base models, the other is for meta-model (or generalizer)</td>
 </tr>
 <tr>
 <td>Architecture</td>
@@ -165,7 +166,7 @@
 <td>Example</td>
 <td>Random forest use N decision trees</td>
 <td>Use N decision trees with low depth (to have low complexity model -&gt; high bias)</td>
-<td>Use 3 base models (decision tree, kNN, SVM) + 1 meta-model (ANN)</td>
+<td>Use three base models (decision tree, kNN, SVM) + 1 meta-model (ANN)</td>
 </tr>
 </tbody></table>
 <p><strong>Note</strong>:</p>
@@ -176,33 +177,33 @@
 </ul>
 <h2 id="train-models">Train models</h2>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/model-development.png" alt="model-development"></p>
-<p>Training, tuning, and evaluation is iterative process.</p>
+<p>Training, tuning, and evaluation are iterative processes.</p>
 <h3 id="split-data">Split data</h3>
 <p>Firstly, we need to split the data to ensure the division between the training and evaluation efforts. A common strategy is to split data into training, validation, and testing subsets with a common ratio of <code>80:10:10</code> or <code>75:15:15</code>.</p>
 <p>Cross-validation is another technique to compare multiple models&#39; performance. The goal is to choose the model that will eventually perform the best in production.</p>
-<p>k-fold cross-validation is a common validation method. In k-fold cross-validation, you split the input data into k subsets of data so-called folds. You train your models on all but one (k-1) of the subsets and then evaluate them on the subset that was not used for training. This process is repeated k times, with a different subset reserved for evaluation (and excluded from training) each time.</p>
+<p>k-fold cross-validation is a common validation method. In k-fold cross-validation, you split the input data into k subsets of data, so-called folds. You train your models on all but one (k-1) of the subsets and then evaluate them on the subset not used for training. This process is repeated k times, with a different subset reserved for evaluation (and excluded from training).</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/k-fold-cross-validation.png" alt="k-fold-cross-validation"></p>
-<p>If you have a small dataset, consider leave-one-out cross-validation (LOOCV), which is k-fold cross-validation where k is set to the number of examples in the dataset. Learn more about LOOCV <a href="https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/">here</a>.</p>
-<p>If you have imbalanced data, consider Stratified k-fold cross-validation where the distribution of classes in each fold is kept. Learn more <a href="https://machinelearningmastery.com/cross-validation-for-imbalanced-classification/">here</a>.</p>
+<p>If you have a small dataset, consider leave-one-out cross-validation (LOOCV), k-fold cross-validation where k is set to the number of examples in the dataset. Learn more about LOOCV <a href="https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/">here</a>.</p>
+<p>If you have imbalanced data, consider Stratified k-fold cross-validation, where the distribution of classes in each fold is kept. Learn more <a href="https://machinelearningmastery.com/cross-validation-for-imbalanced-classification/">here</a>.</p>
 <blockquote>
 <p>Cross-validation techniques will increase the computational power needed for your training.</p>
 </blockquote>
-<p>For more details about data sampling, please refer to the post <strong>Data Engineering - Sampling</strong> in this <strong>The Ultimate Machine Learning System</strong> topic.</p>
+<p>Please refer to the post <strong>Data Engineering - Sampling</strong> in this <strong>The Ultimate Machine Learning System</strong> topic for more details about data sampling.</p>
 <h3 id="optimize-hyperparameters">Optimize hyperparameters</h3>
-<p>To find the right model, we usually have to tune our model after training by performing additional feature engineering, experimenting with new algorithms, etc., by training and evaluating multiple models that use different data setup and algorithms. This model tuning also involves modifying the model&#39;s hyperparameters.</p>
-<p>Hyperparameters are settings that can be tuned before running a training job to control the behavior of an ML algorithm. They can have a big impact on model training as it relates to training time, model convergence, and model accuracy. Unlike model parameters that are derived from the training job, the values of hyperparameters do not change during the training.</p>
-<p>There are different categories of hyperparameters such as:</p>
+<p>To find the suitable model, we usually have to tune our model after training by performing additional feature engineering, experimenting with new algorithms, etc., by training and evaluating multiple models that use different data setups and algorithms. This model tuning also involves modifying the model&#39;s hyperparameters.</p>
+<p>Hyperparameters are settings that can be tuned before running a training job to control the behavior of an ML algorithm. They can have a significant impact on model training related to training time, model convergence, and model accuracy. Unlike model parameters derived from the training job, the values of hyperparameters do not change during the training.</p>
+<p>There are different categories of hyperparameters, such as:</p>
 <ul>
 <li><strong>Model hyperparameters</strong>: define the model itself. For example, attributes of a neural network architecture like filter size, pooling, stride, padding</li>
 <li><strong>Optimizer hyperparameters</strong>: are related to how the model learns the patterns based on data and are used for a neural network model. For example, optimizers like gradient descent, stochastic gradient descent, Adam, Xavier initialization, He initialization, etc.</li>
 <li><strong>Data hyperparameters</strong>: are related to the attributes of the data, often used when you don&#39;t have enough data or enough variation in data. For example, data augmentation techniques like cropping, resizing</li>
 </ul>
-<p>Traditionally, this was done manually. Someone who has domain experience related to that hyperparameter and the use case would manually select the hyperparameters based on their intuition and experience. Then they would train the model and score it on the validation data. This process would be repeated over and over again until satisfactory results are achieved. As a result, several other methods for hyperparameter tuning have been developed.</p>
-<p>Alternatively, some tools offers automated hyperparameter tuning, which uses methods like gradient descent, Bayesian optimization, and evolutionary algorithms to conduct a guided search for the best hyperparameter settings, by running many training jobs on your dataset using the algorithm and ranges of hyperparameters that you specify. For example, <a href="https://wandb.ai/">Weights and Biases</a>.</p>
+<p>Traditionally, this was done manually. Someone with domain experience related to that hyperparameter and the use case would manually select the hyperparameters based on their intuition and experience. Then they would train the model and score it on the validation data. This process would be repeated repeatedly until satisfactory results are achieved. As a result, several other methods for hyperparameter tuning have been developed.</p>
+<p>Alternatively, some tools offer automated hyperparameter tuning, which uses gradient descent, Bayesian optimization, and evolutionary algorithms to conduct a guided search for the best hyperparameter settings by running many training jobs on your dataset using the algorithm and ranges of hyperparameters that you specify. For example, <a href="https://wandb.ai/">Weights and Biases</a>.</p>
 <h3 id="experiment-tracking-and-versioning">Experiment tracking and versioning</h3>
-<p>In the model development phase, we experiment with different models with different hyperparameter configurations. It&#39;s important to keep track of all the experiments and their artifacts such as the loss curve, evaluation loss graph, logs, etc. This helps us to compare different experiments to understand the effect of different changes in the model&#39;s performance to choose the best model.</p>
+<p>We experiment with different models with different hyperparameter configurations in the model development phase. It&#39;s important to keep track of all the experiments and artifacts, such as the loss curve, evaluation loss graph, logs, etc. This helps us compare different experiments to understand the effect of different changes in the model&#39;s performance to choose the best model.</p>
 <blockquote>
-<p>Experiment tracking is the process of tracking the progress and results of an experiment.</p>
+<p>Experiment tracking is tracking the progress and results of an experiment.</p>
 </blockquote>
 <blockquote>
 <p>Versioning is the process of logging all the details of an experiment to recreate it later or compare it with other experiments.</p>
@@ -236,30 +237,32 @@
 <p>Below is the list of things that might cause an ML model to fail.</p>
 <ul>
 <li><strong>Theoretical constraints</strong>: the assumptions about the data and the features that the model uses are wrong</li>
-<li><strong>Poor implementation of model</strong>: forget to stop gradient updates during evaluation, etc.</li>
+<li><strong>Poor model implementation</strong>: forget to stop gradient updates during evaluation, etc.</li>
 <li><strong>Poor choice of hyperparameters</strong>: different sets of hyperparameters give different results</li>
-<li><strong>Data issues</strong>: data is collected unproperly, labels are wrong, features are processed wrongly, etc. For more details on data issues, please refer to the post <strong>Data Engineering - Data Issues</strong> in this <strong>The Ultimate Machine Learning System</strong> topic.</li>
+<li><strong>Data issues</strong>: data is collected unproperly, labels are wrong, features are processed wrongly, etc. Please refer to the post <strong>Data Engineering - Data Issues</strong> in this <strong>The Ultimate Machine Learning System</strong> topic for more details on data issues.</li>
 <li><strong>Poor choice of features</strong>: too many or too few features</li>
 </ul>
 <h3 id="automl">AutoML</h3>
-<p>We can use AutoML tools to automate the process of preprocessing data, selecting models, tuning hyperparameters, and choosing the best model. For the comparison of AutoML libraries, please refer to this <a href="https://www.kaggle.com/code/andreshg/automl-libraries-comparison/notebook">AutoML Libraries Comparision article</a>.</p>
+<p>We can use AutoML tools to automate preprocessing data, selecting models, tuning hyperparameters, and choosing the best model. For the comparison of AutoML libraries, please refer to this <a href="https://www.kaggle.com/code/andreshg/automl-libraries-comparison/notebook">AutoML Libraries Comparision article</a>.</p>
 <h2 id="distributed-training">Distributed training</h2>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training/distributed-training.png" alt="distributed-training"></p>
-<p>It&#39;s common to train a model using a dataset that doesn&#39;t fit into memory such as CT scans. In this case, we need algorithms for preprocessing, shuffling, and batching data out-of-memory and in parallel. This requires training ML models on multiple machines using multiple CPUs, GPUs, and TPUs.</p>
+<p>It&#39;s common to train a model using a dataset that doesn&#39;t fit into memory, such as CT scans. In this case, we need algorithms for preprocessing, shuffling, and batching data out-of-memory and in parallel. This requires training ML models on multiple machines using multiple CPUs, GPUs, and TPUs.</p>
 <h3 id="data-parallelism">Data parallelism</h3>
-<p>The most common parallelization method is <strong>data parallelism</strong>: we split the dataset on multiple machines, train the model on all of them, and accumulate gradients.</p>
+<p>The most common parallelization method is <strong>data parallelism</strong>: we split the dataset on multiple machines, train the model on them, and accumulate gradients.</p>
 <p><strong>Challenge 1: How to accurately and effectively accumulate gradients from different machines</strong></p>
 <p>In Synchronous stochastic gradient descent (SSGD), the model waits for all machines to produce their gradients. This causes the training to slow down, wasting time and resources.</p>
 <p>In Asynchronous stochastic gradient descent (ASGD), the model updates weights using the gradient from each machine separately. This causes the gradient stateless issue when gradients from one machine have caused the weights to change before the gradients from other machines come in.</p>
-<p>In theory, ASGD converges but requires more steps than SSGD. However, in practice, when gradient updates are sparse, which means most gradient updates only modify small fractions of the weights, <a href="https://proceedings.neurips.cc/paper/2011/file/218a0aefd1d1a4be65601cc6ddc1520e-Paper.pdf">the model converges similarly</a>.</p>
+<p>In theory, ASGD converges but requires more steps than SSGD. However, in practice, when gradient updates are sparse, most gradient updates only modify small fractions of the weights, <a href="https://proceedings.neurips.cc/paper/2011/file/218a0aefd1d1a4be65601cc6ddc1520e-Paper.pdf">the model converges similarly</a>.</p>
 <p><strong>Challenge 2: Big batch size</strong></p>
-<p>The batch size can be very big when spreading the model on multiple machines. If a machine processes a batch size of 1000, 1000 machines process a batch size of 1M. In practice, increasing the batch size past a certain point causes diminishing returns.</p>
+<p>The batch size can be huge when spreading the model on multiple machines. If a machine processes a batch size of 1000, 1000 machines process a batch size of 1M. Increasing the batch size past a certain point causes diminishing returns.</p>
 <h3 id="model-parallelism">Model parallelism</h3>
 <p>Model parallelism splits different components of the model on different machines.</p>
 <p><strong>Challenge: parallel computing</strong></p>
-<p>If the model is a massive matrix and the matrix is split into two halves into two machines, these two halves might be executed in parallel. However, if the model is a neural network and the first layer is on machine 1 while the second layer is on machine 2, machine 2 has to wait for machine 1 to finish.</p>
-<p>To solve this, we can use the <strong>pipeline parallelism</strong> technique to make different components of a model on different machines run more in parallel. The idea is to break the computation of each machine into multiple parts. When machine 1 finishes its computation, it passes the output to machine 2 and continues with the next computation while machine 2 executes its computation on the output returned by machine 1. Each machine can run both forward pass and backward pass for one component of a neural network.</p>
-<p>Many organizations use both data parallelism and model parallelism for better utilization of their hardware. However, the setup to use both methods can require significant engineering effort.</p>
+<p>If the model is a massive matrix and the matrix is split into two halves into two machines, these two halves might be executed in parallel. However, if the model is a neural network and the first layer is on machine one while the second layer is on machine 2, machine 2 must wait for machine 1 to finish.</p>
+<p>To solve this, we can use the <strong>pipeline parallelism</strong> technique to make different components of a model on different machines run more in parallel. The idea is to break the computation of each machine into multiple parts. When machine 1 finishes its computation, it passes the output to machine two and continues with the next computation while machine 2 executes its computation on the output returned by machine 1. Each machine can run both forward pass and backward pass for one neural network component.</p>
+<p>Many organizations use both data parallelism and model parallelism to better utilize their hardware. However, the setup to use both methods can require significant engineering effort.</p>
+<h2 id="ending">Ending</h2>
+<p>This post covered the common steps when developing ML models: model selection and model training processes. The distributed training is usually handled by the ML infrastructure engineer or ML platform engineer. A data scientist doesn&#39;t necessarily need to know about it.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>

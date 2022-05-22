@@ -76,32 +76,33 @@
   <h1>UMLS - Data Engineering - Part 3 - Feature Engineering</h1>
 
   <div class="post-info">
-    Sep 15, 2021 · 5 min read
+    Sep 15, 2021 · 6 min read
   </div>
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering/understand.jpg" alt="understand"></p>
-<p>After cleaning, we need to create new features from the original ones to give the ML model strong prediction power. You need to perform feature engineering because of the dimensionality of your dataset, especially when there&#39;re too many features. Please refer to <a href="https://whimsical.com/cs-329s-machine-learning-systems-design-note-E7oPi8C6VUU89j8yPJdgzK@7YNFXnKbZALHYHhFdywLJ">this board</a> for an overview of Feature Engineering.</p>
+<p>After cleaning, we need to create new features from the original ones to give the ML model strong prediction power. You need to perform feature engineering because of the dimensionality of your dataset, especially when there are too many features. Please refer to <a href="https://whimsical.com/cs-329s-machine-learning-systems-design-note-E7oPi8C6VUU89j8yPJdgzK@7YNFXnKbZALHYHhFdywLJ">this board</a> for an overview of Feature Engineering.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#feature-engineering">Feature engineering</a> </li>
 <li><a href="#data-augmentation">Data augmentation</a> </li>
+<li><a href="#ending">Ending</a> </li>
 </ol>
 <h2 id="feature-engineering">Feature engineering</h2>
-<p>There&#39;re two types of feature engineering which are <em>Feature Selection</em> and <em>Feature Extraction</em>. Both are used to reduce the dimensionality of the feature space.</p>
+<p>There&#39;re two feature engineering types: <em>Feature Selection</em> and <em>Feature Extraction</em>. Both are used to reduce the dimensionality of the feature space.</p>
 <ul>
-<li>Feature selection: use algorithms to remove some features from the model (e.g. transform, linear or non-linear combination, etc.)</li>
+<li>Feature selection: use algorithms to remove some features from the model (e.g., transform, linear or non-linear combination, etc.)</li>
 <li>Feature extraction: use algorithms to combine original features to generate a set of new features, and the number of new features to be used in the model is less than the number of original features</li>
 </ul>
 <p>There&#39;re some common techniques such as Filtering, Scaling, and Transformation.</p>
 <h3 id="filtering">Filtering</h3>
-<p>Filtering is the process of selecting relevant features. For example, removing channels from an image if color is not important, removing frequencies from audio if the power is less than a threshold.</p>
+<p>Filtering is the process of selecting relevant features. For example, removing channels from an image if color is not essential, removing frequencies from audio if the power is less than a threshold.</p>
 <h3 id="scaling">Scaling</h3>
-<p>On the one hand, many algorithms are sensitive to features being on different scales, e.g. for gradient descent and kNN, we need to scale all features to one range. On the other hand, some algorihtms like decision trees, random forests, aren&#39;t sensitive to features on different scales. Note that we fit the scaler to training data only, then transform both train and validation data.</p>
-<p>There&#39;re common choices such as Normalization and Scaling methods. Scaling is for columns, normalization is for each row independently.</p>
+<p>On the one hand, many algorithms are sensitive to features being on different scales, e.g., for gradient descent and kNN, we need to scale all features to one range. On the other hand, some algorithms like decision trees, random forests, aren&#39;t sensitive to features on different scales. Note that we only fit the scaler to training data, then transform both train and validation data.</p>
+<p>There&#39;re common choices such as Normalization and Scaling methods. Scaling is for columns, and normalization is for each row independently.</p>
 <h4 id="normalization-methods">Normalization methods</h4>
 <ul>
-<li>Normalizer: divide features at <code>cell(x, y)</code> by standard deviation of col <code>y</code></li>
+<li>Normalizer: divide features at <code>cell(x, y)</code> by the standard deviation of col <code>y</code></li>
 <li>Pros: widely used in text analysis</li>
 </ul>
 <h4 id="scaling-methods">Scaling methods</h4>
@@ -116,7 +117,7 @@
 <tbody><tr>
 <td>Mean/variance standardization</td>
 <td>Most popular, scale values to center them around <code>mean=0</code>, with <code>standard deviation=1</code></td>
-<td>Many algorithms behave better with smaller values; keeps outlier information, but reduces impact</td>
+<td>Many algorithms behave better with smaller values; keeps outlier information, but reduce impact</td>
 </tr>
 <tr>
 <td>MinMaxScaling</td>
@@ -126,7 +127,7 @@
 <tr>
 <td>Maxabs scaling</td>
 <td>Divide features by <code>max(abs(features))</code></td>
-<td>Doesn&#39;t destroy sparsity, because we don&#39;t center the data thru any measurement, we just scale it</td>
+<td>Doesn&#39;t destroy sparsity because we don&#39;t center the data thru any measurement, we just scale it</td>
 </tr>
 <tr>
 <td>Robust scaling</td>
@@ -165,7 +166,7 @@
 </tr>
 <tr>
 <td>Tree path features</td>
-<td>Use leaves of decision tree as features</td>
+<td>Use leaves of the decision tree as features</td>
 <td></td>
 </tr>
 </tbody></table>
@@ -173,14 +174,14 @@
 <p>There&#39;re some other techniques to consider:</p>
 <ul>
 <li>For binary categorical variable: <code>Yes/No</code> -&gt; <code>1/0</code></li>
-<li>For general numerical variables: Use above numeric value binding to split them into <code>Small</code>, <code>Medium</code>, <code>Large</code> bins and map them to <code>5</code>, <code>10</code>, <code>20</code> numbers respectively. These numbers are derived from your business insight.</li>
+<li>For general numerical variables: Use the above numeric value binding to split them into <code>Small</code>, <code>Medium</code>, <code>Large</code> bins and map them to <code>5</code>, <code>10</code>, and <code>20</code> numbers, respectively. These numbers are derived from your business insight.</li>
 <li>For nominal variables like object types: Use one-hot encoding</li>
 </ul>
-<h3 id="the-more-the-better">The more the better?</h3>
+<h3 id="the-more-the-better">The more, the better?</h3>
 <p>Adding more features tends to improve model performance. But sometimes it leads to some problems:</p>
 <ul>
 <li>Overfitting</li>
-<li>Too many features makes model hard to maintain</li>
+<li>Too many features make the model hard to maintain</li>
 <li>Label leaking: The more feature engineering you do, the more chance for labels to leak. For example, feature A doesn&#39;t cause leakage, but <code>A + B</code> can cause leakage</li>
 </ul>
 <p>The solutions might be:</p>
@@ -189,35 +190,35 @@
 <li>Store them in case you want to reuse them</li>
 </ul>
 <h3 id="rules-of-thumb">Rules of thumb</h3>
-<p>There&#39;re some rules of thumb when you perform feature engineering such as:</p>
+<p>There&#39;re some rules of thumb when you perform feature engineering, such as:</p>
 <ul>
 <li>Use your intuition</li>
 <li>Try to generate many features first, then apply dimensionality reduction</li>
 <li>Use non-linear transformation: <code>square</code>, <code>cube</code>, etc.</li>
 <li>Combine features: <code>x\*y</code>, <code>x+y</code>, etc.</li>
 <li>Try not to overthink</li>
-<li>Don&#39;t include too many manual logic because it will be too difficult to maintain</li>
+<li>Don&#39;t include too much manual logic because it will be too difficult to maintain</li>
 </ul>
 <h2 id="data-augmentation">Data augmentation</h2>
 <p>The goals of data augmentation are:</p>
 <ul>
-<li>To improve model&#39;s overall performance or on certain classes</li>
+<li>To improve the model&#39;s overall performance or on certain classes</li>
 <li>To generalize the model better</li>
-<li>To enforce certain behaviors of model</li>
+<li>To enforce certain behaviors of the model</li>
 </ul>
-<p>Some example of text augmentation:</p>
+<p>Some examples of text augmentation:</p>
 <ul>
 <li>Replace words with <code>[MASK]</code> token</li>
 <li>Replace words with a random word</li>
 <li>Keep words unchanged -&gt; to bias the representation towards the actual observed words</li>
 </ul>
-<p>Some example of image augmentation:</p>
+<p>Some examples of image augmentation:</p>
 <ul>
 <li>Basic image manipulation<ul>
 <li>Kernel filters: Gaussian, Sobel, etc.</li>
 <li>Random erasing, cropping, etc.</li>
 <li>Geometric transformations: translation, rotation, flipping, warping, etc.</li>
-<li>Image properties adjustment: brightness, constrast, color space, etc.</li>
+<li>Image properties adjustment: brightness, contrast, color space, etc.</li>
 <li>Mixing images: 70% dog, 30% cat -&gt; label 3.3</li>
 </ul>
 </li>
@@ -228,6 +229,8 @@
 </ul>
 </li>
 </ul>
+<h2 id="ending">Ending</h2>
+<p>Feature engineering is an art. Sometimes we need some levels of experience to select features. Sometimes we even need to borrow some terms from other fields like mechanical engineering or electronic engineering to generate unique, meaningful features such as homogeneous transformation matrix, Euler angles, etc.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>

@@ -81,11 +81,12 @@
 </div>
 
       <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation/assessment.jpg" alt="assessment"></p>
-<p>Model evaluation helps us to decide if one ML algorithm is better than another. Ideally, the evaluation methods should be the same in both the development and production environments. In practice, we might not have ground truths to evaluate models. This post covers the methods to evaluate models in development environments. For evaluating models in production, we will discuss in a future post.</p>
+<p>Model evaluation helps us decide if one ML algorithm is better than another. Ideally, the evaluation methods should be the same in development and production environments. In practice, we might not have ground truths to evaluate models. This post covers the methods to evaluate models in development environments. For evaluating models in production, we will discuss them in a future post.</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#baseline">Baseline</a> </li>
 <li><a href="#evaluation-methods">Evaluation methods</a> </li>
+<li><a href="#ending">Ending</a> </li>
 </ol>
 <h2 id="baseline">Baseline</h2>
 <p>Evaluation metrics are only helpful when comparing against baselines. Below is the list of common baselines.</p>
@@ -109,7 +110,7 @@
 <li>Third-party solution</li>
 </ul>
 <h2 id="evaluation-methods">Evaluation methods</h2>
-<p>This section won&#39;t discuss the common evaluation methods to assess the model&#39;s performance. We will discuss the methods to evaluate the model&#39;s characteristics such as robustness, fairness, calibrated, and making sense.</p>
+<p>This section won&#39;t discuss the common evaluation methods to assess the model&#39;s performance. We will discuss the methods to evaluate the model&#39;s robustness, fairness, calibrated, and making sense.</p>
 <p><strong>Perturbation test</strong></p>
 <p>Add noise to the test data to create perturbed data. The more sensitive the model is to noise, the harder it will be to maintain.</p>
 <p><strong>Invariance test</strong></p>
@@ -117,29 +118,29 @@
 <p><strong>Directional expectation test</strong></p>
 <p>Change an input&#39;s feature to see if the output changes in the expected direction. Certain changes to the inputs should cause predictable changes in outputs.</p>
 <p><strong>Confidence measurement</strong></p>
-<p>Confidence measurement is the threshold considered to be useful for each prediction. If this threshold is not selected wisely, it may annoy and make users lose trust in the system. In this confidence measurement, we need to consider:</p>
+<p>Confidence measurement is the threshold considered to be helpful for each prediction. If this threshold is not selected wisely, it may annoy and make users lose trust in the system. In this confidence measurement, we need to consider:</p>
 <ul>
 <li>How do we measure that threshold?</li>
 <li>What do we want to do with predictions below that threshold? Discard it, loop in humans, or ask for more information from users?</li>
 </ul>
 <p><strong>Slice-based evaluation</strong></p>
-<p>Look at the model&#39;s performance on the subgroups of data instead of just using the coarse-grained metrics like overall F1 or accuracy on the entire dataset. Sometimes, a trend appears in several groups of data but disappears or reverses when the groups are combined. This phenomenon is called <a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simplson&#39;s paradox</a>. Some subgroups examples are majority classes vs. minority classes, paid users vs. non-paid users.</p>
-<p>Selecting the critical slices is more of an art than a science, requiring intensive data exploration and analysis. Below are the three main approaches:</p>
+<p>Look at the model&#39;s performance on the subgroups of data instead of using coarse-grained metrics like overall F1 or accuracy on the entire dataset. Sometimes, a trend appears in several data groups but disappears or reverses when the groups are combined. This phenomenon is called <a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simplson&#39;s paradox</a>. Examples of subgroups are majority classes vs. minority classes and paid users vs. non-paid users.</p>
+<p>Selecting the critical slices is more art than a science, requiring intensive data exploration and analysis. Below are the three main approaches:</p>
 <ul>
-<li>Heuristics-based: slice data using existing knowledge of the data and the task. Eg: in web traffic, slice data along dimensions like mobile vs. desktop, browser types, and locations.</li>
+<li>Heuristics-based: slice data using existing knowledge of the data and the task. E.g., in web traffic, slice data along dimensions like mobile vs. desktop, browser types, and locations.</li>
 <li>Error analysis: find patterns among the misclassified examples.</li>
-<li>Slice finder: uses algorithms such as beam search, and clustering. Eg: <a href="https://ieeexplore.ieee.org/abstract/document/8731353">Slice Finder: Automated Data Slicing for Model Validation</a>, <a href="https://jcst.ict.ac.cn/EN/10.1007/s11390-016-1647-1">Subgroup Discovery Algorithms: A Survey and Empirical Evaluation</a>.</li>
+<li>Slice finder: uses algorithms such as beam search and clustering. E.g., <a href="https://ieeexplore.ieee.org/abstract/document/8731353">Slice Finder: Automated Data Slicing for Model Validation</a>, <a href="https://jcst.ict.ac.cn/EN/10.1007/s11390-016-1647-1">Subgroup Discovery Algorithms: A Survey and Empirical Evaluation</a>.</li>
 </ul>
 <p><strong>Model calibration</strong>: Our model usually returns probabilities. A well-calibrated model is a model that returns probabilities of outcome A that match the real probabilities of that outcome A in production (given a big enough number of data to consider <em>matched</em>). This topic merits a dedicated post. For more details, please check <a href="https://www.unofficialgoogledatascience.com/2021/04/why-model-calibration-matters-and-how.html">Why model calibration matters and how to achieve it</a>, <a href="https://youtu.be/hWb-MIXKe-s">video 1</a>, <a href="https://youtu.be/AunotauS5yI">video 2</a>.</p>
 <p><strong>Data testing</strong></p>
 <p>For data, we need to test the following things.</p>
 <ul>
 <li>Test feature correlation, multiplicity, label quality, missing values</li>
-<li>Test assumption about features, data distribution, pre-train data, post-train data</li>
+<li>Test assumptions about features, data distribution, pre-train data, and post-train data</li>
 <li>Check feature meaning</li>
 </ul>
 <p><strong>Pipeline testing</strong></p>
-<p>For system pipeline, we need to test:</p>
+<p>For the system pipeline, we need to test:</p>
 <ul>
 <li>The consistency of feature engineering in training and inference</li>
 <li>The consistency of predictions in training, inference, and on multiple runs</li>
@@ -155,6 +156,8 @@
 <li>Metrics to compare: latency, memory usage, prediction cost, accuracy, etc.</li>
 <li>Compare with other systems: <code>MLPerf</code></li>
 </ul>
+<h2 id="ending">Ending</h2>
+<p>Without the baseline, you don&#39;t know how much your model is improved after each experiment. This post gives you some common keywords when comparing your model with the baseline. You still might need to search for more information based on these keywords.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>

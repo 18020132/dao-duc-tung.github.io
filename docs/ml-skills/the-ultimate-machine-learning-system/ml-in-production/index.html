@@ -91,7 +91,7 @@
 <li><a href="#case-studies">Case studies</a> </li>
 </ol>
 <h2 id="research-vs-production">Research vs. Production</h2>
-<p>The table below shows five major problems and the differences between ML systems in research and production.</p>
+<p>The table below shows five significant problems and the differences between ML systems in research and production.</p>
 <table>
 <thead>
 <tr>
@@ -128,11 +128,11 @@
 </tbody></table>
 <h3 id="objective">Objective</h3>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/conflict.jpg" alt="conflict"></p>
-<p>In academia, the objective of an ML system usually is model performance. Researchers want to achieve state-of-the-art results on benchmark datasets. Models often are too complicated to be useful in real-life applications.</p>
-<p>Different stakeholders have different objectives. For example, in Facebook, they want to train a model that recommends ads on users&#39; news feed:</p>
+<p>In academia, the objective of an ML system usually is model performance. Researchers want to achieve state-of-the-art results on benchmark datasets. Models often are too complicated to be helpful in real-life applications.</p>
+<p>Different stakeholders have different objectives. For example, Facebook wants to train a model that recommends ads on users&#39; news feed:</p>
 <ul>
-<li><strong>ML engineers</strong> want that model to predict ads that have a high chance of being clicked by users.</li>
-<li><strong>Sales team</strong> wants that model predicts ads that were paid with the highest advertising fee to be shown in the user&#39;s news feed.</li>
+<li><strong>ML engineers</strong> want that model to predict ads with a high chance of being clicked by users.</li>
+<li><strong>Sales team</strong> wants that model predicts ads paid with the highest advertising fee to be shown in the user&#39;s news feed.</li>
 <li><strong>Manager</strong> wants to maximize the profit, maybe by sacking somebody.</li>
 </ul>
 <p>Users won&#39;t see the difference between a model with 98% accuracy and a model with 98.2% accuracy. This 0.2% can save Google millions of dollars.</p>
@@ -141,12 +141,12 @@
 </blockquote>
 <h3 id="computational-priority">Computational priority</h3>
 <p>In research, we want the training process faster. In production, we want the inference faster.</p>
-<p>In research, we want the training process can take as many samples as it can in a second (throughput). In production, latency matters a lot. If you can type your next word faster than what your iPhone predicts, do you ever want to wait and click on the predicted word?</p>
+<p>In research, we want the training process to take as many samples as possible in a second (throughput). In production, latency matters a lot. If you can type your next word faster than your iPhone predicts, do you ever want to wait and click on the predicted word?</p>
 <h3 id="data">Data</h3>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/data.jpg" alt="data"></p>
-<p>In research, data is clean and formatted. They are unchanged so people can use them as benchmarks for evaluation. The process of preparing data and feeding it to your model usually was done by somebody.</p>
-<p>In production, data is messy. You have to clean it and re-format it. It&#39;s not easy to split into the training set, test set, or validation set because it usually has some issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merge two existing label classes. This is really a nightmare!</p>
-<p>In research, data usually was created a long time ago. In production, data could be created a long time ago, or streaming data, or both. In production, you need to care about data privacy and regulations.</p>
+<p>In research, data is clean and formatted. They are unchanged, so people can use them as benchmarks for evaluation. The process of preparing data and feeding it to your model usually was done by somebody.</p>
+<p>In production, data is messy. You have to clean it and re-format it. It&#39;s not easy to split into the training set, test set, or validation set because it usually has issues like biased, imbalanced, outdated, etc. Sometimes you have to add more label classes or merge two existing label classes. This is a nightmare!</p>
+<p>In research, data usually was created a long time ago. Data could be created a long time ago, streaming data, or both in production. In production, you need to care about data privacy and regulations.</p>
 <table>
 <thead>
 <tr>
@@ -174,20 +174,20 @@
 <h3 id="fairness">Fairness</h3>
 <p>You might be a victim of biased ML algorithms. Your resume might be ranked very low because your name is not common. The ranking model picks name as an important feature :)</p>
 <blockquote>
-<p>ML algorithms don&#39;t predict the future, but encode the past, perpetuating the biases in the data and more.</p>
+<p>ML algorithms don&#39;t predict the future but encode the past, perpetuating the biases in the data and more.</p>
 </blockquote>
 <p>The minority groups would be harmed badly because the wrong predictions have minor consequences on the model&#39;s overall performance.</p>
 <h3 id="interpretability">Interpretability</h3>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/ai-surgeon.jpg" alt="ai-surgeon"></p>
-<p>Model interpretability is important to understand why the model makes that prediction/decision. Otherwise, we might feel uncomfortable with trusting it. It also makes the process of debugging, monitoring, and improving the model easier.</p>
+<p>Model interpretability is important to understand why the model makes that prediction/decision. Otherwise, we might feel uncomfortable trusting it. It also makes debugging, monitoring, and improving the model easier.</p>
 <blockquote>
-<p>While most of us are comfortable with using a microwave without understanding how it works, many don&#39;t feel the same way about AI yet, especially if that AI makes important decisions about their lives.</p>
+<p>While most of us are comfortable using a microwave without understanding how it works, many don&#39;t feel the same way about AI yet, especially if that AI makes important decisions about their lives.</p>
 </blockquote>
 <h3 id="addons">Addons</h3>
 <p>Most companies cannot pursue pure research unless it leads to short-term profitable applications.</p>
-<p>Nowadays, more people and organizations in different fields want to find applications for them due to the easy accessibility of state-of-the-art models. That&#39;s why the majority of ML-related jobs are in ML production.</p>
+<p>Nowadays, more people and organizations in different fields want to find applications due to the easy accessibility of state-of-the-art models. That&#39;s why the majority of ML-related jobs are in ML production.</p>
 <h2 id="traditional-software-vs-ml-systems">Traditional software vs. ML systems</h2>
-<p>ML production would be a much better place if ML experts were better software engineers. Many traditional software engineering tools can be used to develop and deploy ML applications.</p>
+<p>ML production would be a better place if ML experts were better software engineers. Many traditional software engineering tools can be used to develop and deploy ML applications.</p>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/ml-in-production/ml-engineering.png" alt="ml-engineering"></p>
 <p>However, many challenges are unique to ML applications and require their own tools. Below is the table to compare traditional software and ML systems.</p>
 <table>
@@ -251,7 +251,7 @@
 <tr>
 <td>4</td>
 <td>Data format</td>
-<td>Take out a subset of features in datasets -&gt; use column-based data format (e.g. PARQUET, ORC). Row-based data formats (CSV) requires to load all features</td>
+<td>Take out a subset of features in datasets -&gt; use column-based data format (e.g., PARQUET, ORC). Row-based data formats (CSV) require loading all features</td>
 <td></td>
 </tr>
 <tr>
@@ -317,7 +317,7 @@
 <tbody><tr>
 <td>1</td>
 <td>Deploying is hard</td>
-<td>Deploying is easy, deploying reliable is hard. Make model available to millions of users with a latency of milliseconds and 99% uptime is hard</td>
+<td>Deploying is easy; deploying reliable is hard. Making the model available to millions of users with a latency of milliseconds and 99% uptime is hard</td>
 </tr>
 <tr>
 <td>2</td>
@@ -337,7 +337,7 @@
 <tr>
 <td>5</td>
 <td>No need to worry about scale</td>
-<td>E.g. a system that serves hundreds of queries per second or millions of users per month</td>
+<td>E.g., a system that serves hundreds of queries per second or millions of users per month</td>
 </tr>
 <tr>
 <td>6</td>

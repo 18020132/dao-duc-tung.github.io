@@ -88,7 +88,7 @@
 <li>Verify data quality</li>
 <li>Prepare data for training</li>
 </ul>
-<p>Before diving into each step, firstly this post will introduce some important aspects of data that we should consider including:</p>
+<p>Before diving into each step, firstly, this post will introduce some important aspects of data that we should consider, including:</p>
 <ul>
 <li>Data sources</li>
 <li>Data formats</li>
@@ -105,6 +105,7 @@
 <li><a href="#oltp-vs-olap-databases">OLTP vs. OLAP databases</a> </li>
 <li><a href="#extract---transform---load">Extract - Transform - Load</a> </li>
 <li><a href="#batch-processing-vs-stream-processing">Batch processing vs. Stream processing</a> </li>
+<li><a href="#ending">Ending</a> </li>
 </ol>
 <h2 id="data-sources">Data sources</h2>
 <p>Data can be from different sources. The table below shows the four common sources.</p>
@@ -129,7 +130,7 @@
 <tr>
 <td>3</td>
 <td>Enterprise application data</td>
-<td>Data generated from enterprise apps used for managing company assets (inventory, customer relationship, users, etc.)</td>
+<td>Data generated from enterprise apps used for managing company assets (inventory, customer relationships, users, etc.)</td>
 </tr>
 <tr>
 <td>4</td>
@@ -147,7 +148,7 @@
 <p>Third-party data companies collect data on the general public who aren&#39;t their customers.</p>
 </blockquote>
 <h2 id="data-formats">Data formats</h2>
-<p>Once we have data, we will serialize and store it. The process of converting a data structure or object state into a format that can be stored or transmitted and reconstructed later is data serialization. There are many, many data serialization formats. This section compares different types of data formats.</p>
+<p>Once we have data, we will serialize and store it. Data serialization is the process of converting a data structure or object state into a format that can be stored or transmitted and reconstructed later. There are many, many data serialization formats. This section compares different types of data formats.</p>
 <h3 id="row-based-vs-column-based">Row-based vs. column-based</h3>
 <table>
 <thead>
@@ -173,7 +174,7 @@
 <td>Require lots of reads with almost no writes</td>
 </tr>
 </tbody></table>
-<p><strong>Note</strong>: NumPy creates array with row-major by default. Pandas creates DataFrame which is columnar.</p>
+<p><strong>Note</strong>: NumPy creates an array with row-major by default. Pandas creates DataFrame, which is columnar.</p>
 <h3 id="text-vs-binary-format">Text vs. binary format</h3>
 <table>
 <thead>
@@ -221,10 +222,10 @@
 <td>Python, PyTorch serialization</td>
 </tr>
 </tbody></table>
-<p><strong>Note</strong>: AWS recommends using the Parquet format because &quot;<em>the Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3, compared to text formats.</em>&quot;</p>
+<p><strong>Note</strong>: AWS recommends using the Parquet format because &quot;<em>the Parquet format is up to 2x faster to unload and consumes up to 6x less storage in Amazon S3 than text formats.</em>&quot;</p>
 <h2 id="structured-vs-unstructured-data">Structured vs. Unstructured data</h2>
-<p>When the data schema evolved and the number of possible data sources expanded, companies just store all data in a data lake so to not have to deal with schema changes. This process of loading data into storage first then processing it later is sometimes called ELT (extract, load, transform).</p>
-<p>As data keeps on growing and companies switch to running applications on the cloud and infrastructures become standardized, data structures also become standardized, which makes some companies store data in a structured way.</p>
+<p>When the data schema evolved and the number of possible data sources expanded, companies just stored all data in a data lake to not deal with schema changes. Loading data into storage first and then processing it later is sometimes called ELT (extract, load, transform).</p>
+<p>As data keeps growing and companies switch to running applications on the cloud, and infrastructures become standardized, data structures also become standardized, which makes some companies store data in a structured way.</p>
 <table>
 <thead>
 <tr>
@@ -271,8 +272,8 @@
 </thead>
 <tbody><tr>
 <td>Traits</td>
-<td>Most of operations will be inserting, deleting, and updating an existing transaction</td>
-<td>Most of operations will be aggregating data in columns across multiple rows. Ex: compute average price for all rides in Sept in Singapore</td>
+<td>Most of the operations will be inserting, deleting, and updating an existing transaction</td>
+<td>Most operations will be aggregating data in columns across multiple rows. Ex: compute the average price for all rides in Sept in Singapore</td>
 </tr>
 <tr>
 <td>Use case</td>
@@ -282,18 +283,18 @@
 </tbody></table>
 <p>OLTP databases also require:</p>
 <ul>
-<li>Isolation controls: two transactions happen at the same time as if they were isolated. Two users accessing the same data won&#39;t change it at the same time. For example, you don&#39;t want two users to book the same driver at the same time.</li>
+<li>Isolation controls: two transactions happen at the same time as if they were isolated. Two users accessing the same data won&#39;t change it simultaneously. For example, you don&#39;t want two users to book the same driver at the same time.</li>
 <li>Atomicity controls: all the steps in a transaction are completed successfully as a group. If any steps between the transaction fail, all other steps must fail also. For example, if a user&#39;s payment fails, you don&#39;t want to still assign a driver to that user.</li>
 </ul>
 <blockquote>
 <p>Atomicity and isolation are part of ACID (Atomicity, Consistency, Isolation, Durability), a standard set of properties that guarantee database transactions are processed reliably.</p>
 </blockquote>
 <h2 id="extract---transform---load">Extract - Transform - Load</h2>
-<p>ETL processes and aggregates OLTP database to generate OLAP databases.</p>
+<p>ETL processes and aggregates OLTP databases to generate OLAP databases.</p>
 <ul>
 <li>Extract: extracting data from data sources.</li>
-<li>Transform: processing data into the target format. E.g. clean, validate data by joining data from multiple sources, splitting data into different parts, applying operations such as transposing, deduplicating, aggregating, etc.</li>
-<li>Load: loading it into the target destination e.g. a file or a data warehouse.</li>
+<li>Transform: processing data into the target format. E.g., clean, validate data by joining data from multiple sources, splitting data into different parts, applying operations such as transposing, deduplicating, aggregating, etc.</li>
+<li>Load: loading it into the target destination, e.g., a file or a data warehouse.</li>
 </ul>
 <h2 id="batch-processing-vs-stream-processing">Batch processing vs. Stream processing</h2>
 <p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider/streaming.jpg" alt="streaming"></p>
@@ -309,12 +310,12 @@
 <tbody><tr>
 <td>Definition</td>
 <td>Data is processed in batches</td>
-<td>Data is processed as soon as sample arrives. This enables <strong>online prediction</strong></td>
+<td>Data is processed as soon as the sample arrives. This enables <strong>online prediction</strong></td>
 </tr>
 <tr>
 <td>Data type</td>
-<td>usually process static features such as age, gender, job, city, income; when account was created; rating</td>
-<td>usually process dynamic features such as locations in the last 10 minutes; what user&#39;s watching; what user just liked</td>
+<td>usually processes static features such as age, gender, job, city, income; when the account was created; rating</td>
+<td>usually processes dynamic features such as locations in the last 10 minutes; what user&#39;s watching; what user just liked</td>
 </tr>
 <tr>
 <td>Data amount</td>
@@ -323,24 +324,26 @@
 </tr>
 <tr>
 <td>Tools</td>
-<td>Can be processed in batch e.g. SQL, MapReduce (to process large amounts of data)</td>
-<td>Processed as events arrive e.g. Apache Flink, Samza</td>
+<td>Can be processed in batch, e.g., SQL, MapReduce (to process large amounts of data)</td>
+<td>Processed as events arrive, e.g., Apache Flink, Samza</td>
 </tr>
 </tbody></table>
 <p>The stream processing is more complicated and has some requirements as below.</p>
 <ul>
-<li>Real-time pipeline: process features, put into model, return prediction in milliseconds.</li>
-<li>Manage streaming data: Keep user&#39;s events in-memory as much as possible, and stay there as long as they&#39;re useful (e.g. 7 days) then goes into permanent storage (e.g. S3) or is discarded. For example, recent history, recent trips, recent transactions, choose location, book a trip, cancel a trip, add a credit card, remove a credit card, etc.</li>
+<li>Real-time pipeline: process features, put into the model, return prediction in milliseconds.</li>
+<li>Manage streaming data: Keep user&#39;s events in memory as much as possible, and stay there as long as they&#39;re helpful (e.g., seven days), then go into permanent storage (e.g., S3) or are discarded. For example, recent history, recent trips, recent transactions, choose a location, book a trip, cancel a trip, add a credit card, remove a credit card, etc.</li>
 <li>Process data: Join features from various data sources</li>
 </ul>
 <p>Apache Kafka stream processing is limited in its ability to deal with various data sources. The most popular tool for stream processing is Apache Flink, with native support for batch processing.</p>
-<p>There&#39;re some barriers in Stream processing adoption such as:</p>
+<p>There&#39;re some barriers to Stream processing adoption, such as:</p>
 <ul>
-<li>Companies don&#39;t see benefits of streaming: System not at scale, batch predictions work fine, online predictions would work better but they don&#39;t know</li>
-<li>High initial investment on infrastructure</li>
+<li>Companies don&#39;t see benefits of streaming: System, not at scale, batch predictions work fine, online predictions would work better, but they don&#39;t know</li>
+<li>High initial investment in infrastructure</li>
 <li>Mental shift</li>
 <li>Python incompatibility</li>
 </ul>
+<h2 id="ending">Ending</h2>
+<p>Data engineering is an important phase of the ML lifecycle. We have discussed some essential things to consider when we reach this phase in this post. In reality, there&#39;re many more things you might need to think about beyond the list provided above. Be ready for the changes in a data-centric world.</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 
 </div>
