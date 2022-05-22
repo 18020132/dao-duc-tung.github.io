@@ -553,6 +553,15 @@
               "technology",
               "accelerator"
             ]
+          },
+          {
+            "title": "Chapter 8 - The Flywheel",
+            "type": "post",
+            "url": "projects/good-to-great/chapter-8-the-flywheel",
+            "tags": [
+              "flywheel",
+              "doom loop"
+            ]
           }
         ]
       }
