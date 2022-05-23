@@ -102,6 +102,7 @@ The learning resources that you will see in this post are the resources I have b
 - [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
 - [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
 - [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
+- [Distributed Training and HPO Deep Dive](https://youtu.be/KJFOlhD3L1E)
 
 ## DevOps
 
