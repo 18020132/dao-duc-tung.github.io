@@ -26,6 +26,7 @@
   gtag('config', 'UA-116933686-1');
 </script>
 
+
 <!-- Google search -->
 <script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
 <script>
@@ -40,6 +41,33 @@
   }
 </script>
 
+<!-- Load logo at last -->
+<script>
+  // Load logo at last: https://stackoverflow.com/a/2230953
+  function pageLoad() {
+    var nodeList, index;
+    nodeList = document.body.getElementsByTagName('img');
+
+    index = 0;
+    backgroundLoader();
+    function backgroundLoader() {
+      var img, src;
+      if (index >= nodeList.length) return;
+
+      img = nodeList[index];
+      src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+      }
+
+      ++index;
+      window.setTimeout(backgroundLoader, 200);
+    }
+  }
+  window.addEventListener('load', pageLoad, false);
+</script>
+
 </head>
 
   <body>
@@ -47,9 +75,8 @@
   <div class="page-header-left">
     <a href="/">
       <img
-        loading="lazy"
         class="logo"
-        src="/assets/images/logo-for-transparent-bg.png"
+        data-src="/assets/images/logo-for-transparent-bg.png"
         alt="AI Engineer - Stay foolish!"
       />
     </a>

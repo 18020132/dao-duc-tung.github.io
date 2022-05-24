@@ -96,6 +96,7 @@ sub {
 }
 
 img {
+  min-height: 20px;
   border: 0;
 }
 
