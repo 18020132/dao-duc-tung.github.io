@@ -96,7 +96,6 @@ sub {
 }
 
 img {
-  min-height: 20px;
   border: 0;
 }
 
@@ -565,6 +564,7 @@ a:hover {
 
 /* .logo */
 .logo {
+  min-height: 35px;
   width: 250px;
 }
 

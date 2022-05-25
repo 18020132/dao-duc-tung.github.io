@@ -400,46 +400,6 @@
               "interview",
               "introduction"
             ]
-          },
-          {
-            "title": "MLII - Machine Learning Infrastructure Roadmap",
-            "type": "post",
-            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap",
-            "tags": [
-              "machine learning infrastructure",
-              "interview",
-              "roadmap"
-            ]
-          },
-          {
-            "title": "MLII - Machine Learning Infrastructure Interview Process",
-            "type": "post",
-            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process",
-            "tags": [
-              "machine learning infrastructure",
-              "interview process",
-              "interview structure",
-              "interview tips"
-            ]
-          },
-          {
-            "title": "MLII - Machine Learning Infrastructure Learning Resources",
-            "type": "post",
-            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources",
-            "tags": [
-              "machine learning infrastructure",
-              "interview",
-              "learning resources"
-            ]
-          },
-          {
-            "title": "MLII - Machine Learning Infrastructure Interview Questions",
-            "type": "post",
-            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-questions",
-            "tags": [
-              "machine learning infrastructure",
-              "interview questions"
-            ]
           }
         ]
       }

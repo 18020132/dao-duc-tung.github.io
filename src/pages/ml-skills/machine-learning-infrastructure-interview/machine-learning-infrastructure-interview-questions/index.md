@@ -75,8 +75,8 @@ All questions are presented in the order of time during the interview. This mean
   - A _soft_ question to check the way you approach and solve a problem
 - When you use some services that people built, do you try to understand how it works?
   - A _soft_ question to check your engineering mindset
-- Implement two threads that alternatively print out numbers from 1 to 100. For example, thread A prints 1, thread B prints 2, thread A prints 3, etc.
 - What happens when you type a command in the terminal?
+- Implement two threads that alternatively print out numbers from 1 to 100. For example, thread A prints 1, thread B prints 2, thread A prints 3, etc.
 - System design: Design the API Rate Limiting system
 - Coding test: Reverse nodes in a linked list by every k element. [LeetCode link](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 
@@ -188,13 +188,13 @@ All questions are presented in the order of time during the interview. This mean
   - An open question to see your viewpoint when it comes to MLOps
 - What do you think about different teams in an organization?
   - An open question to check how you collaborate with teammates and what you think about different team members in various roles with different responsibilities
-- What approach do you take when you work with team members as a leader?
+- Which approach do you take when you work with team members as a leader?
 - Do you think embedded systems or hardware knowledge are needed for a computer science engineer?
   - An open question to see your viewpoint as an engineer
 
 ## Ending
 
-And that's all for the **Machine Learning Infrastructure Interview** series. Thank you, my reader, for being a part of this series and making it happen. Please don't hesitate to contact me if you have any questions. I hope to see you again soon in the future series when I reach the next level of my career path.
+And that's all for the **Machine Learning Infrastructure Interview** series. Thank you for being a part of this series and making it happen. Please don't hesitate to contact me if you have any questions. Hope to see you again soon in the future series when I reach the next level of my career path.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

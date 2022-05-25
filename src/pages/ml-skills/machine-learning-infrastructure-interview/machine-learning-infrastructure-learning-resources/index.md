@@ -5,9 +5,9 @@ layout: post
 
 ![bookshelf][bookshelf]
 
-In this post, I will share a comprehensive list of the interview questions and learning sources that you might need to study before your interview. The actual interview questions that I was asked will be shared in the next post.
+In this post, I will share a comprehensive list of the learning sources that you might need to study before your interview. The actual interview questions that I was asked will be shared in the next post.
 
-The learning resources that you will see in this post are the resources I have been learning for years. You might not find any other detailed list dedicated to machine learning infrastructure interviews like in this post anywhere else.
+The learning resources that you will see in this post are the resources I have been learning for years. You might not find any other detailed list dedicated to machine learning infrastructure interviews like this anywhere else.
 
 <toc>
 
@@ -54,12 +54,9 @@ The learning resources that you will see in this post are the resources I have b
 - [AWS General Immersion Day](https://catalog.workshops.aws/general-immersionday/en-US/)
 - [AWS CloudFormation Workshop](https://catalog.workshops.aws/cfn101/en-US)
 - [AWS CloudFormation best practices](https://workshop.quickstart.awspartner.com/)
-- [Amazon ECS Workshop](https://ecsworkshop.com/)
-- [EKS workshop](https://www.eksworkshop.com/)
 - [One Observability Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/31676d37-bbe9-4992-9cd1-ceae13c5116c/en-US/)
 - [AWS Control Tower Workshops](https://controltower.aws-management.tools/)
 - [AWS management and governance tools workshop](https://mng.workshop.aws/)
-- [Operationalizing the Machine Learning Pipeline](https://catalog.us-east-1.prod.workshops.aws/workshops/44d3e2a0-ec6f-44df-9397-bcfdf129cadf/en-US/)
 
 ## System design
 
@@ -102,6 +99,7 @@ The learning resources that you will see in this post are the resources I have b
 - [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
 - [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
 - [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
+- [Operationalizing the Machine Learning Pipeline](https://catalog.us-east-1.prod.workshops.aws/workshops/44d3e2a0-ec6f-44df-9397-bcfdf129cadf/en-US/)
 - [Distributed Training and HPO Deep Dive](https://youtu.be/KJFOlhD3L1E)
 
 ## DevOps
@@ -110,6 +108,8 @@ The learning resources that you will see in this post are the resources I have b
 - [Docker](https://www.linkedin.com/learning/learning-docker-2018)
 - [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
 - [Kubernetes Essential Training: Application Development](https://www.linkedin.com/learning/kubernetes-essential-training-application-development)
+- [ECS Workshop](https://ecsworkshop.com/)
+- [EKS workshop](https://www.eksworkshop.com/)
 - [AWS CI/CD Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/ef1c179d-8097-4f34-8dc3-0e9eb381b6eb/en-US/)
 - [CI/CD workshop for Amazon ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/869f7eee-d3a2-490b-bf9a-ac90a8fb2d36/en-US/)
 - [CI/CD with AWS Fargate](https://catalog.us-east-1.prod.workshops.aws/workshops/954a35ee-c878-4c22-93ce-b30b25918d89/en-US)
@@ -124,7 +124,7 @@ The learning resources that you will see in this post are the resources I have b
 
 ## Others
 
-Below are some other useful resources that you might need them.
+Below are some other useful resources that you might need.
 
 - [Awesome Software Engineering Interview Github](https://github.com/imkgarg/Awesome-Software-Engineering-Interview)
 - [Backend development best practices](https://github.com/futurice/backend-best-practices)

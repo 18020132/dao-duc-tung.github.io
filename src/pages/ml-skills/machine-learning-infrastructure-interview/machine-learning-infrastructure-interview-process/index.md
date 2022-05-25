@@ -5,7 +5,7 @@ layout: post
 
 ![micro][micro]
 
-Today in this post, I will share with you the typical structure of the interview process for the roles of Machine Learning Infrastructure Engineer, Machine Learning Infrastructure Engineer, Machine Learning Platform Engineer, and MLOps Engineer at the Senior level. At the end of this post, I will also give you some helpful tips to use before, during, and after the interview sessions.
+Today in this post, I will share with you the typical structure of the interview process for the roles of Machine Learning Infrastructure Engineer, Machine Learning Platform Engineer, and MLOps Engineer at the Senior level. At the end of this post, I will also give you some helpful tips to use before, during, and after the interview sessions.
 
 <toc>
 
@@ -45,7 +45,7 @@ A Soft round lasts from 30 minutes to 1 hour.
 
 Depending on the companies' hiring strategies and targets, the number of Hard rounds and the distribution of the above topics is different. There are usually three hard rounds for some companies like Shopee, ByteDance, TikTok, etc. You might be asked about all of the above topics in every single Hard round.
 
-Other than that, there are at most two Hard rounds in the other companies (not necessarily smaller companies than the above companies). They ask less about basic Computer Science knowledge, fewer live coding tests, and fewer system design questions.
+Other than that, there are at most two Hard rounds in the other companies (not necessarily smaller companies than the above companies). They ask less about basic Computer Science knowledge, fewer live coding tests, and fewer system design questions. They focus more on your real experience in your past projects. They prefer to have a Homework round to test your coding skills instead of doing the live coding test.
 
 A Hard round lasts from 1 hour to 1 hour 30 minutes.
 
@@ -56,7 +56,8 @@ The Homework round is self-explanatory. You will be assigned an assignment to so
 - Write a docker command
 - Write a shell script
 - Solve coding tests
-- Design and implement a machine learning system/infrastructure, either a _simple_ one or an _end-to-end_ one that has the capability of testability, high availability, scalability, extendability, maintainability, adaptability, reliability, and lots of other \*_-bility_.
+- Train a machine learning model
+- Design and implement a machine learning system or a machine learning infrastructure, either a _simple_ one or an _end-to-end_ one that has the capability of testability, high availability, scalability, extendability, maintainability, adaptability, reliability, and lots of other \*_-bility_.
 - etc.
 
 The Homework round usually comes with a deadline. It can be 1 hour, 2 hours, three days, one week, or two weeks, depending on the complexity of the problem.
@@ -65,7 +66,7 @@ The Homework round usually comes with a deadline. It can be 1 hour, 2 hours, thr
 
 Congratulations, after passing all the above rounds, you will get an offer from the company. Usually, the HR in charge will contact you to discuss the offer informally via phone. The number of Offer rounds is around three. The situation might be as follows.
 
-1. Offer round 1: The HR person calls you and discusses the initial offer. The HR person takes a few days to ask for their managers.
+1. Offer round 1: The HR person calls you and discusses the initial offer. The HR person takes a few days to ask their managers to make the decision.
 1. Offer round 2: The HR person informs you about the decision. You continue negotiating the offer. The HR person takes a few days more to ask for their managers again.
 1. Offer rounds 3, 4, etc.: Similar to Offer round 2.
 
@@ -101,17 +102,16 @@ These questions show that you care about the work and want to contribute to the 
 
 **Questions about the teams**
 
-- "Could you please describe the structure and scale of your team?"
-- "Do you have any plan to expand your team?"
-- "Could you please describe the teams that I might collaborate with if I join your team?"
+- "Could you please describe the structure and scale of the teams that I might collaborate with if I join the company?"
+- "Do you have any plan to expand your teams?"
 - "Could you please describe the working culture of your team or the company?"
 
 These questions show that you care about the team, the working environment, and the collaboration among teams.
 
 **Other important questions**
 
-- "What personalities do you expect from a candidate?". It would help if you asked the CTO or the CEO these questions.
 - "Do you have any doubt or uncertainty about my qualification?". This question aims to get feedback directly and immediately from the interviewer.
+- "What personalities do you expect from a candidate?". It would help if you asked the CTO or the CEO these questions.
 
 ### Coding test tips
 
@@ -122,7 +122,7 @@ The first tip is to practice coding interview questions frequently, or at least 
 ### Homework round tips
 
 - If the assignment is to design and implement a system, you should follow the [SOLID principles](https://en.wikipedia.org/wiki/SOLID) and best practices in the [Clean Code book](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882). Whatever the system is, design it in a _clean_ way.
-- In the README file, you should describe the System Design's basic steps and draw some diagrams such as the Use cases diagram, Data flow, Sequence diagram, etc. If possible, you can add some images and other helpful information about your design, how to extend some functionalities, etc. For an example of the README file's structure, you can refer to my two projects which are [GRPC + RESTful Model Inference Service](https://github.com/dao-duc-tung/inference-service-grpc-restful) and [Face Detection on UWP using ONNX](https://github.com/dao-duc-tung/face-detection-uwp-onnx). No matter how simple the assignment is, show off your deep understanding by writing structured, informative documents.
+- In the `README` file, you should describe the System Design's basic steps and draw some diagrams such as the Use cases diagram, Data flow, Sequence diagram, etc. If possible, you can add some images and other helpful information about your design, how to extend some functionalities, etc. For an example of the `README` file's structure, you can refer to my two projects which are [GRPC + RESTful Model Inference Service](https://github.com/dao-duc-tung/inference-service-grpc-restful) and [Face Detection on UWP using ONNX](https://github.com/dao-duc-tung/face-detection-uwp-onnx). No matter how simple the assignment is, show off your deep understanding by writing structured and informative documents.
 
 ### Offer round tips
 
@@ -132,7 +132,7 @@ For the tips, I will link a video about [Tips for negotiating your salary](https
 
 ## Ending
 
-And that's it for the interview process. It's pretty similar to the other interviews for engineering roles. In the next post, I will share all the learning resources that I have been learning for years along my Machine Learning Systems Design journey.
+And that's it for the interview process. It's pretty similar to the other interviews for engineering roles. In the next post, I will share all the learning resources that I have been learning for years along my Machine Learning Infrastructure journey.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
