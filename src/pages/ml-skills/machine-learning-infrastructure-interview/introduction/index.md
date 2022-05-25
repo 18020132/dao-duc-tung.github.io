@@ -13,7 +13,7 @@ For the **Machine Learning System Interview**, I recommend you to read these res
 
 Generally, after going through this **Machine Learning Infrastructure Interview** series, you will have an overview of what knowledge you might need to learn, what tools and technologies you might need to know, which topics you should practice for the **Machine Learning Infrastructure Interview**, what tips and tricks you might need in order to increase the chance of being offered, and the most important thing, how the real **Machine Learning Infrastructure Interview** questions look like.
 
-I'll see you, my reader, in the next post.
+I'll see you in the next post, my Machine Learning Infrastructure Roadmap.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
