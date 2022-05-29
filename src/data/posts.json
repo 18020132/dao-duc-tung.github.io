@@ -400,6 +400,16 @@
               "interview",
               "introduction"
             ]
+          },
+          {
+            "title": "MLII - Machine Learning Infrastructure Roadmap",
+            "type": "post",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap",
+            "tags": [
+              "machine learning infrastructure",
+              "journey",
+              "roadmap"
+            ]
           }
         ]
       }
