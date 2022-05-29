@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>MLII - Machine Learning Infrastructure Roadmap</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+<!-- Load logo at last -->
+<script>
+  // Load logo at last: https://stackoverflow.com/a/2230953
+  function pageLoad() {
+    var nodeList, index;
+    nodeList = document.body.getElementsByTagName('img');
+
+    index = 0;
+    backgroundLoader();
+    function backgroundLoader() {
+      var img, src;
+      if (index >= nodeList.length) return;
+
+      img = nodeList[index];
+      src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+      }
+
+      ++index;
+      window.setTimeout(backgroundLoader, 200);
+    }
+  }
+  window.addEventListener('load', pageLoad, false);
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        data-src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/machine-learning-infrastructure-interview" class="btn"> Back to Machine Learning Infrastructure Interview </a>
+    
+  <h1>MLII - Machine Learning Infrastructure Roadmap</h1>
+
+  <div class="post-info">
+    May 29, 2022 · 3 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap/the-road.jpg" alt="the-road"></p>
+<p>Today in this post, I will share with you my journey from when I was a student until the time I fell in love with Machine Learning Infrastructure.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#my-journey">My journey</a> </li>
+<li><a href="#the-roadmap">The roadmap</a> </li>
+</ol>
+<h2 id="my-journey">My journey</h2>
+<p>When I was a fourth-year student at my university, that was the first time I heard about <em>machine learning</em>. I didn&#39;t even search on Google to see what it meant. In the same year, 2016, I had a course named <em>Computer Vision</em> which I didn&#39;t even know why I had to learn. The course was hard for me. But after finishing it, I knew that <em>Computer Vision</em> will be an important part of my life.</p>
+<p>In my fifth year at university in 2017, I got a chance to work on a big Computer Vision project as a researcher with a famous professor in the <em>Computer Vision</em> research area. After graduation in 2018, I continued doing research on Computer Vision with my professor for one year.</p>
+<p>From 2019 to 2020, I was diving into the world of Computer Vision. During this time, I also worked for some companies where I had chances to learn about software architecture and to design and implement several software core applications from the very beginning to the end products. At that time, I tried to deliver the products as perfectly as possible. I didn&#39;t know that my software architecture design experience helped me a lot in terms of systematized thinking when it came to Machine Learning Infrastructure or Machine Learning Systems Design later on.</p>
+<p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap/software-architecture-stack.png" alt="software-architecture-stack"></p>
+<p>At the beginning of 2021, I started learning about machine learning system design. I learned it by taking online courses, reading tutorial articles, searching for best practices, and building my own machine learning systems. I was fortunate that I could also apply what I learned to what I was doing at my company. Moreover, I volunteered for a community project as an MLOps engineer. This was really the moment when my experience was boosted like a rocket.</p>
+<p>That is a brief description of my career so far. In short, I want to emphasize two things in my journey: machine learning knowledge is crucial, and software architecture is essential to shape my mindset into a systematic structure.</p>
+<h2 id="the-roadmap">The roadmap</h2>
+<p>Instead of giving you a comprehensive list of things that you might get overwhelmed with, I will provide a list of topics that I think you might need in order to become a Senior in the Machine Learning Infrastructure or Machine Learning Systems area. Because Machine Learning Infrastructure is a part of a Machine Learning System, some topics are crucial for both Machine Learning Infrastructure and Machine Learning Systems.</p>
+<ul>
+<li>Machine learning</li>
+<li>Software architecture</li>
+<li>Software testing</li>
+<li>Cloud architecture</li>
+<li>DevOps</li>
+<li>Distributed system design</li>
+<li>Machine learning system design</li>
+<li>Parallel/distributed computing/training</li>
+</ul>
+<p>Please take note that some of the topics above can be grouped into one line, but I intended to separate them into multiple lines to highlight their importance.</p>
+<p>During the learning journey, remember that no one can learn those topics once and master them one by one in months. It should take years or decades. Most of the time, you work on problems that belong to a small subset of the topics. At the end of the day, you at least may aggregate things to build a small system, and you move forward from there. Eventually, you will know how the <em>dots</em> are connected.</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">machine learning infrastructure</a></li>
+          
+          <li><a href="#">journey</a></li>
+          
+          <li><a href="#">roadmap</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/machine-learning-infrastructure-interview/introduction" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: MLII - Introduction</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/projects/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        loading="lazy"
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>
