@@ -32,6 +32,7 @@ Instead of giving you a comprehensive list of things that you might get overwhel
 - Software testing
 - Cloud architecture
 - DevOps
+- MLOps
 - Distributed system design
 - Machine learning system design
 - Parallel/distributed computing/training
