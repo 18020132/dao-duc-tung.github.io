@@ -25,7 +25,7 @@ That is a brief description of my career so far. In short, I want to emphasize t
 
 ## The roadmap
 
-Instead of giving you a comprehensive list of things that you might get overwhelmed with, I will provide a list of topics that I think you might need in order to become a Senior in the Machine Learning Infrastructure or Machine Learning Systems area. Because Machine Learning Infrastructure is a part of a Machine Learning System, some topics are crucial for both Machine Learning Infrastructure and Machine Learning Systems.
+Instead of giving you a comprehensive list of things that you might get overwhelmed with, I will provide a list of topics that I think you might need in order to become a Senior in the Machine Learning Infrastructure or Machine Learning Systems area. Because Machine Learning Infrastructure is a part of a Machine Learning System, some topics might overlap but they are all crucial for both Machine Learning Infrastructure and Machine Learning Systems.
 
 - Machine learning
 - Software architecture
@@ -36,9 +36,9 @@ Instead of giving you a comprehensive list of things that you might get overwhel
 - Machine learning system design
 - Parallel/distributed computing/training
 
-Please take note that some of the topics above can be grouped into one line, but I intended to separate them into multiple lines to highlight their importance.
+Please take note that some of the topics above can be grouped into one, but I intend to separate them into multiple lines to highlight their importance. In the future post, I will share with you the resources that I have been learning for years for all the above topics.
 
-During the learning journey, remember that no one can learn those topics once and master them one by one in months. It should take years or decades. Most of the time, you work on problems that belong to a small subset of the topics. At the end of the day, you at least may aggregate things to build a small system, and you move forward from there. Eventually, you will know how the _dots_ are connected.
+During the learning journey, remember that no one can learn those topics once and master them one by one in months. It should take years or even decades. Most of the time, you work on problems that belong to a small subset of the topics. At the end of the day, you at least may aggregate things to build a small system, and you move forward from there. Eventually, you will know how the _dots_ are connected.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 

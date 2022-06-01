@@ -11,8 +11,7 @@
         "tags": [
           "ask question",
           "art"
-        ],
-        "pinned": true
+        ]
       },
       {
         "title": "How Will I Measure My Life",
@@ -409,6 +408,16 @@
               "machine learning infrastructure",
               "journey",
               "roadmap"
+            ]
+          },
+          {
+            "title": "MLII - Machine Learning Infrastructure Interview Process",
+            "type": "post",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process",
+            "tags": [
+              "machine learning infrastructure",
+              "interview process",
+              "interview tips"
             ]
           }
         ]
