@@ -39,9 +39,8 @@ A Soft round lasts from 30 minutes to 1 hour.
 - Computer science
 - Live coding test
 - Machine learning
-- System design
-- Machine learning system
-- DevOps
+- DevOps & MLOps
+- Distributed system design & Machine Learning system design
 - Parallel/distributed computing/training
 
 Depending on the companies' hiring strategies and targets, the number of Hard rounds and the distribution of the above topics is different. There are usually three hard rounds for some companies like Shopee, ByteDance, TikTok, etc. You might be asked about all of the above topics in every single Hard round.
