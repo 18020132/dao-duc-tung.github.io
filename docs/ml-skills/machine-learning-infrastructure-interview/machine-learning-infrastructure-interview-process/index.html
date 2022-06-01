@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>MLII - Machine Learning Infrastructure Interview Process</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+<!-- Load logo at last -->
+<script>
+  // Load logo at last: https://stackoverflow.com/a/2230953
+  function pageLoad() {
+    var nodeList, index;
+    nodeList = document.body.getElementsByTagName('img');
+
+    index = 0;
+    backgroundLoader();
+    function backgroundLoader() {
+      var img, src;
+      if (index >= nodeList.length) return;
+
+      img = nodeList[index];
+      src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+      }
+
+      ++index;
+      window.setTimeout(backgroundLoader, 200);
+    }
+  }
+  window.addEventListener('load', pageLoad, false);
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        data-src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/machine-learning-infrastructure-interview" class="btn"> Back to Machine Learning Infrastructure Interview </a>
+    
+  <h1>MLII - Machine Learning Infrastructure Interview Process</h1>
+
+  <div class="post-info">
+    Jun 01, 2022 · 10 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/micro.jpg" alt="micro"></p>
+<p>Today in this post, I will share with you the typical structure of the interview process for the roles of Machine Learning Infrastructure Engineer and MLOps Engineer at the Senior level. At the end of this post, I will also give you some helpful tips to use before and during the interview sessions.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#interview-process-structure">Interview process structure</a> </li>
+<li><a href="#interview-tips">Interview tips</a> </li>
+<li><a href="#ending">Ending</a> </li>
+</ol>
+<h2 id="interview-process-structure">Interview process structure</h2>
+<p>Different companies at different scales have different interview structures. Fortunately, the interview structure for the machine learning infrastructure engineer-related roles is not so different.</p>
+<p>Commonly, there are four types of interview rounds of a typical interview process.</p>
+<ol>
+<li>Soft round</li>
+<li>Hard round</li>
+<li>Homework round</li>
+<li>Offer round</li>
+</ol>
+<p>The image below shows examples of the interview rounds.</p>
+<p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/interview-rounds.png" alt="interview-rounds"></p>
+<h3 id="soft-round">Soft round</h3>
+<p>The Soft round usually will be the first or the third round where the interviewers are the HR recruiter, the managers, leaders, CTO or CEO, etc. The questions are about behavior, working culture, working mindset, soft skills, etc.</p>
+<p>Due to the nature of technical roles, Soft rounds sometimes are merged into Hard rounds to reduce one round of the interview.</p>
+<p>A Soft round lasts from 30 minutes to 1 hour.</p>
+<h3 id="hard-round">Hard round</h3>
+<p>&quot;Hard round&quot; doesn&#39;t mean the round is challenging, although it might be. It means the interviewer will test your technical skills. Hard rounds usually will be conducted by the Senior Engineers, Solution Architects, Team Leaders, Tech Leads, the CTO, etc. The questions in the Hard rounds include the following topics.</p>
+<ul>
+<li>Computer science</li>
+<li>Live coding test</li>
+<li>Machine learning</li>
+<li>System design</li>
+<li>Machine learning system</li>
+<li>DevOps</li>
+<li>Parallel/distributed computing/training</li>
+</ul>
+<p>Depending on the companies&#39; hiring strategies and targets, the number of Hard rounds and the distribution of the above topics is different. There are usually three hard rounds for some companies like Shopee, ByteDance, TikTok, etc. You might be asked about all of the above topics in every single Hard round.</p>
+<p>Other than that, there are at most two Hard rounds in the other companies (not necessarily smaller companies than the above companies). They ask less about basic Computer Science knowledge, fewer live coding tests, and fewer system design questions. They focus more on your real experience in your past projects. They prefer to have a Homework round to test your coding skills instead of doing the live coding test.</p>
+<p>A Hard round lasts from 1 hour to 1 hour 30 minutes.</p>
+<h3 id="homework-round">Homework round</h3>
+<p>The Homework round is self-explanatory. You will be assigned an assignment to solve at home. Some examples of the assignments are:</p>
+<ul>
+<li>Write a docker command</li>
+<li>Write a shell script</li>
+<li>Solve coding tests</li>
+<li>Train a machine learning model</li>
+<li>Design and implement a machine learning system or a machine learning infrastructure, either a <em>simple</em> one or an <em>end-to-end</em> one that has the capability of testability, high availability, scalability, extendability, maintainability, adaptability, reliability, and lots of other *<em>-bility</em>.</li>
+<li>etc.</li>
+</ul>
+<p>The Homework round usually comes with a deadline. It can be 1 hour, 2 hours, three days, one week, or two weeks, depending on the complexity of the problems.</p>
+<h3 id="offer-round">Offer round</h3>
+<p>Congratulations, after passing all the above rounds, you will get an offer from the company. Usually, the HR in charge will contact you to discuss the offer informally via phone. The number of Offer rounds is around three. The situation might be as follows.</p>
+<ol>
+<li>Offer round 1: The HR person calls you and discusses the initial offer. The HR person takes a few days to ask their managers to make the decision.</li>
+<li>Offer round 2: The HR person informs you about the decision. You continue negotiating the offer. The HR person takes a few days more to ask for their managers again.</li>
+<li>Offer rounds 3, 4, etc.: Similar to Offer round 2.</li>
+</ol>
+<p>Usually, you will make the decision at the Offer round 3 or 4. Each Offer round might take three days to one week.</p>
+<h2 id="interview-tips">Interview tips</h2>
+<p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process/trick.jpg" alt="trick"></p>
+<h3 id="before-the-interview">Before the interview</h3>
+<ul>
+<li>Prepare presentation slides for each project that you plan to talk about. The interviewer might get lost easily because of the complexity of the system. The presentation slides create the visual effect to attract people&#39;s attention and help people understand your project easier. The slides also impress the interviewer that you prepared very carefully for the interview.</li>
+<li>Pretend to be the interviewer, look into your presentation slides, list down every question you think the interviewer might ask, and answer those questions. This helps you to understand your project better, prepare for what you might be asked, and feel confident during the interview.</li>
+<li>Write down everything you plan to say or talk about. For example, your self-introduction, the answers to all the questions in the Soft round, Hard round, or your presentation slides. Writing down the answers helps you organize them better, add more impressive information, and remove the redundant ones.</li>
+</ul>
+<h3 id="during-the-interview">During the interview</h3>
+<p>There are some tips during the interview as follows.</p>
+<ul>
+<li>Play a song that makes you sing along <strong>until</strong> the interviewer joins the online meeting room. This trick keeps your guts comfortable.</li>
+<li>Be confident, talk confident. Your attitude is super important.</li>
+<li>Every question has a purpose, at least to test your explaining skill.</li>
+<li>If you don&#39;t know or don&#39;t remember the answer to a question, after telling the interviewer that you don&#39;t know the answer exactly, give them a guess and tell them what you can interpret. This trick might help show your analytical thinking and problem-solving skills when approaching an unknown issue.</li>
+</ul>
+<p>At the end of each interview, you have to ask some questions. Below is the list of the important questions you should ask the interviewer.</p>
+<p><strong>Questions about the projects</strong></p>
+<ul>
+<li>Could you please describe the projects that your team is working on, the project that I might work on if I join the team, and the challenges of these projects?</li>
+<li>Could you please give me an overview of the meaning, the target, and the future vision of the projects, if possible?</li>
+</ul>
+<p>These questions show that you care about the work and want to contribute to the team.</p>
+<p><strong>Questions about the teams</strong></p>
+<ul>
+<li>Could you please describe the structure and scale of the teams that I might collaborate with if I join the company?</li>
+<li>Do you have any plan to expand your teams?</li>
+<li>Could you please describe the working culture of your team or the company?</li>
+</ul>
+<p>These questions show that you care about the team, the working environment, and the collaboration among teams.</p>
+<p><strong>Other important questions</strong></p>
+<ul>
+<li>Do you have any doubt or uncertainty about my qualification?<ul>
+<li>This question aims to get feedback directly and immediately from the interviewer.</li>
+</ul>
+</li>
+<li>What personalities do you expect from a candidate?<ul>
+<li>It would help if you asked the CTO or the CEO these questions.</li>
+</ul>
+</li>
+</ul>
+<h3 id="coding-test-tips">Coding test tips</h3>
+<p>I started my journey of practicing coding interview questions with the book <a href="https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850">Cracking the Coding Interview</a>. Every year I spend roughly two weeks practicing the coding questions in this book and another two weeks practicing the coding questions on <a href="https://leetcode.com/">LeetCode</a>, except for the first year when I took two months to recall and practice everything. The following years will be easier when I focus on the topics that I don&#39;t feel confident about.</p>
+<p>The first tip is to practice coding interview questions frequently, or at least annually. The second tip is to answer the coding interview questions in a structured way by reading this article about <a href="https://leetcode.com/discuss/general-discussion/1039615/how-to-answer-coding-interview-questions">How to answer coding interview questions</a>. Also take note that in an actual interview, you don&#39;t need to implement the brute force solution if it&#39;s simple, talking about it would suffice. Otherwise, you won&#39;t have enough time for the optimal solution implementation.</p>
+<h3 id="homework-round-tips">Homework round tips</h3>
+<ul>
+<li>If the assignment is to design and implement a system, you should follow the <a href="https://en.wikipedia.org/wiki/SOLID">SOLID principles</a> and best practices in the <a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code book</a>. Whatever the system is, design it in a <em>clean</em> way.</li>
+<li>In the <code>README</code> file, you should describe the System Design&#39;s basic steps and draw some diagrams such as the Use cases diagram, Data flow, Sequence diagram, etc. If possible, you can add some images and other helpful information about your design, how to extend some functionalities, etc. For an example of the <code>README</code> file&#39;s structure, you can refer to my two projects which are <a href="https://github.com/dao-duc-tung/inference-service-grpc-restful">GRPC + RESTful Model Inference Service</a> and <a href="https://github.com/dao-duc-tung/face-detection-uwp-onnx">Face Detection on UWP using ONNX</a>. No matter how simple the assignment is, show off your deep understanding by writing structured and informative documents.</li>
+</ul>
+<h3 id="offer-round-tips">Offer round tips</h3>
+<p>In the previous section where I describe the Offer round, you can see that it&#39;s similar to when you buy something and negotiate the price. It&#39;s different in the time duration that the negotiation happens. So, keep calm and stay cool.</p>
+<p>For the tips, I will link a video about <a href="https://youtu.be/u9BoG1n1948">Tips for negotiating your salary</a>. Watch it, and you will know what you need to do.</p>
+<h2 id="ending">Ending</h2>
+<p>And that&#39;s it for the interview process. It&#39;s pretty similar to the other interviews for engineering roles. In the next post, I will share all the learning resources that I have been learning for years along my Machine Learning Infrastructure journey.</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">machine learning infrastructure</a></li>
+          
+          <li><a href="#">interview process</a></li>
+          
+          <li><a href="#">interview tips</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: MLII - Machine Learning Infrastructure Roadmap</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/projects/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        loading="lazy"
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>
