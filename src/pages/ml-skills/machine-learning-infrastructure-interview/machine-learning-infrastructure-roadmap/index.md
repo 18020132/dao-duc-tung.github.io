@@ -35,7 +35,7 @@ Instead of giving you a comprehensive list of things that you might get overwhel
 - MLOps
 - Distributed system design
 - Machine learning system design
-- Parallel/distributed computing/training
+- Distributed computing
 
 Please take note that some of the topics above can be grouped into one, but I intend to separate them into multiple lines to highlight their importance. In the future post, I will share with you the resources that I have been learning for years for all the above topics.
 

@@ -36,12 +36,12 @@ A Soft round lasts from 30 minutes to 1 hour.
 
 "Hard round" doesn't mean the round is challenging, although it might be. It means the interviewer will test your technical skills. Hard rounds usually will be conducted by the Senior Engineers, Solution Architects, Team Leaders, Tech Leads, the CTO, etc. The questions in the Hard rounds include the following topics.
 
-- Computer science
+- Computer science fundamentals
 - Live coding test
 - Machine learning
 - DevOps & MLOps
 - Distributed system design & Machine Learning system design
-- Parallel/distributed computing/training
+- Distributed computing
 
 Depending on the companies' hiring strategies and targets, the number of Hard rounds and the distribution of the above topics is different. There are usually three hard rounds for some companies like Shopee, ByteDance, TikTok, etc. You might be asked about all of the above topics in every single Hard round.
 
