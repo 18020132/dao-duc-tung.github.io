@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>MLII - Machine Learning Infrastructure Learning Resources</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+<!-- Load logo at last -->
+<script>
+  // Load logo at last: https://stackoverflow.com/a/2230953
+  function pageLoad() {
+    var nodeList, index;
+    nodeList = document.body.getElementsByTagName('img');
+
+    index = 0;
+    backgroundLoader();
+    function backgroundLoader() {
+      var img, src;
+      if (index >= nodeList.length) return;
+
+      img = nodeList[index];
+      src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+      }
+
+      ++index;
+      window.setTimeout(backgroundLoader, 200);
+    }
+  }
+  window.addEventListener('load', pageLoad, false);
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        data-src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/machine-learning-infrastructure-interview" class="btn"> Back to Machine Learning Infrastructure Interview </a>
+    
+  <h1>MLII - Machine Learning Infrastructure Learning Resources</h1>
+
+  <div class="post-info">
+    Jun 02, 2022 · 5 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources/bookshelf.jpg" alt="bookshelf"></p>
+<p>In this post, I will share a comprehensive list of the learning sources that you might need to study before your interview. The actual interview questions that I was asked will be shared in the next post.</p>
+<p>The learning resources that you will see in this post are the resources I have been learning for years. You might not find any other detailed list dedicated to machine learning infrastructure interviews like this anywhere else.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#computer-science-fundamentals">Computer science fundamentals</a> </li>
+<li><a href="#coding-test">Coding test</a> </li>
+<li><a href="#machine-learning">Machine learning</a> </li>
+<li><a href="#cloud-computing">Cloud computing</a> </li>
+<li><a href="#software/cloud-architecture">Software/Cloud architecture</a> </li>
+<li><a href="#software-testing">Software testing</a> </li>
+<li><a href="#devops-&amp;-mlops">DevOps &amp; MLOps</a> </li>
+<li><a href="#distributed-system-design">Distributed system design</a> </li>
+<li><a href="#machine-learning-system-design">Machine learning system design</a> </li>
+<li><a href="#distributed-computing">Distributed computing</a> </li>
+<li><a href="#others">Others</a> </li>
+<li><a href="#ending">Ending</a> </li>
+</ol>
+<h2 id="computer-science-fundamentals">Computer science fundamentals</h2>
+<ul>
+<li><a href="https://github.com/vietnakid/learning-material/blob/master/computer-science/cs_questions.md">Computer Science questions</a></li>
+<li><a href="https://data-notes.co/the-10-operating-system-concepts-software-developers-need-to-remember-480d0734d710">The 10 Operating System Concepts Software Developers Need to Remember</a></li>
+</ul>
+<h2 id="coding-test">Coding test</h2>
+<ul>
+<li><a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/">Introduction to algorithms</a></li>
+<li><a href="https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850">Cracking the Coding Interview</a></li>
+<li>Coding platform<ul>
+<li><a href="https://leetcode.com/assessment/">LeetCode</a></li>
+<li><a href="https://www.hackerrank.com/interview/interview-preparation-kit">HackerRank</a></li>
+<li><a href="https://app.codesignal.com/interview-practice">CodeSignal</a></li>
+<li><a href="https://codeforces.com/">CodeForces</a></li>
+</ul>
+</li>
+<li><a href="https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-DP-besides-the-TopCoder-tutorial/answer/Michal-Danil%C3%A1k">Dynamic Programming tutorial on Quora</a></li>
+</ul>
+<h2 id="machine-learning">Machine learning</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=pHiMN_gy9mk">Machine Learning Roadmap</a></li>
+<li><a href="https://www.youtube.com/watch?v=tpCFfeUEGs8&amp;list=PL6vjgQ2-qJFfU2vF6-lG9DlSa4tROkzt9">TensorFlow and Deep Learning fundamentals</a></li>
+<li><a href="https://explore.skillbuilder.aws/learn/lp/28/machine-learning-learning-plan">Machine Learning Learning Plan</a></li>
+<li><a href="https://www.linkedin.com/posts/imarpit_machine-learning-cheatsheet-activity-6918744155485536256-v_SS/?fbclid=IwAR2PHMJcdOpAG2L8AhYGTI8oYEHV6uVvFnnrzAyctJkMgoAR0qATRBOQ05k">Machine Learning Cheatsheet</a></li>
+<li><a href="https://huyenchip.com/ml-interviews-book/">Machine Learning Interviews Book</a></li>
+<li><a href="https://github.com/BoltzmannEntropy/interviews.ai">Deep Learning Interviews book</a></li>
+</ul>
+<h2 id="cloud-computing">Cloud computing</h2>
+<ul>
+<li><a href="https://explore.skillbuilder.aws/learn/lp/82/cloud-foundations-learning-plan">Cloud Foundations Learning Plan</a></li>
+<li><a href="https://catalog.workshops.aws/general-immersionday/en-US/">AWS General Immersion Day</a></li>
+<li><a href="https://catalog.workshops.aws/cfn101/en-US">AWS CloudFormation Workshop</a></li>
+<li><a href="https://workshop.quickstart.awspartner.com/">AWS CloudFormation best practices</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/31676d37-bbe9-4992-9cd1-ceae13c5116c/en-US/">One Observability Workshop</a></li>
+<li><a href="https://controltower.aws-management.tools/">AWS Control Tower Workshops</a></li>
+<li><a href="https://mng.workshop.aws/">AWS management and governance tools workshop</a></li>
+</ul>
+<h2 id="softwarecloud-architecture">Software/Cloud architecture</h2>
+<ul>
+<li><a href="https://khalilstemmler.com/articles/software-design-architecture/full-stack-software-design/">The Full-stack Software Design &amp; Architecture Map</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Software_design_pattern">Software design pattern</a></li>
+<li>SOLID principles<ul>
+<li><a href="https://www.youtube.com/watch?v=L2m-S0Pj_Xk">Understanding the Single Responsibility Principle</a></li>
+<li><a href="https://www.youtube.com/watch?v=5RwhyZnVRS8">Single Responsibility Principle Explained Practically in C#</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ryhy7333mqQ">Understanding the Open Closed Principle</a></li>
+<li><a href="https://www.youtube.com/watch?v=VFlk43QGEgc">Open Closed Principle Explained Practically in C#</a></li>
+<li><a href="https://www.youtube.com/watch?v=Mmy1EUKC_iE">Understanding the Liskov Substitution Principle</a></li>
+<li><a href="https://www.youtube.com/watch?v=-3UXq2krhyw">Liskov Substitution Principle Explained Practically in C#</a></li>
+<li><a href="https://www.youtube.com/watch?v=y1JiMGP51NE">Interface Segregation Principle Explained Practically in C#</a></li>
+</ul>
+</li>
+<li><a href="https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Clean Code</a></li>
+<li><a href="https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164">Clean Architecture</a></li>
+<li><a href="https://microservices.io/patterns/microservices.html">Microservice Architecture</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/">Cloud Design Patterns</a></li>
+</ul>
+<h2 id="software-testing">Software testing</h2>
+<ul>
+<li><a href="https://www.guru99.com/software-testing.html">Software Testing Tutorial</a></li>
+</ul>
+<h2 id="devops--mlops">DevOps &amp; MLOps</h2>
+<ul>
+<li><a href="https://explore.skillbuilder.aws/learn/lp/85/devops-engineer-learning-plan">DevOps Engineer Learning Plan</a></li>
+<li><a href="https://www.linkedin.com/learning/learning-docker-2018">Docker</a></li>
+<li><a href="https://kubernetes.io/docs/concepts/">Kubernetes Concepts</a></li>
+<li><a href="https://www.linkedin.com/learning/kubernetes-essential-training-application-development">Kubernetes Essential Training: Application Development</a></li>
+<li><a href="https://ecsworkshop.com/">ECS Workshop</a></li>
+<li><a href="https://www.eksworkshop.com/">EKS workshop</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/ef1c179d-8097-4f34-8dc3-0e9eb381b6eb/en-US/">AWS CI/CD Workshop</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/869f7eee-d3a2-490b-bf9a-ac90a8fb2d36/en-US/">CI/CD workshop for Amazon ECS</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/954a35ee-c878-4c22-93ce-b30b25918d89/en-US">CI/CD with AWS Fargate</a></li>
+<li><a href="https://cicd.serverlessworkshops.io/">CI/CD for serverless applications</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/2175d94a-cd79-4ed2-8e7e-1f0dd1956a3a/en-US/">Blue/green and Canary deployment for EKS and ECS</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/4b59b9fb-48b6-461c-9377-907b2e33c9df/en-US/">Building your first DevOps Blue/Green pipeline with Amazon ECS</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/95ee7fde-4d85-47a5-99fc-7e0dee07fc94/en-US">DevSecOps on AWS</a></li>
+<li><a href="https://www.linkedin.com/learning/running-kubernetes-on-aws-eks">Running Kubernetes on AWS (EKS)</a></li>
+<li><a href="https://www.youtube.com/watch?v=OvOQJba-edM">Kubernetes Interview Questions 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=lHC7xpFack8">Kubernetes Interview Questions 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=p4ZJMPUdm4c">Kubernetes Best Practices for Interview</a></li>
+</ul>
+<h2 id="distributed-system-design">Distributed system design</h2>
+<ul>
+<li><a href="https://www.geeksforgeeks.org/system-design-tutorial/">System Design Tutorial</a></li>
+<li><a href="https://www.geeksforgeeks.org/getting-started-with-system-design/">Getting Started with System Design</a></li>
+<li><a href="https://www.geeksforgeeks.org/how-to-crack-system-design-round-in-interviews/">How to Crack System Design Round in Interviews?</a></li>
+<li><a href="https://www.youtube.com/watch?v=SqcXvc3ZmRU">How to start with distributed systems?</a></li>
+<li><a href="https://www.youtube.com/watch?v=DUbEgNw-F9c">Design Caching System</a></li>
+<li>Design TinyURL<ul>
+<li><a href="https://www.youtube.com/watch?v=He-V_RuHwek">Design TinyURL 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=eCLqmPBIEYs">Design TinyURL 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=AVztRY77xxA">Design TinyURL 3</a></li>
+<li><a href="https://www.youtube.com/watch?v=JQDHz72OA3c">Design TinyURL 4</a></li>
+</ul>
+</li>
+<li>Design Dropbox<ul>
+<li><a href="https://www.youtube.com/watch?v=U0xTu6E2CT8">Design Dropbox 1</a></li>
+<li><a href="https://www.geeksforgeeks.org/design-dropbox-a-system-design-interview-question/">Design Dropbox 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=3RHjRXWAUvg">Design Google Drive</a></li>
+</ul>
+</li>
+<li>Design Netflix<ul>
+<li><a href="https://www.youtube.com/watch?v=psQzyFfsUGU">Design Netflix 1</a></li>
+<li><a href="https://www.geeksforgeeks.org/system-design-netflix-a-complete-architecture/">Design Netflix 2</a></li>
+<li><a href="https://netflixtechblog.com/announcing-evcache-distributed-in-memory-datastore-for-cloud-c26a698c27f7">EVCache in Netflix</a></li>
+</ul>
+</li>
+<li>Design Uber<ul>
+<li><a href="https://www.youtube.com/watch?v=Tp8kpMe-ZKw">Design Uber 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=umWABit-wbk">Design Uber 2</a></li>
+</ul>
+</li>
+<li>Design WhatsApp<ul>
+<li><a href="https://www.youtube.com/watch?v=vvhC64hQZMk">Design WhatsApp 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=L7LtmfFYjc4">Design WhatsApp 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=ovnrSH6G6vw">Design WhatsApp 3</a></li>
+</ul>
+</li>
+<li>Design social networking app<ul>
+<li><a href="https://www.youtube.com/watch?v=9-hjBGxuiEs">Design Facebook</a></li>
+<li><a href="https://www.youtube.com/watch?v=Z-0g_aJL5Fw">Design TikTok</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="machine-learning-system-design">Machine learning system design</h2>
+<ul>
+<li><a href="https://stanford-cs329s.github.io/syllabus.html">CS 329S: Machine Learning Systems Design</a></li>
+<li><a href="https://github.com/andkret/Cookbook">The Data Engineering Cookbook</a></li>
+<li><a href="https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning">MLOps: Continuous delivery and automation pipelines in machine learning</a></li>
+<li><a href="https://www.ravirajag.dev/blog">MLOps Basics</a></li>
+<li><a href="https://alexioannides.com/2019/01/10/deploying-python-ml-models-with-flask-docker-and-kubernetes/">Deploying Python ML Models with Flask, Docker, and Kubernetes</a></li>
+<li><a href="https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science">Deploying Scalable Machine Learning for Data Science</a></li>
+<li><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/44d3e2a0-ec6f-44df-9397-bcfdf129cadf/en-US/">Operationalizing the Machine Learning Pipeline</a></li>
+<li><a href="https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day">Machine Learning System Design: A framework for the interview day</a></li>
+<li><a href="https://theaisummer.com/scalability/">Grow your model to serve millions of users</a></li>
+<li><a href="https://eng.uber.com/michelangelo-machine-learning-platform/">Meet Michelangelo: Uber’s Machine Learning Platform</a></li>
+<li><a href="https://eng.uber.com/three-approaches-to-scaling-machine-learning-with-uber-seattle-engineering/">Three Approaches to Scaling Machine Learning with Uber Seattle Engineering</a></li>
+<li><a href="https://eng.uber.com/michelangelo-machine-learning-model-representation/">Evolving Michelangelo Model Representation for Flexibility at Scale</a></li>
+<li><a href="https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427">Serve hundreds to thousands of ML models — architectures from industry</a></li>
+</ul>
+<h2 id="distributed-computing">Distributed computing</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Collective_operation">Collective operation</a></li>
+<li><a href="https://mpitutorial.com/">MPI Tutorial</a></li>
+<li><a href="https://tech.preferred.jp/en/blog/technologies-behind-distributed-deep-learning-allreduce/">Technologies behind Distributed Deep Learning: AllReduce</a></li>
+<li><a href="https://towardsdatascience.com/visual-intuition-on-ring-allreduce-for-distributed-deep-learning-d1f34b4911da">Visual intuition on ring-Allreduce for distributed Deep Learning</a></li>
+<li><a href="https://youtu.be/KJFOlhD3L1E">Distributed Training and HPO Deep Dive</a></li>
+<li><a href="https://www.youtube.com/watch?v=4y0TDK3KoCA">Horovod: Distributed Deep Learning</a></li>
+</ul>
+<h2 id="others">Others</h2>
+<p>Below are some other useful resources that you might need.</p>
+<ul>
+<li><a href="https://github.com/imkgarg/Awesome-Software-Engineering-Interview">Awesome Software Engineering Interview Github</a></li>
+<li><a href="https://github.com/futurice/backend-best-practices">Backend development best practices</a></li>
+<li>System design<ul>
+<li><a href="https://github.com/donnemartin/system-design-primer">The System Design Primer</a></li>
+<li><a href="https://github.com/binhnguyennus/awesome-scalability">Large scale system design</a></li>
+</ul>
+</li>
+<li>Machine learning system tools<ul>
+<li><a href="https://dvc.org/">DVC</a></li>
+<li><a href="https://wandb.ai/site">WandB</a></li>
+<li><a href="https://mlflow.org/">MLflow</a></li>
+<li><a href="https://docs.seldon.io/projects/seldon-core/en/latest/#">Seldon Core</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="ending">Ending</h2>
+<p>You now have an overview picture of what you might need to study in your journey. I know that the list here is very long but don&#39;t be scared. You can start slow, <em>crawl</em>, <em>walk</em>, then <em>run</em>. Learn at your own speed. Good luck.</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">machine learning infrastructure</a></li>
+          
+          <li><a href="#">learning resources</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: MLII - Machine Learning Infrastructure Interview Process</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/projects/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        loading="lazy"
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>
