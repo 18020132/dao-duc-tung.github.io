@@ -419,6 +419,15 @@
               "interview process",
               "interview tips"
             ]
+          },
+          {
+            "title": "MLII - Machine Learning Infrastructure Learning Resources",
+            "type": "post",
+            "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources",
+            "tags": [
+              "machine learning infrastructure",
+              "learning resources"
+            ]
           }
         ]
       }
@@ -489,7 +498,7 @@
         "url": "projects/sharing-knowledge",
         "children": [
           {
-            "title": "How Does Ai Work?",
+            "title": "How Does AI Work?",
             "type": "post",
             "url": "projects/sharing-knowledge/how-does-ai-work",
             "tags": [
