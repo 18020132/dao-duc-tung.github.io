@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>MLII - Machine Learning Infrastructure Interview Questions</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+<!-- Load logo at last -->
+<script>
+  // Load logo at last: https://stackoverflow.com/a/2230953
+  function pageLoad() {
+    var nodeList, index;
+    nodeList = document.body.getElementsByTagName('img');
+
+    index = 0;
+    backgroundLoader();
+    function backgroundLoader() {
+      var img, src;
+      if (index >= nodeList.length) return;
+
+      img = nodeList[index];
+      src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+      }
+
+      ++index;
+      window.setTimeout(backgroundLoader, 200);
+    }
+  }
+  window.addEventListener('load', pageLoad, false);
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        data-src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/machine-learning-infrastructure-interview" class="btn"> Back to Machine Learning Infrastructure Interview </a>
+    
+  <h1>MLII - Machine Learning Infrastructure Interview Questions</h1>
+
+  <div class="post-info">
+    Jun 08, 2022 · 11 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-questions/the-thinker.jpg" alt="the-thinker"></p>
+<p><em>Save the best for last</em>.</p>
+<p>Today in this post, I will finally reveal the actual interview questions of the <strong>Machine Learning Infrastructure Interview</strong> that I experienced.</p>
+<p>I don&#39;t organize the questions in the order of question types such as Coding tests, Computer science fundamentals, System design, MLOps, etc. Instead, I will group them by the interview round types, such as Hard round and Soft round, so you can understand what the question types&#39; distribution looks like in an interview.</p>
+<p>All questions are presented in the order of time during the interview. This means for each set of questions, you are seeing the real questions in the actual order in a real interview. Moreover, I will give you instructions to get you through some questions. For the interview tips, please refer to the previous post <strong><a href="../machine-learning-infrastructure-interview-process/">Machine Learning Infrastructure Interview Process</a></strong> in this series.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#hard-round">Hard round</a> </li>
+<li><a href="#soft-round">Soft round</a> </li>
+<li><a href="#ending">Ending</a> </li>
+</ol>
+<h2 id="hard-round">Hard round</h2>
+<h3 id="hard-round-01">Hard round 01</h3>
+<ul>
+<li>Interviewer: Team Lead</li>
+<li>Introduce yourself</li>
+<li>Describe your team and your day-to-day job<ul>
+<li>A <em>soft</em> question to check your understanding of your team and your job responsibility</li>
+</ul>
+</li>
+<li>Describe a project in which you design an ML pipeline</li>
+<li>Do you work with other languages?<ul>
+<li>To check your capability when deploying ML models by using other languages rather than Python</li>
+</ul>
+</li>
+<li>What are Python <code>iterator</code>, <code>generator</code>, and <code>decorator</code>? Explain what they do</li>
+<li>How does a CNN work?</li>
+</ul>
+<h3 id="hard-round-02">Hard round 02</h3>
+<ul>
+<li>Interviewer: Team Lead</li>
+<li>Introduce yourself</li>
+<li>Talk about the most impressive project</li>
+<li>Talk about the project in which you developed ML models</li>
+<li>Talk about your experience with network programming in C++</li>
+<li>What is the conditional variable in the multi-threading context in C++?</li>
+<li>Do you have experience in data parallelism and model parallelism using TensorFlow?</li>
+<li>Coding test: check if a graph is a bipartite graph. <a href="https://leetcode.com/problems/is-graph-bipartite/">LeedCode link</a></li>
+</ul>
+<h3 id="hard-round-03">Hard round 03</h3>
+<ul>
+<li>Interviewer: Backend engineer</li>
+<li>Introduce yourself</li>
+<li>Your experience in building cloud infrastructure</li>
+<li>Do you need to run the development env and deployment env in different VPCs?</li>
+<li>What are the differences between using EFS and S3?</li>
+<li>What are the differences between using ECS and EKS?</li>
+<li>What are the differences between a relational database and a non-relational database?</li>
+<li>When to use a relational database and a non-relational database?</li>
+<li>Coding test: remove duplicates in an unsorted singly linked list. <a href="https://leetcode.com/problems/remove-duplicates-from-an-unsorted-linked-list/">LeetCode link</a></li>
+</ul>
+<h3 id="hard-round-04">Hard round 04</h3>
+<ul>
+<li>Interviewer: Backend engineer</li>
+<li>Introduce yourself</li>
+<li>What are the challenges you faced in the past when building an ML infrastructure?</li>
+<li>What are namespaces in Linux? What are they used for?</li>
+<li>Difference between TCP and UDP. When to use TCP and UDP?</li>
+<li>Difference between hard link and symbolic link</li>
+<li>Coding tests<ul>
+<li>Problem 1: Reverse each word in a string (list of words). <a href="https://leetcode.com/problems/reverse-words-in-a-string-iii/">LeetCode link</a></li>
+<li>Problem 2: Find the longest path between leaf nodes in a binary tree. <a href="https://leetcode.com/problems/diameter-of-binary-tree/">LeetCode link</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="hard-round-05">Hard round 05</h3>
+<ul>
+<li>Interviewer: Backend engineer</li>
+<li>Introduce yourself</li>
+<li>Talk about your experience in building cloud infrastructure</li>
+<li>How do you learn a new AWS service?<ul>
+<li>A <em>soft</em> question to test your self-learning ability</li>
+</ul>
+</li>
+<li>How do you know if your solution is the best one?<ul>
+<li>A <em>soft</em> question to check the way you approach and solve a problem</li>
+</ul>
+</li>
+<li>When you use some services that people built, do you try to understand how it works?<ul>
+<li>A <em>soft</em> question to check your engineering mindset</li>
+</ul>
+</li>
+<li>What happens when you type a command in the terminal?</li>
+<li>Implement two threads that alternatively print out numbers from 1 to 100. For example, thread A prints 1, thread B prints 2, thread A prints 3, etc.</li>
+<li>System design: Design the API Rate Limiting system</li>
+<li>Coding test: Reverse nodes in a linked list by every k element. <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">LeetCode link</a></li>
+</ul>
+<h3 id="hard-round-06">Hard round 06</h3>
+<ul>
+<li>Interviewer: Team Lead, ML Engineer</li>
+<li>Talk about two projects in which you built ML systems</li>
+<li>Define and differentiate Supervised, Unsupervised, and Semi-supervised ML</li>
+<li>Define and differentiate input/output of Object Detection, Image Classification, Image Segmentation</li>
+<li>What things need to be logged for a training experiment?</li>
+<li>What libraries do you use for every stage of an ML lifecycle, such as data engineering, model development, and model deployment?</li>
+<li>Do you have experience using NVIDIA technologies such as CUDA programming and <code>nvidia-docker</code>?</li>
+<li>Do you have experience in using NVIDIA for streaming video?</li>
+</ul>
+<h3 id="hard-round-07">Hard round 07</h3>
+<ul>
+<li>Interviewer: Senior Vice President Lead, Assistant Vice President Lead, Solution Architect</li>
+<li>Introduce yourself</li>
+<li>Talk about two projects in which you built ML systems</li>
+<li>Talk about your major in university and some awards</li>
+<li>Do you have experience in TensorRT?</li>
+<li>Do you have experience in Kubernetes?</li>
+<li>What do we need to consider when designing an ML system?<ul>
+<li>This is an extensive question to test your system design skill, especially your ML system design skill. You should be familiar with the ML system&#39;s components, ML lifecycle, ML Infrastructure layers, and ML Platform</li>
+</ul>
+</li>
+<li>How many MLOps team members should we have?<ul>
+<li>A <em>soft</em> question to check your understanding of how ML team members collaborate and work together, what their responsibilities are at different stages of an ML project</li>
+</ul>
+</li>
+<li>What are your plans for the next three years, five years?</li>
+<li>What are your hobbies?</li>
+</ul>
+<h3 id="hard-round-08">Hard round 08</h3>
+<ul>
+<li>Interviewer: ML Engineer</li>
+<li>Introduce yourself</li>
+<li>How does the <code>ping</code> command work?</li>
+<li>Which protocol does <code>ping</code> use?</li>
+<li>What happens when you type <code>google.com</code> on your browser?</li>
+<li>What are the layers of the OSI model?</li>
+<li>What is an <code>interface</code> in Java?</li>
+<li>How to create a function pointer in C++ and C?</li>
+<li>What is a <code>virtual function</code> in C++?</li>
+<li>What are some functions of a <code>socket</code> in C++?</li>
+<li>What data structure is used for database indexing? How to insert an item into that data structure?</li>
+<li>Talk about projects in which you train some models</li>
+<li>Have you used Horovod?</li>
+<li>Do you have experience in distributed training?</li>
+<li>Do you have experience serving models for hundreds of thousands of users or more?</li>
+<li>Coding test: implement binary search</li>
+</ul>
+<h3 id="hard-round-09">Hard round 09</h3>
+<ul>
+<li>Interviewer: Team Lead</li>
+<li>Introduce yourself</li>
+<li>Talk about your ML system design experience</li>
+<li>Talk about your Kubernetes experience</li>
+<li>What are <code>Deployment</code>, <code>Pod</code>, <code>Service</code>, <code>Ingress</code> in Kubernetes?</li>
+<li>What are the differences between <code>ReplicaSets</code> and <code>StatefulSets</code>?</li>
+<li>Coding test: Given a BST, in which exactly two nodes have been swapped on purpose. Recover this BST without changing its data structure. <a href="https://leetcode.com/problems/recover-binary-search-tree/">LeedCode link</a></li>
+<li>Talk about your C++ experience</li>
+<li>Talk about some ML libraries that you used for different stages of the ML lifecycle<ul>
+<li>You should be familiar with tools to version data, version and track training experiments, deploy models, CI/CD automation, etc.</li>
+</ul>
+</li>
+<li>Talk about your Cloud services experience</li>
+<li>Talk about your distributed training experience</li>
+</ul>
+<h3 id="hard-round-10">Hard round 10</h3>
+<ul>
+<li>Interviewer: Team Manager</li>
+<li>Introduce yourself</li>
+<li>Talk about your experience in building an ML system</li>
+<li>In an ML pipeline, different steps have different dependencies. How to run them in order?<ul>
+<li>This is a coding question. The answer is to use topological sort.</li>
+<li>Follow-up questions: How to implement topological sort? How to detect the cyclic dependencies?</li>
+</ul>
+</li>
+<li>How do you pass the results to the next step in the training pipeline?</li>
+<li>How to alert when the training pipeline is failed?</li>
+<li>How do you design a system that doesn&#39;t depend on GPU technologies?</li>
+<li>What is the <code>shared_ptr</code> in C++? How to implement a <code>shared_ptr</code>?</li>
+<li>What are the differences between a <code>thread</code> in C++ and Python?</li>
+<li>When to use multi-threading?</li>
+<li>What do we need to do if we have too much data that cannot fit 1 GPU?</li>
+<li>Explain any type of <code>AllReduce</code>?</li>
+<li>How do you merge the gradients in distributed training?</li>
+<li>How do you detect when a GPU is overloaded or when there&#39;s a problem with the network?</li>
+</ul>
+<h2 id="soft-round">Soft round</h2>
+<h3 id="soft-round-01">Soft round 01</h3>
+<ul>
+<li>Interviewer: Head of AI Department</li>
+<li>Introduce yourself</li>
+<li>What do you expect to work on?</li>
+<li>What is the most important thing when you consider a new job?</li>
+</ul>
+<h3 id="soft-round-02">Soft round 02</h3>
+<ul>
+<li>Interviewer: Data Science Director</li>
+<li>Introduce yourself</li>
+<li>Describe your team at the current company</li>
+<li>Talk about your most challenging project</li>
+<li>How do you manage the time to work on different projects at the same time?</li>
+<li>How do you manage conflicts with team members?</li>
+<li>Why do you leave your current job?</li>
+<li>Why do you choose us?</li>
+</ul>
+<h3 id="soft-round-03">Soft round 03</h3>
+<ul>
+<li>Interviewer: CTO</li>
+<li>Introduce yourself</li>
+<li>Talk about your experience in all your jobs so far</li>
+<li>What is MLOps? What do you think about MLOps?<ul>
+<li>An open question to see your viewpoint when it comes to MLOps</li>
+</ul>
+</li>
+<li>What do you think about different teams in an organization?<ul>
+<li>An open question to check how you collaborate with teammates and what you think about different team members in various roles with different responsibilities</li>
+</ul>
+</li>
+<li>Which approach do you take when you work with team members as a leader?</li>
+<li>Do you think embedded systems or hardware knowledge are needed for a computer science engineer?<ul>
+<li>An open question to see your viewpoint as an engineer</li>
+</ul>
+</li>
+</ul>
+<h2 id="ending">Ending</h2>
+<p>And that&#39;s all for the <strong>Machine Learning Infrastructure Interview</strong> series. Thank you for being a part of this series and making it happen. Please don&#39;t hesitate to contact me if you have any questions. Hope to see you again soon in the future series when I reach the next level of my career path.</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">machine learning infrastructure</a></li>
+          
+          <li><a href="#">interview questions</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-questions'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: MLII - Machine Learning Infrastructure Learning Resources</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/projects/finance-foundations/finance-introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: Finance Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        loading="lazy"
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>
