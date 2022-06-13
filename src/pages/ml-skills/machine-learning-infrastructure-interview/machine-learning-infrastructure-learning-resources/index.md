@@ -69,23 +69,31 @@ The learning resources that you will see in this post are the resources I have b
 
 ## DevOps & MLOps
 
-- [DevOps Engineer Learning Plan](https://explore.skillbuilder.aws/learn/lp/85/devops-engineer-learning-plan)
-- [Docker](https://www.linkedin.com/learning/learning-docker-2018)
-- [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
-- [Kubernetes Essential Training: Application Development](https://www.linkedin.com/learning/kubernetes-essential-training-application-development)
-- [ECS Workshop](https://ecsworkshop.com/)
-- [EKS workshop](https://www.eksworkshop.com/)
-- [AWS CI/CD Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/ef1c179d-8097-4f34-8dc3-0e9eb381b6eb/en-US/)
-- [CI/CD workshop for Amazon ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/869f7eee-d3a2-490b-bf9a-ac90a8fb2d36/en-US/)
-- [CI/CD with AWS Fargate](https://catalog.us-east-1.prod.workshops.aws/workshops/954a35ee-c878-4c22-93ce-b30b25918d89/en-US)
-- [CI/CD for serverless applications](https://cicd.serverlessworkshops.io/)
-- [Blue/green and Canary deployment for EKS and ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/2175d94a-cd79-4ed2-8e7e-1f0dd1956a3a/en-US/)
-- [Building your first DevOps Blue/Green pipeline with Amazon ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/4b59b9fb-48b6-461c-9377-907b2e33c9df/en-US/)
-- [DevSecOps on AWS](https://catalog.us-east-1.prod.workshops.aws/workshops/95ee7fde-4d85-47a5-99fc-7e0dee07fc94/en-US)
-- [Running Kubernetes on AWS (EKS)](https://www.linkedin.com/learning/running-kubernetes-on-aws-eks)
-- [Kubernetes Interview Questions 1](https://www.youtube.com/watch?v=OvOQJba-edM)
-- [Kubernetes Interview Questions 2](https://www.youtube.com/watch?v=lHC7xpFack8)
-- [Kubernetes Best Practices for Interview](https://www.youtube.com/watch?v=p4ZJMPUdm4c)
+- Courses
+  - [Docker](https://www.linkedin.com/learning/learning-docker-2018)
+  - [DevOps Engineer Learning Plan](https://explore.skillbuilder.aws/learn/lp/85/devops-engineer-learning-plan)
+  - [Kubernetes Essential Training: Application Development](https://www.linkedin.com/learning/kubernetes-essential-training-application-development)
+  - [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
+  - [Running Kubernetes on AWS (EKS)](https://www.linkedin.com/learning/running-kubernetes-on-aws-eks)
+- Tutorials
+  - [MLOps Basics](https://www.ravirajag.dev/blog)
+  - [Deploying Python ML Models with Flask, Docker, and Kubernetes](https://alexioannides.com/2019/01/10/deploying-python-ml-models-with-flask-docker-and-kubernetes/)
+  - [Operationalizing the Machine Learning Pipeline](https://catalog.us-east-1.prod.workshops.aws/workshops/44d3e2a0-ec6f-44df-9397-bcfdf129cadf/en-US/)
+  - [ECS Workshop](https://ecsworkshop.com/)
+  - [EKS workshop](https://www.eksworkshop.com/)
+  - [AWS CI/CD Workshop](https://catalog.us-east-1.prod.workshops.aws/workshops/ef1c179d-8097-4f34-8dc3-0e9eb381b6eb/en-US/)
+  - [CI/CD workshop for Amazon ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/869f7eee-d3a2-490b-bf9a-ac90a8fb2d36/en-US/)
+  - [CI/CD with AWS Fargate](https://catalog.us-east-1.prod.workshops.aws/workshops/954a35ee-c878-4c22-93ce-b30b25918d89/en-US)
+  - [CI/CD for serverless applications](https://cicd.serverlessworkshops.io/)
+  - [Blue/green and Canary deployment for EKS and ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/2175d94a-cd79-4ed2-8e7e-1f0dd1956a3a/en-US/)
+  - [Building your first DevOps Blue/Green pipeline with Amazon ECS](https://catalog.us-east-1.prod.workshops.aws/workshops/4b59b9fb-48b6-461c-9377-907b2e33c9df/en-US/)
+  - [DevSecOps on AWS](https://catalog.us-east-1.prod.workshops.aws/workshops/95ee7fde-4d85-47a5-99fc-7e0dee07fc94/en-US)
+- Articles/videos
+  - [MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
+  - [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
+  - [Kubernetes Interview Questions 1](https://www.youtube.com/watch?v=OvOQJba-edM)
+  - [Kubernetes Interview Questions 2](https://www.youtube.com/watch?v=lHC7xpFack8)
+  - [Kubernetes Best Practices for Interview](https://www.youtube.com/watch?v=p4ZJMPUdm4c)
 
 ## Distributed system design
 
@@ -118,21 +126,19 @@ The learning resources that you will see in this post are the resources I have b
   - [Design Facebook](https://www.youtube.com/watch?v=9-hjBGxuiEs)
   - [Design TikTok](https://www.youtube.com/watch?v=Z-0g_aJL5Fw)
 
-## Machine learning system design
+## Machine learning system
 
-- [CS 329S: Machine Learning Systems Design](https://stanford-cs329s.github.io/syllabus.html)
-- [The Data Engineering Cookbook](https://github.com/andkret/Cookbook)
-- [MLOps: Continuous delivery and automation pipelines in machine learning](https://cloud.google.com/architecture/mlops-continuous-delivery-and-automation-pipelines-in-machine-learning)
-- [MLOps Basics](https://www.ravirajag.dev/blog)
-- [Deploying Python ML Models with Flask, Docker, and Kubernetes](https://alexioannides.com/2019/01/10/deploying-python-ml-models-with-flask-docker-and-kubernetes/)
-- [Deploying Scalable Machine Learning for Data Science](https://www.linkedin.com/learning/deploying-scalable-machine-learning-for-data-science)
-- [Operationalizing the Machine Learning Pipeline](https://catalog.us-east-1.prod.workshops.aws/workshops/44d3e2a0-ec6f-44df-9397-bcfdf129cadf/en-US/)
-- [Machine Learning System Design: A framework for the interview day](https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day)
-- [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
-- [Meet Michelangelo: Uber’s Machine Learning Platform](https://eng.uber.com/michelangelo-machine-learning-platform/)
-- [Three Approaches to Scaling Machine Learning with Uber Seattle Engineering](https://eng.uber.com/three-approaches-to-scaling-machine-learning-with-uber-seattle-engineering/)
-- [Evolving Michelangelo Model Representation for Flexibility at Scale](https://eng.uber.com/michelangelo-machine-learning-model-representation/)
-- [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
+- Courses/books
+  - [CS 329S: Machine Learning Systems Design](https://stanford-cs329s.github.io/syllabus.html)
+  - [Designing Machine Learning Systems](https://www.amazon.com/Designing-Machine-Learning-Systems-Production-Ready/dp/1098107969)
+  - [The Data Engineering Cookbook](https://github.com/andkret/Cookbook)
+- Articles
+  - [Machine Learning System Design: A framework for the interview day](https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day)
+  - [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
+  - [Meet Michelangelo: Uber’s Machine Learning Platform](https://eng.uber.com/michelangelo-machine-learning-platform/)
+  - [Three Approaches to Scaling Machine Learning with Uber Seattle Engineering](https://eng.uber.com/three-approaches-to-scaling-machine-learning-with-uber-seattle-engineering/)
+  - [Evolving Michelangelo Model Representation for Flexibility at Scale](https://eng.uber.com/michelangelo-machine-learning-model-representation/)
+  - [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
 
 ## Distributed computing
 
@@ -152,11 +158,6 @@ Below are some other useful resources that you might need.
 - System design
   - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
   - [Large scale system design](https://github.com/binhnguyennus/awesome-scalability)
-- Machine learning system tools
-  - [DVC](https://dvc.org/)
-  - [WandB](https://wandb.ai/site)
-  - [MLflow](https://mlflow.org/)
-  - [Seldon Core](https://docs.seldon.io/projects/seldon-core/en/latest/#)
 
 ## Ending
 
