@@ -143,7 +143,6 @@ The learning resources that you will see in this post are the resources I have b
 ## Distributed computing
 
 - [Collective operation](https://en.wikipedia.org/wiki/Collective_operation)
-- [MPI Tutorial](https://mpitutorial.com/)
 - [Technologies behind Distributed Deep Learning: AllReduce](https://tech.preferred.jp/en/blog/technologies-behind-distributed-deep-learning-allreduce/)
 - [Visual intuition on ring-Allreduce for distributed Deep Learning](https://towardsdatascience.com/visual-intuition-on-ring-allreduce-for-distributed-deep-learning-d1f34b4911da)
 - [Distributed Training and HPO Deep Dive](https://youtu.be/KJFOlhD3L1E)
