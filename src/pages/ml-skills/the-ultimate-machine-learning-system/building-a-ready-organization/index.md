@@ -131,5 +131,4 @@ Preparing your organization to take advantage of ML is a long journey with much 
 
 [ready]: /assets/images/ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization/ready.jpg
 [fail-forward]: /assets/images/ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization/fail-forward.png
-[roles-in-ml-project]: /assets/images/ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization/roles-in-ml-project.png
 [journey]: /assets/images/ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization/journey.jpg
