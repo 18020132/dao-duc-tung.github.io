@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+  <meta charset="UTF-8" />
+
+     
+  <title>UMLS - Machine Learning Roles</title>
+  
+
+  <meta name="description" content="AI Engineer Skills" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#157878" />
+  <link rel="shortcut icon" href="/assets/images/favicon-32x32.ico" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116933686-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116933686-1');
+</script>
+
+
+<!-- Google search -->
+<script async src="https://cse.google.com/cse.js?cx=3b3c3574614bf1b79"></script>
+<script>
+  function copyToClipboard(text) {
+    var dummy = document.createElement('input');
+
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+  }
+</script>
+
+<!-- Load logo at last -->
+<script>
+  // Load logo at last: https://stackoverflow.com/a/2230953
+  function pageLoad() {
+    var nodeList, index;
+    nodeList = document.body.getElementsByTagName('img');
+
+    index = 0;
+    backgroundLoader();
+    function backgroundLoader() {
+      var img, src;
+      if (index >= nodeList.length) return;
+
+      img = nodeList[index];
+      src = img.getAttribute('data-src');
+      if (src) {
+        img.src = src;
+        img.removeAttribute('data-src');
+      }
+
+      ++index;
+      window.setTimeout(backgroundLoader, 200);
+    }
+  }
+  window.addEventListener('load', pageLoad, false);
+</script>
+
+</head>
+
+  <body>
+    <section class="page-header">
+  <div class="page-header-left">
+    <a href="/">
+      <img
+        class="logo"
+        data-src="/assets/images/logo-for-transparent-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="page-header-right">
+    <div class="gcse-search"></div>
+  </div>
+  <div class="page-header-menu">
+    
+    <a href="/thoughts-on" class="btn">Thoughts On</a>
+    
+    <a href="/ml-skills" class="btn">ML Skills</a>
+    
+    <a href="/projects" class="btn">Projects</a>
+    
+  </div>
+</section>
+
+    <section class="main-content">
+      <div class="pre-body">
+   
+   
+  <a href="/ml-skills/the-ultimate-machine-learning-system" class="btn"> Back to The Ultimate Machine Learning System </a>
+    
+  <h1>UMLS - Machine Learning Roles</h1>
+
+  <div class="post-info">
+    Jun 21, 2022 · 9 min read
+  </div>
+</div>
+
+      <div class="mid-body"><p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/machine-learning-roles/roles.jpg" alt="roles"></p>
+<p>In research, people are usually only interested in ML algorithms, but in production, they need to care about all the components of an ML system. And because there are different interests in the research environment and the production environment, the ML roles are also different in these two environments.</p>
+<p>For the difference of ML in research and in production, please refer to this post <a href="../ml-in-production/">Machine Learning In Production</a>. In this <strong>Machine Learning roles</strong> post, we will talk about different ML roles in research and production environments.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#machine-learning-roles-in-research">Machine learning roles in research</a> </li>
+<li><a href="#machine-learning-roles-in-production">Machine learning roles in production</a> </li>
+<li><a href="#skill-map">Skill map</a> </li>
+</ol>
+<h2 id="machine-learning-roles-in-research">Machine learning roles in research</h2>
+<h3 id="research-scientist">Research scientist</h3>
+<p>A research scientist&#39;s job is to come up with unique, novel, and innovative ideas. This role typically requires a Ph.D. and/or first-author papers at leading ML conferences around the world.</p>
+<h3 id="applied-research-scientist">Applied research scientist</h3>
+<p>Applied research is situated somewhere between research and production, but it is closer to research than production. Applied research entails solving real-world problems but not implementing those solutions in a real-world setting, and they require expertise in these problems.</p>
+<h3 id="research-engineer">Research engineer</h3>
+<p>This is a rare position that is frequently found in large research laboratories. A research engineer&#39;s job is to use their engineering skills to set up and run tests designed by research scientists.</p>
+<p>Some teams do not distinguish between a research scientist and a research engineer. Engineers must first and foremost be research scientists. Both research scientists and engineers generate and implement ideas. A research scientist may also serve as an advisor to research engineers who are conducting their own research.</p>
+<h2 id="machine-learning-roles-in-production">Machine learning roles in production</h2>
+<h3 id="product-owner">Product owner</h3>
+<ul>
+<li>Responsibilities: Define goals and vision for ML projects.</li>
+<li>Skills: Strategic vision, leadership, project management skills, subject matter expertise at work, stock examples, and a high-level understanding of ML to know what ML can be and cannot be resolved.</li>
+</ul>
+<h3 id="product-manager">Product manager</h3>
+<ul>
+<li>Responsibilities: Ensure the ML project meets the set goals, timelines, and technical requirements.</li>
+<li>Skills: project management skills, leadership ability, expertise on the subject at hand, high-level understanding of ML, and knowledge of ML systems.</li>
+</ul>
+<h3 id="data-scientist">Data scientist</h3>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/machine-learning-roles/data-scientist.png" alt="data-scientist"></p>
+<ul>
+<li>Responsibilities: Use methods, processes, and algorithms to generate business insights from data.</li>
+<li>Skills: deep math knowledge, statistical probabilities, real-world problem expertise (stocks) to apply ML to those problems, ML knowledge to interpret model output and behavior.</li>
+</ul>
+<h4 id="data-scientist-vs-data-analyst">Data scientist vs. Data analyst</h4>
+<p>The responsibilities of data scientist and data analyst sometimes overlap and confuse people. In <a href="https://medium.com/@chamandy/whats-in-a-name-ce42f419d16c">Lyft</a>, they shift data analyst over to the data scientist title and also rebrand the data scientist job title to research scientist. In general, data scientist builds mathematical models and algorithms that power the core components of the product. Meanwhile, data analyst extracts insights from data, creates and manages the business and operational metrics, tracks the health of the business, and drives better decision-making.</p>
+<h3 id="data-engineer">Data engineer</h3>
+<ul>
+<li>Responsibilities: Build data pipeline, aggregate data, store data, monitor data.</li>
+<li>Skills: using database, data management tools to know how to store/retrieve/process data, skills to deploy distributed systems to handle big data, minimal ML knowledge for optimization Efficient way to store data for ML applications.</li>
+</ul>
+<h3 id="ml-engineer">ML engineer</h3>
+<ul>
+<li>Responsibilities: Train and deploy ML models.</li>
+<li>Skills: Requires knowledge of probability statistics, and ML to understand data and evaluate models, and requires software engineering skills to write effective code, especially in data structures and algorithms.</li>
+</ul>
+<p>This position is difficult to fill because it requires concurrent skills in ML and software engineering. Indeed, some hiring managers have stated that they want to hire good engineers but don&#39;t know much about ML because good engineers learn ML faster than ML professionals. engineering done by engineers.</p>
+<h4 id="ml-engineer-vs-data-scientist">ML engineer vs. data scientist</h4>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/machine-learning-roles/data-scientist-vs-mle.png" alt="data-scientist-vs-mle"></p>
+<p>MLEs, like data scientists, are likely to spend the majority of their time working on data during model training. However, there are significant distinctions between ML engineering and data science. A data scientist&#39;s goal is to generate business insights about the business, whereas an ML engineer&#39;s goal is to turn data into products. Data scientists are better probabilities, and MLEs are better engineers. MLEs must understand ML algorithms, whereas many data scientists can do their jobs without touching ML.</p>
+<p>The table below summarizes those differences.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Data scientist</th>
+<th>ML engineer</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Goal</td>
+<td>Generate business insights</td>
+<td>Turn data into products</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>Better statistician</td>
+<td>Better engineer</td>
+</tr>
+<tr>
+<td>ML need</td>
+<td>Depend</td>
+<td>A must</td>
+</tr>
+</tbody></table>
+<h3 id="mlops-engineer">MLOps engineer</h3>
+<ul>
+<li>Responsibilities: Deploy and oversee the ML system in production.</li>
+<li>Skills: Mainly techniques from standard Software engineering.</li>
+</ul>
+<h4 id="mlops-engineer-vs-ml-engineer">MLOps engineer vs. ML engineer</h4>
+<p>As we know, the responsibility of MLE also includes deploying the ML model.
+However, while MLE focuses on writing code to run prediction, MLOps engineer focuses on the system and the techniques used to automate the process of deploying MLE&#39;s code prediction to the production environment. When the ML system or when the project is small, the MLE will usually take the position and responsibilities of an MLOps engineer.</p>
+<h3 id="ml-infrastructureplatform-engineer">ML infrastructure/platform engineer</h3>
+<p>Requires skills in infrastructure, optimization in parallel computing, and distributed systems.
+Responsibilities: Build a distributed system to train large models with extremely large amounts of data using many servers with many parallel GPUs at the same time.</p>
+<h3 id="ml-acceleratorhardware-engineer">ML accelerator/hardware engineer</h3>
+<p>Requires skill related to hardware, using ML in hardware.
+Responsibilities: to manufacture and optimize hardware that supports training and inference.</p>
+<h3 id="ml-solutions-architect">ML solutions architect</h3>
+<p>Requires long-term ML system skills, and experience in all kinds of ML systems of all kinds of applications such as in Computer Vision, NLP, Recommendation systems, etc.
+Responsibilities: Design and provide solutions for ML systems within the company or external customers.</p>
+<h3 id="developer-advocate-developer-programs-engineer">Developer Advocate, developer programs engineer</h3>
+<p>Engineers have good communication skills, specializing in promoting the company&#39;s ML-related products such as tools, and applications, to educate users, and make users aware of the company&#39;s products.</p>
+<h2 id="skill-map">Skill map</h2>
+<p>To end this post, let&#39;s take a look at the table below which summarizes the typical ML roles in both research and production environments.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Role</th>
+<th>Responsibility</th>
+<th>Skill</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Research scientist</td>
+<td>To come up with original ideas</td>
+<td>Deep understanding of Maths, Statistics, ML</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Applied research scientist</td>
+<td>To find solutions to practical problems</td>
+<td>Deep understanding of Maths, Statistics, ML, subject matter expertise</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Research engineer</td>
+<td>To use their engineering skills to set up and run experiments for these ideas</td>
+<td>Maths, Statistics, ML, Software engineering skills</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Product owner</td>
+<td>Defines business goals and vision for ML projects</td>
+<td>Vision, leadership, product management, subject matter expertise, high-level understanding of ML</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Product manager</td>
+<td>Ensure ML project meets business, time, and technical goals</td>
+<td>Leadership, product management, subject matter expertise, high-level understanding of ML</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Data scientist</td>
+<td>Use/build scientific methods, mathematical models, and algorithms to extract insights from data</td>
+<td>Deep understanding of Maths, Statistics, subject matter expertise, and high-level understanding of ML</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Data analyst</td>
+<td>Extracts insights from data, manages the business and operational metrics, and drives better decision-making</td>
+<td>Analytical, problem-solving, subject matter expertise, high-level understanding of ML</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Data engineer</td>
+<td>Build data pipelines, aggregation, storage, monitoring</td>
+<td>Experience in using tools to save, query, process data, and using big data platforms; ML</td>
+</tr>
+<tr>
+<td>9</td>
+<td>ML engineer</td>
+<td>Train and deploy ML models</td>
+<td>Maths, Statistics, ML, Software engineering skills</td>
+</tr>
+<tr>
+<td>10</td>
+<td>MLOps engineer</td>
+<td>Deploy and monitor production ML systems</td>
+<td>Software engineering, ML</td>
+</tr>
+</tbody></table>
+<p>For another view of ML roles when arranged according to the required level of Software Engineering and ML skills, please take a look at the skill map below while you are skimming the ML roles in the table above.</p>
+<p><img src="/assets/images/ml-skills/the-ultimate-machine-learning-system/machine-learning-roles/skill-map.png" alt="skill-map"></p>
+<!-- MARKDOWN LINKS & IMAGES -->
+
+</div>
+      <div class="post-body">
+  
+
+  <div class="post-body-social">
+    <div class="post-body-social-left">
+      <div class="post-body-tags">
+        <ul>
+          
+          <li><a href="#">ultimate</a></li>
+          
+          <li><a href="#">machine learning system</a></li>
+          
+          <li><a href="#">machine learning roles</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="post-body-social-right">
+      <a
+        href="#"
+        onclick="copyToClipboard(window.location.host + '/ml-skills/the-ultimate-machine-learning-system/machine-learning-roles'); return false;"
+        class="btn"
+        ><i class="material-icons"> link </i></a
+      >
+    </div>
+  </div>
+  <div class="post-body-continue">
+    
+    <div class="post-body-continue-left">
+      
+      <a href="/ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization" class="btn">
+        <i class="material-icons"> arrow_back_ios </i>
+        Previous<span class="post-body-continue-post-title">: UMLS - Building A Ready Organization</span></a
+      >
+      
+    </div>
+    <div class="post-body-continue-right">
+      
+      <a href="/ml-skills/machine-learning-infrastructure-interview/introduction" class="btn">
+        Next<span class="post-body-continue-post-title">: MLII - Introduction</span>
+        <i class="material-icons"> arrow_forward_ios </i>
+      </a>
+      
+    </div>
+  </div>
+</div>
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    var PAGE_URL = site.basePath + '/' + post.url;
+    var PAGE_IDENTIFIER = PAGE_URL;
+    this.page.url = PAGE_URL;
+    this.page.identifier = PAGE_IDENTIFIER;
+  };
+  (function () {
+    // DON'T EDIT BELOW THIS LINE
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://ai-engineer.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript
+  >Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments.</a></noscript
+>
+
+    </section>
+    <footer class="site-footer">
+  <div class="footer-left">
+    <a href="/">
+      <img
+        loading="lazy"
+        class="logo"
+        src="/assets/images/logo-for-black-bg.png"
+        alt="AI Engineer - Stay foolish!"
+      />
+    </a>
+  </div>
+  <div class="footer-right">
+    <a href="/" class="site-footer-credits">AI Engineer @ 2022</a>
+  </div>
+</footer>
+
+  </body>
+</html>
