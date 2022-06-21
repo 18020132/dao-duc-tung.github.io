@@ -10,11 +10,11 @@ Deploying models is easy, and deploying models reliable is hard. The complex par
 - Inference latency
 - Deployment pattern: monolith vs. microservices, batch prediction vs. online prediction, cloud vs. edge deployment
 - Deployment strategies: rolling, canary, blue/green, etc.
-- High availability: redundancy
+- High availability: redundancy, disaster recovery
 - Scalability: scale in/out, latency, high-volume predictions
-- Testability
+- Testability: unit tests, integration tests, system tests, etc.
+- Security: data provider constraints, customer privacy, data/model encryption, access control, etc.
 - Maintenance and monitoring: logging, feedback loop, concept drift, system metrics, etc. We will discuss this section in the next post.
-- Security: data provider constraints, customer privacy, data and model encryption, access control, etc.
 
 <toc>
 

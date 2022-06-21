@@ -70,21 +70,7 @@ Secondly, we need to think about the strategic plans to collect and use data. Fo
 
 ### A culture of learning and collaboration
 
-Before determining the learning and collaboration culture, we should have an idea of what an ML team looks like. The table below shows possible roles in an ML team.
-
-| #   | Role                          | Responsibility                                              | Skills                                                                                 |
-| --- | ----------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| 1   | Data scientist                | Build ML models                                             | Math, statistics, ML algorithms, data processing                                       |
-| 2   | ML engineer                   | Productionize ML models                                     | ML algorithms, data pipeline tools, architecture design, software development          |
-| 3   | Technical Program Manager     | Ensure ML project meets business, time, and technical goals | Project management, leadership, high-level understanding of ML algorithms              |
-| 4   | Data engineer                 | Build data pipeline                                         | Database systems, Data warehousing solutions, ETL tools, ML algorithms                 |
-| 5   | Software development engineer | Build complex systems for ML use cases                      | Software development, architecture design                                              |
-| 6   | Business leader               | Defines business goals and vision for ML projects           | Strategic vision, leadership, high-level understanding of ML algorithms, etc.          |
-| 7   | Business information analyst  | Create and manage the business and operational metrics      | Analytical, problem-solving, writing skills, high-level understanding of ML algorithms |
-
-The skills needed for some roles overlap each other are shown in the below figure.
-
-![roles-in-ml-project][roles-in-ml-project]
+Before determining the learning and collaboration culture, we should have an idea of what an ML team looks like. Please refer to the post [Machine Learning roles](../machine-learning-roles/) for more details.
 
 #### A culture of learning
 
