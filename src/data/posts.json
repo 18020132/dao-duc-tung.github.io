@@ -161,17 +161,6 @@
             ]
           },
           {
-            "title": "UMLS - Building A Ready Organization",
-            "type": "post",
-            "url": "ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "building",
-              "ready organization"
-            ]
-          },
-          {
             "title": "UMLS - Planning A Machine Learning Project",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/planning-an-ml-project",
@@ -380,6 +369,27 @@
               "model store",
               "feature store",
               "development environment"
+            ]
+          },
+          {
+            "title": "UMLS - Building A Ready Organization",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "building",
+              "ready organization"
+            ]
+          },
+          {
+            "title": "UMLS - Machine Learning Roles",
+            "type": "post",
+            "url": "ml-skills/the-ultimate-machine-learning-system/machine-learning-roles",
+            "tags": [
+              "ultimate",
+              "machine learning system",
+              "machine learning roles"
             ]
           }
         ]
