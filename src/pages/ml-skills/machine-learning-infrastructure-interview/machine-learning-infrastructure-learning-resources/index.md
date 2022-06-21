@@ -135,7 +135,7 @@ The learning resources that you will see in this post are the resources I have b
 - Articles
   - [Machine Learning System Design: A framework for the interview day](https://leetcode.com/discuss/interview-question/system-design/566057/Machine-Learning-System-Design-%3A-A-framework-for-the-interview-day)
   - [Grow your model to serve millions of users](https://theaisummer.com/scalability/)
-  - [Meet Michelangelo: Uber’s Machine Learning Platform](https://eng.uber.com/michelangelo-machine-learning-platform/)
+  - [Meet Michelangelo: Uber's Machine Learning Platform](https://eng.uber.com/michelangelo-machine-learning-platform/)
   - [Three Approaches to Scaling Machine Learning with Uber Seattle Engineering](https://eng.uber.com/three-approaches-to-scaling-machine-learning-with-uber-seattle-engineering/)
   - [Evolving Michelangelo Model Representation for Flexibility at Scale](https://eng.uber.com/michelangelo-machine-learning-model-representation/)
   - [Serve hundreds to thousands of ML models — architectures from industry](https://towardsdatascience.com/serve-hundreds-to-thousands-of-ml-models-architectures-from-industry-bf3d9474d427)
