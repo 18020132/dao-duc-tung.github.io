@@ -156,15 +156,11 @@ const sortPostByLatestModifiedDate = (post1, post2) => {
   else return 0;
 };
 
-const getCreatedDate = (filePath) => {
-  return fse.statSync(filePath).birthtime;
-};
-
 const sortPostByLatestCreatedDate = (post1, post2) => {
-  var modifiedDate1 = moment(getCreatedDate(getAbsolutePathFromRelativePath(post1.url)));
-  var modifiedDate2 = moment(getCreatedDate(getAbsolutePathFromRelativePath(post2.url)));
-  if (modifiedDate1.isAfter(modifiedDate2)) return -1;
-  else if (modifiedDate2.isAfter(modifiedDate1)) return 1;
+  var createdDate1 = moment(post1.created);
+  var createdDate2 = moment(post2.created);
+  if (createdDate1.isAfter(createdDate2)) return -1;
+  else if (createdDate2.isAfter(createdDate1)) return 1;
   else return 0;
 };
 
@@ -248,7 +244,6 @@ module.exports = {
   getPrevPost,
   getNextPost,
   getModifiedDate,
-  getCreatedDate,
   getParentUrl,
   getTopicTitleByUrl,
   getCategoryTitleByUrl,

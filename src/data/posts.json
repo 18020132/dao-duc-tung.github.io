@@ -8,44 +8,37 @@
         "title": "The Art Of Asking Questions",
         "type": "post",
         "url": "thoughts-on/the-art-of-asking-questions",
-        "tags": [
-          "ask question",
-          "art"
-        ]
+        "created": "2021-08-01",
+        "tags": ["ask question", "art"]
       },
       {
         "title": "How Will I Measure My Life",
         "type": "post",
         "url": "thoughts-on/how-will-i-measure-my-life",
-        "tags": [
-          "measure",
-          "life"
-        ],
+        "created": "2021-10-14",
+        "tags": ["measure", "life"],
         "pinned": true
       },
       {
         "title": "The Chosen One",
         "type": "post",
         "url": "thoughts-on/the-chosen-one",
-        "tags": [
-          "the chosen one"
-        ]
+        "created": "2021-11-07",
+        "tags": ["the chosen one"]
       },
       {
         "title": "The Last One",
         "type": "post",
         "url": "thoughts-on/the-last-one",
-        "tags": [
-          "the last one"
-        ]
+        "created": "2021-12-08",
+        "tags": ["the last one"]
       },
       {
         "title": "Đà Nẵng 2022",
         "type": "post",
         "url": "thoughts-on/da-nang-2022",
-        "tags": [
-          "da nang 2022"
-        ]
+        "created": "2022-04-29",
+        "tags": ["da nang 2022"]
       }
     ]
   },
@@ -63,73 +56,50 @@
             "title": "Docker - Introduction",
             "type": "post",
             "url": "ml-skills/docker/introduction",
-            "tags": [
-              "docker",
-              "introduction"
-            ]
+            "created": "2021-05-15",
+            "tags": ["docker", "introduction"]
           },
           {
             "title": "Docker - Image And Container",
             "type": "post",
             "url": "ml-skills/docker/image-and-container",
-            "tags": [
-              "docker",
-              "docker image",
-              "docker container"
-            ]
+            "created": "2021-05-20",
+            "tags": ["docker", "docker image", "docker container"]
           },
           {
             "title": "Docker - Attach And Detach",
             "type": "post",
             "url": "ml-skills/docker/attach-and-detach",
-            "tags": [
-              "docker",
-              "docker attach",
-              "docker detach",
-              "docker run",
-              "docker exec"
-            ]
+            "created": "2021-05-25",
+            "tags": ["docker", "docker attach", "docker detach", "docker run", "docker exec"]
           },
           {
             "title": "Docker - Publish Port",
             "type": "post",
             "url": "ml-skills/docker/publish-port",
-            "tags": [
-              "docker",
-              "publish port"
-            ]
+            "created": "2021-05-30",
+            "tags": ["docker", "publish port"]
           },
           {
             "title": "Docker - Container Networking",
             "type": "post",
             "url": "ml-skills/docker/container-networking",
-            "tags": [
-              "docker",
-              "container networking",
-              "docker network"
-            ]
+            "created": "2021-06-05",
+            "tags": ["docker", "container networking", "docker network"]
           },
           {
             "title": "Docker - Volumes",
             "type": "post",
             "url": "ml-skills/docker/volumes",
-            "tags": [
-              "docker",
-              "sharing data",
-              "volumes-from"
-            ]
+            "created": "2021-06-10",
+            "tags": ["docker", "sharing data", "volumes-from"]
           },
           {
             "title": "Docker - Registry",
             "type": "post",
             "url": "ml-skills/docker/registry",
-            "tags": [
-              "docker",
-              "docker registry",
-              "docker search",
-              "docker tag",
-              "docker push"
-            ]
+            "created": "2021-06-15",
+            "tags": ["docker", "docker registry", "docker search", "docker tag", "docker push"]
           }
         ]
       },
@@ -143,48 +113,35 @@
             "title": "UMLS - Introduction",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/introduction",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "introduction"
-            ]
+            "created": "2021-07-15",
+            "tags": ["ultimate", "machine learning system", "introduction"]
           },
           {
             "title": "UMLS - Machine Learning In Production",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/ml-in-production",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "research",
-              "production"
-            ]
+            "created": "2021-07-20",
+            "tags": ["ultimate", "machine learning system", "research", "production"]
           },
           {
             "title": "UMLS - Planning A Machine Learning Project",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/planning-an-ml-project",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "project planning"
-            ]
+            "created": "2021-07-30",
+            "tags": ["ultimate", "machine learning system", "project planning"]
           },
           {
             "title": "UMLS - Intro To Machine Learning Systems Design - Part 1 - Overview",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-1-overview",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "system design",
-              "overview"
-            ]
+            "created": "2021-08-05",
+            "tags": ["ultimate", "machine learning system", "system design", "overview"]
           },
           {
             "title": "UMLS - Intro To Machine Learning Systems Design - Part 2 - The Machine Learning Lifecycle",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/intro-to-ml-systems-design-part-2-the-ml-lifecycle",
+            "created": "2021-08-10",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -196,16 +153,14 @@
             "title": "UMLS - Problem Definition",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/problem-definition",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "problem definition"
-            ]
+            "created": "2021-08-20",
+            "tags": ["ultimate", "machine learning system", "problem definition"]
           },
           {
             "title": "UMLS - Data Engineering - Part 1 - What To Consider",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-1-what-to-consider",
+            "created": "2021-08-25",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -225,6 +180,7 @@
             "title": "UMLS - Data Engineering - Part 2 - Data Issues",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-2-data-issues",
+            "created": "2021-08-30",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -241,6 +197,7 @@
             "title": "UMLS - Data Engineering - Part 3 - Feature Engineering",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-3-feature-engineering",
+            "created": "2021-09-15",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -252,6 +209,7 @@
             "title": "UMLS - Data Engineering - Part 4 - Sampling",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-4-sampling",
+            "created": "2021-10-15",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -265,6 +223,7 @@
             "title": "UMLS - Data Engineering - Part 5 - Data Pipeline",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/data-engineering-part-5-data-pipeline",
+            "created": "2021-11-15",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -281,6 +240,7 @@
             "title": "UMLS - Model Development - Part 1 - Training",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/model-development-part-1-training",
+            "created": "2022-01-06",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -298,6 +258,7 @@
             "title": "UMLS - Model Development - Part 2 - Evaluation",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/model-development-part-2-evaluation",
+            "created": "2022-04-27",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -315,6 +276,7 @@
             "title": "UMLS - Deployment - Part 1 - What To Consider",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-1-what-to-consider",
+            "created": "2022-04-28",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -337,6 +299,7 @@
             "title": "UMLS - Deployment - Part 2 - Monitoring And Maintenance",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-2-monitoring-and-maintenance",
+            "created": "2022-04-29",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -355,6 +318,7 @@
             "title": "UMLS - Deployment - Part 3 - ML Infrastructure",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/deployment-part-3-ml-infrastructure",
+            "created": "2022-04-29",
             "tags": [
               "ultimate",
               "machine learning system",
@@ -375,22 +339,15 @@
             "title": "UMLS - Machine Learning Roles",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/machine-learning-roles",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "machine learning roles"
-            ]
+            "created": "2022-06-21",
+            "tags": ["ultimate", "machine learning system", "machine learning roles"]
           },
           {
             "title": "UMLS - Building A Ready Organization",
             "type": "post",
             "url": "ml-skills/the-ultimate-machine-learning-system/building-a-ready-organization",
-            "tags": [
-              "ultimate",
-              "machine learning system",
-              "building",
-              "ready organization"
-            ]
+            "created": "2021-07-25",
+            "tags": ["ultimate", "machine learning system", "building", "ready organization"]
           }
         ]
       },
@@ -404,49 +361,36 @@
             "title": "MLII - Introduction",
             "type": "post",
             "url": "ml-skills/machine-learning-infrastructure-interview/introduction",
-            "tags": [
-              "machine learning infrastructure",
-              "interview",
-              "introduction"
-            ]
+            "created": "2022-05-24",
+            "tags": ["machine learning infrastructure", "interview", "introduction"]
           },
           {
             "title": "MLII - Machine Learning Infrastructure Roadmap",
             "type": "post",
             "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-roadmap",
-            "tags": [
-              "machine learning infrastructure",
-              "journey",
-              "roadmap"
-            ]
+            "created": "2022-05-29",
+            "tags": ["machine learning infrastructure", "journey", "roadmap"]
           },
           {
             "title": "MLII - Machine Learning Infrastructure Interview Process",
             "type": "post",
             "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-process",
-            "tags": [
-              "machine learning infrastructure",
-              "interview process",
-              "interview tips"
-            ]
+            "created": "2022-06-01",
+            "tags": ["machine learning infrastructure", "interview process", "interview tips"]
           },
           {
             "title": "MLII - Machine Learning Infrastructure Learning Resources",
             "type": "post",
             "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-learning-resources",
-            "tags": [
-              "machine learning infrastructure",
-              "learning resources"
-            ]
+            "created": "2022-06-02",
+            "tags": ["machine learning infrastructure", "learning resources"]
           },
           {
             "title": "MLII - Machine Learning Infrastructure Interview Questions",
             "type": "post",
             "url": "ml-skills/machine-learning-infrastructure-interview/machine-learning-infrastructure-interview-questions",
-            "tags": [
-              "machine learning infrastructure",
-              "interview questions"
-            ]
+            "created": "2022-06-08",
+            "tags": ["machine learning infrastructure", "interview questions"]
           }
         ]
       }
@@ -466,48 +410,36 @@
             "title": "Finance Introduction",
             "type": "post",
             "url": "projects/finance-foundations/finance-introduction",
-            "tags": [
-              "finance",
-              "introduction"
-            ]
+            "created": "2021-08-07",
+            "tags": ["finance", "introduction"]
           },
           {
             "title": "Finance Definition",
             "type": "post",
             "url": "projects/finance-foundations/finance-definition",
-            "tags": [
-              "finance",
-              "definition"
-            ]
+            "created": "2021-08-17",
+            "tags": ["finance", "definition"]
           },
           {
             "title": "Financial Statements Introduction",
             "type": "post",
             "url": "projects/finance-foundations/financial-statements-introduction",
-            "tags": [
-              "finance",
-              "statement",
-              "introduction"
-            ]
+            "created": "2021-08-21",
+            "tags": ["finance", "statement", "introduction"]
           },
           {
             "title": "Financial Statements Detail",
             "type": "post",
             "url": "projects/finance-foundations/financial-statements-detail",
-            "tags": [
-              "finance",
-              "statement",
-              "detail"
-            ]
+            "created": "2021-09-03",
+            "tags": ["finance", "statement", "detail"]
           },
           {
             "title": "Financial Ratios",
             "type": "post",
             "url": "projects/finance-foundations/financial-ratios",
-            "tags": [
-              "finance",
-              "ratio"
-            ]
+            "created": "2021-09-08",
+            "tags": ["finance", "ratio"]
           }
         ]
       },
@@ -520,34 +452,22 @@
             "title": "How Does AI Work?",
             "type": "post",
             "url": "projects/sharing-knowledge/how-does-ai-work",
-            "tags": [
-              "sharing knowledge",
-              "how",
-              "ai",
-              "work"
-            ]
+            "created": "2021-09-13",
+            "tags": ["sharing knowledge", "how", "ai", "work"]
           },
           {
             "title": "Is AI An Existential Threat To Humanity?",
             "type": "post",
             "url": "projects/sharing-knowledge/is-ai-an-existential-threat-to-humanity",
-            "tags": [
-              "sharing knowledge",
-              "ai",
-              "threat",
-              "humanity"
-            ]
+            "created": "2021-09-17",
+            "tags": ["sharing knowledge", "ai", "threat", "humanity"]
           },
           {
             "title": "Should I Teach My Toddler Python?",
             "type": "post",
             "url": "projects/sharing-knowledge/should-i-teach-my-toddler-python",
-            "tags": [
-              "sharing knowledge",
-              "teach",
-              "toddler",
-              "python"
-            ]
+            "created": "2021-09-26",
+            "tags": ["sharing knowledge", "teach", "toddler", "python"]
           }
         ]
       },
@@ -561,81 +481,64 @@
             "title": "Chapter 1 - Good Is The Enemy Of Great",
             "type": "post",
             "url": "projects/good-to-great/chapter-1-good-is-the-enemy-of-great",
-            "tags": [
-              "good to great",
-              "enemy of great"
-            ]
+            "created": "2021-10-03",
+            "tags": ["good to great", "enemy of great"]
           },
           {
             "title": "Chapter 2 - Level 5 Leadership",
             "type": "post",
             "url": "projects/good-to-great/chapter-2-level-5-leadership",
-            "tags": [
-              "level 5",
-              "leadership"
-            ]
+            "created": "2021-10-09",
+            "tags": ["level 5", "leadership"]
           },
           {
             "title": "Chapter 3 - First Who Then What",
             "type": "post",
             "url": "projects/good-to-great/chapter-3-first-who-then-what",
-            "tags": [
-              "first who",
-              "then what"
-            ]
+            "created": "2021-10-19",
+            "tags": ["first who", "then what"]
           },
           {
             "title": "Chapter 4 - Confront The Brutal Facts",
             "type": "post",
             "url": "projects/good-to-great/chapter-4-confront-the-brutal-facts",
-            "tags": [
-              "confront",
-              "brutal fact"
-            ]
+            "created": "2022-04-30",
+            "tags": ["confront", "brutal fact"]
           },
           {
             "title": "Chapter 5 - The Hedgehog Concept",
             "type": "post",
             "url": "projects/good-to-great/chapter-5-hedgehog-concept",
-            "tags": [
-              "hedgehog concept"
-            ]
+            "created": "2022-04-30",
+            "tags": ["hedgehog concept"]
           },
           {
             "title": "Chapter 6 - A Culture Of Discipline",
             "type": "post",
             "url": "projects/good-to-great/chapter-6-culture-of-discipline",
-            "tags": [
-              "culture",
-              "discipline"
-            ]
+            "created": "2022-05-01",
+            "tags": ["culture", "discipline"]
           },
           {
             "title": "Chapter 7 - Technology Accelerators",
             "type": "post",
             "url": "projects/good-to-great/chapter-7-technology-accelerators",
-            "tags": [
-              "technology",
-              "accelerator"
-            ]
+            "created": "2022-05-04",
+            "tags": ["technology", "accelerator"]
           },
           {
             "title": "Chapter 8 - The Flywheel",
             "type": "post",
             "url": "projects/good-to-great/chapter-8-the-flywheel",
-            "tags": [
-              "flywheel",
-              "doom loop"
-            ]
+            "created": "2022-05-11",
+            "tags": ["flywheel", "doom loop"]
           },
           {
             "title": "Chapter 9 - The Enduring Greatness",
             "type": "post",
             "url": "projects/good-to-great/chapter-9-the-enduring-greatness",
-            "tags": [
-              "enduring",
-              "greatness"
-            ]
+            "created": "2022-05-18",
+            "tags": ["enduring", "greatness"]
           }
         ]
       }

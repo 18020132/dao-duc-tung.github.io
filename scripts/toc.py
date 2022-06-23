@@ -7,17 +7,16 @@ stringtoreplace = "<toc>"
 
 def generateTOC(filename, out_filename, max_level=2):
     contents = []
-    with open(filename, "r") as ins:
+    with open(filename, "r", encoding="utf-8") as ins:
         for line in ins:
-            searchObj = re.search(r'(#+)\ (.+)', line, re.M | re.I)
+            searchObj = re.search(r"(#+)\ (.+)", line, re.M | re.I)
             if searchObj:
                 temp = {}
                 level = len(searchObj.group(1))
                 if level > 1 and level <= max_level:
                     temp["level"] = level
                     temp["text"] = searchObj.group(2)
-                    temp["link"] = "#" + \
-                        searchObj.group(2).replace(" ", "-").lower()
+                    temp["link"] = "#" + searchObj.group(2).replace(" ", "-").lower()
                     # Remove special characters
                     temp["link"] = temp["link"].replace(".", "")
                     temp["link"] = temp["link"].replace(",", "")
@@ -28,16 +27,22 @@ def generateTOC(filename, out_filename, max_level=2):
 
     toctext = "## Table of Contents\n"
     for item in contents:
-        line = (item['level'] - 2)*'\t' + \
-            "1. ["+item['text']+"]("+item['link']+") \n"
+        line = (
+            (item["level"] - 2) * "\t"
+            + "1. ["
+            + item["text"]
+            + "]("
+            + item["link"]
+            + ") \n"
+        )
         toctext = toctext + line
 
     filecontents = ""
-    with open(filename, 'r') as myfile:
+    with open(filename, "r", encoding="utf-8") as myfile:
         filecontents = myfile.read()
     filecontents = filecontents.replace(stringtoreplace, toctext)
 
-    with open(out_filename, "w") as file_update:
+    with open(out_filename, "w", encoding="utf-8") as file_update:
         file_update.write(filecontents)
 
 

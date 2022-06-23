@@ -7,6 +7,6 @@
   <h1><%= post.title %></h1>
 
   <div class="post-info">
-    <%= helper.moment(page.createdDate).format('MMM DD, YYYY') %> · <%= page.readingTime %> min read
+    <%= helper.moment(post.created).format('MMM DD, YYYY') %> · <%= page.readingTime %> min read
   </div>
 </div>
